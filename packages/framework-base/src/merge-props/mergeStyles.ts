@@ -29,7 +29,7 @@ export function mergeAndFlattenStyles(...styles: StyleProp<object>[]): object | 
 
 const _styleCache = getMemoCache();
 
-export function mergeStyles(...styles: StyleProp<object>[]): object | undefined {
+export function mergeStyles(...styles: StyleProp<unknown>[]): object | undefined {
   // filter the style set to just objects (which might be arrays or plain style objects)
   const inputs = styles.filter((s) => typeof s === 'object') as object[];
 
