@@ -27,8 +27,8 @@ export const Drawer = compose<DrawerType>({
   useRender: (userProps: DrawerProps, useSlots: UseSlots<DrawerType>) => {
     const drawerProps = useDrawer(userProps).props;
     const Slots = useSlots(userProps, (layer) => drawerLookup(layer, drawerProps));
-    return (final: DrawerProps, children: React.ReactNode) => {
-      const { open, onClose, onScrimClick, animationConfig, drawerPosition, showHandle, ...rest } = mergeProps(drawerProps, final);
+    return (final: DrawerProps) => {
+      const { children, open, onClose, onScrimClick, animationConfig, drawerPosition, showHandle, ...rest } = mergeProps(drawerProps, final);
       return (
         <Slots.modal
           {...rest}

@@ -35,7 +35,7 @@ export const MenuList = compose<MenuListType>({
     const menuListContextValue = useMenuListContextValue(menuList);
     const Slots = useSlots(menuList.props, (layer) => menuListLookup(layer, menuList, userProps));
 
-    return (_final: MenuListProps, children: React.ReactNode) => {
+    return (_final: MenuListProps, ...children: React.ReactNode[]) => {
       const itemCount = React.Children.toArray(children).filter(
         (child) => React.isValidElement(child) && (child as any).type.displayName !== 'MenuDivider',
       ).length;
@@ -50,9 +50,9 @@ export const MenuList = compose<MenuListType>({
           return React.cloneElement(
             child as React.ReactElement<unknown, string | React.JSXElementConstructor<any>>,
             {
-              accessibilityPositionInSet: child.props.accessibilityPositionInSet ?? itemPosition, // win32
-              accessibilitySetSize: child.props.accessibilitySetSize ?? itemCount, //win32
-              ...(child.props.tooltip && { alwaysShowToolTip: true }),
+              accessibilityPositionInSet: (child.props as any).accessibilityPositionInSet ?? itemPosition, // win32
+              accessibilitySetSize: (child.props as any).accessibilitySetSize ?? itemCount, //win32
+              ...((child.props as any).tooltip && { alwaysShowToolTip: true }),
             } as any,
           );
         }

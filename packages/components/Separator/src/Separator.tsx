@@ -17,7 +17,7 @@ export const Separator = compose<SeparatorType>({
   slots: { root: View },
   useRender: (props: SeparatorProps, useSlots: UseSlots<SeparatorType>) => {
     const Root = useSlots(props).root;
-    return (rest: SeparatorProps, children: React.ReactNode) => <Root {...mergeProps(props, rest, propMask)}>{children}</Root>;
+    return (rest: SeparatorProps) => <Root {...mergeProps(props, rest, propMask)}>{rest.children}</Root>;
   },
 });
 

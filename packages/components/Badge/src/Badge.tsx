@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx withSlots */
 import type { ReactNode } from 'react';
-import { Children } from 'react';
+import { Children, Fragment } from 'react';
 import { View, I18nManager } from 'react-native';
 
 import { Shadow } from '@fluentui-react-native/experimental-shadow';
@@ -56,9 +56,9 @@ export const Badge = compose<BadgeType>({
             {showContent &&
               Children.map(children, (child, i) =>
                 typeof child === 'string' ? (
-                  <Slots.text accessible={false} key={`text-${i}`}>
-                    {child}
-                  </Slots.text>
+                  <Fragment {...({ key: `text-${i}` } as any)}>
+                    <Slots.text accessible={false}>{child}</Slots.text>
+                  </Fragment>
                 ) : (
                   child
                 ),

@@ -30,7 +30,7 @@ export const MenuItem = compose<MenuItemType>({
     const menuItem = useMenuItem(userProps);
     const Slots = useSlots(userProps, (layer): boolean => menuItem.state[layer] || userProps[layer]);
 
-    return (final: MenuItemProps, children: React.ReactNode) => {
+    return (final: MenuItemProps, ...children: React.ReactNode[]) => {
       const { accessibilityLabel, icon, tooltip, ...mergedProps } = mergeProps(menuItem.props, final);
       const chevronXml = I18nManager.isRTL
         ? `

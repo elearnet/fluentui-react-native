@@ -9,7 +9,7 @@ import { tokenBuilder } from './tokenBuilder';
 export interface IBorderTokens {
   borderColor?: ColorValue;
   borderWidth?: number;
-  borderRadius?: AnimatableNumericValue;
+  borderRadius?: AnimatableNumericValue | string;
   borderStyle?: ViewStyle['borderStyle'];
 }
 

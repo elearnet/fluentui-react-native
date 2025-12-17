@@ -70,7 +70,7 @@ export const CompoundButton = compose<CompoundButtonType>({
           <Slots.contentContainer>
             {React.Children.map(children, (child) =>
               typeof child === 'string' ? (
-                <Slots.content accessible={false} key="content">
+                <Slots.content accessible={false}>
                   {child}
                 </Slots.content>
               ) : (
@@ -78,7 +78,7 @@ export const CompoundButton = compose<CompoundButtonType>({
               ),
             )}
             {secondaryContent && (
-              <Slots.secondaryContent accessible={false} key="secondaryContent">
+              <Slots.secondaryContent accessible={false}>
                 {secondaryContent}
               </Slots.secondaryContent>
             )}

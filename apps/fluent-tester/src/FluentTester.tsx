@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ScrollView, View, Text as RNText, Platform, SafeAreaView, BackHandler, I18nManager } from 'react-native';
+import { ScrollView, View, Text as RNText, Platform, SafeAreaView, BackHandler, I18nManager, NativeEventSubscription } from 'react-native';
 
 import { Separator, TextV1 as Text } from '@fluentui/react-native';
 import { ButtonV1 as Button } from '@fluentui-react-native/button';
@@ -110,11 +110,13 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
   const [onTestListView, setOnTestListView] = React.useState(true);
   const theme = useTheme();
   const themedStyles = getThemedStyles(theme);
+  const backHandlerSubscriptionRef = React.useRef<NativeEventSubscription | null>(null);
 
   const onBackPress = React.useCallback(() => {
     setOnTestListView(true);
     if (Platform.OS === 'android') {
-      BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+      backHandlerSubscriptionRef.current?.remove();
+      backHandlerSubscriptionRef.current = null;
     }
     return true;
   }, []);
@@ -122,7 +124,7 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
   const TestComponent = selectedTestIndex == -1 ? EmptyComponent : sortedTestComponents[selectedTestIndex].component;
 
   // This is used to initially bring focus to the app on win32
-  const focusOnMountRef = React.useRef<View>();
+  const focusOnMountRef = React.useRef<View>(null);
 
   React.useEffect(() => {
     if (Platform.OS === ('win32' as any)) {
@@ -187,7 +189,7 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
                     setOnTestListView(false);
                     setSelectedTestIndex(index);
                     if (Platform.OS === 'android') {
-                      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+                      backHandlerSubscriptionRef.current = BackHandler.addEventListener('hardwareBackPress', onBackPress);
                     }
                   }}
                   style={mobileStyles.testListItem}

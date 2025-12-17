@@ -19,7 +19,7 @@ export const MenuGroupHeader = compose<MenuGroupHeaderType>({
   useRender: (userProps: MenuGroupHeaderProps, useSlots: UseSlots<MenuGroupHeaderType>) => {
     const Slots = useSlots(userProps);
 
-    return (final: MenuGroupHeaderProps, children: React.ReactNode) => {
+    return (final: MenuGroupHeaderProps, ...children: React.ReactNode[]) => {
       const { ...mergedProps } = mergeProps(userProps, final);
 
       return (

@@ -60,7 +60,7 @@ export const ToggleButton = compose<ToggleButtonType>({
           {shouldShowIcon && iconPosition === 'before' && <Slots.icon {...iconProps} accessible={false} />}
           {React.Children.map(children, (child) =>
             typeof child === 'string' ? (
-              <Slots.content accessible={false} key="content">
+              <Slots.content accessible={false}>
                 {child}
               </Slots.content>
             ) : (

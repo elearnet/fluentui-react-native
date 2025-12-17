@@ -56,8 +56,8 @@ export const CounterBadge = compose<CounterBadgeType>({
               <React.Fragment>
                 {icon && iconPosition === 'before' && <Slots.icon accessible={false} {...iconProps} />}
                 {!hasChildren && <Slots.text>{displayCount}</Slots.text>}
-                {Children.map(children, (child, i) =>
-                  typeof child === 'string' ? <Slots.text key={`text-${i}`}>{child}</Slots.text> : child,
+                {Children.map(children, (child) =>
+                  typeof child === 'string' ? <Slots.text>{child}</Slots.text> : child,
                 )}
                 {icon && iconPosition === 'after' && <Slots.icon accessible={false} {...iconProps} />}
               </React.Fragment>

@@ -146,10 +146,11 @@ export const Text = compressible<TextProps, TextTokens>((props: TextProps, useTo
     delete (mergedProps.style as TextTokens).dynamicTypeRamp;
     delete (mergedProps.style as TextTokens).maximumFontSize;
 
+    const RNTextComponent = RNText as any;
     return (
-      <RNText ref={componentRef} ellipsizeMode={!wrap && !truncate ? 'clip' : 'tail'} {...mergedProps}>
+      <RNTextComponent ref={componentRef} ellipsizeMode={!wrap && !truncate ? 'clip' : 'tail'} {...mergedProps}>
         {children}
-      </RNText>
+      </RNTextComponent>
     );
   };
 }, useTextTokens);

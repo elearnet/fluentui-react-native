@@ -33,7 +33,7 @@ const devToolVersions = {
   '@types/es6-promise': '0.0.32',
   '@types/jest': '^29.0.0',
   '@types/node': '^22.0.0',
-  '@types/react-test-renderer': '16.9.0',
+  '@types/react-test-renderer': '19.1.0',
   '@typescript-eslint/eslint-plugin': '^8.36.0',
   '@typescript-eslint/parser': '^8.36.0',
   '@uifabric/prettier-rules': '^7.0.3',

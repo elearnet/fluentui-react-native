@@ -35,7 +35,7 @@ export const MenuPopover = compressible<MenuPopoverProps, MenuPopoverTokens>(
     });
 
     return (final: MenuPopoverProps, children: React.ReactNode) => {
-      const mergedProps = mergeProps(tokens, state.props, final);
+      const mergedProps = mergeProps(tokens, state.props as any, final);
       const innerViewProps =
         //For windows platforms, styling needs to be set on container view instead of the callout itself for the scrollview to reflect correct width and height
         Platform.OS === 'windows' || Platform.OS === ('win32' as any)
@@ -48,7 +48,7 @@ export const MenuPopover = compressible<MenuPopoverProps, MenuPopoverTokens>(
           : state.innerView;
       const content = React.createElement(View, innerViewProps, children);
       return (
-        <MenuCallout tokens={tokens} {...mergedProps}>
+        <MenuCallout tokens={tokens} {...(mergedProps as any)}>
           {content}
         </MenuCallout>
       );

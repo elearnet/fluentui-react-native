@@ -125,6 +125,7 @@ export const MenuButton = compose<MenuButtonType>({
                   <SubMenuItem {...menuItem} />
                 </Slots.contextualMenuItems>
               ) : (
+                // @ts-expect-error - key is not in the type definition but is required for the map
                 <ContextualMenuItem key={menuItem.itemKey} {...menuItem} />
               );
             })}
@@ -135,7 +136,7 @@ export const MenuButton = compose<MenuButtonType>({
   },
 });
 
-const SubMenuItem: React.FunctionComponent<MenuButtonItemProps> = (props: MenuButtonItemProps): JSX.Element => {
+const SubMenuItem: React.FunctionComponent<MenuButtonItemProps> = (props: MenuButtonItemProps): React.JSX.Element => {
   const [showSubmenuState, setShowSubmenu] = React.useState(false);
   const toggleShowSubmenu = React.useCallback(() => {
     setShowSubmenu(!showSubmenuState);
@@ -153,6 +154,7 @@ const SubMenuItem: React.FunctionComponent<MenuButtonItemProps> = (props: MenuBu
       {showSubmenu && (
         <Submenu target={componentRef} onDismiss={onDismiss} setShowMenu={setShowMenu} {...restSubmenuProps}>
           {submenuItems?.map((submenuItem) => (
+            // @ts-expect-error - key is not in the type definition but is required for the map
             <ContextualMenuItem key={submenuItem.itemKey} {...submenuItem} />
           ))}
         </Submenu>

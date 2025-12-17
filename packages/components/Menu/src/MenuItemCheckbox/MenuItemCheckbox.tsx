@@ -44,7 +44,7 @@ export const menuItemFinalRender = (
   menuItem: MenuItemCheckboxInfo,
   Slots: Slots<MenuItemCheckboxSlotProps>,
 ): React.FunctionComponent<MenuItemCheckboxProps> => {
-  return (final: MenuItemCheckboxProps, children: React.ReactNode) => {
+  return (final: MenuItemCheckboxProps, ...children: React.ReactNode[]) => {
     const { accessibilityLabel, icon, tooltip, ...mergedProps } = mergeProps(menuItem.props, final);
 
     const checkmarkXml = `

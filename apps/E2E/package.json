@@ -33,7 +33,7 @@
     "dist/*"
   ],
   "dependencies": {
-    "react": "19.0.0",
+    "react": " 19.2.1",
     "react-native": "^0.78.0",
     "react-native-macos": "^0.78.0",
     "react-native-windows": "^0.78.0"
@@ -53,7 +53,7 @@
     "@rnx-kit/metro-config": "^2.0.0",
     "@types/jasmine": "5.1.4",
     "@types/node": "^22.2.0",
-    "@types/react": "~19.0.0",
+    "@types/react": "~ 19.2.1",
     "@wdio/appium-service": "^9.12.6",
     "@wdio/cli": "^9.12.6",
     "@wdio/globals": "^9.12.6",

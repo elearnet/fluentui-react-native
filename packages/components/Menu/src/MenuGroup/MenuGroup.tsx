@@ -21,7 +21,7 @@ export const MenuGroup = compose<MenuGroupType>({
   },
   useRender: (userProps: MenuGroupProps, useSlots: UseSlots<MenuGroupType>) => {
     const Slots = useSlots(userProps);
-    return (final: MenuGroupProps, children: React.ReactNode) => {
+    return (final: MenuGroupProps, ...children: React.ReactNode[]) => {
       const { ...mergedProps } = mergeProps(userProps, final);
 
       let itemPosition = 0;
@@ -40,8 +40,8 @@ export const MenuGroup = compose<MenuGroupType>({
           return React.cloneElement(
             child as React.ReactElement<unknown, string | React.JSXElementConstructor<any>>,
             {
-              accessibilityPositionInSet: child.props.accessibilityPositionInSet ?? itemPosition, // win32
-              accessibilitySetSize: child.props.accessibilitySetSize ?? itemCount, //win32
+              accessibilityPositionInSet: (child.props as any).accessibilityPositionInSet ?? itemPosition, // win32
+              accessibilitySetSize: (child.props as any).accessibilitySetSize ?? itemCount, //win32
             } as any,
           );
         }
@@ -58,8 +58,8 @@ export const MenuGroup = compose<MenuGroupType>({
       // we use a string with a space as the default accessibilityLabel for MenuGroup.
       // If an empty string was used, the group context would not be read.
       let menuGroupA11yLabel = ' ';
-      if (menuGroupHeader && typeof (menuGroupHeader as React.ReactElement).props.children === 'string') {
-        menuGroupA11yLabel = (menuGroupHeader as React.ReactElement).props.children;
+      if (menuGroupHeader && typeof (menuGroupHeader as React.ReactElement<any>).props.children === 'string') {
+        menuGroupA11yLabel = (menuGroupHeader as React.ReactElement<any>).props.children;
       }
 
       return (

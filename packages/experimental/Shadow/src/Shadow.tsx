@@ -1,6 +1,6 @@
 import * as React from 'react';
-import type { ViewStyle } from 'react-native';
-import { View } from 'react-native';
+import type { ViewStyle, ViewProps } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import { mergeProps, stagedComponent } from '@fluentui-react-native/framework';
 import { memoize } from '@fluentui-react-native/framework';
@@ -16,7 +16,7 @@ export const Shadow = stagedComponent((props: ShadowProps) => {
       return <>{children}</>;
     }
 
-    const childrenArray = React.Children.toArray(children) as React.ReactElement[];
+    const childrenArray = React.Children.toArray(children) as React.ReactElement<ViewProps>[];
     const child = childrenArray[0];
 
     if (__DEV__) {
@@ -27,11 +27,11 @@ export const Shadow = stagedComponent((props: ShadowProps) => {
 
     const { style: childStyle, ...restOfChildProps } = child.props;
 
-    const shadowViewStyleProps = getStylePropsForShadowViews(childStyle, props.shadowToken);
-    const innerShadowViewProps = mergeProps(restOfChildProps, shadowViewStyleProps.inner);
+    const shadowViewStyleProps = getStylePropsForShadowViews(StyleSheet.flatten(childStyle), props.shadowToken);
+    const innerShadowViewProps = mergeProps(restOfChildProps, shadowViewStyleProps.inner as any);
     const outerShadowViewProps = mergeProps(final, shadowViewStyleProps.outer);
 
-    const childWithInnerShadow = React.cloneElement(child, innerShadowViewProps);
+    const childWithInnerShadow = React.cloneElement(child, innerShadowViewProps as any);
 
     return <View {...outerShadowViewProps}>{childWithInnerShadow}</View>;
   };
@@ -154,8 +154,8 @@ function withObjectAssign(object, [key, value]) {
   return object;
 }
 
-const removeUndefinedProperties = (object: ViewStyle) => {
-  return Object.entries(object).reduce(withObjectAssign, {});
+const removeUndefinedProperties = (object: ViewStyle): ViewStyle => {
+  return Object.entries(object).reduce(withObjectAssign, {}) as ViewStyle;
 };
 
 Shadow.displayName = shadowName;

@@ -18,6 +18,7 @@ import { buildStackStyle } from './Persona.tokens.stack';
 import { buildTextStyle, buildTertiaryStyle, buildOptionalStyle, buildSecondaryStyle } from './Persona.tokens.texts';
 import { personaName } from './Persona.types';
 import type { IPersonaType, IPersonaSlotProps, IPersonaProps, IPersonaRenderData } from './Persona.types';
+import React from 'react';
 
 function usePrepareForProps(props: IPersonaProps, useStyling: IUseComposeStyling<IPersonaType>): IRenderData<IPersonaSlotProps> {
   const {
@@ -51,7 +52,7 @@ function usePrepareForProps(props: IPersonaProps, useStyling: IUseComposeStyling
   };
 }
 
-const render = (Slots: ISlots<IPersonaSlotProps>, renderData: IPersonaRenderData): JSX.Element | null => {
+const render = (Slots: ISlots<IPersonaSlotProps>, renderData: IPersonaRenderData): React.JSX.Element | null => {
   if (!renderData.state) {
     return null;
   }

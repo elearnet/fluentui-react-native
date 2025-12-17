@@ -133,7 +133,7 @@ export abstract class BasePage {
    * The advantage to this over testing using .isEqual in a spec is that this throws a detailed error if
    * the expected and actual values don't match. This should be called for attribute tests in specs. */
   async compareAttribute(
-    element: WebdriverIO.Element | ChainablePromiseElement,
+    element: WebdriverIO.Element | ChainablePromiseElement | Promise<WebdriverIO.Element>,
     attribute: Attribute | AndroidAttribute,
     expectedValue: any,
   ): Promise<boolean> {

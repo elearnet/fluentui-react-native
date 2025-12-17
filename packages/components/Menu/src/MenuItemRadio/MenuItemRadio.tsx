@@ -40,7 +40,7 @@ export const menuItemRadioFinalRender = (
   menuItem: MenuItemRadioInfo,
   Slots: Slots<MenuItemRadioSlotProps>,
 ): React.FunctionComponent<MenuItemRadioProps> => {
-  return (final: MenuItemRadioProps, children: React.ReactNode) => {
+  return (final: MenuItemRadioProps, ...children: React.ReactNode[]) => {
     const { accessibilityLabel, icon, tooltip, ...mergedProps } = mergeProps(menuItem.props, final);
 
     const checkmarkXml = `

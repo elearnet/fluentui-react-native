@@ -39,7 +39,7 @@ export function composable<
       Slots: ISlots<TSlotProps>,
       renderData: IRenderData<TSlotProps, TState>,
       ...children: React.ReactNode[]
-    ) => JSX.Element | null,
+    ) => React.JSX.Element | null,
     slots: {
       [K in keyof TSlotProps]: {
         slotType?: React.ElementType<> | string,
@@ -131,7 +131,7 @@ render?: (
   Slots: ISlots<TSlotProps>,
   renderData: IRenderData<TSlotProps, TState>,
   ...children: React.ReactNode[]
-) => JSX.Element | null,
+) => React.JSX.Element | null,
 ```
 
 The three parameters are:

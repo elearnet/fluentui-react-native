@@ -26,6 +26,7 @@ import type {
   IPersonaCoinRenderData,
   IPersonaCoinState,
 } from './PersonaCoin.types';
+import React from 'react';
 
 function usePrepareForProps(
   props: IPersonaCoinProps,
@@ -63,7 +64,7 @@ function usePrepareForProps(
   };
 }
 
-const render = (Slots: ISlots<IPersonaCoinSlotProps>, renderData: IPersonaCoinRenderData): JSX.Element | null => {
+const render = (Slots: ISlots<IPersonaCoinSlotProps>, renderData: IPersonaCoinRenderData): React.JSX.Element | null => {
   if (!renderData.state) {
     return null;
   }

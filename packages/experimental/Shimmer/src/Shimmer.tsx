@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx withSlots */
-import { useRef, useEffect, useMemo, useCallback } from 'react';
+import React, { useRef, useEffect, useMemo, useCallback } from 'react';
 import type { ScaleXTransform, TranslateXTransform } from 'react-native';
 import { Animated, I18nManager } from 'react-native';
 
@@ -85,18 +85,25 @@ export const Shimmer = compose<ShimmerType>({
           const element = elements[i];
           if (element.type == 'rect') {
             rows.push(
-              <Rect
-                key={i}
-                width={element.width}
-                height={element.height}
-                x={element.x}
-                y={element.y}
-                rx={element.borderRadiusX}
-                ry={element.borderRadiusY}
-              />,
+              React.createElement(Rect, {
+                key: i,
+                width: element.width,
+                height: element.height,
+                x: element.x,
+                y: element.y,
+                rx: element.borderRadiusX,
+                ry: element.borderRadiusY,
+              }),
             );
           } else if (element.type == 'circle') {
-            rows.push(<Circle key={i} r={element.radius} cx={element.cx} cy={element.cy} />);
+            rows.push(
+              React.createElement(Circle, {
+                key: i,
+                r: element.radius,
+                cx: element.cx,
+                cy: element.cy,
+              }),
+            );
           } else {
             assertNever(element);
           }

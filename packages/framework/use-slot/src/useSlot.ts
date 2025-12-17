@@ -3,7 +3,7 @@ import * as React from 'react';
 import { mergeProps } from '@fluentui-react-native/framework-base';
 
 import type { SlotFn, NativeReactType } from '@fluentui-react-native/framework-base';
-import type { ComposableFunction, StagedRender } from '@fluentui-react-native/framework-base';
+import type { ComposableFunction, StagedRender, FinalRender } from '@fluentui-react-native/framework-base';
 
 /**
  *
@@ -29,7 +29,7 @@ export function useSlot<TProps>(
   filter?: (propName: string) => boolean,
 ): React.FunctionComponent<TProps> {
   // some types to make things cleaner
-  type ResultHolder = { result: React.FunctionComponent<TProps> | TProps };
+  type ResultHolder = { result: FinalRender<TProps> | TProps };
   type MemoTuple = [SlotFn<TProps>, ResultHolder];
 
   // extract the staged component function if that pattern is being used, will be undefined if it is a standard component
@@ -55,7 +55,7 @@ export function useSlot<TProps>(
 
       // now if result was a function then call it directly, if not go through the standard React.createElement process
       return typeof result === 'function'
-        ? (result as React.FunctionComponent)(props, ...children)
+        ? (result as FinalRender<TProps>)(props, ...children)
         : React.createElement(component, props, ...children);
     };
     // mark the slotFn so that withSlots knows to handle it differently
