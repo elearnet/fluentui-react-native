@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "feat: apple SF Symbol icon, invertedCorner for tap, etc ..",
+  "packageName": "@elui-react-native/e2e-testing",
+  "email": "eadron@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

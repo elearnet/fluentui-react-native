@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix: some fixes",
+  "packageName": "@uifabricshared/foundation-tokens",
+  "email": "eadron@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

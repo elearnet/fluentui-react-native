@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix: some fixes",
+  "packageName": "@elui-react-native/icon",
+  "email": "eadron@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

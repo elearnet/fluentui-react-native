@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix: some fixes",
+  "packageName": "@elui-react-native/radio-group",
+  "email": "eadron@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
