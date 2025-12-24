@@ -16,6 +16,7 @@ pids
 *.pid.lock
 
 # Xcode
+.DS_Store
 *.xcuserstate
 **/.DS_Store
 **/DerivedData/*
