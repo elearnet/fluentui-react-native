@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { View, Switch } from 'react-native';
 
-import { SPINNER_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import type { SpinnerStatus } from '@fluentui-react-native/spinner';
-import { Spinner } from '@fluentui-react-native/spinner';
-import { Stack } from '@fluentui-react-native/stack';
-import { Text, TextV1 } from '@fluentui-react-native/text';
+import { SPINNER_TESTPAGE } from '@elui-react-native/e2e-testing';
+import type { SpinnerStatus } from '@elui-react-native/spinner';
+import { Spinner } from '@elui-react-native/spinner';
+import { Stack } from '@elui-react-native/stack';
+import { Text, TextV1 } from '@elui-react-native/text';
 
 import { E2ETestingSpinner } from './SpinnerE2ETest';
 import { stackStyle, commonTestStyles as commonStyles, commonTestStyles } from '../Common/styles';

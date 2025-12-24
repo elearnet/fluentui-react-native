@@ -1,8 +1,8 @@
-export type { GetMemoValue, GetTypedMemoValue } from '@fluentui-react-native/framework-base';
-export { getMemoCache, getTypedMemoCache, memoize } from '@fluentui-react-native/framework-base';
+export type { GetMemoValue, GetTypedMemoValue } from '@elui-react-native/framework-base';
+export { getMemoCache, getTypedMemoCache, memoize } from '@elui-react-native/framework-base';
 
-export type { StyleProp } from '@fluentui-react-native/framework-base';
-export { mergeProps, mergeStyles } from '@fluentui-react-native/framework-base';
+export type { StyleProp } from '@elui-react-native/framework-base';
+export { mergeProps, mergeStyles } from '@elui-react-native/framework-base';
 
 export {
   backgroundColorTokens,
@@ -18,7 +18,7 @@ export {
   shadowTokens,
   textTokens,
   tokenBuilder,
-} from '@fluentui-react-native/tokens';
+} from '@elui-react-native/tokens';
 export type {
   FontStyleTokens,
   FontTokens,
@@ -30,16 +30,16 @@ export type {
   IShadowTokens,
   LayoutTokens,
   TokenBuilder,
-} from '@fluentui-react-native/tokens';
+} from '@elui-react-native/tokens';
 
-export { useSlot } from '@fluentui-react-native/use-slot';
-export { renderSlot, stagedComponent, withSlots } from '@fluentui-react-native/framework-base';
-export type { ComposableFunction, FinalRender, NativeReactType, SlotFn, StagedRender } from '@fluentui-react-native/framework-base';
+export { useSlot } from '@elui-react-native/use-slot';
+export { renderSlot, stagedComponent, withSlots } from '@elui-react-native/framework-base';
+export type { ComposableFunction, FinalRender, NativeReactType, SlotFn, StagedRender } from '@elui-react-native/framework-base';
 
-export { buildUseSlots } from '@fluentui-react-native/use-slots';
-export type { GetSlotProps, Slots, UseSlotOptions, UseSlotsBase } from '@fluentui-react-native/use-slots';
+export { buildUseSlots } from '@elui-react-native/use-slots';
+export type { GetSlotProps, Slots, UseSlotOptions, UseSlotsBase } from '@elui-react-native/use-slots';
 
-export { immutableMerge, immutableMergeCore, processImmutable } from '@fluentui-react-native/framework-base';
+export { immutableMerge, immutableMergeCore, processImmutable } from '@elui-react-native/framework-base';
 export type {
   BuiltinRecursionHandlers,
   CustomRecursionHandler,
@@ -47,9 +47,9 @@ export type {
   ObjectBase,
   RecursionHandler,
   RecursionOption,
-} from '@fluentui-react-native/framework-base';
+} from '@elui-react-native/framework-base';
 
-export { ThemeContext, useTheme } from '@fluentui-react-native/theme-types';
+export { ThemeContext, useTheme } from '@elui-react-native/theme-types';
 export type {
   AliasColorTokens,
   AppearanceOptions,
@@ -79,7 +79,7 @@ export type {
   Variant,
   VariantValue,
   Variants,
-} from '@fluentui-react-native/theme-types';
+} from '@elui-react-native/theme-types';
 
 export { compose } from './compose';
 export type {

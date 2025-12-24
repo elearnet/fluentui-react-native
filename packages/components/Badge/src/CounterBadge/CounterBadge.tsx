@@ -4,11 +4,11 @@ import type { ReactNode } from 'react';
 import React, { Children } from 'react';
 import { View, I18nManager } from 'react-native';
 
-import { Shadow } from '@fluentui-react-native/experimental-shadow';
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, withSlots, mergeProps } from '@fluentui-react-native/framework';
-import { Icon, createIconProps } from '@fluentui-react-native/icon';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+import { Shadow } from '@elui-react-native/experimental-shadow';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, withSlots, mergeProps } from '@elui-react-native/framework';
+import { Icon, createIconProps } from '@elui-react-native/icon';
+import { TextV1 as Text } from '@elui-react-native/text';
 
 import { stylingSettings } from './CounterBadge.styling';
 import type { CounterBadgeType, CounterBadgeProps } from './CounterBadge.types';

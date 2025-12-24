@@ -2,7 +2,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
 
-import { stagedComponent } from '@fluentui-react-native/framework';
+import { stagedComponent } from '@elui-react-native/framework';
 
 import type { AnimatedIndicatorProps } from './TabListAnimatedIndicator.types';
 import { tablistAnimatedIndicatorName } from './TabListAnimatedIndicator.types';

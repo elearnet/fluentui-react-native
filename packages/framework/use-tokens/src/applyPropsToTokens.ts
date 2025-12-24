@@ -1,4 +1,4 @@
-import type { GetTypedMemoValue } from '@fluentui-react-native/framework-base';
+import type { GetTypedMemoValue } from '@elui-react-native/framework-base';
 
 export function applyPropsToTokens<TProps, TTokens>(
   props: TProps,

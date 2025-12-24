@@ -8,10 +8,10 @@ import {
   PanResponder,
 } from 'react-native';
 //import { ELUIView, NitrotestHybridObject } from 'el-ui';
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
-import { TabList, Tab } from '@fluentui-react-native/tablist';
-import { ThemeProvider, ThemeReference } from '@fluentui-react-native/theme';
-import { createAppleTheme } from '@fluentui-react-native/apple-theme';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+import { TabList, Tab } from '@elui-react-native/tablist';
+import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
+import { createAppleTheme } from '@elui-react-native/apple-theme';
 
 import { multiply, FbrViewExample,SysIcon,InvertedCorner } from 'elui';
 

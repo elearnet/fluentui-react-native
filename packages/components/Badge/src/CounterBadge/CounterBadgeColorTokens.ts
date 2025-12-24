@@ -1,4 +1,4 @@
-import type { TokenSettings } from '@fluentui-react-native/framework';
+import type { TokenSettings } from '@elui-react-native/framework';
 
 import type { CounterBadgeTokens } from './CounterBadge.types';
 

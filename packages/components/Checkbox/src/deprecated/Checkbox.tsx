@@ -3,18 +3,18 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { filterViewProps } from '@fluentui-react-native/adapters';
+import { filterViewProps } from '@elui-react-native/adapters';
 import {
   useAsToggle,
   useAsPressable,
   useViewCommandFocus,
   useKeyProps,
   useOnPressWithFocus,
-} from '@fluentui-react-native/interactive-hooks';
-import type { IPressableProps } from '@fluentui-react-native/pressable';
-import { Text } from '@fluentui-react-native/text';
-import { foregroundColorTokens, textTokens, borderTokens, getPaletteFromTheme } from '@fluentui-react-native/tokens';
-import { backgroundColorTokens } from '@fluentui-react-native/tokens';
+} from '@elui-react-native/interactive-hooks';
+import type { IPressableProps } from '@elui-react-native/pressable';
+import { Text } from '@elui-react-native/text';
+import { foregroundColorTokens, textTokens, borderTokens, getPaletteFromTheme } from '@elui-react-native/tokens';
+import { backgroundColorTokens } from '@elui-react-native/tokens';
 import type { ISlots } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';

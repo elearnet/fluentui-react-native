@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { stagedComponent } from '@fluentui-react-native/framework';
+import { stagedComponent } from '@elui-react-native/framework';
 
 import type { MenuProps } from './Menu.types';
 import { menuName } from './Menu.types';

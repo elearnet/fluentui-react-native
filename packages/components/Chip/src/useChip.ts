@@ -1,10 +1,10 @@
 import * as React from 'react';
 import type { AccessibilityState } from 'react-native';
 
-import { memoize } from '@fluentui-react-native/framework';
-import { createIconProps } from '@fluentui-react-native/icon';
-import { usePressableState, useAsToggleWithEvent } from '@fluentui-react-native/interactive-hooks';
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
+import { memoize } from '@elui-react-native/framework';
+import { createIconProps } from '@elui-react-native/icon';
+import { usePressableState, useAsToggleWithEvent } from '@elui-react-native/interactive-hooks';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
 
 import DismissSvg from './assets/DismissIcon';
 import type { ChipInfo, ChipProps } from './Chip.types';

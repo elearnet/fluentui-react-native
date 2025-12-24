@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { RNSVGIcons_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { RNSVGIcons_TESTPAGE } from '@elui-react-native/e2e-testing';
 import { faMountainCity } from '@fortawesome/free-solid-svg-icons/faMountainCity';
 import { faMugHot } from '@fortawesome/free-solid-svg-icons/faMugHot';
 import { faMugSaucer } from '@fortawesome/free-solid-svg-icons/faMugSaucer';

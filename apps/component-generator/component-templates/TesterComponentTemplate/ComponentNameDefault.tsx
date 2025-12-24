@@ -1,4 +1,4 @@
-import { ComponentName } from '@fluentui-react-native/component-name';
+import { ComponentName } from '@elui-react-native/component-name';
 import * as React from 'react';
 import { View, Text } from 'react-native';
 

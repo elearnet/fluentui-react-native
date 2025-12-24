@@ -2,10 +2,10 @@ import * as React from 'react';
 import { Alert, View, StyleSheet, Text, TextInput } from 'react-native';
 import { Platform } from 'react-native';
 
-import type { LinkTokens } from '@fluentui/react-native';
-import { LinkV1 as Link } from '@fluentui/react-native';
-import { LINKV1_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import { Stack } from '@fluentui-react-native/stack';
+import type { LinkTokens } from '@elui/react-native';
+import { LinkV1 as Link } from '@elui/react-native';
+import { LINKV1_TESTPAGE } from '@elui-react-native/e2e-testing';
+import { Stack } from '@elui-react-native/stack';
 
 import { E2ELinkV1Test } from './E2ELinkV1Test';
 import { InlineLinks } from './InlineLinksTest';

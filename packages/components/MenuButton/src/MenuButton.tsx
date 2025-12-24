@@ -2,9 +2,9 @@
 /** @jsx withSlots */
 import React, { useRef, useState, useCallback } from 'react';
 
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
-import { ContextualMenu, ContextualMenuItem, SubmenuItem, Submenu } from '@fluentui-react-native/contextual-menu';
-import { backgroundColorTokens, borderTokens } from '@fluentui-react-native/tokens';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+import { ContextualMenu, ContextualMenuItem, SubmenuItem, Submenu } from '@elui-react-native/contextual-menu';
+import { backgroundColorTokens, borderTokens } from '@elui-react-native/tokens';
 import type { ISlots } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';

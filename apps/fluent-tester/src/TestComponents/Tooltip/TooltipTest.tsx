@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { TOOLTIP_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { TOOLTIP_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { TooltipDefault } from './TooltipDefault';
 // import { TooltipPosition } from './TooltipPosition';

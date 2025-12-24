@@ -2,11 +2,11 @@ import * as React from 'react';
 import type { KeyboardMetrics } from 'react-native';
 import { AccessibilityInfo, Platform, ScrollView, Switch, Text, View } from 'react-native';
 
-import { ButtonV1 as Button, Separator, Pressable } from '@fluentui/react-native';
-import type { IFocusable, RestoreFocusEvent, DismissBehaviors } from '@fluentui/react-native';
-import type { CalloutNativeCommands, ICalloutProps } from '@fluentui-react-native/callout';
-import { Callout } from '@fluentui-react-native/callout';
-import { CALLOUT_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { ButtonV1 as Button, Separator, Pressable } from '@elui/react-native';
+import type { IFocusable, RestoreFocusEvent, DismissBehaviors } from '@elui/react-native';
+import type { CalloutNativeCommands, ICalloutProps } from '@elui-react-native/callout';
+import { Callout } from '@elui-react-native/callout';
+import { CALLOUT_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { E2ECalloutTest } from './CalloutE2ETest';
 import { MenuPicker } from '../Common/MenuPicker';

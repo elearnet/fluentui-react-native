@@ -35,16 +35,16 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@fluentui-react-native/default-theme": "workspace:*",
-    "@fluentui-react-native/win32-theme": "workspace:*",
+    "@elui-react-native/default-theme": "workspace:*",
+    "@elui-react-native/win32-theme": "workspace:*",
     "@uifabricshared/theme-registry": "workspace:*",
     "@uifabricshared/theming-ramp": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -70,7 +70,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

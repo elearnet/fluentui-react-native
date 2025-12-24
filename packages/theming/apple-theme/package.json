@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/apple-theme",
+  "name": "@elui-react-native/apple-theme",
   "version": "0.28.17",
   "description": "A FluentUI React Native theme that pulls constants from FluentUI Apple",
   "license": "MIT",
@@ -35,23 +35,23 @@
     "directory": "packages/theming/apple-theme"
   },
   "dependencies": {
-    "@fluentui-react-native/default-theme": "workspace:*",
+    "@elui-react-native/default-theme": "workspace:*",
+    "@elui-react-native/experimental-appearance-additions": "workspace:*",
+    "@elui-react-native/framework-base": "workspace:*",
+    "@elui-react-native/theme": "workspace:*",
+    "@elui-react-native/theme-tokens": "workspace:*",
+    "@elui-react-native/theme-types": "workspace:*",
+    "@elui-react-native/theming-utils": "workspace:*",
     "@fluentui-react-native/design-tokens-ios": "^0.53.0",
     "@fluentui-react-native/design-tokens-macos": "^0.53.0",
-    "@fluentui-react-native/experimental-appearance-additions": "workspace:*",
-    "@fluentui-react-native/framework-base": "workspace:*",
-    "@fluentui-react-native/theme": "workspace:*",
-    "@fluentui-react-native/theme-tokens": "workspace:*",
-    "@fluentui-react-native/theme-types": "workspace:*",
-    "@fluentui-react-native/theming-utils": "workspace:*",
     "assert-never": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -75,7 +75,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

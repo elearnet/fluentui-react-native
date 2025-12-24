@@ -1,4 +1,4 @@
-import type { FocusZoneDirection } from '@fluentui-react-native/focus-zone';
+import type { FocusZoneDirection } from '@elui-react-native/focus-zone';
 
 import type { GridButton } from './pages/FocusZonePageObject';
 export type { GridButton as GridButtonIndex } from './pages/FocusZonePageObject';

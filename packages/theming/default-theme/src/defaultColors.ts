@@ -1,4 +1,4 @@
-import type { Palette, FabricWebPalette, ThemeColorDefinition } from '@fluentui-react-native/theme-types';
+import type { Palette, FabricWebPalette, ThemeColorDefinition } from '@elui-react-native/theme-types';
 
 import { createColorAliasTokens } from './createAliasTokens';
 

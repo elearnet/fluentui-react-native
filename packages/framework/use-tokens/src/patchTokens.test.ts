@@ -1,4 +1,4 @@
-import { getMemoCache } from '@fluentui-react-native/framework-base';
+import { getMemoCache } from '@elui-react-native/framework-base';
 
 import { patchTokens } from './patchTokens';
 

@@ -13,7 +13,7 @@ import { DepcheckCommand } from './tasks/depcheck.js';
 
 const cli = new Cli({
   binaryLabel: 'fluentui-scripts CLI',
-  binaryName: '@fluentui-react-native/scripts',
+  binaryName: '@elui-react-native/scripts',
   binaryVersion: '0.0.0',
 });
 

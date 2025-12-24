@@ -1,5 +1,5 @@
-import { memoize } from '@fluentui-react-native/framework-base';
-import type { Theme, Spacing } from '@fluentui-react-native/theme-types';
+import { memoize } from '@elui-react-native/framework-base';
+import type { Theme, Spacing } from '@elui-react-native/theme-types';
 
 import { paletteFromAppleColors } from './appleColors.ios';
 import { iOSShadows } from './appleShadows.ios';

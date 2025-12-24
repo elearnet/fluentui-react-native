@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
+import { ButtonV1 as Button } from '@elui-react-native/button';
 import * as renderer from 'react-test-renderer';
 
 import { Menu } from '../Menu/Menu';

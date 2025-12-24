@@ -1,4 +1,4 @@
-import type { FocusZoneDirection } from '@fluentui-react-native/focus-zone';
+import type { FocusZoneDirection } from '@elui-react-native/focus-zone';
 
 import { BasePage, By } from '../../common/BasePage';
 import {

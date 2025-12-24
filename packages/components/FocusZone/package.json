@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/focus-zone",
+  "name": "@elui-react-native/focus-zone",
   "version": "0.21.15",
   "description": "A cross-platform FocusZone component using the Fluent Design System",
   "main": "lib-commonjs/index.js",
@@ -31,17 +31,17 @@
     "directory": "packages/components/FocusZone"
   },
   "dependencies": {
-    "@fluentui-react-native/adapters": "workspace:*",
-    "@fluentui-react-native/interactive-hooks": "workspace:*",
+    "@elui-react-native/adapters": "workspace:*",
+    "@elui-react-native/interactive-hooks": "workspace:*",
     "@uifabricshared/foundation-composable": "workspace:*",
     "@uifabricshared/foundation-settings": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -69,7 +69,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

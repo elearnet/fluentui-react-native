@@ -8,7 +8,7 @@ import * as React from 'react';
 import { findNodeHandle, Platform } from 'react-native';
 import type { HostComponent } from 'react-native';
 
-import { backgroundColorTokens, borderTokens } from '@fluentui-react-native/tokens';
+import { backgroundColorTokens, borderTokens } from '@elui-react-native/tokens';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
 import { compose } from '@uifabricshared/foundation-compose';
 import { mergeSettings } from '@uifabricshared/foundation-settings';

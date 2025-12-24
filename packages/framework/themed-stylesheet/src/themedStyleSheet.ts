@@ -1,7 +1,7 @@
 import type { ViewStyle, TextStyle, ImageStyle } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-import { getMemoCache } from '@fluentui-react-native/framework-base';
+import { getMemoCache } from '@elui-react-native/framework-base';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type ObjectBase = {};

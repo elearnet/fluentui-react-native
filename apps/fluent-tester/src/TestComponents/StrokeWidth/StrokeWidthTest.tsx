@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { Text } from '@fluentui/react-native';
-import { STROKEWIDTH_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import type { Theme } from '@fluentui-react-native/framework';
-import { useFluentTheme } from '@fluentui-react-native/framework';
-import { Stack } from '@fluentui-react-native/stack';
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
-import { themedStyleSheet } from '@fluentui-react-native/themed-stylesheet';
-import { getCurrentAppearance } from '@fluentui-react-native/theming-utils';
+import { Text } from '@elui/react-native';
+import { STROKEWIDTH_TESTPAGE } from '@elui-react-native/e2e-testing';
+import type { Theme } from '@elui-react-native/framework';
+import { useFluentTheme } from '@elui-react-native/framework';
+import { Stack } from '@elui-react-native/stack';
+import { globalTokens } from '@elui-react-native/theme-tokens';
+import { themedStyleSheet } from '@elui-react-native/themed-stylesheet';
+import { getCurrentAppearance } from '@elui-react-native/theming-utils';
 
 import { stackStyle } from '../Common/styles';
 import type { TestSection, PlatformStatus } from '../Test';

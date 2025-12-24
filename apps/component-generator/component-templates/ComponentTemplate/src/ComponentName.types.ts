@@ -1,6 +1,6 @@
 import { ViewProps } from 'react-native';
-import { TextProps } from '@fluentui-react-native/text';
-import { IBorderTokens, IColorTokens, LayoutTokens } from '@fluentui-react-native/tokens';
+import { TextProps } from '@elui-react-native/text';
+import { IBorderTokens, IColorTokens, LayoutTokens } from '@elui-react-native/tokens';
 
 export const componentName = 'ComponentName';
 /**

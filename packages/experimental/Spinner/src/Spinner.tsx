@@ -2,8 +2,8 @@
 /** @jsx withSlots */
 import { Animated, View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots } from '@fluentui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots } from '@elui-react-native/framework';
 import { Svg } from 'react-native-svg';
 
 import type { SpinnerProps, SpinnerType } from './Spinner.types';

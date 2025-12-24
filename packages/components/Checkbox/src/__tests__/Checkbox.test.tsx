@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
 import { Svg } from 'react-native-svg';
 import * as renderer from 'react-test-renderer';
 

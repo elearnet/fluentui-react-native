@@ -4,7 +4,7 @@ import React from 'react';
 import { View } from 'react-native';
 import type { Animated, ViewProps, ViewStyle } from 'react-native';
 
-import { stagedComponent, memoize } from '@fluentui-react-native/framework';
+import { stagedComponent, memoize } from '@elui-react-native/framework';
 
 import type { AnimatedIndicatorProps } from './TabListAnimatedIndicator.types';
 import { tablistAnimatedIndicatorName } from './TabListAnimatedIndicator.types';

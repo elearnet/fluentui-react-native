@@ -3,15 +3,15 @@
 import type { PressableProps, ViewStyle, ViewProps } from 'react-native';
 import { useWindowDimensions, View } from 'react-native';
 
-import type { SizeClassIOS } from '@fluentui-react-native/experimental-appearance-additions';
-import { useHorizontalSizeClass } from '@fluentui-react-native/experimental-appearance-additions';
-import { Shadow } from '@fluentui-react-native/experimental-shadow';
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots, memoize } from '@fluentui-react-native/framework';
-import { Icon, createIconProps } from '@fluentui-react-native/icon';
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
-import { Pressable } from '@fluentui-react-native/pressable';
-import { Body2, Body2Strong } from '@fluentui-react-native/text';
+import type { SizeClassIOS } from '@elui-react-native/experimental-appearance-additions';
+import { useHorizontalSizeClass } from '@elui-react-native/experimental-appearance-additions';
+import { Shadow } from '@elui-react-native/experimental-shadow';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots, memoize } from '@elui-react-native/framework';
+import { Icon, createIconProps } from '@elui-react-native/icon';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
+import { Pressable } from '@elui-react-native/pressable';
+import { Body2, Body2Strong } from '@elui-react-native/text';
 
 import { NotificationButton, createNotificationButtonProps } from './Notification.helper';
 import { stylingSettings } from './Notification.styling';

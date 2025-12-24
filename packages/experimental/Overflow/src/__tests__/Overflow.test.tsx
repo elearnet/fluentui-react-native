@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { ButtonV1 } from '@fluentui-react-native/button';
-import { Menu, MenuPopover, MenuTrigger, MenuItem } from '@fluentui-react-native/menu';
+import { ButtonV1 } from '@elui-react-native/button';
+import { Menu, MenuPopover, MenuTrigger, MenuItem } from '@elui-react-native/menu';
 import * as renderer from 'react-test-renderer';
 
 import { Overflow, OverflowItem, useOverflowMenu } from '../';

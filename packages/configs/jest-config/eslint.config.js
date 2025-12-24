@@ -1,2 +1,2 @@
-import baseConfig from '@fluentui-react-native/eslint-config-rules';
+import baseConfig from '@elui-react-native/eslint-config-rules';
 export default baseConfig;

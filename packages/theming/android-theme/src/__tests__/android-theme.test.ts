@@ -1,4 +1,4 @@
-import type { ThemeOptions } from '@fluentui-react-native/theme-types';
+import type { ThemeOptions } from '@elui-react-native/theme-types';
 
 import { getAndroidTheme } from '../androidTheme';
 import { createAndroidTheme } from '../createAndroidTheme';

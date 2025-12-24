@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { ButtonV1 as Button, Text } from '@fluentui/react-native';
+import { ButtonV1 as Button, Text } from '@elui/react-native';
 import {
   BUTTON_TEST_COMPONENT,
   BUTTON_ON_PRESS,
@@ -13,8 +13,8 @@ import {
   BUTTON_PRESS_TEST_COMPONENT_LABEL,
   BUTTON_FOCUSABLE_TEST_COMPONENT,
   BUTTON_FOCUSABLE_TEST_COMPONENT_LABEL,
-} from '@fluentui-react-native/e2e-testing';
-import { Stack } from '@fluentui-react-native/stack';
+} from '@elui-react-native/e2e-testing';
+import { Stack } from '@elui-react-native/stack';
 import type { IKeyboardEvent } from '@office-iss/react-native-win32';
 
 import { stackStyle } from '../Common/styles';

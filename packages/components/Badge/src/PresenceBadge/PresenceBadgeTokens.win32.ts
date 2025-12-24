@@ -1,6 +1,6 @@
-import type { TokenSettings, Theme } from '@fluentui-react-native/framework';
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
-import { isHighContrast } from '@fluentui-react-native/theming-utils';
+import type { TokenSettings, Theme } from '@elui-react-native/framework';
+import { globalTokens } from '@elui-react-native/theme-tokens';
+import { isHighContrast } from '@elui-react-native/theming-utils';
 
 import type { PresenceBadgeTokens } from './PresenceBadge.types';
 

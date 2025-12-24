@@ -3,8 +3,8 @@
 import type { ViewProps, TextProps, ColorValue } from 'react-native';
 import { View, Text } from 'react-native';
 
-import { withSlots } from '@fluentui-react-native/framework-base';
-import type { ThemeHelper } from '@fluentui-react-native/use-styling';
+import { withSlots } from '@elui-react-native/framework-base';
+import type { ThemeHelper } from '@elui-react-native/use-styling';
 import * as renderer from 'react-test-renderer';
 
 import type { UseStyledSlots } from './composeFactory';

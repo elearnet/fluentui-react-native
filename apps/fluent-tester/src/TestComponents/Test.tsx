@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Switch, View } from 'react-native';
 
-import { Link, Separator, Text, ToggleButton } from '@fluentui/react-native';
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
-import { E2E_MODE_SWITCH, E2E_TEST_SECTION } from '@fluentui-react-native/e2e-testing';
-import type { SvgIconProps } from '@fluentui-react-native/icon';
-import { Stack } from '@fluentui-react-native/stack';
-import { useTheme } from '@fluentui-react-native/theme-types';
+import { Link, Separator, Text, ToggleButton } from '@elui/react-native';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+import { E2E_MODE_SWITCH, E2E_TEST_SECTION } from '@elui-react-native/e2e-testing';
+import type { SvgIconProps } from '@elui-react-native/icon';
+import { Stack } from '@elui-react-native/stack';
+import { useTheme } from '@elui-react-native/theme-types';
 import type { SvgProps } from 'react-native-svg';
 import Svg, { G, Path } from 'react-native-svg';
 

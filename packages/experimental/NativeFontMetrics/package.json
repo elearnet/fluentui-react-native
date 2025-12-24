@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/experimental-native-font-metrics",
+  "name": "@elui-react-native/experimental-native-font-metrics",
   "version": "0.6.5",
   "description": "A temporary partial wrapper for UIFontMetrics.",
   "license": "MIT",
@@ -38,9 +38,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
     "@react-native-community/cli-platform-ios": "^20.0.0",
@@ -58,7 +58,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

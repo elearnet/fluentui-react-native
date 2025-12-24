@@ -1,5 +1,5 @@
-import type { TokenSettings, Theme } from '@fluentui-react-native/framework';
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
+import type { TokenSettings, Theme } from '@elui-react-native/framework';
+import { globalTokens } from '@elui-react-native/theme-tokens';
 
 import type { PresenceBadgeTokens } from './PresenceBadge.types';
 

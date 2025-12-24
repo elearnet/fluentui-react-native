@@ -1,12 +1,12 @@
 import type * as React from 'react';
 import type { PressableProps, ViewProps, ColorValue } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { IconProps, IconSourcesType } from '@fluentui-react-native/icon';
-import type { IFocusable, IPressableState } from '@fluentui-react-native/interactive-hooks';
-import type { IPressableProps } from '@fluentui-react-native/pressable';
-import type { ITextProps } from '@fluentui-react-native/text';
-import type { FontTokens, IForegroundColorTokens, IBackgroundColorTokens, IBorderTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { IconProps, IconSourcesType } from '@elui-react-native/icon';
+import type { IFocusable, IPressableState } from '@elui-react-native/interactive-hooks';
+import type { IPressableProps } from '@elui-react-native/pressable';
+import type { ITextProps } from '@elui-react-native/text';
+import type { FontTokens, IForegroundColorTokens, IBackgroundColorTokens, IBorderTokens } from '@elui-react-native/tokens';
 import type { IRenderData } from '@uifabricshared/foundation-composable';
 
 /**

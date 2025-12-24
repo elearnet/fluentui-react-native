@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { View, Text, Switch, TextInput } from 'react-native';
 
-import { Persona } from '@fluentui/react-native';
-import type { Theme } from '@fluentui-react-native/theme-types';
-import { useTheme } from '@fluentui-react-native/theme-types';
-import { themedStyleSheet } from '@fluentui-react-native/themed-stylesheet';
+import { Persona } from '@elui/react-native';
+import type { Theme } from '@elui-react-native/theme-types';
+import { useTheme } from '@elui-react-native/theme-types';
+import { themedStyleSheet } from '@elui-react-native/themed-stylesheet';
 
 import { michaelImageUrl } from './styles';
 import { Slider } from '../Common/Slider';

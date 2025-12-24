@@ -1,8 +1,8 @@
 import { Platform } from 'react-native';
 
-import type { Theme, UseStylingOptions } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
-import { borderStyles, fontStyles, layoutStyles } from '@fluentui-react-native/tokens';
+import type { Theme, UseStylingOptions } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
+import { borderStyles, fontStyles, layoutStyles } from '@elui-react-native/tokens';
 
 import type { MenuItemRadioProps, MenuItemRadioSlotProps, MenuItemRadioTokens } from './MenuItemRadio.types';
 import { menuItemRadioName } from './MenuItemRadio.types';

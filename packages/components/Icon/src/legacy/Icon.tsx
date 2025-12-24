@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Image, Platform, View } from 'react-native';
 import type { ImageStyle, TextStyle } from 'react-native';
 
-import { mergeStyles, useFluentTheme } from '@fluentui-react-native/framework';
-import { stagedComponent, mergeProps, getMemoCache, getTypedMemoCache } from '@fluentui-react-native/framework';
-import { Text } from '@fluentui-react-native/text';
+import { mergeStyles, useFluentTheme } from '@elui-react-native/framework';
+import { stagedComponent, mergeProps, getMemoCache, getTypedMemoCache } from '@elui-react-native/framework';
+import { Text } from '@elui-react-native/text';
 import type { SvgProps } from 'react-native-svg';
 import { SvgUri } from 'react-native-svg';
 

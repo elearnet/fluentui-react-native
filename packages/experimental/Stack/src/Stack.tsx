@@ -4,9 +4,9 @@ import * as React from 'react';
 import { View } from 'react-native';
 import type { ViewProps } from 'react-native';
 
-import { filterViewProps } from '@fluentui-react-native/adapters';
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, withSlots, mergeProps, getTypedMemoCache } from '@fluentui-react-native/framework';
+import { filterViewProps } from '@elui-react-native/adapters';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, withSlots, mergeProps, getTypedMemoCache } from '@elui-react-native/framework';
 
 import { stylingSettings } from './Stack.styling';
 import { stackName } from './Stack.types';

@@ -1,7 +1,7 @@
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { Theme } from '@fluentui-react-native/framework';
-import type { IPersonaCoinTokens } from '@fluentui-react-native/persona-coin';
-import { buildRootStyles as buildPersonaCoinRootStyle } from '@fluentui-react-native/persona-coin';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { Theme } from '@elui-react-native/framework';
+import type { IPersonaCoinTokens } from '@elui-react-native/persona-coin';
+import { buildRootStyles as buildPersonaCoinRootStyle } from '@elui-react-native/persona-coin';
 import { styleFunction } from '@uifabricshared/foundation-tokens';
 
 import type { IPersonaTokens } from './Persona.types';

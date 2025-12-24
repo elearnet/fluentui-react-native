@@ -1,4 +1,4 @@
-import { isHighContrast, setIsHighContrast as setIsHighContrastCore } from '@fluentui-react-native/theming-utils';
+import { isHighContrast, setIsHighContrast as setIsHighContrastCore } from '@elui-react-native/theming-utils';
 
 export function setIsHighContrast(newIsHighContrast: boolean) {
   setIsHighContrastCore(newIsHighContrast);

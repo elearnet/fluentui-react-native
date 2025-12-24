@@ -2,10 +2,10 @@
 /** @jsx withSlots */
 import { Pressable, ScrollView, TextInput, View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose } from '@fluentui-react-native/framework';
-import { Icon } from '@fluentui-react-native/icon';
-import { Text } from '@fluentui-react-native/text';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose } from '@elui-react-native/framework';
+import { Icon } from '@elui-react-native/icon';
+import { Text } from '@elui-react-native/text';
 
 import { stylingSettings } from './Input.styling';
 import type { InputType, InputProps } from './Input.types';

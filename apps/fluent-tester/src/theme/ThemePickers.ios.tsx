@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
-import type { Theme } from '@fluentui-react-native/framework';
-import { useTheme } from '@fluentui-react-native/framework';
-import { themedStyleSheet } from '@fluentui-react-native/themed-stylesheet';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+import type { Theme } from '@elui-react-native/framework';
+import { useTheme } from '@elui-react-native/framework';
+import { themedStyleSheet } from '@elui-react-native/themed-stylesheet';
 import { MenuView } from '@react-native-menu/menu';
 import type { MenuAction } from '@react-native-menu/menu';
 

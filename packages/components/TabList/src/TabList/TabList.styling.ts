@@ -1,5 +1,5 @@
-import type { Theme, UseStylingOptions } from '@fluentui-react-native/framework';
-import { buildProps, layoutStyles } from '@fluentui-react-native/framework';
+import type { Theme, UseStylingOptions } from '@elui-react-native/framework';
+import { buildProps, layoutStyles } from '@elui-react-native/framework';
 
 import { tabListName } from './TabList.types';
 import type { TabListTokens, TabListSlotProps, TabListProps } from './TabList.types';

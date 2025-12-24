@@ -7,7 +7,7 @@ import {
   useOnPressWithFocus,
   useViewCommandFocus,
   getAccessibilityState,
-} from '@fluentui-react-native/interactive-hooks';
+} from '@elui-react-native/interactive-hooks';
 
 import type { LinkProps, LinkInfo } from './Link.types';
 

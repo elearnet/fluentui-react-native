@@ -12,10 +12,10 @@ export const transform: Transform = (fileInfo: FileInfo, api: API, options: Opti
 
   const root = j(fileInfo.source);
   root
-    // Find all imports that import from '@fluentui/react-native' or '@fluentui-react-native/button'
+    // Find all imports that import from '@elui/react-native' or '@elui-react-native/button'
     .find(
       j.ImportDeclaration,
-      (path: ImportDeclaration) => path.source.value === '@fluentui/react-native' || path.source.value === '@fluentui-react-native/button',
+      (path: ImportDeclaration) => path.source.value === '@elui/react-native' || path.source.value === '@elui-react-native/button',
     )
     .forEach((path: ASTPath<ImportDeclaration>) => {
       if (!path.value.specifiers) {

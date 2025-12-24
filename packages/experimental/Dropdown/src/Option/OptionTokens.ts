@@ -1,5 +1,5 @@
-import type { Theme, TokenSettings } from '@fluentui-react-native/framework';
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
+import type { Theme, TokenSettings } from '@elui-react-native/framework';
+import { globalTokens } from '@elui-react-native/theme-tokens';
 
 import type { OptionTokens } from './Option.types';
 

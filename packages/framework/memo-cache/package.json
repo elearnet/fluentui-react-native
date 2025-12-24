@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/memo-cache",
+  "name": "@elui-react-native/memo-cache",
   "version": "1.3.12",
   "description": "Layered memoization style cache helper",
   "repository": {
@@ -33,12 +33,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@fluentui-react-native/framework-base": "workspace:*"
+    "@elui-react-native/framework-base": "workspace:*"
   },
   "devDependencies": {
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@types/jest": "^29.0.0",
     "@types/node": "^22.0.0",
     "tslib": "^2.3.1"

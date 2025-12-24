@@ -1,4 +1,4 @@
-import type { GetMemoValue } from '@fluentui-react-native/framework-base';
+import type { GetMemoValue } from '@elui-react-native/framework-base';
 import type { IComponentSettings, IOverrideLookup } from '@uifabricshared/foundation-settings';
 import { mergeSettings, getActiveOverrides, resolveSettingsOverrides } from '@uifabricshared/foundation-settings';
 

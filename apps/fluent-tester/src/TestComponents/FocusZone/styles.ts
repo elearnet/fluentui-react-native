@@ -1,8 +1,8 @@
 import { Platform, StyleSheet, View } from 'react-native';
 
-import { Text } from '@fluentui/react-native';
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
-import { Icon } from '@fluentui-react-native/icon';
+import { Text } from '@elui/react-native';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+import { Icon } from '@elui-react-native/icon';
 
 export const focusZoneTestStyles = StyleSheet.create({
   focusZoneViewStyle: {

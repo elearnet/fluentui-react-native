@@ -2,8 +2,8 @@
 /** @jsx withSlots */
 import type { CSSProperties } from 'react';
 
-import { mergeProps } from '@fluentui-react-native/framework-base';
-import { withSlots, stagedComponent } from '@fluentui-react-native/framework-base';
+import { mergeProps } from '@elui-react-native/framework-base';
+import { withSlots, stagedComponent } from '@elui-react-native/framework-base';
 import * as renderer from 'react-test-renderer';
 
 import { buildUseSlots } from './buildUseSlots';

@@ -1,10 +1,10 @@
 import type React from 'react';
 import type { ScrollViewProps, View } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { FocusZoneProps } from '@fluentui-react-native/focus-zone';
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
-import type { IBackgroundColorTokens, LayoutTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { FocusZoneProps } from '@elui-react-native/focus-zone';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
+import type { IBackgroundColorTokens, LayoutTokens } from '@elui-react-native/tokens';
 
 export const menuListName = 'MenuList';
 

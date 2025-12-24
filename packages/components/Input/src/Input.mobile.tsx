@@ -3,12 +3,12 @@
 import { Fragment } from 'react';
 import { Pressable, ScrollView, TextInput, View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots } from '@fluentui-react-native/framework';
-import { createIconProps } from '@fluentui-react-native/icon';
-import { Icon } from '@fluentui-react-native/icon';
-import type { FocusState } from '@fluentui-react-native/interactive-hooks';
-import { Text } from '@fluentui-react-native/text';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots } from '@elui-react-native/framework';
+import { createIconProps } from '@elui-react-native/icon';
+import { Icon } from '@elui-react-native/icon';
+import type { FocusState } from '@elui-react-native/interactive-hooks';
+import { Text } from '@elui-react-native/text';
 
 import { stylingSettings } from './Input.styling';
 import type { InputType, InputProps } from './Input.types';

@@ -1,4 +1,4 @@
-import type { GetMemoValue, StyleProp } from '@fluentui-react-native/framework-base';
+import type { GetMemoValue, StyleProp } from '@elui-react-native/framework-base';
 import type { ISlotProps, IComponentSettings } from '@uifabricshared/foundation-settings';
 import { mergeSettings } from '@uifabricshared/foundation-settings';
 

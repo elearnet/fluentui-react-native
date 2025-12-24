@@ -1,10 +1,10 @@
 import type * as React from 'react';
 import type { ColorValue, ImageProps, ViewStyle } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { IconPropsV1 as IconProps } from '@fluentui-react-native/icon';
-import type { PressablePropsExtended, PressableState } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
+import type { PressablePropsExtended, PressableState } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
 import type { XmlProps } from 'react-native-svg';
 
 import type { MenuItemProps, MenuItemTokens } from '../MenuItem/MenuItem.types';

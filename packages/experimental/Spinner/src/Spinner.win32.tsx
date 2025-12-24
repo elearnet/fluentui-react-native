@@ -9,9 +9,9 @@
 import type { ColorValue } from 'react-native';
 import { View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots } from '@fluentui-react-native/framework';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots } from '@elui-react-native/framework';
+import { TextV1 as Text } from '@elui-react-native/text';
 import { Path, Svg } from 'react-native-svg';
 import type { SvgProps } from 'react-native-svg';
 

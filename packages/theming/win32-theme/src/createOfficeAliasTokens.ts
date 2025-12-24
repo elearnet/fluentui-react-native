@@ -1,6 +1,6 @@
-import { memoize } from '@fluentui-react-native/framework-base';
-import type { AliasColorTokens, ThemeShadowDefinition } from '@fluentui-react-native/theme-types';
-import { mapPipelineToShadow, mapPipelineToTheme } from '@fluentui-react-native/theming-utils';
+import { memoize } from '@elui-react-native/framework-base';
+import type { AliasColorTokens, ThemeShadowDefinition } from '@elui-react-native/theme-types';
+import { mapPipelineToShadow, mapPipelineToTheme } from '@elui-react-native/theming-utils';
 
 import { getOfficeAliasTokens, getOfficeShadowTokens } from './getOfficeTokens';
 

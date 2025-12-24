@@ -10,8 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@fluentui-react-native/button": "workspace:*",
-    "@fluentui-react-native/tablist": "workspace:*",
+    "@elui-react-native/button": "workspace:*",
+    "@elui-react-native/tablist": "workspace:*",
     "elui": "workspace:*",
     "react": "19.0.3",
     "react-native": "^0.79.0",

@@ -1,4 +1,4 @@
-import type { FontSize, FontSizes, FontWeightValue, Typography, Variants } from '@fluentui-react-native/theme-types';
+import type { FontSize, FontSizes, FontWeightValue, Typography, Variants } from '@elui-react-native/theme-types';
 
 import { createFontAliasTokens } from './createFontAliasTokens';
 

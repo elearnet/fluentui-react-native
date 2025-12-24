@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx withSlots */
-import type { UseTokens } from '@fluentui-react-native/framework';
-import { compressible, buildUseTokens } from '@fluentui-react-native/framework';
+import type { UseTokens } from '@elui-react-native/framework';
+import { compressible, buildUseTokens } from '@elui-react-native/framework';
 
 import type { PopoverProps, PopoverTokens } from './Popover.types';
 import { popoverName } from './Popover.types';

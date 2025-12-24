@@ -1,6 +1,6 @@
-import type { Theme } from '@fluentui-react-native/framework';
-import { isHighContrast } from '@fluentui-react-native/theming-utils';
-import type { TokenSettings } from '@fluentui-react-native/use-styling';
+import type { Theme } from '@elui-react-native/framework';
+import { isHighContrast } from '@elui-react-native/theming-utils';
+import type { TokenSettings } from '@elui-react-native/use-styling';
 
 import type { SwitchTokens } from './Switch.types';
 

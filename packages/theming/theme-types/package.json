@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/theme-types",
+  "name": "@elui-react-native/theme-types",
   "version": "0.43.0",
   "description": "Typing only package for fluentui-react-native theme types",
   "repository": {
@@ -36,9 +36,9 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
     "@react-native-community/cli-platform-ios": "^20.0.0",
@@ -56,7 +56,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

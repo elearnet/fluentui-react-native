@@ -2,8 +2,8 @@
 /** @jsx withSlots */
 import { Image, View, Text } from 'react-native';
 
-import { filterViewProps, filterImageProps } from '@fluentui-react-native/adapters';
-import { foregroundColorTokens } from '@fluentui-react-native/tokens';
+import { filterViewProps, filterImageProps } from '@elui-react-native/adapters';
+import { foregroundColorTokens } from '@elui-react-native/tokens';
 import type { ISlots, IRenderData } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import { compose } from '@uifabricshared/foundation-compose';

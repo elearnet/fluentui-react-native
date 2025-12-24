@@ -6,7 +6,7 @@ import { Notification } from '../Notification';
 
 describe('Notification component tests', () => {
   beforeAll(() => {
-    jest.mock('@fluentui-react-native/experimental-appearance-additions', () => ({
+    jest.mock('@elui-react-native/experimental-appearance-additions', () => ({
       useHorizontalSizeClass: 'regular',
     }));
   });

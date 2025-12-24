@@ -1,7 +1,7 @@
 import type { ViewStyle, ViewProps } from 'react-native';
 
-import type { UseStylingOptions } from '@fluentui-react-native/framework';
-import { getTypedMemoCache } from '@fluentui-react-native/framework';
+import type { UseStylingOptions } from '@elui-react-native/framework';
+import { getTypedMemoCache } from '@elui-react-native/framework';
 
 import { stackItemName } from './StackItem.types';
 import type { StackItemTokens, StackItemProps, StackItemSlotProps } from './StackItem.types';

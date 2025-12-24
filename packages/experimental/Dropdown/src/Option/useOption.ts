@@ -1,4 +1,4 @@
-import { useAsPressable } from '@fluentui-react-native/interactive-hooks';
+import { useAsPressable } from '@elui-react-native/interactive-hooks';
 
 import type { OptionProps, OptionState } from './Option.types';
 

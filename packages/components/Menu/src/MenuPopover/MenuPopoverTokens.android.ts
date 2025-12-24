@@ -1,8 +1,8 @@
 import { Dimensions } from 'react-native';
 
-import type { Theme } from '@fluentui-react-native/framework';
-import { buildUseTokens } from '@fluentui-react-native/framework';
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
+import type { Theme } from '@elui-react-native/framework';
+import { buildUseTokens } from '@elui-react-native/framework';
+import { globalTokens } from '@elui-react-native/theme-tokens';
 
 import type { MenuPopoverTokens } from './MenuPopover.types';
 import { menuPopoverName } from './MenuPopover.types';

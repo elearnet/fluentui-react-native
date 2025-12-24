@@ -1,4 +1,4 @@
-import type { OfficePalette } from '@fluentui-react-native/theme-types';
+import type { OfficePalette } from '@elui-react-native/theme-types';
 
 import type { OfficeThemingModule } from './officeThemingModule';
 

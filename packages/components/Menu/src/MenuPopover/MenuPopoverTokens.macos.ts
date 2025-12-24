@@ -1,6 +1,6 @@
-import type { Theme } from '@fluentui-react-native/framework';
-import { buildUseTokens } from '@fluentui-react-native/framework';
-import { getCurrentAppearance, isHighContrast } from '@fluentui-react-native/theming-utils';
+import type { Theme } from '@elui-react-native/framework';
+import { buildUseTokens } from '@elui-react-native/framework';
+import { getCurrentAppearance, isHighContrast } from '@elui-react-native/theming-utils';
 
 import type { MenuPopoverTokens } from './MenuPopover.types';
 import { menuPopoverName } from './MenuPopover.types';

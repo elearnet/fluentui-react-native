@@ -1,11 +1,11 @@
-import type { MergeOptions } from '@fluentui-react-native/framework-base';
-import { immutableMergeCore } from '@fluentui-react-native/framework-base';
-import type { ComposableFunction } from '@fluentui-react-native/framework-base';
-import { stagedComponent } from '@fluentui-react-native/framework-base';
-import type { UseSlotOptions, Slots } from '@fluentui-react-native/use-slots';
-import { buildUseSlots } from '@fluentui-react-native/use-slots';
-import { buildUseStyling } from '@fluentui-react-native/use-styling';
-import type { UseStylingOptions, TokenSettings, ThemeHelper, HasLayer } from '@fluentui-react-native/use-styling';
+import type { MergeOptions } from '@elui-react-native/framework-base';
+import { immutableMergeCore } from '@elui-react-native/framework-base';
+import type { ComposableFunction } from '@elui-react-native/framework-base';
+import { stagedComponent } from '@elui-react-native/framework-base';
+import type { UseSlotOptions, Slots } from '@elui-react-native/use-slots';
+import { buildUseSlots } from '@elui-react-native/use-slots';
+import { buildUseStyling } from '@elui-react-native/use-styling';
+import type { UseStylingOptions, TokenSettings, ThemeHelper, HasLayer } from '@elui-react-native/use-styling';
 
 export type UseStyledSlots<TProps, TSlotProps> = (props: TProps, lookup?: HasLayer) => Slots<TSlotProps>;
 

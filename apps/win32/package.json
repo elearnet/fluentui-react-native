@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/tester-win32",
+  "name": "@elui-react-native/tester-win32",
   "version": "0.38.68",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
@@ -34,7 +34,7 @@
     "directory": "apps/win32"
   },
   "dependencies": {
-    "@fluentui-react-native/tester": "workspace:*",
+    "@elui-react-native/tester": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "react": " 19.0.3",
     "react-native": "^0.79.0",
@@ -43,8 +43,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.74.0",
     "@office-iss/rex-win32": "0.73.11-devmain.16.0.17615.15030",
     "@react-native-community/cli": "^20.0.0",
@@ -99,7 +99,7 @@
     ],
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": [

@@ -2,7 +2,7 @@ import { createReporter } from '@rnx-kit/reporter';
 
 const reporter = createReporter({
   name: 'fluentui-scripts reporter',
-  packageName: '@fluentui-react-native/scripts',
+  packageName: '@elui-react-native/scripts',
 });
 
 /**

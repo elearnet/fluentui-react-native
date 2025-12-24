@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Platform } from 'react-native';
 import type { View, AccessibilityState, LayoutRectangle } from 'react-native';
 
-import { memoize, mergeStyles } from '@fluentui-react-native/framework';
-import type { LayoutEvent } from '@fluentui-react-native/interactive-hooks';
-import { useSelectedKey } from '@fluentui-react-native/interactive-hooks';
+import { memoize, mergeStyles } from '@elui-react-native/framework';
+import type { LayoutEvent } from '@elui-react-native/interactive-hooks';
+import { useSelectedKey } from '@elui-react-native/interactive-hooks';
 import type { IKeyboardEvent } from '@office-iss/react-native-win32';
 
 import type { TabListInfo, TabListProps } from './TabList.types';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Drawer_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { Drawer_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { DrawerDefault } from './DrawerDefault';
 import { E2EDrawerTest } from './E2EDrawerTest';

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Text, View, Switch } from 'react-native';
 
-import { Text as FURNText, ContextualMenu, ContextualMenuItem, Submenu, SubmenuItem, Separator, Checkbox } from '@fluentui/react-native';
-import { CONTEXTUALMENU_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import { MenuButton } from '@fluentui-react-native/experimental-menu-button';
+import { Text as FURNText, ContextualMenu, ContextualMenuItem, Submenu, SubmenuItem, Separator, Checkbox } from '@elui/react-native';
+import { CONTEXTUALMENU_TESTPAGE } from '@elui-react-native/e2e-testing';
+import { MenuButton } from '@elui-react-native/experimental-menu-button';
 
 import { E2EContextualMenuTest } from './E2EContextualMenuTest';
 import { svgProps, fontProps, testImage } from '../Common/iconExamples';

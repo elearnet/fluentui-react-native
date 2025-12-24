@@ -1,8 +1,8 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
 
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
-import { isMouseEvent } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
+import { isMouseEvent } from '@elui-react-native/interactive-hooks';
 
 import type { MenuProps, MenuState } from './Menu.types';
 import { useMenuContext } from '../context/menuContext';

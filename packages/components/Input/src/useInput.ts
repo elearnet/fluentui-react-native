@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { createIconProps } from '@fluentui-react-native/icon';
-import type { IconProps } from '@fluentui-react-native/icon';
-import { usePressableState, useControllableValue } from '@fluentui-react-native/interactive-hooks';
-import type { ValueChangeCallback } from '@fluentui-react-native/interactive-hooks';
+import { createIconProps } from '@elui-react-native/icon';
+import type { IconProps } from '@elui-react-native/icon';
+import { usePressableState, useControllableValue } from '@elui-react-native/interactive-hooks';
+import type { ValueChangeCallback } from '@elui-react-native/interactive-hooks';
 
 import { DismissSvg } from './assets/dismissSvg';
 import type { InputProps, InputInfo } from './Input.types';

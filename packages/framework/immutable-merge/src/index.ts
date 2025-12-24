@@ -1,4 +1,4 @@
-export { immutableMerge, immutableMergeCore, processImmutable, filterToObjects } from '@fluentui-react-native/framework-base';
+export { immutableMerge, immutableMergeCore, processImmutable, filterToObjects } from '@elui-react-native/framework-base';
 export type {
   BuiltinRecursionHandlers,
   CustomRecursionHandler,
@@ -6,4 +6,4 @@ export type {
   ObjectBase,
   RecursionHandler,
   RecursionOption,
-} from '@fluentui-react-native/framework-base';
+} from '@elui-react-native/framework-base';

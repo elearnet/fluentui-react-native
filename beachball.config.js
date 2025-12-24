@@ -15,7 +15,7 @@ module.exports = {
       }
     },
     postbump: (packagePath, name) => {
-      if (name === '@fluentui-react-native/dependency-profiles') {
+      if (name === '@elui-react-native/dependency-profiles') {
         console.log(`Updating ${name} to use latest published versions`);
         execSync(`yarn update-profile`, { cwd: packagePath });
         // This logic is run after all bumps have happened,
@@ -28,7 +28,7 @@ module.exports = {
   changelog: {
     groups: [
       {
-        masterPackageName: '@fluentui/react-native',
+        masterPackageName: '@elui/react-native',
         include: getPackagesToInclude(),
         changelogPath: path.resolve('packages/libraries/core/'),
       },

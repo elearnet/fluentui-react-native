@@ -1,14 +1,14 @@
 import * as React from 'react';
 import type { AccessibilityActionEvent, AccessibilityState } from 'react-native';
 
-import { memoize } from '@fluentui-react-native/framework';
+import { memoize } from '@elui-react-native/framework';
 import {
   usePressableState,
   useKeyProps,
   useOnPressWithFocus,
   useViewCommandFocus,
   useAsToggleWithEvent,
-} from '@fluentui-react-native/interactive-hooks';
+} from '@elui-react-native/interactive-hooks';
 
 import type { CheckboxProps, CheckboxInfo, CheckboxState } from './Checkbox.types';
 

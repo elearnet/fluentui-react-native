@@ -1,9 +1,9 @@
 import type { TextStyle } from 'react-native';
 
-import type { ITextProps } from '@fluentui-react-native/adapters';
-import type { Theme } from '@fluentui-react-native/framework';
-import type { PersonaSize } from '@fluentui-react-native/persona-coin';
-import type { FontTokens } from '@fluentui-react-native/tokens';
+import type { ITextProps } from '@elui-react-native/adapters';
+import type { Theme } from '@elui-react-native/framework';
+import type { PersonaSize } from '@elui-react-native/persona-coin';
+import type { FontTokens } from '@elui-react-native/tokens';
 import { styleFunction } from '@uifabricshared/foundation-tokens';
 
 import { getTextFont, getSecondaryFont, getTertiaryFont, getOptionalFont } from './Persona.helpers';

@@ -8,7 +8,7 @@ import type {
   ViewProps,
 } from 'react-native';
 
-import type { InteractionEvent, PressableFocusProps } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent, PressableFocusProps } from '@elui-react-native/interactive-hooks';
 
 export const DrawerName = 'Drawer';
 

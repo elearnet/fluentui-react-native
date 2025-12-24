@@ -1,7 +1,7 @@
-import type { Theme } from '@fluentui-react-native/theme-types';
-import type { StagedRender } from '@fluentui-react-native/framework-base';
-import { stagedComponent } from '@fluentui-react-native/framework-base';
-import type { CustomizableComponent } from '@fluentui-react-native/use-tokens';
+import type { Theme } from '@elui-react-native/theme-types';
+import type { StagedRender } from '@elui-react-native/framework-base';
+import { stagedComponent } from '@elui-react-native/framework-base';
+import type { CustomizableComponent } from '@elui-react-native/use-tokens';
 
 import type { TokenSettings } from './useStyling';
 import type { UseTokens } from './useTokens';

@@ -3,11 +3,11 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import type { ButtonProps } from '@fluentui-react-native/button';
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
-import type { UseTokens } from '@fluentui-react-native/framework';
-import { buildUseTokens, compressible, useSlot, withSlots } from '@fluentui-react-native/framework';
-import type { IFocusable, PressablePropsExtended } from '@fluentui-react-native/interactive-hooks';
+import type { ButtonProps } from '@elui-react-native/button';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+import type { UseTokens } from '@elui-react-native/framework';
+import { buildUseTokens, compressible, useSlot, withSlots } from '@elui-react-native/framework';
+import type { IFocusable, PressablePropsExtended } from '@elui-react-native/interactive-hooks';
 import type { SvgProps } from 'react-native-svg';
 import { Path, Svg } from 'react-native-svg';
 

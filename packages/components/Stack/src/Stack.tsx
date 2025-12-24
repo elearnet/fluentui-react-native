@@ -4,8 +4,8 @@ import * as React from 'react';
 import { View } from 'react-native';
 import type { StyleProp, ViewStyle } from 'react-native';
 
-import { filterViewProps } from '@fluentui-react-native/adapters';
-import { backgroundColorTokens, borderTokens } from '@fluentui-react-native/tokens';
+import { filterViewProps } from '@elui-react-native/adapters';
+import { backgroundColorTokens, borderTokens } from '@elui-react-native/tokens';
 import type { ISlots } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';

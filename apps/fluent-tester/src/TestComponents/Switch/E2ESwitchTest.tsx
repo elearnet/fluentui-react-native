@@ -7,10 +7,10 @@ import {
   SWITCH_NO_A11Y_LABEL_COMPONENT,
   SWITCH_TEST_COMPONENT_LABEL,
   SWITCH_ON_PRESS,
-} from '@fluentui-react-native/e2e-testing';
-import { Stack } from '@fluentui-react-native/stack';
-import { Switch } from '@fluentui-react-native/switch';
-import { TextV1 } from '@fluentui-react-native/text';
+} from '@elui-react-native/e2e-testing';
+import { Stack } from '@elui-react-native/stack';
+import { Switch } from '@elui-react-native/switch';
+import { TextV1 } from '@elui-react-native/text';
 
 import { stackStyle, commonTestStyles } from '../Common/styles';
 import { testProps } from '../Common/TestProps';

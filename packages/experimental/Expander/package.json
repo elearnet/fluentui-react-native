@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/experimental-expander",
+  "name": "@elui-react-native/experimental-expander",
   "version": "0.8.18",
   "description": "A cross-platform Native Expander component using the Fluent Design System. Currently only implemented on windows",
   "license": "MIT",
@@ -35,13 +35,13 @@
     "directory": "packages/experimental/Expander"
   },
   "dependencies": {
-    "@fluentui-react-native/framework": "workspace:*"
+    "@elui-react-native/framework": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -65,7 +65,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

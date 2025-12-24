@@ -57,10 +57,10 @@ const devToolVersions = {
 
 /** @type {Record<string, string>} */
 const workspaceToolVersions = {
-  '@fluentui-react-native/babel-config': 'workspace:*',
-  '@fluentui-react-native/eslint-config-rules': 'workspace:*',
-  '@fluentui-react-native/jest-config': 'workspace:*',
-  '@fluentui-react-native/scripts': 'workspace:*',
+  '@elui-react-native/babel-config': 'workspace:*',
+  '@elui-react-native/eslint-config-rules': 'workspace:*',
+  '@elui-react-native/jest-config': 'workspace:*',
+  '@elui-react-native/scripts': 'workspace:*',
 };
 
 /**

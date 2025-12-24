@@ -1,3 +1,3 @@
-const { preset } = require('@fluentui-react-native/scripts');
+const { preset } = require('@elui-react-native/scripts');
 
 preset();

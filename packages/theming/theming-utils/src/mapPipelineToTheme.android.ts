@@ -1,4 +1,4 @@
-import type { AliasColorTokens, Variants, VariantValue } from '@fluentui-react-native/theme-types';
+import type { AliasColorTokens, Variants, VariantValue } from '@elui-react-native/theme-types';
 
 // API that maps tokens coming from the android token pipeline to Theme color values.
 export function mapPipelineToTheme(pipelineOutput: any): AliasColorTokens {

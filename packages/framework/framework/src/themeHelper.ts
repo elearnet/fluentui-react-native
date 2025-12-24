@@ -1,5 +1,5 @@
-import type { Theme } from '@fluentui-react-native/theme-types';
-import type { ThemeHelper } from '@fluentui-react-native/use-styling';
+import type { Theme } from '@elui-react-native/theme-types';
+import type { ThemeHelper } from '@elui-react-native/use-styling';
 
 import { useFluentTheme } from './useFluentTheme';
 

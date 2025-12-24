@@ -2,11 +2,11 @@ import React, { useState, useCallback } from 'react';
 import type { FunctionComponent } from 'react';
 import { View, Text, Platform } from 'react-native';
 
-import { ToggleButton } from '@fluentui/react-native';
-import type { AvatarSize, AvatarColor, AvatarActive } from '@fluentui-react-native/avatar';
-import { AvatarSizes, AvatarColors, Avatar } from '@fluentui-react-native/avatar';
-import type { PresenceBadgeStatus } from '@fluentui-react-native/badge';
-import { PresenceBadgeStatuses } from '@fluentui-react-native/badge';
+import { ToggleButton } from '@elui/react-native';
+import type { AvatarSize, AvatarColor, AvatarActive } from '@elui-react-native/avatar';
+import { AvatarSizes, AvatarColors, Avatar } from '@elui-react-native/avatar';
+import type { PresenceBadgeStatus } from '@elui-react-native/badge';
+import { PresenceBadgeStatuses } from '@elui-react-native/badge';
 
 import { svgProps } from '../Common/iconExamples';
 import { StyledPicker } from '../Common/StyledPicker';

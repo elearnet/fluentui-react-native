@@ -1,4 +1,4 @@
-import type { GetMemoValue } from '@fluentui-react-native/framework-base';
+import type { GetMemoValue } from '@elui-react-native/framework-base';
 
 export interface ITokenPropInfo<TTokens> {
   /** token props, aggregated from settings and user props */

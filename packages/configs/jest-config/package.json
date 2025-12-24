@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/jest-config",
+  "name": "@elui-react-native/jest-config",
   "private": true,
   "version": "0.1.1",
   "description": "Jest configuration for UI Fabric React Native",
@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@types/node": "^22.0.0",
     "babel-jest": "^29.0.0",
     "jest": "^29.2.1",

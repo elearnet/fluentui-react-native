@@ -1,2 +1,2 @@
-const { configureJest } = require('@fluentui-react-native/jest-config');
+const { configureJest } = require('@elui-react-native/jest-config');
 module.exports = configureJest();

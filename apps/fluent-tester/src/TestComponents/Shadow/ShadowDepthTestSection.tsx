@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { Text } from '@fluentui/react-native';
-import { Shadow, getShadowTokenStyleSet } from '@fluentui-react-native/experimental-shadow';
-import { mergeStyles, useFluentTheme } from '@fluentui-react-native/framework';
-import type { ShadowToken, Theme } from '@fluentui-react-native/theme-types';
-import { useTheme } from '@fluentui-react-native/theme-types';
-import { themedStyleSheet } from '@fluentui-react-native/themed-stylesheet';
+import { Text } from '@elui/react-native';
+import { Shadow, getShadowTokenStyleSet } from '@elui-react-native/experimental-shadow';
+import { mergeStyles, useFluentTheme } from '@elui-react-native/framework';
+import type { ShadowToken, Theme } from '@elui-react-native/theme-types';
+import { useTheme } from '@elui-react-native/theme-types';
+import { themedStyleSheet } from '@elui-react-native/themed-stylesheet';
 
 import { shadowTestPageStyles } from './ShadowTestPageStyles';
 

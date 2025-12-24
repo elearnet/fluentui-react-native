@@ -3,8 +3,8 @@ import type {
   CxxException,
   PlatformDefaultsChangedCallback,
   PlatformDefaultsChangedArgs,
-} from '@fluentui-react-native/win32-theme';
-import { createPartialOfficeTheme } from '@fluentui-react-native/win32-theme';
+} from '@elui-react-native/win32-theme';
+import { createPartialOfficeTheme } from '@elui-react-native/win32-theme';
 import type { ITheme, OfficePalette } from '@uifabricshared/theming-ramp';
 import { resolvePartialTheme } from '@uifabricshared/theming-ramp';
 

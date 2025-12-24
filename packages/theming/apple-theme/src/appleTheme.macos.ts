@@ -1,5 +1,5 @@
-import { memoize } from '@fluentui-react-native/framework-base';
-import type { Spacing, Theme, AppearanceOptions } from '@fluentui-react-native/theme-types';
+import { memoize } from '@elui-react-native/framework-base';
+import type { Spacing, Theme, AppearanceOptions } from '@elui-react-native/theme-types';
 
 import { fallbackApplePalette } from './appleColors.macos';
 import { fallbackAppleShadows } from './appleShadows.macos';

@@ -2,8 +2,8 @@ import * as React from 'react';
 import type { View } from 'react-native';
 import type { AccessibilityState } from 'react-native';
 
-import { memoize } from '@fluentui-react-native/framework';
-import { useSelectedKey as useValue } from '@fluentui-react-native/interactive-hooks';
+import { memoize } from '@elui-react-native/framework';
+import { useSelectedKey as useValue } from '@elui-react-native/interactive-hooks';
 
 import type { RadioGroupInfo, RadioGroupProps, RadioGroupState } from './RadioGroup.types';
 

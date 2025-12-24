@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/scripts",
+  "name": "@elui-react-native/scripts",
   "version": "0.1.1",
   "private": true,
   "main": "./src/index.js",

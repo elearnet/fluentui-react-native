@@ -1,7 +1,7 @@
 import type { AnimatableNumericValue } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { ICalloutProps, ICalloutTokens } from '@fluentui-react-native/callout';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { ICalloutProps, ICalloutTokens } from '@elui-react-native/callout';
 
 export const menuPopoverName = 'MenuPopover';
 

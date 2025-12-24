@@ -3,11 +3,11 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { filterViewProps } from '@fluentui-react-native/adapters';
-import { Icon, createIconProps } from '@fluentui-react-native/icon';
-import { useAsPressable, useKeyProps, useViewCommandFocus, useOnPressWithFocus } from '@fluentui-react-native/interactive-hooks';
-import { Text } from '@fluentui-react-native/text';
-import { backgroundColorTokens, borderTokens, textTokens, foregroundColorTokens, getPaletteFromTheme } from '@fluentui-react-native/tokens';
+import { filterViewProps } from '@elui-react-native/adapters';
+import { Icon, createIconProps } from '@elui-react-native/icon';
+import { useAsPressable, useKeyProps, useViewCommandFocus, useOnPressWithFocus } from '@elui-react-native/interactive-hooks';
+import { Text } from '@elui-react-native/text';
+import { backgroundColorTokens, borderTokens, textTokens, foregroundColorTokens, getPaletteFromTheme } from '@elui-react-native/tokens';
 import type { ISlots } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';

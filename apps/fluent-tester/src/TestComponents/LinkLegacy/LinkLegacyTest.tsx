@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Alert } from 'react-native';
 
-import { Link } from '@fluentui/react-native';
-import { LINK_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import { Stack } from '@fluentui-react-native/stack';
+import { Link } from '@elui/react-native';
+import { LINK_TESTPAGE } from '@elui-react-native/e2e-testing';
+import { Stack } from '@elui-react-native/stack';
 
 import { E2ELinkLegacyTest } from './E2ELinkLegacyTest';
 import { stackStyle } from '../Common/styles';

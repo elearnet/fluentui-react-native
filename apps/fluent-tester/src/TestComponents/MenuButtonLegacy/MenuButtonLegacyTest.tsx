@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { MENU_BUTTON_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { MENU_BUTTON_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { CustomizedMenuButton } from './CustomizedMenuButtonTest';
 import { MenuButtonLegacyE2ETest } from './MenuButtonLegacyE2ETest';

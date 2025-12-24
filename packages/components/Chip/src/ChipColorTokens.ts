@@ -1,4 +1,4 @@
-import type { Theme, TokenSettings } from '@fluentui-react-native/framework';
+import type { Theme, TokenSettings } from '@elui-react-native/framework';
 
 import type { ChipTokens } from './Chip.types';
 

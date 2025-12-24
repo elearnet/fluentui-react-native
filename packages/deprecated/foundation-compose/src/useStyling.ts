@@ -4,11 +4,11 @@ import { ISlotProps, IComponentSettings, IOverrideLookup, IWithTokens } from '@u
 import { getThemedSettings } from '@uifabricshared/themed-settings';
 import { ITheme, getSettings, returnAsSlotProps } from '@uifabricshared/theming-ramp';
 import { IComponentTokens, processTokens, ITargetHasToken, buildComponentTokens } from '@uifabricshared/foundation-tokens';
-import { useTheme } from '@fluentui-react-native/theme-types';
-import { defaultFluentTheme } from '@fluentui-react-native/default-theme';
+import { useTheme } from '@elui-react-native/theme-types';
+import { defaultFluentTheme } from '@elui-react-native/default-theme';
 import { IWithComposable, AsObject, IComposableDefinition, INativeSlotType } from '@uifabricshared/foundation-composable';
 import { IComposeOptions, IStylingSettings, IDefineUseComposeStyling } from './compose.types';
-import { getMemoCache, GetMemoValue } from '@fluentui-react-native/framework-base';
+import { getMemoCache, GetMemoValue } from '@elui-react-native/framework-base';
 
 /* tslint:disable-next-line no-any */
 export function getOptionsFromObj<TComponent>(obj: any): TComponent | undefined {

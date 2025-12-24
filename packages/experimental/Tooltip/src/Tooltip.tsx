@@ -8,7 +8,7 @@
 import * as React from 'react';
 import { findNodeHandle } from 'react-native';
 
-import { mergeProps, stagedComponent } from '@fluentui-react-native/framework';
+import { mergeProps, stagedComponent } from '@elui-react-native/framework';
 
 import type { TooltipProps } from './Tooltip.types';
 import { tooltipName } from './Tooltip.types';

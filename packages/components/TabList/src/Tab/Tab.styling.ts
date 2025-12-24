@@ -1,12 +1,12 @@
 import React from 'react';
 import { Platform } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import { borderStyles, fontStyles } from '@fluentui-react-native/framework';
-import type { Theme } from '@fluentui-react-native/framework';
-import type { IconPropsV1 as IconProps } from '@fluentui-react-native/icon';
-import type { PressablePropsExtended } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
+import type { IViewProps } from '@elui-react-native/adapters';
+import { borderStyles, fontStyles } from '@elui-react-native/framework';
+import type { Theme } from '@elui-react-native/framework';
+import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
+import type { PressablePropsExtended } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
 
 import type { TabProps, TabSlotProps, TabTokens } from './Tab.types';
 import type { TabListState } from '../TabList/TabList.types';

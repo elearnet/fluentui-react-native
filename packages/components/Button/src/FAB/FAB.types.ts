@@ -1,5 +1,5 @@
-import type { ShadowProps } from '@fluentui-react-native/experimental-shadow';
-import type { IconSourcesType } from '@fluentui-react-native/icon';
+import type { ShadowProps } from '@elui-react-native/experimental-shadow';
+import type { IconSourcesType } from '@elui-react-native/icon';
 
 import type { ButtonSlotProps, ButtonCoreTokens, ButtonCoreProps } from '../Button.types';
 

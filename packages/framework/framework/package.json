@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/framework",
+  "name": "@elui-react-native/framework",
   "version": "0.14.17",
   "description": "Component framework used by fluentui react native controls",
   "main": "lib-commonjs/index.js",
@@ -32,21 +32,21 @@
     "directory": "packages/framework/framework"
   },
   "dependencies": {
-    "@fluentui-react-native/composition": "workspace:*",
-    "@fluentui-react-native/default-theme": "workspace:*",
-    "@fluentui-react-native/framework-base": "workspace:*",
-    "@fluentui-react-native/theme-types": "workspace:*",
-    "@fluentui-react-native/tokens": "workspace:*",
-    "@fluentui-react-native/use-slot": "workspace:*",
-    "@fluentui-react-native/use-slots": "workspace:*",
-    "@fluentui-react-native/use-styling": "workspace:*",
-    "@fluentui-react-native/use-tokens": "workspace:*"
+    "@elui-react-native/composition": "workspace:*",
+    "@elui-react-native/default-theme": "workspace:*",
+    "@elui-react-native/framework-base": "workspace:*",
+    "@elui-react-native/theme-types": "workspace:*",
+    "@elui-react-native/tokens": "workspace:*",
+    "@elui-react-native/use-slot": "workspace:*",
+    "@elui-react-native/use-slots": "workspace:*",
+    "@elui-react-native/use-styling": "workspace:*",
+    "@elui-react-native/use-tokens": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -74,7 +74,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

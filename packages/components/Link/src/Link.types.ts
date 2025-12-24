@@ -1,7 +1,7 @@
 import type { ViewProps } from 'react-native';
 
-import type { IFocusable, IPressableState, IWithPressableEvents, IWithPressableOptions } from '@fluentui-react-native/interactive-hooks';
-import type { TextTokens, TextProps } from '@fluentui-react-native/text';
+import type { IFocusable, IPressableState, IWithPressableEvents, IWithPressableOptions } from '@elui-react-native/interactive-hooks';
+import type { TextTokens, TextProps } from '@elui-react-native/text';
 
 export const linkName = 'Link';
 

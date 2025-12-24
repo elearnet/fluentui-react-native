@@ -1,6 +1,6 @@
 import type * as React from 'react';
 
-import type { InteractionEvent, PressablePropsExtended } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent, PressablePropsExtended } from '@elui-react-native/interactive-hooks';
 
 export const menuTriggerName = 'MenuTrigger';
 

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { Button, Text } from '@fluentui/react-native';
+import { Button, Text } from '@elui/react-native';
 import {
   BUTTON_TEST_COMPONENT_DEPRECATED,
   BUTTON_ON_PRESS_DEPRECATED,
   BUTTON_NO_A11Y_LABEL_COMPONENT_DEPRECATED,
   BUTTON_ACCESSIBILITY_LABEL_DEPRECATED,
   BUTTON_TEST_COMPONENT_LABEL_DEPRECATED,
-} from '@fluentui-react-native/e2e-testing';
-import { Stack } from '@fluentui-react-native/stack';
+} from '@elui-react-native/e2e-testing';
+import { Stack } from '@elui-react-native/stack';
 
 import { stackStyle } from '../../Common/styles';
 import { testProps } from '../../Common/TestProps';

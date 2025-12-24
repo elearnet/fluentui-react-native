@@ -1,8 +1,8 @@
 import type { ColorValue } from 'react-native';
 
-import type { IViewProps, ITextProps } from '@fluentui-react-native/adapters';
-import type { IPersonaCoinProps, IPersonaCoinTokens } from '@fluentui-react-native/persona-coin';
-import type { FontTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps, ITextProps } from '@elui-react-native/adapters';
+import type { IPersonaCoinProps, IPersonaCoinTokens } from '@elui-react-native/persona-coin';
+import type { FontTokens } from '@elui-react-native/tokens';
 import type { IRenderData } from '@uifabricshared/foundation-composable';
 
 export const personaName = 'RNFPersona';

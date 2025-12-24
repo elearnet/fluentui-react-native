@@ -4,11 +4,11 @@
 import * as React from 'react';
 import { View, I18nManager } from 'react-native';
 
-import { filterViewProps } from '@fluentui-react-native/adapters';
-import type { KeyPressEvent } from '@fluentui-react-native/interactive-hooks';
-import { useAsPressable, useViewCommandFocus, useKeyDownProps } from '@fluentui-react-native/interactive-hooks';
-import { Text } from '@fluentui-react-native/text';
-import { foregroundColorTokens, textTokens, borderTokens, backgroundColorTokens, getPaletteFromTheme } from '@fluentui-react-native/tokens';
+import { filterViewProps } from '@elui-react-native/adapters';
+import type { KeyPressEvent } from '@elui-react-native/interactive-hooks';
+import { useAsPressable, useViewCommandFocus, useKeyDownProps } from '@elui-react-native/interactive-hooks';
+import { Text } from '@elui-react-native/text';
+import { foregroundColorTokens, textTokens, borderTokens, backgroundColorTokens, getPaletteFromTheme } from '@elui-react-native/tokens';
 import type { ISlots } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';

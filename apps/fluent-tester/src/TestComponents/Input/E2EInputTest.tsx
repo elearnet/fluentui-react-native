@@ -7,11 +7,11 @@ import {
   INPUT_ERROR_STRING,
   INPUT_ONCLICK_STRING,
   INPUT_START_STRING,
-} from '@fluentui-react-native/e2e-testing';
-import type { IconProps } from '@fluentui-react-native/icon';
-import { Input } from '@fluentui-react-native/input';
-import { Stack } from '@fluentui-react-native/stack';
-import { Text } from '@fluentui-react-native/text';
+} from '@elui-react-native/e2e-testing';
+import type { IconProps } from '@elui-react-native/icon';
+import { Input } from '@elui-react-native/input';
+import { Stack } from '@elui-react-native/stack';
+import { Text } from '@elui-react-native/text';
 
 import FilledSvg from '../../../assets/filledIcon.svg';
 import OutlineSvg from '../../../assets/outlineIcon.svg';

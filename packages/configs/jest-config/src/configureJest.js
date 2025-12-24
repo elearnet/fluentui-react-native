@@ -7,7 +7,7 @@
 /**
  * Jest configuration for pure React packages (non-React Native).
  * Uses babel-jest for TypeScript transpilation with the babel configuration
- * from @fluentui-react-native/babel-config/babel.react.config.js
+ * from @elui-react-native/babel-config/babel.react.config.js
  *
  * @param {JestConfig} [customConfig] - Optional custom configuration to merge
  * @returns {JestConfig} - The Jest configuration object
@@ -33,7 +33,7 @@ export function configureJest(customConfig) {
       '^.+\\.(ts|tsx|js|jsx)$': [
         'babel-jest',
         {
-          configFile: '@fluentui-react-native/babel-config/babel.react.config.js',
+          configFile: '@elui-react-native/babel-config/babel.react.config.js',
         },
       ],
     },

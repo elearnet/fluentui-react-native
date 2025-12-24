@@ -1,12 +1,12 @@
 import type { PressableProps } from 'react-native';
 
-import type { IViewProps, ITextProps } from '@fluentui-react-native/adapters';
-import type { ButtonProps } from '@fluentui-react-native/button';
-import type { ShadowProps } from '@fluentui-react-native/experimental-shadow';
-import type { IconProps, IconSourcesType } from '@fluentui-react-native/icon';
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
-import type { ShadowToken } from '@fluentui-react-native/theme-types';
-import type { FontTokens, IBorderTokens, IColorTokens, LayoutTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps, ITextProps } from '@elui-react-native/adapters';
+import type { ButtonProps } from '@elui-react-native/button';
+import type { ShadowProps } from '@elui-react-native/experimental-shadow';
+import type { IconProps, IconSourcesType } from '@elui-react-native/icon';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
+import type { ShadowToken } from '@elui-react-native/theme-types';
+import type { FontTokens, IBorderTokens, IColorTokens, LayoutTokens } from '@elui-react-native/tokens';
 
 import type { NotificationButtonColorStates } from './Notification.helper';
 

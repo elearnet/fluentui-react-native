@@ -1,4 +1,4 @@
-import { getTypedMemoCache } from '@fluentui-react-native/framework-base';
+import { getTypedMemoCache } from '@elui-react-native/framework-base';
 
 import { applyPropsToTokens } from './applyPropsToTokens';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/themed-stylesheet",
+  "name": "@elui-react-native/themed-stylesheet",
   "version": "1.7.11",
   "description": "Helper for using react-native StyleSheets with themes",
   "repository": {
@@ -35,14 +35,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@fluentui-react-native/framework-base": "workspace:*"
+    "@elui-react-native/framework-base": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
     "@react-native-community/cli-platform-ios": "^20.0.0",
@@ -59,7 +59,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

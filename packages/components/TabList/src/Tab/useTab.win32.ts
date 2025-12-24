@@ -1,9 +1,9 @@
 import * as React from 'react';
 import type { AccessibilityActionEvent, AccessibilityState } from 'react-native';
 
-import { memoize } from '@fluentui-react-native/framework';
-import type { IFocusable } from '@fluentui-react-native/interactive-hooks';
-import { usePressableState, useKeyProps, useViewCommandFocus } from '@fluentui-react-native/interactive-hooks';
+import { memoize } from '@elui-react-native/framework';
+import type { IFocusable } from '@elui-react-native/interactive-hooks';
+import { usePressableState, useKeyProps, useViewCommandFocus } from '@elui-react-native/interactive-hooks';
 
 import type { TabProps, TabInfo } from './Tab.types';
 import { TabListContext } from '../TabList/TabListContext';

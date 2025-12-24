@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
 
-import { CHECKBOXV1_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { CHECKBOXV1_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { E2ECheckboxV1Test } from './E2ECheckboxV1Test';
 import type { TestSection, PlatformStatus } from '../Test';

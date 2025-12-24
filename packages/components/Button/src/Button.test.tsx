@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Pressable, Text } from 'react-native';
 
-import { Icon } from '@fluentui-react-native/icon';
+import { Icon } from '@elui-react-native/icon';
 import * as renderer from 'react-test-renderer';
 
 import { Button } from './Button';

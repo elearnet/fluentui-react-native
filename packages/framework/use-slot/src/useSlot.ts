@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { mergeProps } from '@fluentui-react-native/framework-base';
+import { mergeProps } from '@elui-react-native/framework-base';
 
-import type { SlotFn, NativeReactType } from '@fluentui-react-native/framework-base';
-import type { ComposableFunction, StagedRender, FinalRender } from '@fluentui-react-native/framework-base';
+import type { SlotFn, NativeReactType } from '@elui-react-native/framework-base';
+import type { ComposableFunction, StagedRender, FinalRender } from '@elui-react-native/framework-base';
 
 /**
  *

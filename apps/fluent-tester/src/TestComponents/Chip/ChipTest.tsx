@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { CHIP_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { CHIP_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { ChipDefault } from './ChipDefault';
 import { E2EChipTest } from './E2EChipTest';

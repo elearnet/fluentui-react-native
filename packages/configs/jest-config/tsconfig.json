@@ -1,4 +1,4 @@
 {
-  "extends": "@fluentui-react-native/scripts/tsconfig.json",
+  "extends": "@elui-react-native/scripts/tsconfig.json",
   "include": ["src"]
 }

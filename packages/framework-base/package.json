@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/framework-base",
+  "name": "@elui-react-native/framework-base",
   "version": "0.2.1",
   "description": "Base types and utilities fluentui-react-native frameworks",
   "repository": {
@@ -44,10 +44,10 @@
     "react": " 19.0.3"
   },
   "devDependencies": {
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@types/jest": "^29.0.0",
     "@types/node": "^22.0.0"
   }

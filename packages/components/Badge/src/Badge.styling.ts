@@ -1,6 +1,6 @@
-import type { UseStylingOptions, Theme } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
-import { borderStyles, layoutStyles, fontStyles } from '@fluentui-react-native/tokens';
+import type { UseStylingOptions, Theme } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
+import { borderStyles, layoutStyles, fontStyles } from '@elui-react-native/tokens';
 
 import { badgeName, BadgeColors, BadgeSizes, BadgeShapes, BadgeAppearances } from './Badge.types';
 import type { BadgeCoreTokens, BadgeTokens, BadgeSlotProps, BadgeProps, BadgeConfigurableProps, BadgeNamedColor } from './Badge.types';

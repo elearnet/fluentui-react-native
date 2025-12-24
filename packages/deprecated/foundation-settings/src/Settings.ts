@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import { MergeOptions, immutableMergeCore } from '@fluentui-react-native/framework-base';
+import { MergeOptions, immutableMergeCore } from '@elui-react-native/framework-base';
 import { IComponentSettingsCollection, IComponentSettings, ISlotProps, IOverrideLookup } from './Settings.types';
-import { mergeProps } from '@fluentui-react-native/framework-base';
+import { mergeProps } from '@elui-react-native/framework-base';
 
 /**
  * an individual settings block is a set of slotProps, with an additional collection of tokens.

@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/test-tools",
+  "name": "@elui-react-native/test-tools",
   "version": "0.1.1",
   "description": "Tools and mocks for testing components using jest",
   "main": "lib-commonjs/index.js",
@@ -29,13 +29,13 @@
     "directory": "packages/utils/test-tools"
   },
   "dependencies": {
-    "@fluentui-react-native/theme-types": "workspace:*"
+    "@elui-react-native/theme-types": "workspace:*"
   },
   "devDependencies": {
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
     "@react-native-community/cli-platform-ios": "^20.0.0",

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Switch, View } from 'react-native';
 
-import { Text } from '@fluentui/react-native';
-import { NATIVE_AVATAR_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import type { Size } from '@fluentui-react-native/experimental-avatar/';
-import { NativeAvatar } from '@fluentui-react-native/experimental-avatar/';
-import { Stack } from '@fluentui-react-native/stack';
+import { Text } from '@elui/react-native';
+import { NATIVE_AVATAR_TESTPAGE } from '@elui-react-native/e2e-testing';
+import type { Size } from '@elui-react-native/experimental-avatar/';
+import { NativeAvatar } from '@elui-react-native/experimental-avatar/';
+import { Stack } from '@elui-react-native/stack';
 
 import { testImageSource, rainbowGradientSource } from './testImageSources';
 import { commonTestStyles as commonStyles } from '../Common/styles';

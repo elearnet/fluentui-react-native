@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { PERSONA_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { PERSONA_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { CustomizeUsage } from './CustomizeUsage';
 import { StandardUsage } from './StandardUsage';

@@ -1,5 +1,5 @@
-import type { Theme, UseStylingOptions } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
+import type { Theme, UseStylingOptions } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
 
 import { DrawerName } from './Drawer.types';
 import type { DrawerTokens, DrawerSlotProps, DrawerProps } from './Drawer.types';

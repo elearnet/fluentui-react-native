@@ -1,7 +1,7 @@
 import { Appearance } from 'react-native';
 
-import type { ThemeShadowDefinition } from '@fluentui-react-native/theme-types';
-import { getCurrentAppearance } from '@fluentui-react-native/theming-utils';
+import type { ThemeShadowDefinition } from '@elui-react-native/theme-types';
+import { getCurrentAppearance } from '@elui-react-native/theming-utils';
 
 import { createiOSShadowAliasTokens } from './createiOSAliasTokens';
 

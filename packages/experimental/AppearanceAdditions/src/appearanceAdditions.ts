@@ -1,4 +1,4 @@
-import { memoize } from '@fluentui-react-native/framework';
+import { memoize } from '@elui-react-native/framework';
 
 import type { AppearanceAdditions } from './NativeAppearanceAdditions.types';
 

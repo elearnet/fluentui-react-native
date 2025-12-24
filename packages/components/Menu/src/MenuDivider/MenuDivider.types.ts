@@ -1,8 +1,8 @@
 import type * as React from 'react';
 import type { ViewStyle } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { IBackgroundColorTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { IBackgroundColorTokens } from '@elui-react-native/tokens';
 
 export const menuDividerName = 'MenuDivider';
 

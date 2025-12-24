@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { View, ScrollView, Pressable, TextInput } from 'react-native';
 
-import type { FocusZoneDirection, FocusZoneTabNavigation } from '@fluentui/react-native';
-import { FocusZone, MenuButton, Text, useOnPressWithFocus } from '@fluentui/react-native';
-import { ButtonV1 as Button } from '@fluentui-react-native/button';
-import { FOCUSZONE_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import type { CheckboxProps } from '@fluentui-react-native/experimental-checkbox';
-import { Checkbox } from '@fluentui-react-native/experimental-checkbox';
+import type { FocusZoneDirection, FocusZoneTabNavigation } from '@elui/react-native';
+import { FocusZone, MenuButton, Text, useOnPressWithFocus } from '@elui/react-native';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+import { FOCUSZONE_TESTPAGE } from '@elui-react-native/e2e-testing';
+import type { CheckboxProps } from '@elui-react-native/experimental-checkbox';
+import { Checkbox } from '@elui-react-native/experimental-checkbox';
 
 import { FocusZone2D, FocusZoneDirections, FocusZoneListWrapper, FocusZoneTabNavigations, GridOfButtons } from './FocusZoneE2ETest';
 import { focusZoneTestStyles, SubheaderText } from './styles';

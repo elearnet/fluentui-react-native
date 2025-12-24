@@ -8,8 +8,8 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
 
-import { useHorizontalSizeClass } from '@fluentui-react-native/experimental-appearance-additions';
-import { ThemeReference, ThemeProvider } from '@fluentui-react-native/theme';
+import { useHorizontalSizeClass } from '@elui-react-native/experimental-appearance-additions';
+import { ThemeReference, ThemeProvider } from '@elui-react-native/theme';
 
 import type { FluentTesterProps } from './FluentTester';
 import { FluentTester } from './FluentTester';

@@ -2,8 +2,8 @@
 /** @jsx withSlots */
 import { View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, withSlots, mergeProps } from '@fluentui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, withSlots, mergeProps } from '@elui-react-native/framework';
 
 import { stylingSettings } from './Separator.styling';
 import type { SeparatorProps, SeparatorType } from './Separator.types';

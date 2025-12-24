@@ -1,4 +1,4 @@
-import type { GetMemoValue } from '@fluentui-react-native/framework-base';
+import type { GetMemoValue } from '@elui-react-native/framework-base';
 
 /**
  * Informs the framework of any tokens that also appear as props for the component.

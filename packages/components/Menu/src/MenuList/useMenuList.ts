@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 import type { View } from 'react-native';
 
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
 
 import type { MenuListProps, MenuListState, TrackedMenuItem } from './MenuList.types';
 import { useMenuContext } from '../context/menuContext';

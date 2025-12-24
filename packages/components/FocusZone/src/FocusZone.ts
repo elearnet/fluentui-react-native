@@ -7,7 +7,7 @@
 import * as React from 'react';
 import { findNodeHandle } from 'react-native';
 
-import { useViewCommandFocus } from '@fluentui-react-native/interactive-hooks';
+import { useViewCommandFocus } from '@elui-react-native/interactive-hooks';
 import type { IUseStyling } from '@uifabricshared/foundation-composable';
 import { composable } from '@uifabricshared/foundation-composable';
 import { mergeSettings } from '@uifabricshared/foundation-settings';

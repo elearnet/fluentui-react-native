@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { View, Text, TextInput, Platform, StyleSheet } from 'react-native';
 
-import { ToggleButton } from '@fluentui/react-native';
-import type { AvatarSize } from '@fluentui-react-native/avatar';
-import { Avatar } from '@fluentui-react-native/avatar';
-import type { FontWeight } from '@fluentui-react-native/theme-types';
+import { ToggleButton } from '@elui/react-native';
+import type { AvatarSize } from '@elui-react-native/avatar';
+import { Avatar } from '@elui-react-native/avatar';
+import type { FontWeight } from '@elui-react-native/theme-types';
 
 import { svgProps } from '../Common/iconExamples';
 import { commonTestStyles as commonStyles } from '../Common/styles';

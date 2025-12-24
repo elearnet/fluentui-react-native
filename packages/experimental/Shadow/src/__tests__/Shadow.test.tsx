@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-import { mergeStyles, useFluentTheme } from '@fluentui-react-native/framework';
-import { Pressable } from '@fluentui-react-native/pressable';
+import { mergeStyles, useFluentTheme } from '@elui-react-native/framework';
+import { Pressable } from '@elui-react-native/pressable';
 import * as renderer from 'react-test-renderer';
 
 import { Shadow } from '../Shadow';

@@ -1,7 +1,7 @@
 import type { ViewStyle, ViewProps, ColorValue, DimensionValue } from 'react-native';
 
-import type { Spacing } from '@fluentui-react-native/framework';
-import type { IBorderTokens, FontTokens } from '@fluentui-react-native/tokens';
+import type { Spacing } from '@elui-react-native/framework';
+import type { IBorderTokens, FontTokens } from '@elui-react-native/tokens';
 
 import type { StackItemProps } from './StackItem/StackItem.types';
 

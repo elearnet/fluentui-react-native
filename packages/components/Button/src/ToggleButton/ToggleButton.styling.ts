@@ -1,6 +1,6 @@
-import type { Theme, UseStylingOptions } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
-import { borderStyles, layoutStyles, fontStyles } from '@fluentui-react-native/tokens';
+import type { Theme, UseStylingOptions } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
+import { borderStyles, layoutStyles, fontStyles } from '@elui-react-native/tokens';
 
 import { toggleButtonName } from './ToggleButton.types';
 import type { ToggleButtonTokens, ToggleButtonSlotProps, ToggleButtonProps } from './ToggleButton.types';

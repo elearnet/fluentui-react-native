@@ -2,9 +2,9 @@ import * as React from 'react';
 import type { AccessibilityActionEvent, AccessibilityState } from 'react-native';
 import { I18nManager, Platform } from 'react-native';
 
-import { memoize } from '@fluentui-react-native/framework';
-import type { InteractionEvent, KeyPressEvent } from '@fluentui-react-native/interactive-hooks';
-import { usePressableState, useKeyDownProps, useOnPressWithFocus, useViewCommandFocus } from '@fluentui-react-native/interactive-hooks';
+import { memoize } from '@elui-react-native/framework';
+import type { InteractionEvent, KeyPressEvent } from '@elui-react-native/interactive-hooks';
+import { usePressableState, useKeyDownProps, useOnPressWithFocus, useViewCommandFocus } from '@elui-react-native/interactive-hooks';
 
 import type { MenuItemCheckboxProps, MenuItemCheckboxInfo } from './MenuItemCheckbox.types';
 import { useMenuContext } from '../context/menuContext';

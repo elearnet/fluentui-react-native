@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import type { LayoutChangeEvent, View } from 'react-native';
 import { Animated, Dimensions, Easing, I18nManager, StatusBar } from 'react-native';
 
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
 
 import type { MenuProps, MenuState } from './Menu.types';
 import { AndroidMenuStates } from './Menu.types';

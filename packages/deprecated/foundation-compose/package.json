@@ -35,9 +35,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@fluentui-react-native/default-theme": "workspace:*",
-    "@fluentui-react-native/framework-base": "workspace:*",
-    "@fluentui-react-native/theme-types": "workspace:*",
+    "@elui-react-native/default-theme": "workspace:*",
+    "@elui-react-native/framework-base": "workspace:*",
+    "@elui-react-native/theme-types": "workspace:*",
     "@uifabricshared/foundation-composable": "workspace:*",
     "@uifabricshared/foundation-settings": "workspace:*",
     "@uifabricshared/foundation-tokens": "workspace:*",
@@ -45,9 +45,9 @@
     "@uifabricshared/theming-ramp": "workspace:*"
   },
   "devDependencies": {
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -68,9 +68,9 @@
   },
   "depcheck": {
     "ignoreMatches": [
-      "@fluentui-react-native/default-theme",
-      "@fluentui-react-native/memo-cache",
-      "@fluentui-react-native/theme-types"
+      "@elui-react-native/default-theme",
+      "@elui-react-native/memo-cache",
+      "@elui-react-native/theme-types"
     ]
   },
   "peerDependenciesMeta": {
@@ -88,7 +88,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/configs/align-deps-preset.cjs",
+        "@elui-react-native/scripts/configs/align-deps-preset.cjs",
         "microsoft/react-native"
       ],
       "requirements": {

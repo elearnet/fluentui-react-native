@@ -4,8 +4,8 @@ import React, { useRef, useEffect, useMemo, useCallback } from 'react';
 import type { ScaleXTransform, TranslateXTransform } from 'react-native';
 import { Animated, I18nManager } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots, buildUseStyling } from '@fluentui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots, buildUseStyling } from '@elui-react-native/framework';
 import assertNever from 'assert-never';
 import { Circle, ClipPath, Defs, LinearGradient, Rect, Stop, Svg, G } from 'react-native-svg';
 

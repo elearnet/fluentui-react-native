@@ -1,8 +1,8 @@
 import type * as React from 'react';
 import type { ViewStyle, StyleProp } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { IWithPressableOptions, IPressableState } from '@fluentui-react-native/interactive-hooks';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { IWithPressableOptions, IPressableState } from '@elui-react-native/interactive-hooks';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type ObjectBase = {};

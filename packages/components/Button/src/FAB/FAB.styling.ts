@@ -1,9 +1,9 @@
 import { Platform } from 'react-native';
 
-import type { Theme, UseStylingOptions } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
-import { getTextMarginAdjustment } from '@fluentui-react-native/styling-utils';
-import { borderStyles, layoutStyles, fontStyles, shadowStyles } from '@fluentui-react-native/tokens';
+import type { Theme, UseStylingOptions } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
+import { getTextMarginAdjustment } from '@elui-react-native/styling-utils';
+import { borderStyles, layoutStyles, fontStyles, shadowStyles } from '@elui-react-native/tokens';
 
 import { fabName } from './FAB.types';
 import type { FABProps, FABSlotProps, FABTokens } from './FAB.types';

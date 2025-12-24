@@ -1,4 +1,4 @@
-import type { ThemeOptions, AppearanceOptions } from '@fluentui-react-native/theme-types';
+import type { ThemeOptions, AppearanceOptions } from '@elui-react-native/theme-types';
 
 import { createColorAliasTokens, createShadowAliasTokens } from '../createAliasTokens';
 import { createDefaultTheme } from '../createDefaultTheme';

@@ -1,7 +1,7 @@
 import type { ImageProps, ImageSourcePropType } from 'react-native';
 import { Platform } from 'react-native';
 
-import { createIconProps } from '@fluentui-react-native/icon';
+import { createIconProps } from '@elui-react-native/icon';
 
 import type { AvatarProps, AvatarInfo, AvatarState, AvatarSize, AvatarColor } from './Avatar.types';
 import { AvatarColors } from './Avatar.types';

@@ -1,6 +1,6 @@
-import type { Theme, UseStylingOptions } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
-import { borderStyles, fontStyles, layoutStyles } from '@fluentui-react-native/tokens';
+import type { Theme, UseStylingOptions } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
+import { borderStyles, fontStyles, layoutStyles } from '@elui-react-native/tokens';
 
 import { compoundButtonName } from './CompoundButton.types';
 import type { CompoundButtonTokens, CompoundButtonSlotProps, CompoundButtonProps } from './CompoundButton.types';

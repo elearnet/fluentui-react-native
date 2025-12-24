@@ -1,4 +1,4 @@
-import type { AliasColorTokens, OfficePalette } from '@fluentui-react-native/theme-types';
+import type { AliasColorTokens, OfficePalette } from '@elui-react-native/theme-types';
 
 export function createAliasesFromPalette(palette: OfficePalette, isHighContrast: boolean): Partial<AliasColorTokens> {
   // Workaround for getting checkmark to have correct color in HC

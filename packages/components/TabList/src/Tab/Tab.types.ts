@@ -1,17 +1,17 @@
 import type * as React from 'react';
 import type { ViewStyle, ColorValue } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { IconPropsV1 as IconProps } from '@fluentui-react-native/icon';
-import type { IFocusable, PressableState, PressablePropsExtended } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
+import type { IFocusable, PressableState, PressablePropsExtended } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
 import type {
   FontTokens,
   IBackgroundColorTokens,
   IBorderTokens,
   IForegroundColorTokens,
   LayoutTokens,
-} from '@fluentui-react-native/tokens';
+} from '@elui-react-native/tokens';
 
 export const tabName = 'Tab';
 

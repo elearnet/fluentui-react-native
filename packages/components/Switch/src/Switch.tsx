@@ -3,9 +3,9 @@
 import type { StyleProp, TextStyle } from 'react-native';
 import { View, AccessibilityInfo, Pressable, Animated, Platform } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, memoize, mergeProps, withSlots } from '@fluentui-react-native/framework';
-import { Text } from '@fluentui-react-native/text';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, memoize, mergeProps, withSlots } from '@elui-react-native/framework';
+import { Text } from '@elui-react-native/text';
 
 import { stylingSettings } from './Switch.styling';
 import type { SwitchType, SwitchState, SwitchProps } from './Switch.types';

@@ -1,6 +1,6 @@
 import type { AnimatableNumericValue } from 'react-native';
 
-import type { ICalloutProps, ICalloutTokens } from '@fluentui-react-native/callout';
+import type { ICalloutProps, ICalloutTokens } from '@elui-react-native/callout';
 
 export const menuCalloutName = 'MenuCallout';
 

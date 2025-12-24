@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View, Alert, StyleSheet } from 'react-native';
 
-import { LinkV1 as Link, TextV1 as Text } from '@fluentui/react-native';
-import { Stack } from '@fluentui-react-native/stack';
+import { LinkV1 as Link, TextV1 as Text } from '@elui/react-native';
+import { Stack } from '@elui-react-native/stack';
 
 import { stackStyle } from '../Common/styles';
 

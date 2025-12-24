@@ -1,16 +1,16 @@
 import type { ColorValue, ViewStyle } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { Variant } from '@fluentui-react-native/framework';
-import type { IFocusable, PressablePropsExtended, PressableState } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { Variant } from '@elui-react-native/framework';
+import type { IFocusable, PressablePropsExtended, PressableState } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
 import type {
   FontTokens,
   IForegroundColorTokens,
   IBackgroundColorTokens,
   IBorderTokens,
   IColorTokens,
-} from '@fluentui-react-native/tokens';
+} from '@elui-react-native/tokens';
 import type { SvgProps } from 'react-native-svg';
 
 export const radioName = 'Radio';

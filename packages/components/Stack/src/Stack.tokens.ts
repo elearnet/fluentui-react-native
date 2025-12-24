@@ -1,6 +1,6 @@
 import type { ViewStyle, ViewProps } from 'react-native';
 
-import type { Theme } from '@fluentui-react-native/framework';
+import type { Theme } from '@elui-react-native/framework';
 import { styleFunction } from '@uifabricshared/foundation-tokens';
 
 import type { Alignment, IStackTokens } from './Stack.types';

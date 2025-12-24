@@ -1,6 +1,6 @@
-import type { Theme, UseStylingOptions } from '@fluentui-react-native/framework';
-import { fontStyles } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
+import type { Theme, UseStylingOptions } from '@elui-react-native/framework';
+import { fontStyles } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
 
 import { menuGroupHeaderName } from './MenuGroupHeader.types';
 import type { MenuGroupHeaderProps, MenuGroupHeaderTokens, MenuGroupHeaderSlotProps } from './MenuGroupHeader.types';

@@ -1,6 +1,6 @@
-import type { UseStylingOptions, Theme } from '@fluentui-react-native/framework';
-import { buildProps } from '@fluentui-react-native/framework';
-import { borderStyles } from '@fluentui-react-native/tokens';
+import type { UseStylingOptions, Theme } from '@elui-react-native/framework';
+import { buildProps } from '@elui-react-native/framework';
+import { borderStyles } from '@elui-react-native/tokens';
 
 import { presenceBadgeName, PresenceBadgeStatuses } from './PresenceBadge.types';
 import type { PresenceBadgeTokens, PresenceBadgeSlotProps, PresenceBadgeProps } from './PresenceBadge.types';

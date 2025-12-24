@@ -3,8 +3,8 @@
 
 import { ActivityIndicator as CoreActivityIndicator } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, withSlots } from '@fluentui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, withSlots } from '@elui-react-native/framework';
 
 import { coreStylingSettings } from './ActivityIndicator.styling';
 import type { CoreActivityIndicatorType, ActivityIndicatorProps } from './ActivityIndicator.types';

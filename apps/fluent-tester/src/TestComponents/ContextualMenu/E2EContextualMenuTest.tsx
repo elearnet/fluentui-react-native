@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Text, View, Switch } from 'react-native';
 
-import { ButtonV1 as Button, ContextualMenu, ContextualMenuItem, Separator } from '@fluentui/react-native';
-import { CONTEXTUALMENUITEM_TEST_COMPONENT, CONTEXTUALMENU_TEST_COMPONENT } from '@fluentui-react-native/e2e-testing';
+import { ButtonV1 as Button, ContextualMenu, ContextualMenuItem, Separator } from '@elui/react-native';
+import { CONTEXTUALMENUITEM_TEST_COMPONENT, CONTEXTUALMENU_TEST_COMPONENT } from '@elui-react-native/e2e-testing';
 
 import { testProps } from '../Common/TestProps';
 

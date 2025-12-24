@@ -1,10 +1,10 @@
 import type { ColorValue, FlexStyle } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { IconProps, IconSourcesType } from '@fluentui-react-native/icon';
-import type { InteractionEvent, PressablePropsExtended, PressableState } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
-import type { FontTokens, IBorderTokens, IColorTokens, LayoutTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { IconProps, IconSourcesType } from '@elui-react-native/icon';
+import type { InteractionEvent, PressablePropsExtended, PressableState } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
+import type { FontTokens, IBorderTokens, IColorTokens, LayoutTokens } from '@elui-react-native/tokens';
 
 export const chipName = 'Chip';
 export const ChipSizes = ['small', 'medium'] as const;

@@ -2,16 +2,16 @@
  * Many of the types from use-styling take a theme as a type parameter. This re-exports them in such a way
  * as to be dependent on the core theme type
  */
-export type { TokensThatAreAlsoProps, HasLayer, UseStyling } from '@fluentui-react-native/use-styling';
-import type { Theme } from '@fluentui-react-native/theme-types';
+export type { TokensThatAreAlsoProps, HasLayer, UseStyling } from '@elui-react-native/use-styling';
+import type { Theme } from '@elui-react-native/theme-types';
 import type {
   TokensFromTheme as TokensFromThemeBase,
   TokenSettings as TokenSettingsBase,
   UseStylingOptions as UseStylingOptionsBase,
   UseStyling,
   BuildPropsBase,
-} from '@fluentui-react-native/use-styling';
-import { buildUseStyling as buildUseStylingBase, buildProps as buildPropsBase } from '@fluentui-react-native/use-styling';
+} from '@elui-react-native/use-styling';
+import { buildUseStyling as buildUseStylingBase, buildProps as buildPropsBase } from '@elui-react-native/use-styling';
 
 import { themeHelper } from './themeHelper';
 

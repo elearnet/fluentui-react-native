@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { validateHookValueNotChanged } from '@fluentui-react-native/test-tools';
+import { validateHookValueNotChanged } from '@elui-react-native/test-tools';
 import * as renderer from 'react-test-renderer';
 
 import { useConst } from '../useConst';

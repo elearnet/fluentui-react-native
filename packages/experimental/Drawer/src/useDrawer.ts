@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { Animated, Dimensions } from 'react-native';
 
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
 
 import type { DrawerProps, DrawerInfo } from './Drawer.types';
 

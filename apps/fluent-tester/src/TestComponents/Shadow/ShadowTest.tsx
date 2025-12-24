@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { SHADOW_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { SHADOW_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { ShadowButtonTestSection } from './ShadowButtonTestSection';
 import { ShadowDepthTestSection } from './ShadowDepthTestSection';

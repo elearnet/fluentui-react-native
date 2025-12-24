@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { RadioButton, RadioGroup, Separator } from '@fluentui/react-native';
-import { RADIOGROUP_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { RadioButton, RadioGroup, Separator } from '@elui/react-native';
+import { RADIOGROUP_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { RadioGroupLegacyE2ETest } from './RadioGroupLegacyE2ETest';
 import type { TestSection, PlatformStatus } from '../Test';

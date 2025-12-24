@@ -7,6 +7,6 @@ export type {
   CheckboxState,
   CheckboxTokens,
   CheckboxType,
-} from '@fluentui-react-native/checkbox';
-export { checkboxNameV1 as checkboxName } from '@fluentui-react-native/checkbox';
+} from '@elui-react-native/checkbox';
+export { checkboxNameV1 as checkboxName } from '@elui-react-native/checkbox';
 export { Checkbox } from './Checkbox';

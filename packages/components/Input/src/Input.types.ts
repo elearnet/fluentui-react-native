@@ -1,10 +1,10 @@
 import type { ColorValue, TextInputProps, ViewStyle, ViewProps, ScrollViewProps, KeyboardTypeOptions, TextInput } from 'react-native';
 
-import type { IconProps, IconSourcesType } from '@fluentui-react-native/icon';
-import type { InteractionEvent, PressableFocusProps } from '@fluentui-react-native/interactive-hooks';
-import type { FocusState, PressablePropsExtended } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
-import type { FontTokens, IBorderTokens, IColorTokens, LayoutTokens } from '@fluentui-react-native/tokens';
+import type { IconProps, IconSourcesType } from '@elui-react-native/icon';
+import type { InteractionEvent, PressableFocusProps } from '@elui-react-native/interactive-hooks';
+import type { FocusState, PressablePropsExtended } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
+import type { FontTokens, IBorderTokens, IColorTokens, LayoutTokens } from '@elui-react-native/tokens';
 
 export const input = 'Input';
 

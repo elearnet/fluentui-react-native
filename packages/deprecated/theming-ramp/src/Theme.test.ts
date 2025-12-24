@@ -1,5 +1,5 @@
-import { mockTheme } from '@fluentui-react-native/test-tools';
-import type { Theme, PartialTheme } from '@fluentui-react-native/theme-types';
+import { mockTheme } from '@elui-react-native/test-tools';
+import type { Theme, PartialTheme } from '@elui-react-native/theme-types';
 
 import { resolvePartialTheme } from './Theme';
 

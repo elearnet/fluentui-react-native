@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
 
-import { BADGE_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { BADGE_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { BasicBadge } from './BasicBadgeTest';
 import { CounterBadgeTest } from './CounterBadgeTest';

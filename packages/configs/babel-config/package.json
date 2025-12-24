@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/babel-config",
+  "name": "@elui-react-native/babel-config",
   "private": true,
   "version": "0.1.1",
   "description": "Babel configuration for UI Fabric React Native",

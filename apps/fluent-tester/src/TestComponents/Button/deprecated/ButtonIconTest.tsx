@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Platform, View } from 'react-native';
 
-import { Button, Text } from '@fluentui/react-native';
-import { Stack } from '@fluentui-react-native/stack';
+import { Button, Text } from '@elui/react-native';
+import { Stack } from '@elui-react-native/stack';
 
 import { testImage, svgProps } from '../../Common/iconExamples';
 import { stackStyle } from '../../Common/styles';

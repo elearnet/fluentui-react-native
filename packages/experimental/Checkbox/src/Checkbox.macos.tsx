@@ -5,11 +5,11 @@
  */
 /** @jsxRuntime classic */
 /** @jsx withSlots */
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { CheckboxTokens, CheckboxProps, CheckboxState } from '@fluentui-react-native/checkbox';
-import { checkboxName } from '@fluentui-react-native/checkbox';
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots, buildProps } from '@fluentui-react-native/framework';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { CheckboxTokens, CheckboxProps, CheckboxState } from '@elui-react-native/checkbox';
+import { checkboxName } from '@elui-react-native/checkbox';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots, buildProps } from '@elui-react-native/framework';
 
 import NativeCheckboxView from './MacOSCheckboxNativeComponent';
 

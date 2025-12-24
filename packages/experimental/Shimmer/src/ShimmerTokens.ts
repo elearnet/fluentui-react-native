@@ -1,6 +1,6 @@
-import type { Theme } from '@fluentui-react-native/framework';
-import { getCurrentAppearance } from '@fluentui-react-native/theming-utils';
-import type { TokenSettings } from '@fluentui-react-native/use-styling';
+import type { Theme } from '@elui-react-native/framework';
+import { getCurrentAppearance } from '@elui-react-native/theming-utils';
+import type { TokenSettings } from '@elui-react-native/use-styling';
 
 import { shimmerDefaultAngle, shimmerDefaultDelay, shimmerDefaultDuration } from './consts';
 import type { ShimmerTokens } from './Shimmer.types';

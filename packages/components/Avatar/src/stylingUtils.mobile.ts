@@ -1,4 +1,4 @@
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
+import { globalTokens } from '@elui-react-native/theme-tokens';
 
 import type { RingConfig, AvatarTokens, AvatarColor } from './Avatar.types';
 

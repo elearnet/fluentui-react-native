@@ -2,12 +2,12 @@ import { useMemo } from 'react';
 import type { ViewProps, ColorValue, StyleProp, ViewStyle } from 'react-native';
 import { Platform } from 'react-native';
 
-import { memoize, mergeStyles } from '@fluentui-react-native/framework';
-import type { Theme } from '@fluentui-react-native/framework';
-import type { IconPropsV1 as IconProps } from '@fluentui-react-native/icon';
-import type { TextProps } from '@fluentui-react-native/text';
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
-import { fontStyles } from '@fluentui-react-native/tokens';
+import { memoize, mergeStyles } from '@elui-react-native/framework';
+import type { Theme } from '@elui-react-native/framework';
+import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
+import type { TextProps } from '@elui-react-native/text';
+import { globalTokens } from '@elui-react-native/theme-tokens';
+import { fontStyles } from '@elui-react-native/tokens';
 
 import type { DividerTokens, DividerProps, DividerAppearance } from './Divider.types';
 

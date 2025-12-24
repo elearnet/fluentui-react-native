@@ -1,8 +1,8 @@
 import React from 'react';
 import { Animated, Modal, TouchableWithoutFeedback, View, StyleSheet, ScrollView } from 'react-native';
 
-import { stagedComponent } from '@fluentui-react-native/framework';
-import { mergeProps } from '@fluentui-react-native/framework';
+import { stagedComponent } from '@elui-react-native/framework';
+import { mergeProps } from '@elui-react-native/framework';
 
 import type { MenuCalloutProps } from './MenuCallout.types';
 import { menuCalloutName } from './MenuCallout.types';

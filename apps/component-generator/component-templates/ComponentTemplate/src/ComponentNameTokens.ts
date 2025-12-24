@@ -1,5 +1,5 @@
-import { Theme } from '@fluentui-react-native/framework';
-import { TokenSettings } from '@fluentui-react-native/use-styling';
+import { Theme } from '@elui-react-native/framework';
+import { TokenSettings } from '@elui-react-native/use-styling';
 import { ComponentNameTokens } from './ComponentName.types';
 
 export const defaultComponentNameTokens: TokenSettings<ComponentNameTokens, Theme> = (t: Theme) =>

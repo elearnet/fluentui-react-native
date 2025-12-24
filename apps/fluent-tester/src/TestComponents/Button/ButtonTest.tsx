@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
 
-import { BUTTON_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { BUTTON_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { ButtonShapeTest } from './ButtonShapeTestSection';
 import { ButtonSizeTest } from './ButtonSizeTestSection';

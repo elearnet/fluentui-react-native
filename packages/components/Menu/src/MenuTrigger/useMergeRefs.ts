@@ -1,8 +1,8 @@
 /**
- * Copied from @fluentui/react-utilities
+ * Copied from @elui/react-utilities
  *
  * Keeping the file local to Menu for now while looking into whether
- * we can pull in @fluentui/react-utilities package
+ * we can pull in @elui/react-utilities package
  */
 
 import * as React from 'react';

@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Platform } from 'react-native';
 import type { LayoutChangeEvent } from 'react-native';
 
-import { useFluentTheme } from '@fluentui-react-native/framework';
-import { usePressableState, useKeyProps, useOnPressWithFocus, useViewCommandFocus } from '@fluentui-react-native/interactive-hooks';
-import { isHighContrast } from '@fluentui-react-native/theming-utils';
+import { useFluentTheme } from '@elui-react-native/framework';
+import { usePressableState, useKeyProps, useOnPressWithFocus, useViewCommandFocus } from '@elui-react-native/interactive-hooks';
+import { isHighContrast } from '@elui-react-native/theming-utils';
 
 import type { ButtonProps, ButtonInfo } from './Button.types';
 

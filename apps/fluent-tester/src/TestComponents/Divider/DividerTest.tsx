@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 
-import { Divider } from '@fluentui-react-native/divider';
-import { DIVIDER_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import { Stack } from '@fluentui-react-native/stack';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+import { Divider } from '@elui-react-native/divider';
+import { DIVIDER_TESTPAGE } from '@elui-react-native/e2e-testing';
+import { Stack } from '@elui-react-native/stack';
+import { TextV1 as Text } from '@elui-react-native/text';
 
 import { CustomisedMobileDividers, MobileDividers } from './MobileDividerTest';
 import TestSvg from '../../../assets/test.svg';

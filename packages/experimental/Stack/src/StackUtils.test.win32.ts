@@ -1,4 +1,4 @@
-import type { Theme } from '@fluentui-react-native/framework';
+import type { Theme } from '@elui-react-native/framework';
 
 import { parseGap, parsePadding } from './StackUtils';
 

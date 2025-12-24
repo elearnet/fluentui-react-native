@@ -3,9 +3,9 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
 
-import { FocusZone } from '@fluentui-react-native/focus-zone';
-import { compose, mergeProps, withSlots } from '@fluentui-react-native/framework';
-import type { UseSlots } from '@fluentui-react-native/framework';
+import { FocusZone } from '@elui-react-native/focus-zone';
+import { compose, mergeProps, withSlots } from '@elui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
 
 import type { MenuGroupProps, MenuGroupType } from './MenuGroup.types';
 import { menuGroupName } from './MenuGroup.types';

@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { SHIMMER_TEST_COMPONENT } from '@fluentui-react-native/e2e-testing';
-import { Shimmer } from '@fluentui-react-native/experimental-shimmer';
-import { Stack } from '@fluentui-react-native/stack';
+import { SHIMMER_TEST_COMPONENT } from '@elui-react-native/e2e-testing';
+import { Shimmer } from '@elui-react-native/experimental-shimmer';
+import { Stack } from '@elui-react-native/stack';
 
 import { shimmerRectsAndRect } from './ShimmerTestElementSets';
 import { stackStyle } from '../Common/styles';

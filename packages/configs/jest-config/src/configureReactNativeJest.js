@@ -3,7 +3,7 @@
 // @ts-expect-error no types available for jest-preset
 import jestPreset from '@rnx-kit/jest-preset';
 import { ensurePlatform } from './platforms.js';
-import { isPnpmMode } from '@fluentui-react-native/scripts';
+import { isPnpmMode } from '@elui-react-native/scripts';
 
 /**
  * @typedef {import('jest').Config} JestConfig

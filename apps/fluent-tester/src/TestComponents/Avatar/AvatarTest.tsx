@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
 
-import { AVATAR_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { AVATAR_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import type { PlatformStatus, TestSection } from '../Test';
 import { Test } from '../Test';

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Callout } from '@fluentui-react-native/callout';
-import { stagedComponent } from '@fluentui-react-native/framework';
-import { mergeProps } from '@fluentui-react-native/framework';
+import { Callout } from '@elui-react-native/callout';
+import { stagedComponent } from '@elui-react-native/framework';
+import { mergeProps } from '@elui-react-native/framework';
 
 import type { MenuCalloutProps } from './MenuCallout.types';
 import { menuCalloutName } from './MenuCallout.types';

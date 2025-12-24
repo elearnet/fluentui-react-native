@@ -1,4 +1,4 @@
-import type { IViewProps } from '@fluentui-react-native/adapters';
+import type { IViewProps } from '@elui-react-native/adapters';
 
 export type Material =
   | 'titlebar'

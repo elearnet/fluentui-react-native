@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { SEPARATOR_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import { Separator } from '@fluentui-react-native/separator';
-import { Stack } from '@fluentui-react-native/stack';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+import { SEPARATOR_TESTPAGE } from '@elui-react-native/e2e-testing';
+import { Separator } from '@elui-react-native/separator';
+import { Stack } from '@elui-react-native/stack';
+import { TextV1 as Text } from '@elui-react-native/text';
 
 import { commonTestStyles, mobileStyles } from '../Common/styles';
 import type { TestSection, PlatformStatus } from '../Test';

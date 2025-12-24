@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Platform } from 'react-native';
 import type { ColorValue } from 'react-native';
 
-import { useTheme } from '@fluentui-react-native/theme-types';
+import { useTheme } from '@elui-react-native/theme-types';
 
 import { MenuPicker } from './MenuPicker';
 import { commonTestStyles as commonStyles } from './styles';

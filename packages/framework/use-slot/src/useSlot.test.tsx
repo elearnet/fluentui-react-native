@@ -4,13 +4,13 @@ import * as React from 'react';
 import type { TextProps } from 'react-native';
 import { Text, View } from 'react-native';
 
-import { mergeStyles } from '@fluentui-react-native/framework-base';
+import { mergeStyles } from '@elui-react-native/framework-base';
 import * as renderer from 'react-test-renderer';
 
-import type { NativeReactType } from '@fluentui-react-native/framework-base';
-import { stagedComponent } from '@fluentui-react-native/framework-base';
+import type { NativeReactType } from '@elui-react-native/framework-base';
+import { stagedComponent } from '@elui-react-native/framework-base';
 import { useSlot } from './useSlot';
-import { withSlots } from '@fluentui-react-native/framework-base';
+import { withSlots } from '@elui-react-native/framework-base';
 
 type PluggableTextProps = React.PropsWithChildren<TextProps> & { inner?: NativeReactType | React.FunctionComponent<TextProps> };
 

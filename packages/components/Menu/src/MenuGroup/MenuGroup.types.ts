@@ -1,8 +1,8 @@
 import type { ViewProps } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { FocusZoneProps } from '@fluentui-react-native/focus-zone';
-import type { LayoutTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { FocusZoneProps } from '@elui-react-native/focus-zone';
+import type { LayoutTokens } from '@elui-react-native/tokens';
 
 export const menuGroupName = 'MenuGroup';
 

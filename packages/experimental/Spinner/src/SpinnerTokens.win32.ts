@@ -1,5 +1,5 @@
-import type { Theme, Variant } from '@fluentui-react-native/framework';
-import type { TokenSettings } from '@fluentui-react-native/use-styling';
+import type { Theme, Variant } from '@elui-react-native/framework';
+import type { TokenSettings } from '@elui-react-native/use-styling';
 
 import type { SpinnerSize, SpinnerTokens } from './Spinner.types.win32';
 

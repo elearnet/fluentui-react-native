@@ -16,10 +16,10 @@ import {
   SECOND_TAB_KEY,
   THIRD_TAB_KEY,
   SECOND_TAB_LABEL,
-} from '@fluentui-react-native/e2e-testing';
-import { Stack } from '@fluentui-react-native/stack';
-import { TabList, Tab } from '@fluentui-react-native/tablist';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+} from '@elui-react-native/e2e-testing';
+import { Stack } from '@elui-react-native/stack';
+import { TabList, Tab } from '@elui-react-native/tablist';
+import { TextV1 as Text } from '@elui-react-native/text';
 
 import { stackStyle } from '../Common/styles';
 import { testProps } from '../Common/TestProps';

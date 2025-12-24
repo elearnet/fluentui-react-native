@@ -1,4 +1,4 @@
-import type { Spacing, Theme } from '@fluentui-react-native/framework';
+import type { Spacing, Theme } from '@elui-react-native/framework';
 
 /**
  * Functions used by Stack components to simplify style-related computations

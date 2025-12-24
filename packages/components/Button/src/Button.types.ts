@@ -1,12 +1,12 @@
 import type * as React from 'react';
 import type { ViewStyle, ColorValue } from 'react-native';
 
-import type { IViewProps } from '@fluentui-react-native/adapters';
-import type { IconProps, IconSourcesType } from '@fluentui-react-native/icon';
-import type { IFocusable, InteractionEvent, PressablePropsExtended, PressableState } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
-import type { ShadowToken } from '@fluentui-react-native/theme-types';
-import type { FontTokens, IBorderTokens, IColorTokens, IShadowTokens, LayoutTokens } from '@fluentui-react-native/tokens';
+import type { IViewProps } from '@elui-react-native/adapters';
+import type { IconProps, IconSourcesType } from '@elui-react-native/icon';
+import type { IFocusable, InteractionEvent, PressablePropsExtended, PressableState } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
+import type { ShadowToken } from '@elui-react-native/theme-types';
+import type { FontTokens, IBorderTokens, IColorTokens, IShadowTokens, LayoutTokens } from '@elui-react-native/tokens';
 
 export const buttonName = 'Button';
 export type ButtonSize = 'small' | 'medium' | 'large';

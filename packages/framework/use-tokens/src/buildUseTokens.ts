@@ -1,6 +1,6 @@
-import { immutableMerge } from '@fluentui-react-native/framework-base';
-import type { GetTypedMemoValue } from '@fluentui-react-native/framework-base';
-import { getMemoCache } from '@fluentui-react-native/framework-base';
+import { immutableMerge } from '@elui-react-native/framework-base';
+import type { GetTypedMemoValue } from '@elui-react-native/framework-base';
+import { getMemoCache } from '@elui-react-native/framework-base';
 
 /** A function to generate tokens based on a theme */
 export type TokensFromTheme<TTokens, TTheme> = (theme: TTheme) => TTokens;

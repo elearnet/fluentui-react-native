@@ -1,5 +1,5 @@
-import { immutableMerge } from '@fluentui-react-native/framework-base';
-import type { GetTypedMemoValue } from '@fluentui-react-native/framework-base';
+import { immutableMerge } from '@elui-react-native/framework-base';
+import type { GetTypedMemoValue } from '@elui-react-native/framework-base';
 
 /**
  * alternatively look them up with a passed in function

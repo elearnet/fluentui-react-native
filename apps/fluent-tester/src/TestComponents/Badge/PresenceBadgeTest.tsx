@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import { View, Platform, Text } from 'react-native';
 
-import { ToggleButton } from '@fluentui/react-native';
-import type { BadgeSize } from '@fluentui-react-native/badge';
-import { PresenceBadge, BadgeSizes } from '@fluentui-react-native/badge';
+import { ToggleButton } from '@elui/react-native';
+import type { BadgeSize } from '@elui-react-native/badge';
+import { PresenceBadge, BadgeSizes } from '@elui-react-native/badge';
 
 import { StyledPicker } from '../Common/StyledPicker';
 

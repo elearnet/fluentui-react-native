@@ -2,7 +2,7 @@ import React from 'react';
 import { I18nManager, Platform } from 'react-native';
 import type { LayoutChangeEvent } from 'react-native';
 
-import type { PressablePropsExtended } from '@fluentui-react-native/interactive-hooks';
+import type { PressablePropsExtended } from '@elui-react-native/interactive-hooks';
 
 import type { TabProps, TabTokens } from './Tab.types';
 import type { TabListState } from '../TabList/TabList.types';

@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/experimental-shimmer",
+  "name": "@elui-react-native/experimental-shimmer",
   "version": "0.13.20",
   "description": "A cross-platform Fluent Shimmer component",
   "main": "lib-commonjs/index.js",
@@ -31,18 +31,18 @@
     "directory": "packages/experimental/Shimmer"
   },
   "dependencies": {
-    "@fluentui-react-native/framework": "workspace:*",
-    "@fluentui-react-native/theming-utils": "workspace:*",
-    "@fluentui-react-native/tokens": "workspace:*",
-    "@fluentui-react-native/use-styling": "workspace:*",
+    "@elui-react-native/framework": "workspace:*",
+    "@elui-react-native/theming-utils": "workspace:*",
+    "@elui-react-native/tokens": "workspace:*",
+    "@elui-react-native/use-styling": "workspace:*",
     "assert-never": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -72,7 +72,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

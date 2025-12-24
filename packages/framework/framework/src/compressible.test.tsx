@@ -4,11 +4,11 @@ import * as React from 'react';
 import type { TextProps, TextStyle } from 'react-native';
 import { Text, View } from 'react-native';
 
-import { mergeStyles } from '@fluentui-react-native/framework-base';
-import type { Theme } from '@fluentui-react-native/theme-types';
-import { useSlot } from '@fluentui-react-native/use-slot';
-import { withSlots } from '@fluentui-react-native/framework-base';
-import { applyTokenLayers } from '@fluentui-react-native/use-tokens';
+import { mergeStyles } from '@elui-react-native/framework-base';
+import type { Theme } from '@elui-react-native/theme-types';
+import { useSlot } from '@elui-react-native/use-slot';
+import { withSlots } from '@elui-react-native/framework-base';
+import { applyTokenLayers } from '@elui-react-native/use-tokens';
 import * as renderer from 'react-test-renderer';
 
 import { compressible } from './compressible';

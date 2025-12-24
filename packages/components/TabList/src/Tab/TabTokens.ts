@@ -1,6 +1,6 @@
-import { buildUseTokens } from '@fluentui-react-native/framework';
-import type { Theme } from '@fluentui-react-native/framework';
-import type { TokenSettings } from '@fluentui-react-native/use-styling';
+import { buildUseTokens } from '@elui-react-native/framework';
+import type { Theme } from '@elui-react-native/framework';
+import type { TokenSettings } from '@elui-react-native/use-styling';
 
 import type { TabTokens } from './Tab.types';
 import { tabName } from './Tab.types';

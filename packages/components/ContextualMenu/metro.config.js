@@ -1,4 +1,4 @@
-module.exports = require('@fluentui-react-native/scripts/metro.config');
+module.exports = require('@elui-react-native/scripts/metro.config');
 const { getDefaultConfig } = require('metro-config');
 
 module.exports = (async () => {

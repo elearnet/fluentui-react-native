@@ -1,5 +1,5 @@
-import { buildUseTokens } from '@fluentui-react-native/framework';
-import { globalTokens } from '@fluentui-react-native/theme-tokens';
+import { buildUseTokens } from '@elui-react-native/framework';
+import { globalTokens } from '@elui-react-native/theme-tokens';
 
 import type { DividerTokens } from './Divider.types';
 

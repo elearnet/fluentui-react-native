@@ -3,12 +3,12 @@
 import * as React from 'react';
 import { Platform, Pressable, View } from 'react-native';
 
-import { ActivityIndicator } from '@fluentui-react-native/experimental-activity-indicator';
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, memoize, mergeProps, withSlots } from '@fluentui-react-native/framework';
-import { Icon, createIconProps } from '@fluentui-react-native/icon';
-import type { IPressableState } from '@fluentui-react-native/interactive-hooks';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+import { ActivityIndicator } from '@elui-react-native/experimental-activity-indicator';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, memoize, mergeProps, withSlots } from '@elui-react-native/framework';
+import { Icon, createIconProps } from '@elui-react-native/icon';
+import type { IPressableState } from '@elui-react-native/interactive-hooks';
+import { TextV1 as Text } from '@elui-react-native/text';
 
 import { stylingSettings, getDefaultSize, getPlatformSpecificAppearance } from './Button.styling';
 import { buttonName } from './Button.types';

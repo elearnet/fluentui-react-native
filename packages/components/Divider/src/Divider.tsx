@@ -5,12 +5,12 @@ import React from 'react';
 import { View } from 'react-native';
 import type { ViewProps } from 'react-native';
 
-import { withSlots, compressible, useSlot, useFluentTheme, patchTokens } from '@fluentui-react-native/framework';
-import type { UseTokens } from '@fluentui-react-native/framework';
-import { IconV1 as Icon } from '@fluentui-react-native/icon';
-import type { IconPropsV1 as IconProps } from '@fluentui-react-native/icon';
-import { TextV1 as Text } from '@fluentui-react-native/text';
-import type { TextProps } from '@fluentui-react-native/text';
+import { withSlots, compressible, useSlot, useFluentTheme, patchTokens } from '@elui-react-native/framework';
+import type { UseTokens } from '@elui-react-native/framework';
+import { IconV1 as Icon } from '@elui-react-native/icon';
+import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
+import { TextV1 as Text } from '@elui-react-native/text';
+import type { TextProps } from '@elui-react-native/text';
 
 import { colorsFromAppearance, getBeforeLineStyle, getRootStyle, useDividerSlotProps } from './Divider.styling';
 import { dividerName } from './Divider.types';

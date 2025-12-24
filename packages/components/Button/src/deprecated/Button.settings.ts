@@ -1,4 +1,4 @@
-import type { IViewProps } from '@fluentui-react-native/adapters';
+import type { IViewProps } from '@elui-react-native/adapters';
 import type { IComposeSettings } from '@uifabricshared/foundation-compose';
 
 import type { IButtonType } from './Button.types';

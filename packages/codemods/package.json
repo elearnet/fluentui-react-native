@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/codemods",
+  "name": "@elui-react-native/codemods",
   "version": "0.5.24",
   "description": "Transform files to make refactoring FURN code easier",
   "license": "MIT",
@@ -41,11 +41,11 @@
   "devDependencies": {
     "@babel/core": "^7.8.0",
     "@babel/preset-env": "^7.8.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/jest-config": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
-    "@fluentui-react-native/test-tools": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/jest-config": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
+    "@elui-react-native/test-tools": "workspace:*",
     "@types/jscodeshift": "^0.11.11",
     "@types/node": "^22.0.0"
   },

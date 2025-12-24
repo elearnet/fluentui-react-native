@@ -3,10 +3,10 @@
 import type { ReactNode } from 'react';
 import { Pressable } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose } from '@fluentui-react-native/framework';
-import { Icon } from '@fluentui-react-native/icon';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose } from '@elui-react-native/framework';
+import { Icon } from '@elui-react-native/icon';
+import { TextV1 as Text } from '@elui-react-native/text';
 
 import type { ChipType, ChipProps } from './Chip.types';
 import { chipName } from './Chip.types';

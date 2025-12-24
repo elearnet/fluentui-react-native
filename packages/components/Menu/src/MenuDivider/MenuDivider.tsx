@@ -2,8 +2,8 @@
 /** @jsx withSlots */
 import { View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, withSlots } from '@fluentui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, withSlots } from '@elui-react-native/framework';
 
 import { stylingSettings } from './MenuDivider.styling';
 import type { MenuDividerProps, MenuDividerType } from './MenuDivider.types';

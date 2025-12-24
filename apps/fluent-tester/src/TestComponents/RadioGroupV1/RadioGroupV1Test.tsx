@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
 
-import { RADIOGROUPV1_TESTPAGE } from '@fluentui-react-native/e2e-testing';
+import { RADIOGROUPV1_TESTPAGE } from '@elui-react-native/e2e-testing';
 
 import { CustomizedRadioGroup } from './CustomizedRadioGroup';
 import { DefaultRadioGroup } from './DefaultRadioGroup';

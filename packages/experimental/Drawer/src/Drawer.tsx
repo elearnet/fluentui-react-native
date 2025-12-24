@@ -2,8 +2,8 @@
 /** @jsx withSlots */
 import { Animated, Modal, TouchableWithoutFeedback, View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots } from '@fluentui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots } from '@elui-react-native/framework';
 
 import { stylingSettings } from './Drawer.styling';
 import type { DrawerType, DrawerProps } from './Drawer.types';

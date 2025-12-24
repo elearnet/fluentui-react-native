@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { IRenderData, ISlotWithFilter, IComposable, IWithComposable, ISlots, IPropFilter, INativeSlotType } from './Composable.types';
 import { mergeSettings, ISlotProps } from '@uifabricshared/foundation-settings';
-import { mergeProps } from '@fluentui-react-native/framework-base';
+import { mergeProps } from '@elui-react-native/framework-base';
 
 interface LegacyFunctionComponent<P = unknown> extends React.FunctionComponent<P> {
   (props: P, ...children: React.ReactNode[]): React.ReactElement<any, any> | null;

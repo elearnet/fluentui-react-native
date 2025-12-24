@@ -3,8 +3,8 @@
 import { useRef, useEffect, useCallback } from 'react';
 import { Animated, Easing, View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, mergeProps, withSlots, buildUseStyling } from '@fluentui-react-native/framework';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, mergeProps, withSlots, buildUseStyling } from '@elui-react-native/framework';
 import { Svg, Path } from 'react-native-svg';
 import type { SvgProps } from 'react-native-svg';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@fluentui-react-native/spinner",
+  "name": "@elui-react-native/spinner",
   "version": "0.9.24",
   "description": "A cross-platform Fluent spinner component",
   "main": "lib-commonjs/index.js",
@@ -31,16 +31,16 @@
     "directory": "packages/experimental/Spinner"
   },
   "dependencies": {
-    "@fluentui-react-native/framework": "workspace:*",
-    "@fluentui-react-native/text": "workspace:*",
-    "@fluentui-react-native/theme-tokens": "workspace:*",
-    "@fluentui-react-native/use-styling": "workspace:*"
+    "@elui-react-native/framework": "workspace:*",
+    "@elui-react-native/text": "workspace:*",
+    "@elui-react-native/theme-tokens": "workspace:*",
+    "@elui-react-native/use-styling": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@fluentui-react-native/babel-config": "workspace:*",
-    "@fluentui-react-native/eslint-config-rules": "workspace:*",
-    "@fluentui-react-native/scripts": "workspace:*",
+    "@elui-react-native/babel-config": "workspace:*",
+    "@elui-react-native/eslint-config-rules": "workspace:*",
+    "@elui-react-native/scripts": "workspace:*",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",
@@ -68,7 +68,7 @@
     "kitType": "library",
     "alignDeps": {
       "presets": [
-        "@fluentui-react-native/scripts/align-deps-preset.js",
+        "@elui-react-native/scripts/align-deps-preset.js",
         "microsoft/react-native"
       ],
       "requirements": {

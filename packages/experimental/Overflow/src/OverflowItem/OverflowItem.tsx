@@ -2,7 +2,7 @@
 import * as React from 'react';
 import type { StyleProp, ViewProps, ViewStyle } from 'react-native';
 
-import { mergeProps, stagedComponent, memoize, mergeStyles } from '@fluentui-react-native/framework';
+import { mergeProps, stagedComponent, memoize, mergeStyles } from '@elui-react-native/framework';
 
 import type { OverflowItemProps } from './OverflowItem.types';
 import { overflowItemName } from './OverflowItem.types';

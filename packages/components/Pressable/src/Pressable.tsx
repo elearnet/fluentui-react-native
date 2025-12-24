@@ -12,7 +12,7 @@
 
 import { View } from 'react-native';
 
-import { useAsPressable } from '@fluentui-react-native/interactive-hooks';
+import { useAsPressable } from '@elui-react-native/interactive-hooks';
 import type { IUseStyling } from '@uifabricshared/foundation-composable';
 import { composable } from '@uifabricshared/foundation-composable';
 import { mergeSettings } from '@uifabricshared/foundation-settings';

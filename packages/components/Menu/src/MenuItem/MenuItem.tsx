@@ -3,10 +3,10 @@
 import React from 'react';
 import { I18nManager, Image, Pressable, View } from 'react-native';
 
-import type { UseSlots } from '@fluentui-react-native/framework';
-import { compose, memoize, mergeProps, withSlots } from '@fluentui-react-native/framework';
-import { IconV1 as Icon } from '@fluentui-react-native/icon';
-import { TextV1 as Text } from '@fluentui-react-native/text';
+import type { UseSlots } from '@elui-react-native/framework';
+import { compose, memoize, mergeProps, withSlots } from '@elui-react-native/framework';
+import { IconV1 as Icon } from '@elui-react-native/icon';
+import { TextV1 as Text } from '@elui-react-native/text';
 import { SvgXml } from 'react-native-svg';
 
 import { stylingSettings } from './MenuItem.styling';

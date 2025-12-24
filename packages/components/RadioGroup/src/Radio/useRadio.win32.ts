@@ -2,9 +2,9 @@ import * as React from 'react';
 import type { AccessibilityState } from 'react-native';
 import { I18nManager } from 'react-native';
 
-import { memoize } from '@fluentui-react-native/framework';
-import type { KeyPressEvent } from '@fluentui-react-native/interactive-hooks';
-import { usePressableState, useOnPressWithFocus, useViewCommandFocus, useKeyDownProps } from '@fluentui-react-native/interactive-hooks';
+import { memoize } from '@elui-react-native/framework';
+import type { KeyPressEvent } from '@elui-react-native/interactive-hooks';
+import { usePressableState, useOnPressWithFocus, useViewCommandFocus, useKeyDownProps } from '@elui-react-native/interactive-hooks';
 
 import type { RadioProps, RadioInfo } from './Radio.types';
 import { useRadioGroupContext } from '../RadioGroup/radioGroupContext';

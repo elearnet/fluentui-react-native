@@ -1,7 +1,7 @@
 import type React from 'react';
 import type { Animated, LayoutChangeEvent, View } from 'react-native';
 
-import type { InteractionEvent } from '@fluentui-react-native/interactive-hooks';
+import type { InteractionEvent } from '@elui-react-native/interactive-hooks';
 
 import type { MenuListProps } from '../MenuList/MenuList.types';
 

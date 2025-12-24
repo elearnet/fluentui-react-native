@@ -1,5 +1,5 @@
-import type { Theme } from '@fluentui-react-native/framework';
-import { isHighContrast } from '@fluentui-react-native/theming-utils';
+import type { Theme } from '@elui-react-native/framework';
+import { isHighContrast } from '@elui-react-native/theming-utils';
 
 export function shouldUseThickCheckmark(theme: Theme): boolean {
   if (isHighContrast(theme)) {

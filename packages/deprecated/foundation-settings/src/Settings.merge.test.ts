@@ -1,6 +1,6 @@
 import type { ColorValue } from 'react-native';
 
-import type { StyleProp } from '@fluentui-react-native/framework-base';
+import type { StyleProp } from '@elui-react-native/framework-base';
 
 import { mergeSettings } from './Settings';
 import type { IComponentSettings } from './Settings.types';

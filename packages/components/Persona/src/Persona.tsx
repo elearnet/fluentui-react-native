@@ -2,9 +2,9 @@
 /** @jsx withSlots */
 import { View, Text } from 'react-native';
 
-import { filterViewProps } from '@fluentui-react-native/adapters';
-import { PersonaCoin } from '@fluentui-react-native/persona-coin';
-import { foregroundColorTokens } from '@fluentui-react-native/tokens';
+import { filterViewProps } from '@elui-react-native/adapters';
+import { PersonaCoin } from '@elui-react-native/persona-coin';
+import { foregroundColorTokens } from '@elui-react-native/tokens';
 import type { ISlots, IRenderData } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';

@@ -1,4 +1,4 @@
-import * as Constants from '@fluentui-react-native/e2e-testing';
+import * as Constants from '@elui-react-native/e2e-testing';
 
 import type { TestDescription } from './TestComponents';
 import { ActivityIndicatorTest } from './TestComponents/ActivityIndicator';

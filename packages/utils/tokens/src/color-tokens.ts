@@ -1,6 +1,6 @@
 import type { ColorValue } from 'react-native';
 
-import type { Theme, ThemeColorDefinition } from '@fluentui-react-native/theme-types';
+import type { Theme, ThemeColorDefinition } from '@elui-react-native/theme-types';
 
 import type { OperationSet } from './token.types';
 

@@ -3,11 +3,11 @@
 import * as React from 'react';
 import { View, ScrollView, Platform, I18nManager } from 'react-native';
 
-import { Callout } from '@fluentui-react-native/callout';
-import { FocusZone } from '@fluentui-react-native/focus-zone';
-import type { IFocusable } from '@fluentui-react-native/interactive-hooks';
-import { useKeyDownProps, useSelectedKey } from '@fluentui-react-native/interactive-hooks';
-import { backgroundColorTokens, borderTokens } from '@fluentui-react-native/tokens';
+import { Callout } from '@elui-react-native/callout';
+import { FocusZone } from '@elui-react-native/focus-zone';
+import type { IFocusable } from '@elui-react-native/interactive-hooks';
+import { useKeyDownProps, useSelectedKey } from '@elui-react-native/interactive-hooks';
+import { backgroundColorTokens, borderTokens } from '@elui-react-native/tokens';
 import type { ISlots } from '@uifabricshared/foundation-composable';
 import { withSlots } from '@uifabricshared/foundation-composable';
 import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';

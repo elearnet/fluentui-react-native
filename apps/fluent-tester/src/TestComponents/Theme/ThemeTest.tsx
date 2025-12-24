@@ -2,11 +2,11 @@ import * as React from 'react';
 import type { ViewStyle, ColorValue } from 'react-native';
 import { View, StyleSheet } from 'react-native';
 
-import { Button, PrimaryButton, Text, StealthButton } from '@fluentui/react-native';
-import { THEME_TESTPAGE } from '@fluentui-react-native/e2e-testing';
-import type { Theme } from '@fluentui-react-native/theme-types';
-import { useTheme } from '@fluentui-react-native/theme-types';
-import { themedStyleSheet } from '@fluentui-react-native/themed-stylesheet';
+import { Button, PrimaryButton, Text, StealthButton } from '@elui/react-native';
+import { THEME_TESTPAGE } from '@elui-react-native/e2e-testing';
+import type { Theme } from '@elui-react-native/theme-types';
+import { useTheme } from '@elui-react-native/theme-types';
+import { themedStyleSheet } from '@elui-react-native/themed-stylesheet';
 
 import { commonTestStyles } from '../Common/styles';
 import type { TestSection, PlatformStatus } from '../Test';

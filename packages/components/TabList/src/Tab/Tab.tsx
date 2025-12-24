@@ -6,13 +6,13 @@ import React from 'react';
 import { View, Pressable } from 'react-native';
 import type { ViewProps } from 'react-native';
 
-import type { UseTokens } from '@fluentui-react-native/framework';
-import { withSlots, compressible, useSlot, useFluentTheme, applyTokenLayers, mergeProps } from '@fluentui-react-native/framework';
-import { IconV1 as Icon } from '@fluentui-react-native/icon';
-import type { IconPropsV1 as IconProps } from '@fluentui-react-native/icon';
-import type { PressablePropsExtended } from '@fluentui-react-native/interactive-hooks';
-import type { TextProps } from '@fluentui-react-native/text';
-import { Text } from '@fluentui-react-native/text';
+import type { UseTokens } from '@elui-react-native/framework';
+import { withSlots, compressible, useSlot, useFluentTheme, applyTokenLayers, mergeProps } from '@elui-react-native/framework';
+import { IconV1 as Icon } from '@elui-react-native/icon';
+import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
+import type { PressablePropsExtended } from '@elui-react-native/interactive-hooks';
+import type { TextProps } from '@elui-react-native/text';
+import { Text } from '@elui-react-native/text';
 
 import { useTabSlotProps } from './Tab.styling';
 import { tabName } from './Tab.types';
