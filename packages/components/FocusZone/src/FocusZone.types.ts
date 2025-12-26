@@ -2,7 +2,7 @@ import type * as React from 'react';
 
 import type { IViewProps } from '@elui-react-native/adapters';
 import type { IFocusable } from '@elui-react-native/interactive-hooks';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 export const focusZoneName = 'FocusZone';
 

@@ -2,7 +2,7 @@ import type { ViewStyle, ViewProps, DimensionValue } from 'react-native';
 
 import type { Spacing } from '@elui-react-native/framework';
 import type { IBackgroundColorTokens, IBorderTokens, FontTokens } from '@elui-react-native/tokens';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 import type { IStackItemProps } from './StackItem/StackItem.types';
 

@@ -2,7 +2,7 @@ import { Text as RNText } from 'react-native';
 
 import { filterTextProps } from '@elui-react-native/adapters';
 import { foregroundColorTokens, textTokens } from '@elui-react-native/tokens';
-import { compose } from '@uifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
 
 import { settings } from './Text.settings';
 import { textName } from './Text.types';

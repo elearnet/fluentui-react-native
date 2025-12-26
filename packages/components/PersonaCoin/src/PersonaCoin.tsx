@@ -4,11 +4,11 @@ import { Image, View, Text } from 'react-native';
 
 import { filterViewProps, filterImageProps } from '@elui-react-native/adapters';
 import { foregroundColorTokens } from '@elui-react-native/tokens';
-import type { ISlots, IRenderData } from '@uifabricshared/foundation-composable';
-import { withSlots } from '@uifabricshared/foundation-composable';
-import { compose } from '@uifabricshared/foundation-compose';
-import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { ISlots, IRenderData } from '@eluifabricshared/foundation-composable';
+import { withSlots } from '@eluifabricshared/foundation-composable';
+import { compose } from '@eluifabricshared/foundation-compose';
+import type { IUseComposeStyling } from '@eluifabricshared/foundation-compose';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import { getPresenceIconSource } from './PersonaCoin.helpers';
 import { settings } from './PersonaCoin.settings';

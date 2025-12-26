@@ -4,7 +4,7 @@ import type { IViewProps } from '@elui-react-native/adapters';
 import type { IFocusable, IPressableState, IWithPressableOptions } from '@elui-react-native/interactive-hooks';
 import type { ITextProps } from '@elui-react-native/text';
 import type { IForegroundColorTokens, FontTokens, IBorderTokens } from '@elui-react-native/tokens';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type ObjectBase = {};

@@ -28,6 +28,7 @@ export const useTabSlotProps = (props: TabProps, tokens: TabTokens, theme: Theme
         justifyContent: 'center',
         padding: 1,
         backgroundColor: tokens.backgroundColor,
+        // backgroundColor:'#567212',
         ...(!vertical ? Platform.select({ macos: {}, default: { height: '100%' } }) : {}),
         ...borderStyles.from(tokens, theme),
       },
@@ -116,5 +117,18 @@ export const useTabSlotProps = (props: TabProps, tokens: TabTokens, theme: Theme
     [canShowAnimatedIndicator, props.tabKey, selectedKey, tokens.indicatorColor, tokens.indicatorRadius, theme],
   );
 
-  return { root, contentContainer, content, icon, stack, indicatorContainer, indicator };
+  const separator = React.useMemo<IViewProps>(
+    () => ({
+      style: {
+        width: tokens.separatorWidth,
+        height: tokens.separatorHeight,
+        backgroundColor: tokens.separatorColor,
+        alignSelf: 'center',
+        marginHorizontal: 0,
+      },
+    }),
+    [tokens.separatorWidth, tokens.separatorHeight, tokens.separatorColor],
+  );
+
+  return { root, contentContainer, content, icon, stack, indicatorContainer, indicator, separator };
 };

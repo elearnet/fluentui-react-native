@@ -5,7 +5,7 @@ import type { IconProps } from '@elui-react-native/icon';
 import type { IFocusable, IPressableState, PressablePropsExtended } from '@elui-react-native/interactive-hooks';
 import type { ITextProps } from '@elui-react-native/text';
 import type { FontTokens, IForegroundColorTokens, IBackgroundColorTokens, IBorderTokens } from '@elui-react-native/tokens';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 export const contextualMenuItemName = 'ContextualMenuItem';
 

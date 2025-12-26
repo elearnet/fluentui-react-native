@@ -31,6 +31,9 @@ export const defaultTabTokens: TokenSettings<TabTokens, Theme> = {
   flexDirection: 'column',
   indicatorRadius: 99,
   numberOfLines: 1,
+  separatorColor: '#c0c0c0',
+  separatorWidth: 1,
+  separatorHeight: 16,
   small: {
     iconSize: 20,
     iconMargin: 2,

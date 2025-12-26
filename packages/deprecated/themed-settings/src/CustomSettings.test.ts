@@ -1,8 +1,8 @@
 import type { ColorValue } from 'react-native';
 
 import { getMemoCache } from '@elui-react-native/framework-base';
-import type { IComponentSettings } from '@uifabricshared/foundation-settings';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { IComponentSettings } from '@eluifabricshared/foundation-settings';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import { mergeBaseSettings, getThemedSettings } from './CustomSettings';
 import type { ISettingsEntry, ISettingsFromTheme } from './CustomSettings.types';

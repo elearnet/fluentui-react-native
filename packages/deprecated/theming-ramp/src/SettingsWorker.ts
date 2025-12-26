@@ -1,5 +1,5 @@
 import type { Theme } from '@elui-react-native/theme-types';
-import type { IComponentSettings } from '@uifabricshared/foundation-settings';
+import type { IComponentSettings } from '@eluifabricshared/foundation-settings';
 
 /** helper to strip out the component settings specific bits from the returned structure */
 export function returnAsSlotProps(target: IComponentSettings): IComponentSettings {

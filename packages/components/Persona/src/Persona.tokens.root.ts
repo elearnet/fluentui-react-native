@@ -2,7 +2,7 @@ import type { ViewStyle } from 'react-native';
 
 import type { IViewProps } from '@elui-react-native/adapters';
 import type { Theme } from '@elui-react-native/framework';
-import { styleFunction } from '@uifabricshared/foundation-tokens';
+import { styleFunction } from '@eluifabricshared/foundation-tokens';
 
 import type { IPersonaTokens } from './Persona.types';
 

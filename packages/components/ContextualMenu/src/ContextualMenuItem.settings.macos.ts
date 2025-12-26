@@ -1,4 +1,4 @@
-import type { IComposeSettings } from '@uifabricshared/foundation-compose';
+import type { IComposeSettings } from '@eluifabricshared/foundation-compose';
 
 import type { ContextualMenuItemType } from './ContextualMenuItem.types';
 import { contextualMenuItemName } from './ContextualMenuItem.types';

@@ -2,7 +2,7 @@ import type * as React from 'react';
 import { View } from 'react-native';
 
 import { filterViewProps } from '@elui-react-native/adapters';
-import { compose } from '@uifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
 
 import { settings } from './StackItem.settings';
 import { stackItemTokenProcessor } from './StackItem.tokens';

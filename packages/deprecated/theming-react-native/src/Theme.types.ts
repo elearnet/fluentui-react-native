@@ -1,10 +1,10 @@
-import type { IThemeRegistry, IProcessTheme } from '@uifabricshared/theme-registry';
-import type { ITheme, IPartialTheme } from '@uifabricshared/theming-ramp';
+import type { IThemeRegistry, IProcessTheme } from '@eluifabricshared/theme-registry';
+import type { ITheme, IPartialTheme } from '@eluifabricshared/theming-ramp';
 
 /**
  * @deprecated
  */
-export type { ITheme, IPartialTheme } from '@uifabricshared/theming-ramp';
+export type { ITheme, IPartialTheme } from '@eluifabricshared/theming-ramp';
 
 /**
  * @deprecated

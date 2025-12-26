@@ -1,12 +1,12 @@
 /* eslint-disable */
 
-import { ISlotProps, IComponentSettings, IOverrideLookup, IWithTokens } from '@uifabricshared/foundation-settings';
-import { getThemedSettings } from '@uifabricshared/themed-settings';
-import { ITheme, getSettings, returnAsSlotProps } from '@uifabricshared/theming-ramp';
-import { IComponentTokens, processTokens, ITargetHasToken, buildComponentTokens } from '@uifabricshared/foundation-tokens';
+import { ISlotProps, IComponentSettings, IOverrideLookup, IWithTokens } from '@eluifabricshared/foundation-settings';
+import { getThemedSettings } from '@eluifabricshared/themed-settings';
+import { ITheme, getSettings, returnAsSlotProps } from '@eluifabricshared/theming-ramp';
+import { IComponentTokens, processTokens, ITargetHasToken, buildComponentTokens } from '@eluifabricshared/foundation-tokens';
 import { useTheme } from '@elui-react-native/theme-types';
 import { defaultFluentTheme } from '@elui-react-native/default-theme';
-import { IWithComposable, AsObject, IComposableDefinition, INativeSlotType } from '@uifabricshared/foundation-composable';
+import { IWithComposable, AsObject, IComposableDefinition, INativeSlotType } from '@eluifabricshared/foundation-composable';
 import { IComposeOptions, IStylingSettings, IDefineUseComposeStyling } from './compose.types';
 import { getMemoCache, GetMemoValue } from '@elui-react-native/framework-base';
 

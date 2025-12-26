@@ -7,7 +7,7 @@ import type { IFocusable, IPressableState } from '@elui-react-native/interactive
 import type { IPressableProps } from '@elui-react-native/pressable';
 import type { ITextProps } from '@elui-react-native/text';
 import type { FontTokens, IForegroundColorTokens, IBackgroundColorTokens, IBorderTokens } from '@elui-react-native/tokens';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 /**
  * @deprecated This will be removed when the package moves to 1.0.0.

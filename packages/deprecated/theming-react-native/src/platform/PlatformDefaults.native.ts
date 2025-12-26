@@ -1,5 +1,5 @@
-import { createThemeRegistry } from '@uifabricshared/theme-registry';
-import { resolvePartialTheme } from '@uifabricshared/theming-ramp';
+import { createThemeRegistry } from '@eluifabricshared/theme-registry';
+import { resolvePartialTheme } from '@eluifabricshared/theming-ramp';
 
 import type { IThemingModuleHelper } from '../NativeModule';
 import { ThemingModuleHelper } from '../NativeModule';

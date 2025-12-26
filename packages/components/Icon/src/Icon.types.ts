@@ -3,6 +3,13 @@ import type { ColorValue } from 'react-native';
 import type { FontIconProps } from './FontIcon/FontIcon.types';
 import type { SvgIconProps } from './SvgIcon/SvgIcon.types';
 
+export interface SysIconProps {
+  /**
+   * The SF Symbol name (e.g., 'star.fill', 'gear', 'house')
+   */
+  symbolName: string;
+}
+
 export interface IconProps {
   /**
    * Color of icon
@@ -24,4 +31,8 @@ export interface IconProps {
    * Props of FontIcon.
    */
   fontSource?: FontIconProps;
+  /*
+   * Props of SysIcon (macOS SF Symbols).
+   */
+  sysSource?: SysIconProps;
 }

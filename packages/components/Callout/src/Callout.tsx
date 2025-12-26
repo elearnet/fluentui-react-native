@@ -9,9 +9,9 @@ import { findNodeHandle, Platform } from 'react-native';
 import type { HostComponent } from 'react-native';
 
 import { backgroundColorTokens, borderTokens } from '@elui-react-native/tokens';
-import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
-import { compose } from '@uifabricshared/foundation-compose';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { IUseComposeStyling } from '@eluifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import { settings } from './Callout.settings';
 import type { ICalloutProps, ICalloutSlotProps, ICalloutType } from './Callout.types';

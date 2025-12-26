@@ -1,7 +1,7 @@
 import type { ImageProps } from 'react-native';
 
 import type { Theme } from '@elui-react-native/framework';
-import { styleFunction } from '@uifabricshared/foundation-tokens';
+import { styleFunction } from '@eluifabricshared/foundation-tokens';
 
 import { calculateEffectiveSizes } from './PersonaCoin.helpers';
 import type { IPersonaCoinTokens } from './PersonaCoin.types';

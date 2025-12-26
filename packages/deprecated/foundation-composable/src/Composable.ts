@@ -18,7 +18,7 @@ import type {
 } from './Composable.types';
 import { useCompoundPrepare } from './Composable.slots';
 import { renderSlot } from '@elui-react-native/framework-base';
-import { ISlotProps, mergeSettings } from '@uifabricshared/foundation-settings';
+import { ISlotProps, mergeSettings } from '@eluifabricshared/foundation-settings';
 
 export function atomicRender<TProps extends object, TState = object>(
   Slots: ISlots<ISlotProps<TProps>>,

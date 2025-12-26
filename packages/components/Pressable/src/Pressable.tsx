@@ -13,9 +13,9 @@
 import { View } from 'react-native';
 
 import { useAsPressable } from '@elui-react-native/interactive-hooks';
-import type { IUseStyling } from '@uifabricshared/foundation-composable';
-import { composable } from '@uifabricshared/foundation-composable';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { IUseStyling } from '@eluifabricshared/foundation-composable';
+import { composable } from '@eluifabricshared/foundation-composable';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import type { IPressableProps, IPressableType } from './Pressable.props';
 

@@ -1,5 +1,5 @@
 import { defaultFluentTheme } from '@elui-react-native/default-theme';
-import type { ITheme } from '@uifabricshared/theming-ramp';
+import type { ITheme } from '@eluifabricshared/theming-ramp';
 
 /**
  * @deprecated

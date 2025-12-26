@@ -1,4 +1,4 @@
-import type { IComponentSettings } from '@uifabricshared/foundation-settings';
+import type { IComponentSettings } from '@eluifabricshared/foundation-settings';
 
 import type { IMockBaseProps } from './MockComponent';
 import { mockCreate, stockFakeComponent } from './MockComponent';

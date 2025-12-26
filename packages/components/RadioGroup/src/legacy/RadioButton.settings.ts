@@ -1,4 +1,4 @@
-import type { IComposeSettings } from '@uifabricshared/foundation-compose';
+import type { IComposeSettings } from '@eluifabricshared/foundation-compose';
 
 import type { IRadioButtonType } from './RadioButton.types';
 import { radioButtonName } from './RadioButton.types';

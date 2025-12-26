@@ -1,4 +1,4 @@
-import type { IComposeSettings } from '@uifabricshared/foundation-compose';
+import type { IComposeSettings } from '@eluifabricshared/foundation-compose';
 
 import type { ICheckboxType } from './Checkbox.types';
 import { checkboxName } from './Checkbox.types';

@@ -8,9 +8,9 @@ import * as React from 'react';
 import { findNodeHandle } from 'react-native';
 
 import { useViewCommandFocus } from '@elui-react-native/interactive-hooks';
-import type { IUseStyling } from '@uifabricshared/foundation-composable';
-import { composable } from '@uifabricshared/foundation-composable';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { IUseStyling } from '@eluifabricshared/foundation-composable';
+import { composable } from '@eluifabricshared/foundation-composable';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import type { FocusZoneProps, FocusZoneSlotProps, FocusZoneType } from './FocusZone.types';
 import RCTFocusZone from './FocusZoneNativeComponent';

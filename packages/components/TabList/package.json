@@ -39,7 +39,8 @@
     "@elui-react-native/text": "workspace:*",
     "@elui-react-native/theming-utils": "workspace:*",
     "@elui-react-native/tokens": "workspace:*",
-    "@elui-react-native/use-styling": "workspace:*"
+    "@elui-react-native/use-styling": "workspace:*",
+    "elui": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

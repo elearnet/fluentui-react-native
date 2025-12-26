@@ -1,5 +1,5 @@
 import type { IViewProps } from '@elui-react-native/adapters';
-import type { IComposeSettings } from '@uifabricshared/foundation-compose';
+import type { IComposeSettings } from '@eluifabricshared/foundation-compose';
 
 import type { ILinkType } from './Link.types';
 import { linkName } from './Link.types';

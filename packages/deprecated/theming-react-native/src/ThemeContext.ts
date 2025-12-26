@@ -4,7 +4,7 @@ import type { ThemeRegistry } from './Theme.types';
 /**
  * @deprecated
  */
-export { ThemeContext, useTheme } from '@uifabricshared/theming-ramp';
+export { ThemeContext, useTheme } from '@eluifabricshared/theming-ramp';
 
 /**
  * @deprecated

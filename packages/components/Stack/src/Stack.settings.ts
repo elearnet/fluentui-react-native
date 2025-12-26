@@ -1,4 +1,4 @@
-import type { IComposeSettings } from '@uifabricshared/foundation-compose';
+import type { IComposeSettings } from '@eluifabricshared/foundation-compose';
 
 import type { IStackType } from './Stack.types';
 import { stackName } from './Stack.types';

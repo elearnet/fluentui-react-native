@@ -2,7 +2,7 @@ import type { ImageProps, ViewProps, ImageURISource, TextProps, ColorValue } fro
 
 import type { IViewProps } from '@elui-react-native/adapters';
 import type { IBackgroundColorTokens, IForegroundColorTokens } from '@elui-react-native/tokens';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 export const personaCoinName = 'RNFPersonaCoin';
 

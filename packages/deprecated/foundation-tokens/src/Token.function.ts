@@ -1,6 +1,6 @@
 import type { GetTypedMemoValue } from '@elui-react-native/framework-base';
 import { mergeProps } from '@elui-react-native/framework-base';
-import type { ISlotProps } from '@uifabricshared/foundation-settings';
+import type { ISlotProps } from '@eluifabricshared/foundation-settings';
 
 import type { ITokenPropInfo, ICachedPropHandlers } from './Token.internal';
 import type {

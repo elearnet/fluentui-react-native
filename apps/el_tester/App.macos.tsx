@@ -21,21 +21,25 @@ const customTheme = new ThemeReference(baseTheme, {
   components: {
     Tab:{
       indicatorThickness:0,
+      backgroundColor:'red',
       // Note: Don't set borderRadius here - it overrides inline corner styles
       small:{
         indicatorMargin: 0,
+        backgroundColor:'red',
         iconSize:11,
-        stackMarginHorizontal:8,
+        stackMarginHorizontal:0,
         stackMarginVertical:0,
       },
       medium:{
         indicatorMargin: 0,
         iconSize:11,
+        stackMarginHorizontal:0,
         stackMarginVertical:0,
       },
       large:{
         indicatorMargin: 0,
         iconSize:11,
+        stackMarginHorizontal:0,
         stackMarginVertical:0,
       },
       // Selected state - this backgroundColor is used by inverted corners
@@ -45,10 +49,7 @@ const customTheme = new ThemeReference(baseTheme, {
     }
   },
 });
-
-
 const result = multiply(3,8);
-
 
 //console.log(NitrotestHybridObject);
 //const result = NitrotestHybridObject.multiply(2, 3);
@@ -57,47 +58,6 @@ const notes = [
   { id: '2', title: 'Note 2', body: 'Note 2 body' },
   // ...more notes
 ];
-
-// Chrome-style inverted corners - using nested Views since borderColor doesn't work on macOS
-// Outer View: has the tab's background color
-// Inner View: has transparent/toolbar background to "cut out" the curve
-const CORNER_SIZE = 8;
-
-interface InvertedCornersProps {
-  selectedTabIndex: number;
-  tabBackgroundColor: string;
-  selectedTabWidth: number;
-  tabWidth: number;
-}
-
-const InvertedCorners: React.FC<InvertedCornersProps> = ({
-                                                           selectedTabIndex,
-                                                           tabBackgroundColor,
-                                                           selectedTabWidth,
-                                                           tabWidth,
-                                                         }) => {
-  // Calculate left position: all tabs before selected have tabWidth, then the selected tab starts
-  const leftPosition = selectedTabIndex * tabWidth;
-
-  return (
-    <>
-      {/* Left inverted corner */}
-      <InvertedCorner
-        cornerColor={tabBackgroundColor}
-        cornerPosition="left"
-        cornerRadius={CORNER_SIZE}
-        style={{ position: 'absolute',bottom: 0,left: leftPosition - CORNER_SIZE,width: CORNER_SIZE, height: CORNER_SIZE,zIndex: 10, }}
-      />
-      {/* Right inverted corner */}
-      <InvertedCorner
-        cornerColor={tabBackgroundColor}
-        cornerPosition="right"
-        cornerRadius={CORNER_SIZE}
-        style={{ position: 'absolute',bottom: 0,left: leftPosition + selectedTabWidth,width: CORNER_SIZE, height: CORNER_SIZE,zIndex: 10, }}
-      />
-    </>
-  );
-};
 
 
 export default function App() {
@@ -194,24 +154,40 @@ export default function App() {
         </View>
         <View style={[styles.toolbarRight, { overflow: 'visible' }]}>
           <View style={{ position: 'relative', overflow: 'visible', flexDirection: 'row' }}>
-            <TabList defaultSelectedKey="tab1" onTabSelect={onTabSelect} selectedKey={selectedKey} size="small" appearance="subtle">
-              <Tab tabKey="tab1" style={[styles.tab, { backgroundColor: selectedKey === 'tab1' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab1'? selectedTabWith:tabWith}]}>
+            <TabList defaultSelectedKey="tab1" style={styles.tabList} onTabSelect={onTabSelect} selectedKey={selectedKey} size="small" appearance="subtle">
+              <Tab
+                tabKey="tab1"
+                icon={{size:20, sysSource:{ symbolName: 'star.fill' }}}
+                showSeparator={selectedKey !== 'tab1' && selectedKey !== 'tab2'}
+                showInvertedCorners cornerColor={styles.detail.backgroundColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab1' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab1'? selectedTabWith:tabWith}]}
+              >
                 Tab 1
               </Tab>
-              <Tab tabKey="tab2" style={[styles.tab, { backgroundColor: selectedKey === 'tab2' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab2'? selectedTabWith:tabWith}]}>
+              <Tab
+                tabKey="tab2"
+                showSeparator={selectedKey !== 'tab2' && selectedKey !== 'tab3'}
+                showInvertedCorners cornerColor={styles.detail.backgroundColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab2' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab2'? selectedTabWith:tabWith}]}
+              >
                 Tab 2
               </Tab>
-              <Tab tabKey="tab3" style={[styles.tab, { backgroundColor: selectedKey === 'tab3' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab3'? selectedTabWith:tabWith}]}>
-                Tab3 <SysIcon symbolName="sidebar.left" style={{width:20,height:20}} ></SysIcon>
+              <Tab
+                tabKey="tab3"
+                showSeparator={selectedKey !== 'tab3' && selectedKey !== 'tab4'}
+                showInvertedCorners cornerColor={styles.detail.backgroundColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab3' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab3'? selectedTabWith:tabWith}]}
+              >
+                Tab3
+              </Tab>
+              <Tab
+                tabKey="tab4"
+                showInvertedCorners cornerColor={styles.detail.backgroundColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab4' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab4'? selectedTabWith:tabWith}]}
+              >
+                Tab4
               </Tab>
             </TabList>
-            {/* Inverted corners for Chrome-style tabs */}
-            <InvertedCorners
-              selectedTabIndex={selectedKey === 'tab1' ? 0 : selectedKey === 'tab2' ? 1 : 2}
-              tabBackgroundColor={styles.detail.backgroundColor as string}
-              selectedTabWidth={selectedTabWith}
-              tabWidth={tabWith}
-            />
           </View>
         </View>
       </View>
@@ -250,7 +226,7 @@ export default function App() {
         {/* Detail Pane */}
         <View style={styles.detail}>
           <Text>{result}</Text>
-          <Text>{leftWidth}</Text>
+          <Text>{selectedKey}</Text>
           <Text>{isSeparatorHovered ? 'green' : 'red'}</Text>
           <FbrViewExample style={styles.box} color="#452109"></FbrViewExample>
           <SysIcon symbolName="sidebar.left" style={styles.box} ></SysIcon>
@@ -317,14 +293,18 @@ const styles = StyleSheet.create({
   toolbarLeft: { height: 35, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', paddingLeft: 60 },
   toolbarFixed: { position: 'absolute', left: 80, height: '100%', flexDirection: 'row', alignItems: 'center' },
   toolbarRight: { flex: 1, height: 35,  flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingLeft: 10,paddingTop:0 },
+  tabList:{
+    flex: 1, height: 35,
+  },
   tab:{
+    height: 35,
     borderTopLeftRadius: 6,
     borderTopRightRadius: 6,
     borderBottomLeftRadius: 0, // No rounding at bottom (inverted corners handle this)
     borderBottomRightRadius: 0,
     backgroundColor: 'transparent',
     paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingVertical: 0,
   },
   content: { flex: 1, flexDirection: 'row' },
   sidebar: { backgroundColor: '#ede', paddingTop: 0, height: '100%', },

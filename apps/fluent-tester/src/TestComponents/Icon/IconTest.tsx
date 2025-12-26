@@ -131,5 +131,5 @@ export const IconTest: React.FunctionComponent = () => {
 
   const description = 'Icons are styled images that can be fonts, svgs, or bitmaps';
 
-  return <Test name="Icon Test" description={description} sections={iconSections} status={status} e2eSections={e2eSections}></Test>;
+  return <Test name="Icon Testdd" description={description} sections={iconSections} status={status} e2eSections={e2eSections}></Test>;
 };

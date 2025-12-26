@@ -7,11 +7,11 @@ import {
   IExtractSlotProps,
   IExtractProps,
   IExtractState,
-} from '@uifabricshared/foundation-composable';
-import { ISlotProps, IComponentSettings, IWithTokens, IOverrideLookup } from '@uifabricshared/foundation-settings';
-import { ISettingsEntry } from '@uifabricshared/themed-settings';
-import { ITheme } from '@uifabricshared/theming-ramp';
-import { IStyleFactories, IComponentTokens } from '@uifabricshared/foundation-tokens';
+} from '@eluifabricshared/foundation-composable';
+import { ISlotProps, IComponentSettings, IWithTokens, IOverrideLookup } from '@eluifabricshared/foundation-settings';
+import { ISettingsEntry } from '@eluifabricshared/themed-settings';
+import { ITheme } from '@eluifabricshared/theming-ramp';
+import { IStyleFactories, IComponentTokens } from '@eluifabricshared/foundation-tokens';
 import * as React from 'react';
 
 export interface IComposeType<

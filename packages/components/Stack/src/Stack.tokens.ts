@@ -1,7 +1,7 @@
 import type { ViewStyle, ViewProps } from 'react-native';
 
 import type { Theme } from '@elui-react-native/framework';
-import { styleFunction } from '@uifabricshared/foundation-tokens';
+import { styleFunction } from '@eluifabricshared/foundation-tokens';
 
 import type { Alignment, IStackTokens } from './Stack.types';
 import { parseGap, parsePadding } from './StackUtils';

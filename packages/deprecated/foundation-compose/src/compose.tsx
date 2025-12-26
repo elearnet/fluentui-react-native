@@ -8,10 +8,10 @@ import {
   IExtractProps,
   IExtractSlotProps,
   IExtractState,
-} from '@uifabricshared/foundation-composable';
+} from '@eluifabricshared/foundation-composable';
 import { initializeStyling, getOptionsFromObj } from './useStyling';
 import { immutableMerge } from '@elui-react-native/framework-base';
-import { ISlotProps } from '@uifabricshared/foundation-settings';
+import { ISlotProps } from '@eluifabricshared/foundation-settings';
 
 /**
  * Merge current and base options together to form the new object definition.  These objects will merge with the

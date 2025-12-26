@@ -5,9 +5,9 @@
  */
 
 import { useViewCommandFocus } from '@elui-react-native/interactive-hooks';
-import type { IUseStyling } from '@uifabricshared/foundation-composable';
-import { composable } from '@uifabricshared/foundation-composable';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { IUseStyling } from '@eluifabricshared/foundation-composable';
+import { composable } from '@eluifabricshared/foundation-composable';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import type { IFocusTrapZoneProps, IFocusTrapZoneSlotProps, IFocusTrapZoneType } from './FocusTrapZone.types';
 import RCTFocusTrapZone from './FocusTrapZoneNativeComponent';

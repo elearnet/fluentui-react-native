@@ -4,7 +4,7 @@ import type { ViewProps } from 'react-native';
 import type { FocusZoneProps } from '@elui-react-native/focus-zone';
 import type { ITextProps } from '@elui-react-native/text';
 import type { IForegroundColorTokens, FontTokens } from '@elui-react-native/tokens';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 export const radioGroupName = 'RadioGroup';
 

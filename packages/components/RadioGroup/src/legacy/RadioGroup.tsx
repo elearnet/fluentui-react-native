@@ -7,11 +7,11 @@ import { FocusZone } from '@elui-react-native/focus-zone';
 import { useSelectedKey } from '@elui-react-native/interactive-hooks';
 import { Text } from '@elui-react-native/text';
 import { foregroundColorTokens, textTokens } from '@elui-react-native/tokens';
-import type { ISlots } from '@uifabricshared/foundation-composable';
-import { withSlots } from '@uifabricshared/foundation-composable';
-import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
-import { compose } from '@uifabricshared/foundation-compose';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { ISlots } from '@eluifabricshared/foundation-composable';
+import { withSlots } from '@eluifabricshared/foundation-composable';
+import type { IUseComposeStyling } from '@eluifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import { settings } from './RadioGroup.settings';
 import type {

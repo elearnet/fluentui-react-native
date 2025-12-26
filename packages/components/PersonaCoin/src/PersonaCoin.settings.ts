@@ -1,4 +1,4 @@
-import type { IComposeSettings } from '@uifabricshared/foundation-compose';
+import type { IComposeSettings } from '@eluifabricshared/foundation-compose';
 
 import { convertCoinColorFluent } from './PersonaCoin.helpers';
 import type { IPersonaCoinType } from './PersonaCoin.types';

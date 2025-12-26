@@ -15,11 +15,11 @@ import type { IPressableProps } from '@elui-react-native/pressable';
 import { Text } from '@elui-react-native/text';
 import { foregroundColorTokens, textTokens, borderTokens, getPaletteFromTheme } from '@elui-react-native/tokens';
 import { backgroundColorTokens } from '@elui-react-native/tokens';
-import type { ISlots } from '@uifabricshared/foundation-composable';
-import { withSlots } from '@uifabricshared/foundation-composable';
-import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
-import { compose } from '@uifabricshared/foundation-compose';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { ISlots } from '@eluifabricshared/foundation-composable';
+import { withSlots } from '@eluifabricshared/foundation-composable';
+import type { IUseComposeStyling } from '@eluifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import { settings, checkboxSelectActionLabel } from './Checkbox.settings';
 import type { ICheckboxState, ICheckboxProps, ICheckboxSlotProps, ICheckboxRenderData, ICheckboxType } from './Checkbox.types';

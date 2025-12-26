@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { Theme, PartialTheme } from '@elui-react-native/theme-types';
-import { mergeSettingsCollection } from '@uifabricshared/foundation-settings';
+import { mergeSettingsCollection } from '@eluifabricshared/foundation-settings';
 import { MergeOptions, immutableMergeCore } from '@elui-react-native/framework-base';
 
 function _settingsHandler(...objs: (object | undefined)[]): object | undefined {

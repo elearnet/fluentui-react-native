@@ -1702,17 +1702,17 @@ DEPENDENCIES:
   - fast_float (from `../../../node_modules/react-native-macos/third-party-podspecs/fast_float.podspec`)
   - FBLazyVector (from `../../../node_modules/react-native-macos/Libraries/FBLazyVector`)
   - fmt (from `../../../node_modules/react-native-macos/third-party-podspecs/fmt.podspec`)
-  - "FRNAvatar (from `../../../node_modules/@fluentui-react-native/experimental-avatar`)"
-  - "FRNCallout (from `../../../node_modules/@fluentui-react-native/callout`)"
-  - "FRNCheckbox (from `../../../node_modules/@fluentui-react-native/experimental-checkbox`)"
-  - "FRNMenuButton (from `../../../node_modules/@fluentui-react-native/menu-button`)"
-  - "FRNRadioButton (from `../../../node_modules/@fluentui-react-native/radio-group`)"
-  - "FRNVibrancyView (from `../../../node_modules/@fluentui-react-native/vibrancy-view`)"
+  - "FRNAvatar (from `../../../node_modules/@elui-react-native/experimental-avatar`)"
+  - "FRNCallout (from `../../../node_modules/@elui-react-native/callout`)"
+  - "FRNCheckbox (from `../../../node_modules/@elui-react-native/experimental-checkbox`)"
+  - "FRNMenuButton (from `../../../node_modules/@elui-react-native/menu-button`)"
+  - "FRNRadioButton (from `../../../node_modules/@elui-react-native/radio-group`)"
+  - "FRNVibrancyView (from `../../../node_modules/@elui-react-native/vibrancy-view`)"
   - glog (from `../../../node_modules/react-native-macos/third-party-podspecs/glog.podspec`)
   - RCT-Folly (from `../../../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../../../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec`)
   - RCTDeprecation (from `../../../node_modules/react-native-macos/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
-  - "RCTFocusZone (from `../../../node_modules/@fluentui-react-native/focus-zone`)"
+  - "RCTFocusZone (from `../../../node_modules/@elui-react-native/focus-zone`)"
   - RCTRequired (from `../../../node_modules/react-native-macos/Libraries/Required`)
   - RCTTypeSafety (from `../../../node_modules/react-native-macos/Libraries/TypeSafety`)
   - React (from `../../../node_modules/react-native-macos/`)
@@ -1797,17 +1797,17 @@ EXTERNAL SOURCES:
   fmt:
     :podspec: "../../../node_modules/react-native-macos/third-party-podspecs/fmt.podspec"
   FRNAvatar:
-    :path: "../../../node_modules/@fluentui-react-native/experimental-avatar"
+    :path: "../../../node_modules/@elui-react-native/experimental-avatar"
   FRNCallout:
-    :path: "../../../node_modules/@fluentui-react-native/callout"
+    :path: "../../../node_modules/@elui-react-native/callout"
   FRNCheckbox:
-    :path: "../../../node_modules/@fluentui-react-native/experimental-checkbox"
+    :path: "../../../node_modules/@elui-react-native/experimental-checkbox"
   FRNMenuButton:
-    :path: "../../../node_modules/@fluentui-react-native/menu-button"
+    :path: "../../../node_modules/@elui-react-native/menu-button"
   FRNRadioButton:
-    :path: "../../../node_modules/@fluentui-react-native/radio-group"
+    :path: "../../../node_modules/@elui-react-native/radio-group"
   FRNVibrancyView:
-    :path: "../../../node_modules/@fluentui-react-native/vibrancy-view"
+    :path: "../../../node_modules/@elui-react-native/vibrancy-view"
   glog:
     :podspec: "../../../node_modules/react-native-macos/third-party-podspecs/glog.podspec"
   RCT-Folly:
@@ -1815,7 +1815,7 @@ EXTERNAL SOURCES:
   RCTDeprecation:
     :path: "../../../node_modules/react-native-macos/ReactApple/Libraries/RCTFoundation/RCTDeprecation"
   RCTFocusZone:
-    :path: "../../../node_modules/@fluentui-react-native/focus-zone"
+    :path: "../../../node_modules/@elui-react-native/focus-zone"
   RCTRequired:
     :path: "../../../node_modules/react-native-macos/Libraries/Required"
   RCTTypeSafety:

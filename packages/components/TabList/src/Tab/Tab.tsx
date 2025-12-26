@@ -13,6 +13,7 @@ import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
 import type { PressablePropsExtended } from '@elui-react-native/interactive-hooks';
 import type { TextProps } from '@elui-react-native/text';
 import { Text } from '@elui-react-native/text';
+import { InvertedCorner } from 'elui';
 
 import { useTabSlotProps } from './Tab.styling';
 import { tabName } from './Tab.types';
@@ -56,6 +57,13 @@ export const Tab = compressible<TabProps, TabTokens>((props: TabProps, useTokens
   const ContentContainerSlot = useSlot<ViewProps>(View, slotProps.contentContainer as ViewProps);
   const ContentSlot = useSlot<TextProps>(Text, slotProps.content);
   const IconSlot = useSlot<IconProps>(Icon, slotProps.icon);
+  const SeparatorSlot = useSlot<ViewProps>(View, slotProps.separator as ViewProps);
+
+  const showIndicator = tokens.indicatorThickness>0 ;
+
+  // Get corner styling from tokens
+  const cornerRadius = tokens.cornerRadius ?? 8;
+  const cornerSize = cornerRadius;
 
   return (final: TabProps, ...children: React.ReactNode[]) => {
     if (!tab.state) {
@@ -79,39 +87,95 @@ export const Tab = compressible<TabProps, TabTokens>((props: TabProps, useTokens
     const {
       icon,
       tabKey,
+      showSeparator,
+      showInvertedCorners,
+      cornerColor,
       onLayout: _,
       ...mergedProps
     } = mergeProps(tab.props, final, {
       accessibilityLabel: tab.props.accessibilityLabel || final.accessibilityLabel || label,
     });
 
+    const isSelected = tab.state.selected;
+    const shouldShowCorners = isSelected && showInvertedCorners;
+
+    //console.warn(`showIndicator:${showIndicator}`);
     if (__DEV__ && !hasChildren && !icon) {
       console.warn('A Tab component must render content. Children, an icon, or both should be passed in.');
     }
-
-    return (
-      <RootSlot {...mergedProps}>
-        <StackSlot>
-          {icon && <IconSlot {...icon} />}
-          {hasChildren && (
-            <ContentContainerSlot>
-              {React.Children.map(children, (child) =>
-                typeof child === 'string' ? (
-                  <ContentSlot accessible={false}>
-                    {child}
-                  </ContentSlot>
-                ) : (
-                  child
-                ),
-              )}
-            </ContentContainerSlot>
+    if(shouldShowCorners){
+      return (
+        <>
+        <View style={{ position: 'relative', flexDirection: 'row', alignItems: 'flex-end' }}>
+        <InvertedCorner
+            cornerColor={cornerColor as string}
+            cornerPosition="left"
+            cornerRadius={cornerRadius}
+            style={{ width: cornerSize, height: cornerSize,  zIndex: 10 }}
+          />
+        <RootSlot {...mergedProps}>
+          <StackSlot>
+            {icon && <IconSlot {...icon} />}
+            {hasChildren && (
+              <ContentContainerSlot>
+                {React.Children.map(children, (child) =>
+                  typeof child === 'string' ? (
+                    <ContentSlot accessible={false}>
+                      {child}
+                    </ContentSlot>
+                  ) : (
+                    child
+                  ),
+                )}
+              </ContentContainerSlot>
+            )}
+          </StackSlot>
+          {showIndicator && (
+            <IndicatorContainerSlot>
+              <IndicatorSlot />
+            </IndicatorContainerSlot>
           )}
-        </StackSlot>
-        <IndicatorContainerSlot>
-          <IndicatorSlot />
-        </IndicatorContainerSlot>
-      </RootSlot>
+        </RootSlot>
+       <InvertedCorner
+            cornerColor={cornerColor as string}
+            cornerPosition="right"
+            cornerRadius={cornerRadius}
+            style={{ width: cornerSize, height: cornerSize, zIndex: 10 }}
+          />
+         </View>
+        {showSeparator && <SeparatorSlot />}
+        </>
     );
+    } else {
+      return (
+        <>
+        <RootSlot {...mergedProps}>
+          <StackSlot>
+            {icon && <IconSlot {...icon} />}
+            {hasChildren && (
+              <ContentContainerSlot>
+                {React.Children.map(children, (child) =>
+                  typeof child === 'string' ? (
+                    <ContentSlot accessible={false}>
+                      {child}
+                    </ContentSlot>
+                  ) : (
+                    child
+                  ),
+                )}
+              </ContentContainerSlot>
+            )}
+          </StackSlot>
+          {showIndicator && (
+            <IndicatorContainerSlot>
+              <IndicatorSlot />
+            </IndicatorContainerSlot>
+          )}
+        </RootSlot>
+        {showSeparator && <SeparatorSlot />}
+        </>
+      );
+    }
   };
 }, useTabTokens);
 Tab.displayName = tabName;

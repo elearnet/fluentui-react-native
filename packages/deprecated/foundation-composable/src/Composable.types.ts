@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as React from 'react';
-import { ISlotProps } from '@uifabricshared/foundation-settings';
+import { ISlotProps } from '@eluifabricshared/foundation-settings';
 
 export type AsObject<T> = T extends object ? T : object;
 export type RequireObject<T> = T extends object ? T : never;

@@ -1,6 +1,6 @@
 import { I18nManager } from 'react-native';
 
-import type { IComposeSettings } from '@uifabricshared/foundation-compose';
+import type { IComposeSettings } from '@eluifabricshared/foundation-compose';
 
 import type { SubmenuType } from './Submenu.types';
 import { submenuName } from './Submenu.types';

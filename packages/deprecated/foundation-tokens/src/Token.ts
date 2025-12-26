@@ -1,5 +1,5 @@
 import type { GetMemoValue } from '@elui-react-native/framework-base';
-import type { ISlotProps, IComponentSettings } from '@uifabricshared/foundation-settings';
+import type { ISlotProps, IComponentSettings } from '@eluifabricshared/foundation-settings';
 
 import type { ITokenPropInfo } from './Token.internal';
 import type { IComponentTokens } from './Token.types';

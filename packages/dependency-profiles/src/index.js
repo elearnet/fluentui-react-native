@@ -739,35 +739,35 @@ module.exports = {
       "version": "0.22.14"
     },
     "@eluifabricshared/foundation-composable": {
-      "name": "@uifabricshared/foundation-composable",
+      "name": "@eluifabricshared/foundation-composable",
       "version": "0.12.5"
     },
-    "@uifabricshared/foundation-compose": {
-      "name": "@uifabricshared/foundation-compose",
+    "@eluifabricshared/foundation-compose": {
+      "name": "@eluifabricshared/foundation-compose",
       "version": "1.14.25"
     },
-    "@uifabricshared/foundation-settings": {
-      "name": "@uifabricshared/foundation-settings",
+    "@eluifabricshared/foundation-settings": {
+      "name": "@eluifabricshared/foundation-settings",
       "version": "0.14.1"
     },
-    "@uifabricshared/foundation-tokens": {
-      "name": "@uifabricshared/foundation-tokens",
+    "@eluifabricshared/foundation-tokens": {
+      "name": "@eluifabricshared/foundation-tokens",
       "version": "0.14.9"
     },
-    "@uifabricshared/theme-registry": {
-      "name": "@uifabricshared/theme-registry",
+    "@eluifabricshared/theme-registry": {
+      "name": "@eluifabricshared/theme-registry",
       "version": "0.11.2"
     },
-    "@uifabricshared/themed-settings": {
-      "name": "@uifabricshared/themed-settings",
+    "@eluifabricshared/themed-settings": {
+      "name": "@eluifabricshared/themed-settings",
       "version": "0.11.1"
     },
-    "@uifabricshared/theming-ramp": {
-      "name": "@uifabricshared/theming-ramp",
+    "@eluifabricshared/theming-ramp": {
+      "name": "@eluifabricshared/theming-ramp",
       "version": "0.19.12"
     },
-    "@uifabricshared/theming-react-native": {
-      "name": "@uifabricshared/theming-react-native",
+    "@eluifabricshared/theming-react-native": {
+      "name": "@eluifabricshared/theming-react-native",
       "version": "0.19.13"
     },
     "@elui-react-native/experimental-activity-indicator": {
@@ -1044,36 +1044,36 @@ module.exports = {
       "name": "@elui-react-native/text",
       "version": "0.21.14"
     },
-    "@uifabricshared/foundation-composable": {
-      "name": "@uifabricshared/foundation-composable",
+    "@eluifabricshared/foundation-composable": {
+      "name": "@eluifabricshared/foundation-composable",
       "version": "0.12.2"
     },
-    "@uifabricshared/foundation-compose": {
-      "name": "@uifabricshared/foundation-compose",
+    "@eluifabricshared/foundation-compose": {
+      "name": "@eluifabricshared/foundation-compose",
       "version": "1.14.12"
     },
-    "@uifabricshared/foundation-settings": {
-      "name": "@uifabricshared/foundation-settings",
+    "@eluifabricshared/foundation-settings": {
+      "name": "@eluifabricshared/foundation-settings",
       "version": "0.13.2"
     },
-    "@uifabricshared/foundation-tokens": {
-      "name": "@uifabricshared/foundation-tokens",
+    "@eluifabricshared/foundation-tokens": {
+      "name": "@eluifabricshared/foundation-tokens",
       "version": "0.13.9"
     },
-    "@uifabricshared/theme-registry": {
-      "name": "@uifabricshared/theme-registry",
+    "@eluifabricshared/theme-registry": {
+      "name": "@eluifabricshared/theme-registry",
       "version": "0.10.1"
     },
-    "@uifabricshared/themed-settings": {
-      "name": "@uifabricshared/themed-settings",
+    "@eluifabricshared/themed-settings": {
+      "name": "@eluifabricshared/themed-settings",
       "version": "0.10.2"
     },
-    "@uifabricshared/theming-ramp": {
-      "name": "@uifabricshared/theming-ramp",
+    "@eluifabricshared/theming-ramp": {
+      "name": "@eluifabricshared/theming-ramp",
       "version": "0.19.4"
     },
-    "@uifabricshared/theming-react-native": {
-      "name": "@uifabricshared/theming-react-native",
+    "@eluifabricshared/theming-react-native": {
+      "name": "@eluifabricshared/theming-react-native",
       "version": "0.18.12"
     },
     "@elui-react-native/experimental-activity-indicator": {

@@ -3,7 +3,7 @@ import type { ScrollViewProps } from 'react-native';
 import type { IViewProps } from '@elui-react-native/adapters';
 import type { ICalloutProps, ICalloutTokens } from '@elui-react-native/callout';
 import type { FocusZoneProps } from '@elui-react-native/focus-zone';
-import type { IRenderData } from '@uifabricshared/foundation-composable';
+import type { IRenderData } from '@eluifabricshared/foundation-composable';
 
 export const contextualMenuName = 'ContextualMenu';
 export interface ContextualMenuContext {

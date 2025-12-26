@@ -1,4 +1,4 @@
-import type { IProcessTheme, IThemeEventListener, IThemeRegistry } from '@uifabricshared/theme-registry';
+import type { IProcessTheme, IThemeEventListener, IThemeRegistry } from '@eluifabricshared/theme-registry';
 
 import { createPlatformThemeRegistry } from './platform';
 import type { IPartialTheme, ITheme, ThemeRegistry } from './Theme.types';
@@ -6,7 +6,7 @@ import type { IPartialTheme, ITheme, ThemeRegistry } from './Theme.types';
 /**
  * @deprecated
  */
-export { ITheme, IPartialTheme } from '@uifabricshared/theming-ramp';
+export { ITheme, IPartialTheme } from '@eluifabricshared/theming-ramp';
 /**
  * @deprecated
  */

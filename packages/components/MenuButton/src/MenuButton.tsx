@@ -5,11 +5,11 @@ import React, { useRef, useState, useCallback } from 'react';
 import { ButtonV1 as Button } from '@elui-react-native/button';
 import { ContextualMenu, ContextualMenuItem, SubmenuItem, Submenu } from '@elui-react-native/contextual-menu';
 import { backgroundColorTokens, borderTokens } from '@elui-react-native/tokens';
-import type { ISlots } from '@uifabricshared/foundation-composable';
-import { withSlots } from '@uifabricshared/foundation-composable';
-import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
-import { compose } from '@uifabricshared/foundation-compose';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { ISlots } from '@eluifabricshared/foundation-composable';
+import { withSlots } from '@eluifabricshared/foundation-composable';
+import type { IUseComposeStyling } from '@eluifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 import { SvgXml } from 'react-native-svg';
 
 import { defaultIconColor, primaryIconColor } from './MenuButton.style';

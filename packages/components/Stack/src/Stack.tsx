@@ -6,11 +6,11 @@ import type { StyleProp, ViewStyle } from 'react-native';
 
 import { filterViewProps } from '@elui-react-native/adapters';
 import { backgroundColorTokens, borderTokens } from '@elui-react-native/tokens';
-import type { ISlots } from '@uifabricshared/foundation-composable';
-import { withSlots } from '@uifabricshared/foundation-composable';
-import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
-import { compose } from '@uifabricshared/foundation-compose';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { ISlots } from '@eluifabricshared/foundation-composable';
+import { withSlots } from '@eluifabricshared/foundation-composable';
+import type { IUseComposeStyling } from '@eluifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import { settings } from './Stack.settings';
 import { buildStackRootStyles, buildStackInnerStyles } from './Stack.tokens';

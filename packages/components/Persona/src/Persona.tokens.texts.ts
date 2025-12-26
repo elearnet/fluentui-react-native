@@ -4,7 +4,7 @@ import type { ITextProps } from '@elui-react-native/adapters';
 import type { Theme } from '@elui-react-native/framework';
 import type { PersonaSize } from '@elui-react-native/persona-coin';
 import type { FontTokens } from '@elui-react-native/tokens';
-import { styleFunction } from '@uifabricshared/foundation-tokens';
+import { styleFunction } from '@eluifabricshared/foundation-tokens';
 
 import { getTextFont, getSecondaryFont, getTertiaryFont, getOptionalFont } from './Persona.helpers';
 import type { IPersonaTokens } from './Persona.types';

@@ -1,6 +1,6 @@
 import type { GetMemoValue, StyleProp } from '@elui-react-native/framework-base';
-import type { ISlotProps, IComponentSettings } from '@uifabricshared/foundation-settings';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { ISlotProps, IComponentSettings } from '@eluifabricshared/foundation-settings';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import type { IMockTheme } from './MockTheme';
 import { processTokens } from './Token';

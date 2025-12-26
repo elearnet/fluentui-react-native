@@ -5,11 +5,11 @@ import { View, Text } from 'react-native';
 import { filterViewProps } from '@elui-react-native/adapters';
 import { PersonaCoin } from '@elui-react-native/persona-coin';
 import { foregroundColorTokens } from '@elui-react-native/tokens';
-import type { ISlots, IRenderData } from '@uifabricshared/foundation-composable';
-import { withSlots } from '@uifabricshared/foundation-composable';
-import type { IUseComposeStyling } from '@uifabricshared/foundation-compose';
-import { compose } from '@uifabricshared/foundation-compose';
-import { mergeSettings } from '@uifabricshared/foundation-settings';
+import type { ISlots, IRenderData } from '@eluifabricshared/foundation-composable';
+import { withSlots } from '@eluifabricshared/foundation-composable';
+import type { IUseComposeStyling } from '@eluifabricshared/foundation-compose';
+import { compose } from '@eluifabricshared/foundation-compose';
+import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import { settings } from './Persona.settings';
 import { buildCoinStyle } from './Persona.tokens.coin';

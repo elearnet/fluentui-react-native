@@ -81,6 +81,23 @@ export interface TabTokens extends FontTokens, IBorderTokens, IForegroundColorTo
    */
   numberOfLines?: number;
 
+  cornerRadius?: number;
+
+  /**
+   * The color of the separator line.
+   */
+  separatorColor?: ColorValue;
+
+  /**
+   * The width/thickness of the separator line.
+   */
+  separatorWidth?: number;
+
+  /**
+   * The height of the separator line.
+   */
+  separatorHeight?: number;
+
   /**
    * States that can be applied to a button
    */
@@ -119,6 +136,17 @@ export interface TabProps extends Omit<PressablePropsExtended, 'onPress'> {
    */
   componentRef?: React.RefObject<IFocusable>;
 
+  /**
+   * Whether to show a separator after this tab (Chrome-style).
+   */
+  showSeparator?: boolean;
+
+  /**
+   * Whether to show inverted corners (Chrome-style).
+   */
+  showInvertedCorners?: boolean;
+  cornerColor?: ColorValue;
+
   testID?: string;
 }
 
@@ -139,6 +167,7 @@ export interface TabSlotProps {
   indicator: IViewProps;
   contentContainer: IViewProps;
   content: TextProps;
+  separator: IViewProps;
 }
 
 export interface TabType {

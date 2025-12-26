@@ -5,8 +5,8 @@ import type {
   PlatformDefaultsChangedArgs,
 } from '@elui-react-native/win32-theme';
 import { createPartialOfficeTheme } from '@elui-react-native/win32-theme';
-import type { ITheme, OfficePalette } from '@uifabricshared/theming-ramp';
-import { resolvePartialTheme } from '@uifabricshared/theming-ramp';
+import type { ITheme, OfficePalette } from '@eluifabricshared/theming-ramp';
+import { resolvePartialTheme } from '@eluifabricshared/theming-ramp';
 
 import type { IThemingModuleHelper, IEventEmitter } from './ThemingModule.types';
 import { getBaselinePlatformTheme } from '../BaselinePlatformDefaults';
