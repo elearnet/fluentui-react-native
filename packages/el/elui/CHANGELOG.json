@@ -1,0 +1,50 @@
+{
+  "name": "elui",
+  "entries": [
+    {
+      "date": "Wed, 24 Dec 2025 08:17:27 GMT",
+      "version": "0.1.1",
+      "tag": "elui_v0.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "eadron@users.noreply.github.com",
+            "package": "elui",
+            "commit": "1f651ac5fa245e599937a03c35d6be2fca544f01",
+            "comment": "fix: some fixes"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Wed, 24 Dec 2025 08:14:16 GMT",
+      "version": "0.1.1",
+      "tag": "elui_v0.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "eadron@users.noreply.github.com",
+            "package": "elui",
+            "commit": "1f651ac5fa245e599937a03c35d6be2fca544f01",
+            "comment": "fix: some fixes"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Wed, 24 Dec 2025 07:47:59 GMT",
+      "version": "0.1.1",
+      "tag": "elui_v0.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "eadron@users.noreply.github.com",
+            "package": "elui",
+            "commit": "6de5be776edec9704f3cac50eb4465037ad7a770",
+            "comment": "fix: some fixes"
+          }
+        ]
+      }
+    }
+  ]
+}

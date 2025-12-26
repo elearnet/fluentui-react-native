@@ -5,15 +5,72 @@ import {
   Text,
   FlatList,
   TouchableOpacity,
+  Pressable,
   PanResponder,
 } from 'react-native';
 //import { ELUIView, NitrotestHybridObject } from 'el-ui';
 import { ButtonV1 as Button } from '@elui-react-native/button';
 import { TabList, Tab } from '@elui-react-native/tablist';
 import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
+import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
 
-import { multiply, FbrViewExample,SysIcon,InvertedCorner } from 'elui';
+import { multiply, FbrViewExample, SysIcon, HoverableView } from 'elui';
+
+// CloseButton component with native hover support via HoverableView
+const CloseButton = ({ onPress }: { onPress: () => void }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <HoverableView
+      onHoverIn={() => setIsHovered(true)}
+      onHoverOut={() => setIsHovered(false)}
+    >
+      <TouchableOpacity
+        onPress={onPress}
+        style={[
+          styles.tabCloseButton,
+          isHovered && styles.tabCloseButtonHovered,
+        ]}
+      >
+        <SysIcon symbolName="xmark" style={styles.tabCloseIcon} />
+      </TouchableOpacity>
+    </HoverableView>
+  );
+};
+
+// HoverableTabContent component - shows hover background on tab content
+interface HoverableTabContentProps {
+  icon: string;
+  title: string;
+  isSelected:boolean;
+  onClose: () => void;
+}
+const HoverableTabContent = ({ icon, title, isSelected, onClose }: HoverableTabContentProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const theme = useFluentTheme();
+
+  // Get font styles from theme (similar to Tab.styling.ts)
+  const textStyle = React.useMemo(() => ({
+    ...styles.tabText,
+    color: theme.colors.neutralForeground1,
+    ...fontStyles.from({ fontSize: 12 }, theme),
+  }), [theme]);
+
+  return (
+    <HoverableView
+      onHoverIn={() => setIsHovered(true && !isSelected)}
+      onHoverOut={() => setIsHovered(false)}
+      style={[
+        styles.tabContent,
+        isHovered && styles.tabContentHovered,
+      ]}
+    >
+      <SysIcon symbolName={icon} style={styles.tabIcon} />
+      <Text style={textStyle}>{title}</Text>
+      <CloseButton onPress={onClose} />
+    </HoverableView>
+  );
+};
 
 // Create theme with custom Tab tokens to hide indicator (Chrome-style tabs)
 const baseTheme = createAppleTheme();
@@ -49,7 +106,7 @@ const customTheme = new ThemeReference(baseTheme, {
     }
   },
 });
-const result = multiply(3,8);
+const result = multiply(3,11);
 
 //console.log(NitrotestHybridObject);
 //const result = NitrotestHybridObject.multiply(2, 3);
@@ -120,7 +177,7 @@ export default function App() {
 
   const [selectedKey, setSelectedKey] = React.useState('tab1');
   const [selectedTabWith, setSelectedTabWith] = React.useState(200);
-  const [tabWith, setabWith] = React.useState(100);
+  const [tabWith, setabWith] = React.useState(200);
   const onTabSelect = React.useCallback((key: string) => {
     setSelectedKey(key);
   }, []);
@@ -157,12 +214,11 @@ export default function App() {
             <TabList defaultSelectedKey="tab1" style={styles.tabList} onTabSelect={onTabSelect} selectedKey={selectedKey} size="small" appearance="subtle">
               <Tab
                 tabKey="tab1"
-                icon={{size:20, sysSource:{ symbolName: 'star.fill' }}}
                 showSeparator={selectedKey !== 'tab1' && selectedKey !== 'tab2'}
                 showInvertedCorners cornerColor={styles.detail.backgroundColor}
                 style={[styles.tab, { backgroundColor: selectedKey === 'tab1' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab1'? selectedTabWith:tabWith}]}
               >
-                Tab 1
+                <HoverableTabContent icon="star.fill" title="Tab 1" isSelected={selectedKey === 'tab1'} onClose={() => console.log('Close tab1')} />
               </Tab>
               <Tab
                 tabKey="tab2"
@@ -170,7 +226,7 @@ export default function App() {
                 showInvertedCorners cornerColor={styles.detail.backgroundColor}
                 style={[styles.tab, { backgroundColor: selectedKey === 'tab2' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab2'? selectedTabWith:tabWith}]}
               >
-                Tab 2
+                <HoverableTabContent icon="doc.text" title="Tab 2" isSelected={selectedKey === 'tab2'} onClose={() => console.log('Close tab2')} />
               </Tab>
               <Tab
                 tabKey="tab3"
@@ -178,14 +234,14 @@ export default function App() {
                 showInvertedCorners cornerColor={styles.detail.backgroundColor}
                 style={[styles.tab, { backgroundColor: selectedKey === 'tab3' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab3'? selectedTabWith:tabWith}]}
               >
-                Tab3
+                <HoverableTabContent icon="folder" title="Tab 3" isSelected={selectedKey === 'tab3'} onClose={() => console.log('Close tab3')} />
               </Tab>
               <Tab
                 tabKey="tab4"
                 showInvertedCorners cornerColor={styles.detail.backgroundColor}
                 style={[styles.tab, { backgroundColor: selectedKey === 'tab4' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab4'? selectedTabWith:tabWith}]}
               >
-                Tab4
+                <HoverableTabContent icon="gear" title="Tab 4" isSelected={selectedKey === 'tab4'} onClose={() => console.log('Close tab4')} />
               </Tab>
             </TabList>
           </View>
@@ -215,13 +271,15 @@ export default function App() {
              event.nativeEvent.offsetY,
            );}}
          */}
-        <View
+        <HoverableView
           style={[styles.separator, { backgroundColor: isSeparatorHovered ? 'transparent':styles.sidebar.backgroundColor, width: isSeparatorHovered ? 4 : 1 }]}
           {...panResponder.panHandlers}
           //for resizing cursor
           //options: col-resize, row-resize, ew-resize, ns-resize
           // @ts-ignore
           cursor="ew-resize"
+          onHoverIn={() => setIsSeparatorHovered(true)}
+          onHoverOut={() => setIsSeparatorHovered(false)}
         />
         {/* Detail Pane */}
         <View style={styles.detail}>
@@ -292,19 +350,52 @@ const styles = StyleSheet.create({
   toolbar: { height: 35, backgroundColor: 'transparent', flexDirection: 'row' },
   toolbarLeft: { height: 35, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', paddingLeft: 60 },
   toolbarFixed: { position: 'absolute', left: 80, height: '100%', flexDirection: 'row', alignItems: 'center' },
-  toolbarRight: { flex: 1, height: 35,  flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingLeft: 10,paddingTop:0 },
+  toolbarRight: { flex: 1, height: 35,  flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingLeft: 10,paddingTop:8 },
   tabList:{
-    flex: 1, height: 35,
+    flex: 1, height: 27,
   },
   tab:{
-    height: 35,
+    height: 27,
     borderTopLeftRadius: 6,
     borderTopRightRadius: 6,
     borderBottomLeftRadius: 0, // No rounding at bottom (inverted corners handle this)
     borderBottomRightRadius: 0,
     backgroundColor: 'transparent',
-    paddingHorizontal: 12,
+    paddingHorizontal: 0,
     paddingVertical: 0,
+  },
+  tabContent: {
+    height: 25,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flex: 1,
+    borderRadius: 6,
+    paddingHorizontal: 3,
+  },
+  tabContentHovered: {
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+  },
+  tabIcon: {
+    width: 16,
+    height: 16,
+    marginRight: 6,
+  },
+  tabText: {
+    flex: 1,
+    fontSize: 12,
+  },
+  tabCloseButton: {
+    marginLeft: 6,
+    padding: 2,
+    borderRadius: 4,
+  },
+  tabCloseButtonHovered: {
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+  },
+  tabCloseIcon: {
+    width: 12,
+    height: 12,
   },
   content: { flex: 1, flexDirection: 'row' },
   sidebar: { backgroundColor: '#ede', paddingTop: 0, height: '100%', },
@@ -330,4 +421,5 @@ const styles = StyleSheet.create({
     marginLeft: -32,
     marginVertical: 0
   },
+
 });
