@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix: some fixes",
-  "packageName": "@eluifabricshared/themed-settings",
-  "email": "eadron@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

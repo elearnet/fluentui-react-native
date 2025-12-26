@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix: fixed some issues",
+  "packageName": "@elui-react-native/use-styling",
+  "email": "eadron@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

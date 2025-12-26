@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix: fixed some issues",
+  "packageName": "@eluifabricshared/foundation-compose",
+  "email": "eadron@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

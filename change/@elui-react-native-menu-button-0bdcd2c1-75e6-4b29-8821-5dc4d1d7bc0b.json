@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix: some fixes",
-  "packageName": "@elui-react-native/menu-button",
-  "email": "eadron@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
