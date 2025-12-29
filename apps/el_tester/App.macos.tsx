@@ -5,9 +5,9 @@ import {
   Text,
   FlatList,
   TouchableOpacity,
-  Pressable,
-  PanResponder,
+  useColorScheme,
 } from 'react-native';
+//import { PlatformColor,DynamicColorMacOS } from 'react-native-macos';
 //import { ELUIView, NitrotestHybridObject } from 'el-ui';
 import { ButtonV1 as Button } from '@elui-react-native/button';
 import { TabList, Tab } from '@elui-react-native/tablist';
@@ -15,7 +15,7 @@ import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
 import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
 
-import { multiply, FbrViewExample, SysIcon, HoverableView } from 'elui';
+import { multiply, FbrViewExample, SysIcon, HoverableView, ResizableSeparator, SystemColors } from 'elui';
 
 // CloseButton component with native hover support via HoverableView
 const CloseButton = ({ onPress }: { onPress: () => void }) => {
@@ -106,7 +106,9 @@ const customTheme = new ThemeReference(baseTheme, {
     }
   },
 });
-const result = multiply(3,11);
+// customTheme.theme.colors.bodyFrameBackground
+
+const result = multiply(3,55);
 
 //console.log(NitrotestHybridObject);
 //const result = NitrotestHybridObject.multiply(2, 3);
@@ -115,26 +117,13 @@ const notes = [
   { id: '2', title: 'Note 2', body: 'Note 2 body' },
   // ...more notes
 ];
-
-
 export default function App() {
   const initWith = 245;
   const minWith = 155;
   const maxWith = 600;
   const [leftWidth, setLeftWidth] = useState(initWith); // Initial width
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
-  const [isSeparatorHovered, setIsSeparatorHovered] = useState(false);
-  const leftWidthRef = useRef(leftWidth);
-  const initialWidthRef = useRef(initWith);
   const savedWidthRef = useRef(initWith); // Save width when hiding
-
-  // Keep the ref in sync with the state
-  React.useEffect(() => {
-    leftWidthRef.current = leftWidth;
-    if (isSidebarVisible && leftWidth > 0) {
-      savedWidthRef.current = leftWidth; // Save non-zero widths
-    }
-  }, [leftWidth, isSidebarVisible]);
 
   const toggleSidebar = () => {
     if (isSidebarVisible) {
@@ -149,31 +138,12 @@ export default function App() {
     }
   };
 
-  const panResponder = React.useMemo(() =>
-      PanResponder.create({
-        onStartShouldSetPanResponder: () => {
-          setIsSeparatorHovered(true);
-          return true;
-        },
-        onMoveShouldSetPanResponder: () => true,
-        onPanResponderGrant: () => {
-          initialWidthRef.current = leftWidthRef.current;
-          setIsSeparatorHovered(true);
-        },
-        onPanResponderMove: (e, gestureState) => {
-          setLeftWidth(
-            Math.max(minWith, Math.min(maxWith, initialWidthRef.current + gestureState.dx)),
-          );
-        },
-        onPanResponderRelease: () => {
-          setIsSeparatorHovered(false);
-        },
-        onPanResponderTerminate: () => {
-          setIsSeparatorHovered(false);
-        },
-      }),
-    [minWith, maxWith]
-  );
+  // Keep the ref in sync with the state
+  React.useEffect(() => {
+    if (isSidebarVisible && leftWidth > 0) {
+      savedWidthRef.current = leftWidth; // Save non-zero widths
+    }
+  }, [leftWidth, isSidebarVisible]);
 
   const [selectedKey, setSelectedKey] = React.useState('tab1');
   const [selectedTabWith, setSelectedTabWith] = React.useState(200);
@@ -181,6 +151,15 @@ export default function App() {
   const onTabSelect = React.useCallback((key: string) => {
     setSelectedKey(key);
   }, []);
+
+  const colorScheme = useColorScheme();
+
+  // Dynamic colors - re-evaluated on each render when colorScheme changes
+  const sidebarBgColor = SystemColors.getSystemColor('windowBackgroundColor') || '#ECECEC';
+  const detailBgColor = SystemColors.getSystemColor('unemphasizedSelectedContentBackgroundColor') || '#E0E0E0';
+
+  // Debug: Check if re-render happens and what colors are returned
+  console.log('colorScheme:', colorScheme, 'sidebar:', sidebarBgColor, 'detail:', detailBgColor);
 
   // @ts-ignore
   const rootElement = (
@@ -215,31 +194,31 @@ export default function App() {
               <Tab
                 tabKey="tab1"
                 showSeparator={selectedKey !== 'tab1' && selectedKey !== 'tab2'}
-                showInvertedCorners cornerColor={styles.detail.backgroundColor}
-                style={[styles.tab, { backgroundColor: selectedKey === 'tab1' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab1'? selectedTabWith:tabWith}]}
+                showInvertedCorners cornerColor={detailBgColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab1' ? detailBgColor : styles.tab.backgroundColor , width: selectedKey === 'tab1'? selectedTabWith:tabWith}]}
               >
                 <HoverableTabContent icon="star.fill" title="Tab 1" isSelected={selectedKey === 'tab1'} onClose={() => console.log('Close tab1')} />
               </Tab>
               <Tab
                 tabKey="tab2"
                 showSeparator={selectedKey !== 'tab2' && selectedKey !== 'tab3'}
-                showInvertedCorners cornerColor={styles.detail.backgroundColor}
-                style={[styles.tab, { backgroundColor: selectedKey === 'tab2' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab2'? selectedTabWith:tabWith}]}
+                showInvertedCorners cornerColor={detailBgColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab2' ? detailBgColor : styles.tab.backgroundColor , width: selectedKey === 'tab2'? selectedTabWith:tabWith}]}
               >
                 <HoverableTabContent icon="doc.text" title="Tab 2" isSelected={selectedKey === 'tab2'} onClose={() => console.log('Close tab2')} />
               </Tab>
               <Tab
                 tabKey="tab3"
                 showSeparator={selectedKey !== 'tab3' && selectedKey !== 'tab4'}
-                showInvertedCorners cornerColor={styles.detail.backgroundColor}
-                style={[styles.tab, { backgroundColor: selectedKey === 'tab3' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab3'? selectedTabWith:tabWith}]}
+                showInvertedCorners cornerColor={detailBgColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab3' ? detailBgColor : styles.tab.backgroundColor , width: selectedKey === 'tab3'? selectedTabWith:tabWith}]}
               >
                 <HoverableTabContent icon="folder" title="Tab 3" isSelected={selectedKey === 'tab3'} onClose={() => console.log('Close tab3')} />
               </Tab>
               <Tab
                 tabKey="tab4"
-                showInvertedCorners cornerColor={styles.detail.backgroundColor}
-                style={[styles.tab, { backgroundColor: selectedKey === 'tab4' ? styles.detail.backgroundColor : styles.tab.backgroundColor , width: selectedKey === 'tab4'? selectedTabWith:tabWith}]}
+                showInvertedCorners cornerColor={detailBgColor}
+                style={[styles.tab, { backgroundColor: selectedKey === 'tab4' ? detailBgColor : styles.tab.backgroundColor , width: selectedKey === 'tab4'? selectedTabWith:tabWith}]}
               >
                 <HoverableTabContent icon="gear" title="Tab 4" isSelected={selectedKey === 'tab4'} onClose={() => console.log('Close tab4')} />
               </Tab>
@@ -249,7 +228,7 @@ export default function App() {
       </View>
       <View style={styles.content}>
         {/* Sidebar */}
-        <View style={[styles.sidebar, { width: leftWidth }]}>
+        <View style={[styles.sidebar, { width: leftWidth, backgroundColor: sidebarBgColor }]}>
 
           <FlatList
             data={notes}
@@ -271,21 +250,18 @@ export default function App() {
              event.nativeEvent.offsetY,
            );}}
          */}
-        <HoverableView
-          style={[styles.separator, { backgroundColor: isSeparatorHovered ? 'transparent':styles.sidebar.backgroundColor, width: isSeparatorHovered ? 4 : 1 }]}
-          {...panResponder.panHandlers}
-          //for resizing cursor
-          //options: col-resize, row-resize, ew-resize, ns-resize
-          // @ts-ignore
-          cursor="ew-resize"
-          onHoverIn={() => setIsSeparatorHovered(true)}
-          onHoverOut={() => setIsSeparatorHovered(false)}
+        <ResizableSeparator
+          leftPaneWidth={leftWidth}
+          minLeftPaneWidth={minWith}
+          maxLeftPaneWidth={maxWith}
+          onResize={setLeftWidth}
+          backgroundColor={sidebarBgColor}
+          hidden={!isSidebarVisible}
         />
         {/* Detail Pane */}
-        <View style={styles.detail}>
+        <View style={[styles.detail, { backgroundColor: detailBgColor }]}>
           <Text>{result}</Text>
           <Text>{selectedKey}</Text>
-          <Text>{isSeparatorHovered ? 'green' : 'red'}</Text>
           <FbrViewExample style={styles.box} color="#452109"></FbrViewExample>
           <SysIcon symbolName="sidebar.left" style={styles.box} ></SysIcon>
           <View style={{
@@ -398,18 +374,9 @@ const styles = StyleSheet.create({
     height: 12,
   },
   content: { flex: 1, flexDirection: 'row' },
-  sidebar: { backgroundColor: '#ede', paddingTop: 0, height: '100%', },
-  separator: {
-    width: 1,
-    height: '100%',
-    backgroundColor: 'transparent',
-    //backgroundColor: 'red',
-    // @ts-ignore
-    //cursor: 'col-resize', // for resizing cursor
-    zIndex: 1,
-  },
+  sidebar: { paddingTop: 0, height: '100%' },
   noteTitle: { padding: 10 },
-  detail: { flex: 1, paddingTop: 0, backgroundColor: 'grey' },
+  detail: { flex: 1, paddingTop: 0 },
   box: {
     width: 30,
     height: 30
