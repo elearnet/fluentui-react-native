@@ -28,6 +28,61 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
+// //Pane state and render props interface
+// interface PaneState {
+//   leftWidth: number;
+//   isSidebarVisible: boolean;
+//   savedWidth: number;
+//   minWidth: number;
+//   maxWidth: number;
+//   toggleSidebar: () => void;
+//   setLeftWidth: (width: number) => void;
+// }
+// interface PaneProps {
+//   sidebarBgColor: string;
+//   children: (state: PaneState) => React.ReactNode;
+// }
+
+// const LeftPane = React.memo(({ sidebarBgColor, children }: PaneProps) => {
+//   const initWidth = 245;
+//   const minWidth = 155;
+//   const maxWidth = 600;
+//   const [leftWidth, setLeftWidth] = useState(initWidth);
+//   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+//   const savedWidthRef = useRef(initWidth);
+
+//   const toggleSidebar = React.useCallback(() => {
+//     if (isSidebarVisible) {
+//       savedWidthRef.current = leftWidth;
+//       setLeftWidth(0);
+//       setIsSidebarVisible(false);
+//     } else {
+//       setLeftWidth(savedWidthRef.current);
+//       setIsSidebarVisible(true);
+//     }
+//   }, [isSidebarVisible, leftWidth]);
+
+//   React.useEffect(() => {
+//     if (isSidebarVisible && leftWidth > 0) {
+//       savedWidthRef.current = leftWidth;
+//     }
+//   }, [leftWidth, isSidebarVisible]);
+
+//   console.log('LeftPane renders, leftWidth:', leftWidth);
+
+//   const state: PaneState = {
+//     leftWidth,
+//     isSidebarVisible,
+//     savedWidth: savedWidthRef.current,
+//     minWidth,
+//     maxWidth,
+//     toggleSidebar,
+//     setLeftWidth,
+//   };
+
+//   return <>{children(state)}</>;
+// });
+
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (

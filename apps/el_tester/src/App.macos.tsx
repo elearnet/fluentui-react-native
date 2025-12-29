@@ -15,7 +15,8 @@ import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
 import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
 
-import { multiply, FbrViewExample, SysIcon, HoverableView, ResizableSeparator, SystemColors } from 'elui';
+import { multiply, FbrViewExample, SysIcon, HoverableView, PaneWithSeparator, SystemColors ,openNewWindow} from 'elui';
+//import type { PaneState } from 'elui';
 
 // CloseButton component with native hover support via HoverableView
 const CloseButton = ({ onPress }: { onPress: () => void }) => {
@@ -72,6 +73,95 @@ const HoverableTabContent = ({ icon, title, isSelected, onClose }: HoverableTabC
   );
 };
 
+// Notes data (moved before SideBar so it can be used inside)
+const notes = [
+  { id: '1', title: 'Note 1', body: 'Note 1 body' },
+  { id: '2', title: 'Note 2', body: 'Note 2 body' },
+  // ...more notes
+];
+// SideBar component props
+interface SideBarProps {
+  initWidth: number;
+  minWidth: number;
+  maxWidth: number;
+  onHidden: (isHidden: boolean) => void;
+  sidebarBgColor: string;
+}
+const SideBar = React.memo(({ initWidth, minWidth, maxWidth, sidebarBgColor,onHidden }: SideBarProps) => {
+  // Toggle functionality managed here (since it needs UI state)
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+  const savedWidthRef = useRef(initWidth);
+
+  const [buttonWidth, setButtonWidth] = useState(40); // default fallback
+
+  console.log('SideBar renders');
+
+  return (
+    <PaneWithSeparator initWidth={initWidth} minWidth={minWidth} maxWidth={maxWidth} separatorBgColor={'transparent'}>
+      {({ paneWidth, setPaneWidth }) => {
+        const toggleSidebar = () => {
+          if (isSidebarVisible) {
+            savedWidthRef.current = paneWidth;
+            setPaneWidth(0);
+            setIsSidebarVisible(false);
+            onHidden(true);
+          } else {
+            setPaneWidth(savedWidthRef.current);
+            setIsSidebarVisible(true);
+            onHidden(false);
+          }
+        };
+
+        // Keep savedWidthRef in sync
+        if (isSidebarVisible && paneWidth > 0) {
+          savedWidthRef.current = paneWidth;
+        }
+
+        return (
+          <>
+            <View style={[{ height: 35, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', paddingLeft: 60 }]}>
+              {isSidebarVisible && (
+                <View style={[styles.toolbarFixed,{overflow:'hidden'}]}>
+                  <Button iconOnly={true} shape={'circular'} appearance={'subtle'} style={styles.vmargin} onClick={() => testOpenWin('testType', 'testId', 'testTitle')}>
+                    <SysIcon symbolName="plus.circle.fill" style={styles.box} />
+                  </Button>
+                  {/* {paneWidth > minWidth && ( */}
+                    <Button iconOnly={true} shape={'circular'} appearance={'subtle'} style={styles.vmargin}>
+                      <SysIcon symbolName="tray" style={styles.box} />
+                    </Button>
+                  {/* )}
+                  {paneWidth > 218 && ( */}
+                    <Button iconOnly={true} shape={'circular'} appearance={'subtle'} style={styles.vmargin}>
+                      <SysIcon symbolName="smallcircle.fill.circle" style={styles.box} />
+                    </Button>
+                  {/* )} */}
+                </View>
+              )}
+              <Button onLayout={(event) => {
+                const { width } = event.nativeEvent.layout;
+                setButtonWidth(width);
+              }} iconOnly={true} shape={'circular'} appearance={'subtle'} style={isSidebarVisible?styles.vmargin:{ position: 'absolute', left: minWidth - buttonWidth, top: 0, zIndex: 100 }}
+                      onClick={toggleSidebar}>
+                <SysIcon symbolName="sidebar.left" style={styles.box} />
+              </Button>
+            </View>
+            <View style={[styles.sidebar, { backgroundColor: sidebarBgColor }]}>
+              <FlatList
+                data={notes}
+                keyExtractor={item => item.id}
+                renderItem={({ item }) => (
+                  <TouchableOpacity>
+                    <Text style={styles.noteTitle}>{item.title}</Text>
+                  </TouchableOpacity>
+                )}
+              />
+            </View>
+          </>
+        );
+      }}
+    </PaneWithSeparator>
+  );
+});
 // Create theme with custom Tab tokens to hide indicator (Chrome-style tabs)
 const baseTheme = createAppleTheme();
 const customTheme = new ThemeReference(baseTheme, {
@@ -109,41 +199,18 @@ const customTheme = new ThemeReference(baseTheme, {
 // customTheme.theme.colors.bodyFrameBackground
 
 const result = multiply(3,55);
+const testOpenWin = (type: string, id: string, title: string)=>{
+  openNewWindow(type, id, title);
+}
 
 //console.log(NitrotestHybridObject);
 //const result = NitrotestHybridObject.multiply(2, 3);
-const notes = [
-  { id: '1', title: 'Note 1', body: 'Note 1 body' },
-  { id: '2', title: 'Note 2', body: 'Note 2 body' },
-  // ...more notes
-];
+
 export default function App() {
-  const initWith = 245;
-  const minWith = 155;
-  const maxWith = 600;
-  const [leftWidth, setLeftWidth] = useState(initWith); // Initial width
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
-  const savedWidthRef = useRef(initWith); // Save width when hiding
-
-  const toggleSidebar = () => {
-    if (isSidebarVisible) {
-      // Hide: save current width and set to 0
-      savedWidthRef.current = leftWidth;
-      setLeftWidth(0);
-      setIsSidebarVisible(false);
-    } else {
-      // Show: restore saved width
-      setLeftWidth(savedWidthRef.current);
-      setIsSidebarVisible(true);
-    }
-  };
-
-  // Keep the ref in sync with the state
-  React.useEffect(() => {
-    if (isSidebarVisible && leftWidth > 0) {
-      savedWidthRef.current = leftWidth; // Save non-zero widths
-    }
-  }, [leftWidth, isSidebarVisible]);
+  const sidebarInitWidth = 245;
+  const sidebarMinWidth = 155;
+  const sidebarMaxWidth = 600;
+  const [isSidebarHidden, setIsSidebarHidden] = useState(false);
 
   const [selectedKey, setSelectedKey] = React.useState('tab1');
   const [selectedTabWith, setSelectedTabWith] = React.useState(200);
@@ -164,36 +231,15 @@ export default function App() {
   // @ts-ignore
   const rootElement = (
     <View style={styles.container} collapsable={false}>
-      <View style={styles.toolbar}>
-        <View style={[styles.toolbarLeft, { width: isSidebarVisible ? leftWidth : savedWidthRef.current }, isSidebarVisible ? {} : { maxWidth: 155 }]} >
-          {isSidebarVisible && (
-            <View style={styles.toolbarFixed} >
-              <Button iconOnly={true} shape={'circular'} appearance={'subtle'} style={styles.vmargin} >
-                <SysIcon symbolName="plus.circle.fill" style={styles.box} />
-              </Button>
-              {leftWidth > minWith && (
-                <Button iconOnly={true} shape={'circular'} appearance={'subtle'} style={styles.vmargin} >
-                  <SysIcon symbolName="tray" style={styles.box} />
-                </Button>
-              )}
-              {leftWidth > 218 && (
-                <Button iconOnly={true} shape={'circular'} appearance={'subtle'} style={styles.vmargin} >
-                  <SysIcon symbolName="smallcircle.fill.circle" style={styles.box} />
-                </Button>
-              )}
-            </View>
-          )}
-          <Button iconOnly={true} shape={'circular'} appearance={'subtle'} style={styles.vmargin}
-                  onClick={toggleSidebar} >
-            <SysIcon symbolName="sidebar.left" style={styles.box} />
-          </Button>
-        </View>
-        <View style={[styles.toolbarRight, { overflow: 'visible' }]}>
-          <View style={{ position: 'relative', overflow: 'visible', flexDirection: 'row' }}>
-            <TabList defaultSelectedKey="tab1" style={styles.tabList} onTabSelect={onTabSelect} selectedKey={selectedKey} size="small" appearance="subtle">
-              <Tab
-                tabKey="tab1"
-                showSeparator={selectedKey !== 'tab1' && selectedKey !== 'tab2'}
+      <SideBar onHidden={setIsSidebarHidden} initWidth={sidebarInitWidth} minWidth={sidebarMinWidth} maxWidth={sidebarMaxWidth} sidebarBgColor={sidebarBgColor} />
+      <View style={styles.content}>
+        <View style={[styles.toolbar,{marginLeft:isSidebarHidden?sidebarMinWidth:0}]}>
+          <View style={[styles.toolbarRight, { overflow: 'visible' }]}>
+            <View style={{ position: 'relative', overflow: 'visible', flexDirection: 'row' }}>
+              <TabList defaultSelectedKey="tab1" style={styles.tabList} onTabSelect={onTabSelect} selectedKey={selectedKey} size="small" appearance="subtle">
+                <Tab
+                  tabKey="tab1"
+                  showSeparator={selectedKey !== 'tab1' && selectedKey !== 'tab2'}
                 showInvertedCorners cornerColor={detailBgColor}
                 style={[styles.tab, { backgroundColor: selectedKey === 'tab1' ? detailBgColor : styles.tab.backgroundColor , width: selectedKey === 'tab1'? selectedTabWith:tabWith}]}
               >
@@ -224,40 +270,8 @@ export default function App() {
               </Tab>
             </TabList>
           </View>
+          </View>
         </View>
-      </View>
-      <View style={styles.content}>
-        {/* Sidebar */}
-        <View style={[styles.sidebar, { width: leftWidth, backgroundColor: sidebarBgColor }]}>
-
-          <FlatList
-            data={notes}
-            keyExtractor={item => item.id}
-            renderItem={({ item }) => (
-              <TouchableOpacity>
-                <Text style={styles.noteTitle}>{item.title}</Text>
-              </TouchableOpacity>
-            )}
-          />
-        </View>
-        {/* Separator
-        //https://reactnative.dev/blog/2022/12/13/pointer-events-in-react-native
-         onPointerEnter={() => { setIsSeparatorHovered(true); console.log('Mouse enter'); }}
-         onPointerLeave={() => { setIsSeparatorHovered(false); console.log('Mouse leave'); }}
-         onPointerOver={(event) => { setIsSeparatorHovered(true); console.log('Mouse enter'); console.log(
-             'Over   box offset: ',
-             event.nativeEvent.offsetX,
-             event.nativeEvent.offsetY,
-           );}}
-         */}
-        <ResizableSeparator
-          leftPaneWidth={leftWidth}
-          minLeftPaneWidth={minWith}
-          maxLeftPaneWidth={maxWith}
-          onResize={setLeftWidth}
-          backgroundColor={sidebarBgColor}
-          hidden={!isSidebarVisible}
-        />
         {/* Detail Pane */}
         <View style={[styles.detail, { backgroundColor: detailBgColor }]}>
           <Text>{result}</Text>
@@ -297,7 +311,6 @@ export default function App() {
           }} />
         </View>
       </View>
-
     </View>
   );
   //console.log(rootElement);
@@ -311,6 +324,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row', // SideBar and content side-by-side
 
     // borderWidth: 2,
     // // borderTopColor: 'red', //not showing color,don't know why. to be fixed.
@@ -324,7 +338,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   toolbar: { height: 35, backgroundColor: 'transparent', flexDirection: 'row' },
-  toolbarLeft: { height: 35, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', paddingLeft: 60 },
+  //toolbarLeft: { height: 35, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', paddingLeft: 60 },
   toolbarFixed: { position: 'absolute', left: 80, height: '100%', flexDirection: 'row', alignItems: 'center' },
   toolbarRight: { flex: 1, height: 35,  flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingLeft: 10,paddingTop:8 },
   tabList:{
@@ -373,7 +387,7 @@ const styles = StyleSheet.create({
     width: 12,
     height: 12,
   },
-  content: { flex: 1, flexDirection: 'row' },
+  content: { flex: 1, flexDirection: 'column' }, // Column: toolbar on top, detail below
   sidebar: { paddingTop: 0, height: '100%' },
   noteTitle: { padding: 10 },
   detail: { flex: 1, paddingTop: 0 },

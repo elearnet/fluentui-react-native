@@ -4,11 +4,11 @@ import HoverableView from './HoverableViewNativeComponent';
 
 export interface ResizableSeparatorProps {
   /** Current width of the left pane */
-  leftPaneWidth: number;
+  paneWidth: number;
   /** Minimum allowed width for the left pane */
-  minLeftPaneWidth: number;
+  minPaneWidth: number;
   /** Maximum allowed width for the left pane */
-  maxLeftPaneWidth: number;
+  maxPaneWidth: number;
   /** Callback when the pane is resized */
   onResize: (newWidth: number) => void;
   /** Background color of the separator when not hovered */
@@ -28,9 +28,9 @@ export interface ResizableSeparatorProps {
  * Handles hover states and pan gestures for smooth resizing.
  */
 export const ResizableSeparator = ({
-  leftPaneWidth,
-  minLeftPaneWidth,
-  maxLeftPaneWidth,
+  paneWidth,
+  minPaneWidth,
+  maxPaneWidth,
   onResize,
   backgroundColor,
   separatorNormalWidth = 1,
@@ -39,13 +39,13 @@ export const ResizableSeparator = ({
   style,
 }: ResizableSeparatorProps) => {
   const [isHovered, setIsHovered] = useState(false);
-  const initialWidthRef = useRef(leftPaneWidth);
-  const leftPaneWidthRef = useRef(leftPaneWidth);
+  const initialWidthRef = useRef(paneWidth);
+  const paneWidthRef = useRef(paneWidth);
 
-  // Keep leftPaneWidthRef in sync
+  // Keep paneWidthRef in sync
   React.useEffect(() => {
-    leftPaneWidthRef.current = leftPaneWidth;
-  }, [leftPaneWidth]);
+    paneWidthRef.current = paneWidth;
+  }, [paneWidth]);
 
   const panResponder = React.useMemo(
     () =>
@@ -53,18 +53,22 @@ export const ResizableSeparator = ({
         onStartShouldSetPanResponder: () => true,
         onMoveShouldSetPanResponder: () => true,
         onPanResponderGrant: () => {
-          initialWidthRef.current = leftPaneWidthRef.current;
+          initialWidthRef.current = paneWidthRef.current;
         },
         onPanResponderMove: (_, gestureState) => {
           onResize(
             Math.max(
-              minLeftPaneWidth,
-              Math.min(maxLeftPaneWidth, initialWidthRef.current + gestureState.dx)
+              minPaneWidth,
+              Math.min(maxPaneWidth, initialWidthRef.current + gestureState.dx)
             )
           );
         },
+        // Clear hover state when gesture ends (covers all cases)
+        onPanResponderEnd: () => setIsHovered(false),
+        onPanResponderRelease: () => setIsHovered(false),
+        onPanResponderTerminate: () => setIsHovered(false),
       }),
-    [minLeftPaneWidth, maxLeftPaneWidth, onResize]
+    [minPaneWidth, maxPaneWidth, onResize]
   );
 
   if (hidden) {
