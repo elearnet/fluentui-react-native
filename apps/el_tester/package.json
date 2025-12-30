@@ -16,6 +16,7 @@
     "react": "19.0.3",
     "react-native": "^0.79.0",
     "react-native-macos": "^0.79.0",
+    "react-native-markdown-display": "^7.0.2",
     "react-native-windows": "^0.79.0"
   },
   "devDependencies": {

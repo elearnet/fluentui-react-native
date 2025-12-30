@@ -107,5 +107,9 @@
     "type": "turbo-module",
     "tools": [],
     "version": "0.55.1"
+  },
+  "dependencies": {
+    "@elui-react-native/contextual-menu": "workspace:^",
+    "react-native-markdown-display": "^7.0.2"
   }
 }

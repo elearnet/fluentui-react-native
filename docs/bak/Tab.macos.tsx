@@ -3,7 +3,7 @@
 /** @jsxFrag */
 
 import React from 'react';
-import { View, Pressable, StyleSheet } from 'react-native';
+import { View, Pressable } from 'react-native';
 import type { ViewProps } from 'react-native';
 
 import type { UseTokens } from '@elui-react-native/framework';
@@ -96,54 +96,18 @@ export const Tab = compressible<TabProps, TabTokens>((props: TabProps, useTokens
       accessibilityLabel: tab.props.accessibilityLabel || final.accessibilityLabel || label,
     });
 
+    //const cornerColor = 'red';
     const isSelected = tab.state.selected;
     const shouldShowCorners = isSelected && showInvertedCorners;
 
+    console.warn(`${tabKey}: shouldShowCorners:${shouldShowCorners}`);
     if (__DEV__ && !hasChildren && !icon) {
       console.warn('A Tab component must render content. Children, an icon, or both should be passed in.');
     }
     if(shouldShowCorners){
-      //const {style, ...otherProps} = mergedProps;
-      const {style} = mergedProps;
-      const flatStyle = StyleSheet.flatten(style) || {};
-
-    // Extract layout-related props for the wrapper
-    // We want the wrapper to behave like the tab in the flex container
-    const {maxWidth, minWidth,flex} = flatStyle;
-
-    const wrapperStyle: any = {
-      position: 'relative',
-      flexDirection: 'row',
-      alignItems: 'flex-end',
-      flex,
-      maxWidth, minWidth,};
-
-    // Remove these from the inner style to prevent double application
-    //const innerStyle = { ...flatStyle };
-    // delete innerStyle.flex;
-    // delete innerStyle.flexGrow;
-    // delete innerStyle.flexShrink;
-    // delete innerStyle.flexBasis;
-    // delete innerStyle.alignSelf;
-    // delete innerStyle.margin;
-    // delete innerStyle.marginLeft;
-    // delete innerStyle.marginRight;
-    // delete innerStyle.marginTop;
-    // delete innerStyle.marginBottom;
-    // delete innerStyle.marginHorizontal;
-    // delete innerStyle.marginVertical;
-    // delete innerStyle.marginStart;
-    // delete innerStyle.marginEnd;
-
-    // // innerStyle.width/height/min/max should also be handled carefully.
-    // // If the wrapper has width, the inner slot should probably fill it.
-    // delete innerStyle.width;
-     //delete innerStyle.minWidth;
-    // delete innerStyle.maxWidth;
-
       return (
         <>
-        <View style={wrapperStyle}>
+        <View style={{ position: 'relative', flexDirection: 'row', alignItems: 'flex-end' }}>
         <InvertedCorner
             cornerColor={cornerColor as string}
             cornerPosition="left"
@@ -173,7 +137,7 @@ export const Tab = compressible<TabProps, TabTokens>((props: TabProps, useTokens
             </IndicatorContainerSlot>
           )}
         </RootSlot>
-       <InvertedCorner
+        <InvertedCorner
             cornerColor={cornerColor as string}
             cornerPosition="right"
             cornerRadius={cornerRadius}

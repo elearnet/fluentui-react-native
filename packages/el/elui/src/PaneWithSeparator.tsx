@@ -13,6 +13,7 @@ export interface PaneWithSeparatorProps {
   minWidth: number;
   maxWidth: number;
   separatorBgColor: string;
+  onResizeEnd?: (width: number) => void;
   children: (state: PaneState) => React.ReactNode;
 }
 
@@ -22,6 +23,7 @@ export const PaneWithSeparator = React.memo(({
   maxWidth,
   separatorBgColor,
   children,
+  onResizeEnd,
 }: PaneWithSeparatorProps) => {
   const [paneWidth, setPaneWidth] = useState(initWidth);
   const state: PaneState = {
@@ -38,6 +40,7 @@ export const PaneWithSeparator = React.memo(({
         minPaneWidth={minWidth}
         maxPaneWidth={maxWidth}
         onResize={setPaneWidth}
+        onResizeEnd={onResizeEnd}
         backgroundColor={separatorBgColor}
         hidden={paneWidth==0}
       />

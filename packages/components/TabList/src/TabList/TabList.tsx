@@ -50,6 +50,7 @@ export const TabList = compose<TabListType>({
               defaultTabbableElement={defaultTabbableElement}
               focusZoneDirection={vertical ? 'vertical' : 'horizontal'}
               isCircularNavigation={isCircularNavigation}
+              style={vertical?{height:'100%'}:{width:'100%'}}
             >
               <Slots.stack>{children}</Slots.stack>
               {canShowAnimatedIndicator && (

@@ -19,3 +19,10 @@ export { PaneWithSeparator } from './PaneWithSeparator';
 export type { PaneWithSeparatorProps, PaneState } from './PaneWithSeparator';
 export { default as SystemColors } from './NativeSystemColors';
 
+// Framework Exports
+export * from './framework/App';
+export * from './framework/Workspace';
+export * from './framework/WorkspaceView';
+export * from './framework/MarkdownView';
+export * from './framework/SearchView';
+
