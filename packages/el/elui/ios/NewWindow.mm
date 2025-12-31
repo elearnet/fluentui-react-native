@@ -1,6 +1,6 @@
 #import "NewWindow.h"
-#import <RCTAppDelegate.h>
-#import <RCTRootViewFactory.h>
+#import "RCTAppDelegate.h"
+#import "RCTRootViewFactory.h"
 #import <AppKit/AppKit.h>
 
 @implementation NewWindow {

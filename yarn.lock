@@ -2337,7 +2337,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/contextual-menu@npm:*, @elui-react-native/contextual-menu@workspace:*, @elui-react-native/contextual-menu@workspace:^, @elui-react-native/contextual-menu@workspace:packages/components/ContextualMenu":
+"@elui-react-native/contextual-menu@npm:*, @elui-react-native/contextual-menu@workspace:*, @elui-react-native/contextual-menu@workspace:packages/components/ContextualMenu":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/contextual-menu@workspace:packages/components/ContextualMenu"
   dependencies:
@@ -9010,6 +9010,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ts-morph/common@npm:~0.28.1":
+  version: 0.28.1
+  resolution: "@ts-morph/common@npm:0.28.1"
+  dependencies:
+    minimatch: "npm:^10.0.1"
+    path-browserify: "npm:^1.0.1"
+    tinyglobby: "npm:^0.2.14"
+  checksum: 10c0/d51276d840997e0f8f83e04f8b1689135bb12588a7ddbed575f87848d5737eeae31e242685d6449de27573e8ed30892157fea643393cb875e175f2711200bc50
+  languageName: node
+  linkType: hard
+
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.12
   resolution: "@tsconfig/node10@npm:1.0.12"
@@ -10482,7 +10493,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-styles@npm:^6.1.0":
+"ansi-styles@npm:^6.1.0, ansi-styles@npm:^6.2.1":
   version: 6.2.3
   resolution: "ansi-styles@npm:6.2.3"
   checksum: 10c0/23b8a4ce14e18fb854693b95351e286b771d23d8844057ed2e7d083cd3e708376c3323707ec6a24365f7d7eda3ca00327fe04092e29e551499ec4c8b7bfac868
@@ -12139,6 +12150,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cliui@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "cliui@npm:9.0.1"
+  dependencies:
+    string-width: "npm:^7.2.0"
+    strip-ansi: "npm:^7.1.0"
+    wrap-ansi: "npm:^9.0.0"
+  checksum: 10c0/13441832e9efe7c7a76bd2b8e683555c478d461a9f249dc5db9b17fe8d4b47fa9277b503914b90bd00e4a151abb6b9b02b2288972ffe2e5e3ca40bcb1c2330d3
+  languageName: node
+  linkType: hard
+
 "clone-deep@npm:^4.0.1":
   version: 4.0.1
   resolution: "clone-deep@npm:4.0.1"
@@ -12161,6 +12183,13 @@ __metadata:
   version: 4.6.0
   resolution: "co@npm:4.6.0"
   checksum: 10c0/c0e85ea0ca8bf0a50cbdca82efc5af0301240ca88ebe3644a6ffb8ffe911f34d40f8fbcf8f1d52c5ddd66706abd4d3bfcd64259f1e8e2371d4f47573b0dc8c28
+  languageName: node
+  linkType: hard
+
+"code-block-writer@npm:^13.0.3":
+  version: 13.0.3
+  resolution: "code-block-writer@npm:13.0.3"
+  checksum: 10c0/87db97b37583f71cfd7eced8bf3f0a0a0ca53af912751a734372b36c08cd27f3e8a4878ec05591c0cd9ae11bea8add1423e132d660edd86aab952656dd41fd66
   languageName: node
   linkType: hard
 
@@ -13358,6 +13387,7 @@ __metadata:
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
     react-native-markdown-display: "npm:^7.0.2"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
     react-native-windows: "npm:^0.79.0"
     react-test-renderer: "npm:19.0.3"
     typescript: "npm:5.0.4"
@@ -13375,21 +13405,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "elui@workspace:packages/el/elui"
   dependencies:
-    "@elui-react-native/contextual-menu": "workspace:^"
     "@elui-react-native/eslint-config-rules": "workspace:*"
     "@elui-react-native/scripts": "workspace:*"
     "@react-native-community/cli": "npm:^20.0.0"
     "@react-native/babel-preset": "npm:0.79.1"
     "@types/react": "npm:^19.0.3"
+    nitrogen: "patch:nitrogen@npm%3A0.32.0#~/.yarn/patches/nitrogen-npm-0.32.0-10e775b6a9.patch"
     react: "npm:19.0.3"
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
-    react-native-markdown-display: "npm:^7.0.2"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
     react-native-windows: "npm:^0.79.0"
     typescript: "npm:5.0.4"
   peerDependencies:
     react: "*"
     react-native: "*"
+    react-native-nitro-modules: "*"
   peerDependenciesMeta:
     react-native-macos:
       optional: true
@@ -13402,6 +13433,13 @@ __metadata:
   version: 0.13.1
   resolution: "emittery@npm:0.13.1"
   checksum: 10c0/1573d0ae29ab34661b6c63251ff8f5facd24ccf6a823f19417ae8ba8c88ea450325788c67f16c99edec8de4b52ce93a10fe441ece389fd156e88ee7dab9bfa35
+  languageName: node
+  linkType: hard
+
+"emoji-regex@npm:^10.3.0":
+  version: 10.6.0
+  resolution: "emoji-regex@npm:10.6.0"
+  checksum: 10c0/1e4aa097bb007301c3b4b1913879ae27327fdc48e93eeefefe3b87e495eb33c5af155300be951b4349ff6ac084f4403dc9eff970acba7c1c572d89396a9a32d7
   languageName: node
   linkType: hard
 
@@ -15196,6 +15234,13 @@ __metadata:
   version: 2.0.5
   resolution: "get-caller-file@npm:2.0.5"
   checksum: 10c0/c6c7b60271931fa752aeb92f2b47e355eac1af3a2673f47c9589e8f8a41adc74d45551c1bc57b5e66a80609f10ffb72b6f575e4370d61cc3f7f3aaff01757cde
+  languageName: node
+  linkType: hard
+
+"get-east-asian-width@npm:^1.0.0":
+  version: 1.4.0
+  resolution: "get-east-asian-width@npm:1.4.0"
+  checksum: 10c0/4e481d418e5a32061c36fbb90d1b225a254cc5b2df5f0b25da215dcd335a3c111f0c2023ffda43140727a9cafb62dac41d022da82c08f31083ee89f714ee3b83
   languageName: node
   linkType: hard
 
@@ -19177,7 +19222,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^10.1.1":
+"minimatch@npm:^10.0.1, minimatch@npm:^10.1.1":
   version: 10.1.1
   resolution: "minimatch@npm:10.1.1"
   dependencies:
@@ -19561,6 +19606,36 @@ __metadata:
   version: 1.0.5
   resolution: "nice-try@npm:1.0.5"
   checksum: 10c0/95568c1b73e1d0d4069a3e3061a2102d854513d37bcfda73300015b7ba4868d3b27c198d1dbbd8ebdef4112fc2ed9e895d4a0f2e1cce0bd334f2a1346dc9205f
+  languageName: node
+  linkType: hard
+
+"nitrogen@npm:0.32.0":
+  version: 0.32.0
+  resolution: "nitrogen@npm:0.32.0"
+  dependencies:
+    chalk: "npm:^5.3.0"
+    react-native-nitro-modules: "npm:^0.32.0"
+    ts-morph: "npm:^27.0.0"
+    yargs: "npm:^18.0.0"
+    zod: "npm:^4.0.5"
+  bin:
+    nitrogen: lib/index.js
+  checksum: 10c0/e75465af4d7f430765bae74639e9c1cd8645074a8e00385f1106ba6f00398be741df8934ddb9b727641b3f9d6c136ba29f6cfb3aee2fc75723d2eca0a2d66c6b
+  languageName: node
+  linkType: hard
+
+"nitrogen@patch:nitrogen@npm%3A0.32.0#~/.yarn/patches/nitrogen-npm-0.32.0-10e775b6a9.patch":
+  version: 0.32.0
+  resolution: "nitrogen@patch:nitrogen@npm%3A0.32.0#~/.yarn/patches/nitrogen-npm-0.32.0-10e775b6a9.patch::version=0.32.0&hash=45b1b3"
+  dependencies:
+    chalk: "npm:^5.3.0"
+    react-native-nitro-modules: "npm:^0.32.0"
+    ts-morph: "npm:^27.0.0"
+    yargs: "npm:^18.0.0"
+    zod: "npm:^4.0.5"
+  bin:
+    nitrogen: lib/index.js
+  checksum: 10c0/5a7da85e19dad600a5eed22ca17a6ebe4a3d9e93f962d8f0383713f6954dbea0f72f23e5462ec9776f253dc06a2ab3360030c7bc366fefd03b545b7e70217b66
   languageName: node
   linkType: hard
 
@@ -20423,6 +20498,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-browserify@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "path-browserify@npm:1.0.1"
+  checksum: 10c0/8b8c3fd5c66bd340272180590ae4ff139769e9ab79522e2eb82e3d571a89b8117c04147f65ad066dccfb42fcad902e5b7d794b3d35e0fd840491a8ddbedf8c66
+  languageName: node
+  linkType: hard
+
 "path-dirname@npm:^1.0.2":
   version: 1.0.2
   resolution: "path-dirname@npm:1.0.2"
@@ -21219,6 +21301,26 @@ __metadata:
     react: ">=16.2.0"
     react-native: ">=0.50.4"
   checksum: 10c0/b90b75401340cd79c42e07e6e8961551e8b98acfbc53bc0b651174aea2a86b92430be767da7c813e54b08e7bbd8af6c09dbeb4f9369d925984979cc28b6ba8fb
+  languageName: node
+  linkType: hard
+
+"react-native-nitro-modules@npm:0.32.0":
+  version: 0.32.0
+  resolution: "react-native-nitro-modules@npm:0.32.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/4074d93391a5691175d9df335549c3719e2c549e9639d1c092a591c22196e596a1654a77496e9b6c56708605d6074d3a25199ace091db1682d69fbc0d100af04
+  languageName: node
+  linkType: hard
+
+"react-native-nitro-modules@patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch":
+  version: 0.32.0
+  resolution: "react-native-nitro-modules@patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch::version=0.32.0&hash=dec7d9"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/eb6e4ed69b6c006d5aa2b366dab37b1fd4947ae99632da339d81399a048003ed314b0148f1a97bbb717602b6a0d50f14fad7578e7794e563db74e3a8fe7fd861
   languageName: node
   linkType: hard
 
@@ -22955,6 +23057,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"string-width@npm:^7.0.0, string-width@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "string-width@npm:7.2.0"
+  dependencies:
+    emoji-regex: "npm:^10.3.0"
+    get-east-asian-width: "npm:^1.0.0"
+    strip-ansi: "npm:^7.1.0"
+  checksum: 10c0/eb0430dd43f3199c7a46dcbf7a0b34539c76fe3aa62763d0b0655acdcbdf360b3f66f3d58ca25ba0205f42ea3491fa00f09426d3b7d3040e506878fc7664c9b9
+  languageName: node
+  linkType: hard
+
 "string.prototype.matchall@npm:^4.0.12":
   version: 4.0.12
   resolution: "string.prototype.matchall@npm:4.0.12"
@@ -23405,7 +23518,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyglobby@npm:^0.2.12, tinyglobby@npm:^0.2.15":
+"tinyglobby@npm:^0.2.12, tinyglobby@npm:^0.2.14, tinyglobby@npm:^0.2.15":
   version: 0.2.15
   resolution: "tinyglobby@npm:0.2.15"
   dependencies:
@@ -23529,6 +23642,16 @@ __metadata:
   peerDependencies:
     typescript: ">=4.8.4"
   checksum: 10c0/9806a38adea2db0f6aa217ccc6bc9c391ddba338a9fe3080676d0d50ed806d305bb90e8cef0276e793d28c8a929f400abb184ddd7ff83a416959c0f4d2ce754f
+  languageName: node
+  linkType: hard
+
+"ts-morph@npm:^27.0.0":
+  version: 27.0.2
+  resolution: "ts-morph@npm:27.0.2"
+  dependencies:
+    "@ts-morph/common": "npm:~0.28.1"
+    code-block-writer: "npm:^13.0.3"
+  checksum: 10c0/224715cc6d97b8ff5afd3986f9629f912a0ebd83eaecbdca91c35cf10a98f607c663f666e7ea5e6afab00563d00dc80fa7a13552cc7f1cef735261c3217d0863
   languageName: node
   linkType: hard
 
@@ -24700,6 +24823,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"wrap-ansi@npm:^9.0.0":
+  version: 9.0.2
+  resolution: "wrap-ansi@npm:9.0.2"
+  dependencies:
+    ansi-styles: "npm:^6.2.1"
+    string-width: "npm:^7.0.0"
+    strip-ansi: "npm:^7.1.0"
+  checksum: 10c0/3305839b9a0d6fb930cb63a52f34d3936013d8b0682ff3ec133c9826512620f213800ffa19ea22904876d5b7e9a3c1f40682f03597d986a4ca881fa7b033688c
+  languageName: node
+  linkType: hard
+
 "wrappy@npm:1":
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
@@ -24886,6 +25020,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yargs-parser@npm:^22.0.0":
+  version: 22.0.0
+  resolution: "yargs-parser@npm:22.0.0"
+  checksum: 10c0/cb7ef81759c4271cb1d96b9351dbbc9a9ce35d3e1122d2b739bf6c432603824fa02c67cc12dcef6ea80283379d63495686e8f41cc7b06c6576e792aba4d33e1c
+  languageName: node
+  linkType: hard
+
 "yargs@npm:17.7.2, yargs@npm:^17.0.0, yargs@npm:^17.3.1, yargs@npm:^17.6.2, yargs@npm:^17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
@@ -24932,6 +25073,20 @@ __metadata:
     y18n: "npm:^5.0.5"
     yargs-parser: "npm:^20.2.2"
   checksum: 10c0/b1dbfefa679848442454b60053a6c95d62f2d2e21dd28def92b647587f415969173c6e99a0f3bab4f1b67ee8283bf735ebe3544013f09491186ba9e8a9a2b651
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "yargs@npm:18.0.0"
+  dependencies:
+    cliui: "npm:^9.0.1"
+    escalade: "npm:^3.1.1"
+    get-caller-file: "npm:^2.0.5"
+    string-width: "npm:^7.2.0"
+    y18n: "npm:^5.0.5"
+    yargs-parser: "npm:^22.0.0"
+  checksum: 10c0/bf290e4723876ea9c638c786a5c42ac28e03c9ca2325e1424bf43b94e5876456292d3ed905b853ebbba6daf43ed29e772ac2a6b3c5fb1b16533245d6211778f3
   languageName: node
   linkType: hard
 
@@ -24998,5 +25153,12 @@ __metadata:
     compress-commons: "npm:^6.0.2"
     readable-stream: "npm:^4.0.0"
   checksum: 10c0/50f2fb30327fb9d09879abf7ae2493705313adf403e794b030151aaae00009162419d60d0519e807673ec04d442e140c8879ca14314df0a0192de3b233e8f28b
+  languageName: node
+  linkType: hard
+
+"zod@npm:^4.0.5":
+  version: 4.2.1
+  resolution: "zod@npm:4.2.1"
+  checksum: 10c0/ecb5219bddf76a42d092a843fb98ad4cb78f1e1077082772b03ef032ee5cbc80790a4051836b962d26fb4af854323bc784d628bd1b8d9898149eba7af21c5560
   languageName: node
   linkType: hard

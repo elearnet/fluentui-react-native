@@ -17,6 +17,7 @@
     "react-native": "^0.79.0",
     "react-native-macos": "^0.79.0",
     "react-native-markdown-display": "^7.0.2",
+    "react-native-nitro-modules": "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch",
     "react-native-windows": "^0.79.0"
   },
   "devDependencies": {

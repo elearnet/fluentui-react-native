@@ -40,7 +40,8 @@
     "depcheck": "fluentui-scripts depcheck",
     "lint": "fluentui-scripts eslint",
     "prettier": "fluentui-scripts prettier",
-    "prettier-fix": "fluentui-scripts prettier --fix true"
+    "prettier-fix": "fluentui-scripts prettier --fix true",
+    "nitrogen": "nitrogen"
   },
   "keywords": [
     "react-native",
@@ -63,15 +64,18 @@
     "@react-native-community/cli": "^20.0.0",
     "@react-native/babel-preset": "0.79.1",
     "@types/react": "^19.0.3",
+    "nitrogen": "patch:nitrogen@npm%3A0.32.0#~/.yarn/patches/nitrogen-npm-0.32.0-10e775b6a9.patch",
     "react": "19.0.3",
     "react-native": "^0.79.0",
     "react-native-macos": "^0.79.0",
+    "react-native-nitro-modules": "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch",
     "react-native-windows": "^0.79.0",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-nitro-modules": "*"
   },
   "peerDependenciesMeta": {
     "react-native-macos": {
@@ -107,9 +111,5 @@
     "type": "turbo-module",
     "tools": [],
     "version": "0.55.1"
-  },
-  "dependencies": {
-    "@elui-react-native/contextual-menu": "workspace:^",
-    "react-native-markdown-display": "^7.0.2"
   }
 }

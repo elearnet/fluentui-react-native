@@ -23,6 +23,21 @@ export { default as SystemColors } from './NativeSystemColors';
 export * from './framework/App';
 export * from './framework/Workspace';
 export * from './framework/WorkspaceView';
-export * from './framework/MarkdownView';
-export * from './framework/SearchView';
+
+import { getHostComponent } from 'react-native-nitro-modules';
+import { NitroModules } from 'react-native-nitro-modules';
+
+//import { ButtonV1 as Button } from '@fluentui/react-native';
+
+const ELUIConfig = require('../nitrogen/generated/shared/json/ELUI_TESTConfig.json');
+import type { ELUI_TESTMethods, ELUI_TESTProps } from './ELUI_TEST.nitro';
+import type { Nitrotest } from './Nitrotest.nitro';
+
+export const ELUIView = getHostComponent<ELUI_TESTMethods, ELUI_TESTProps>(
+  'ELUI_TEST',
+  () => ELUIConfig
+);
+
+export const NitrotestHybridObject =
+  NitroModules.createHybridObject<Nitrotest>('Nitrotest');
 

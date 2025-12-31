@@ -1,0 +1,45 @@
+diff --git a/ios/views/HybridView.swift b/ios/views/HybridView.swift
+index d2d52ab5d389f4a9c3243e5d47d392f29d0ea647..64e9f8e6b21885884bb28ef889d00dffe792425f 100644
+--- a/ios/views/HybridView.swift
++++ b/ios/views/HybridView.swift
+@@ -43,4 +43,40 @@
+     }
+   }
+ 
++#elseif canImport(AppKit)
++import Foundation
++import AppKit
++  /// A base protocol for all Swift-based Hybrid Views.
++  public protocol HybridView: HybridObject {
++    /**
++     * Get the ``NSView`` this HybridView is holding.
++     *
++     * This value should not change during the lifetime of this ``HybridView``.
++     */
++    var view: NSView { get }
++
++    /**
++     * Called right before updating props.
++     * React props are updated in a single batch/transaction.
++     */
++    func beforeUpdate()
++    /**
++     * Called right after updating props.
++     * React props are updated in a single batch/transaction.
++     */
++    func afterUpdate()
++  }
++
++  extension HybridView {
++    public func beforeUpdate() { /* noop */  }
++    public func afterUpdate() { /* noop */  }
++  }
++
++  extension HybridView {
++    // In a View, this could be the size of the UIView.
++    public var memorySize: Int {
++      return MemoryHelper.getSizeOf(self.view)
++    }
++  }
++
+ #endif

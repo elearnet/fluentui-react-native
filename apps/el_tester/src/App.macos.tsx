@@ -1,32 +1,24 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   StyleSheet,
   Text,
-  FlatList,
-  TouchableOpacity,
-  useColorScheme,
 } from 'react-native';
-//import { PlatformColor,DynamicColorMacOS } from 'react-native-macos';
-//import { ELUIView, NitrotestHybridObject } from 'el-ui';
-import { ButtonV1 as Button } from '@elui-react-native/button';
-// import { TabList, Tab } from '@elui-react-native/tablist'; // Now internal to WorkspaceView
 import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
-import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
 
-import { multiply, FbrViewExample, SysIcon, HoverableView, PaneWithSeparator, SystemColors ,openNewWindow, App, WorkspaceView, WorkspaceLeaf, MarkdownView, SearchView } from 'elui';
-//import type { PaneState } from 'elui';
+import {
+  App,
+  WorkspaceView,
+  WorkspaceLeaf,
+  ELUIView,
+  NitrotestHybridObject,
+} from 'elui';
+import { NoteListView } from './UI/NoteListView';
+import {SearchView} from './UI/SearchView.tsx';
+import {MarkdownView} from './UI/MarkdownView.tsx';
 
-// CloseButton component with native hover support via HoverableView
 
-
-// HoverableTabContent component - shows hover background on tab content
-
-
-// Notes data (moved before SideBar so it can be used inside)
-
-// Create theme with custom Tab tokens to hide indicator (Chrome-style tabs)
 const baseTheme = createAppleTheme();
 const customTheme = new ThemeReference(baseTheme, {
   components: {
@@ -62,12 +54,8 @@ const customTheme = new ThemeReference(baseTheme, {
 });
 // customTheme.theme.colors.bodyFrameBackground
 
-
-
 //console.log(NitrotestHybridObject);
-//const result = NitrotestHybridObject.multiply(2, 3);
-
-import { NoteListView } from './UI/NoteListView';
+const result = NitrotestHybridObject.multiply(2, 3);
 
 export default function AppRoot() {
   // Singleton App instance
@@ -171,6 +159,8 @@ function hello() {
       return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>Example View: {leaf.viewState.state?.text || 'Hello World'}</Text>
+          <Text>nitro test result:{result}</Text>
+          <ELUIView color="plus.circle.fill" style={{width:30,height:30,backgroundColor:'grey'}} />
         </View>
       );
     };
@@ -184,10 +174,10 @@ function hello() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: 'transparent',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     flexDirection: 'row',
+//     backgroundColor: 'transparent',
+//   },
+// });

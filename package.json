@@ -85,7 +85,8 @@
     "semver": "^7.5.2",
     "tar-fs": "^3.1.1",
     "ws": "^8.17.1",
-    "yaml": "^2.2.2"
+    "yaml": "^2.2.2",
+    "react-native-nitro-modules@npm:^0.32.0": "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
   },
   "rnx-kit": {
     "kitType": "library",
