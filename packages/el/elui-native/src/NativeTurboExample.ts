@@ -1,4 +1,4 @@
-import { TurboModuleRegistry, type TurboModule,NativeModules } from 'react-native';
+import { TurboModuleRegistry, type TurboModule, NativeModules } from 'react-native';
 
 export interface Spec extends TurboModule {
   multiply(a: number, b: number): number;

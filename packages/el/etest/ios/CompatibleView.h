@@ -1,12 +1,14 @@
-#ifdef RCT_NEW_ARCH_ENABLED
-#import <React/RCTViewComponentView.h>
+#ifndef CompatibleViewNativeComponent_h
+#define CompatibleViewNativeComponent_h
+
 #if __has_include(<UIKit/UIKit.h>)
 #import <UIKit/UIKit.h>
 #elif __has_include(<AppKit/AppKit.h>)
 #import <AppKit/AppKit.h>
 #endif
-#ifndef CompatibleViewNativeComponent_h
-#define CompatibleViewNativeComponent_h
+
+#ifdef RCT_NEW_ARCH_ENABLED
+#import <React/RCTViewComponentView.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#endif /* CompatibleViewNativeComponent_h */
-
 #else
 #import <React/RCTViewManager.h>
 
 @interface CompatibleViewManager : RCTViewManager
 @end
 #endif
+
+#endif /* CompatibleViewNativeComponent_h */

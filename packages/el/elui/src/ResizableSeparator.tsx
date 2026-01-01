@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { PanResponder, StyleSheet, ViewStyle } from 'react-native';
-import HoverableView from './HoverableViewNativeComponent';
+import {HoverableView} from 'elui-native';
 
 export interface ResizableSeparatorProps {
   /** Current width of the left pane */

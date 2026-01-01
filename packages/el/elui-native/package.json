@@ -1,5 +1,5 @@
 {
-  "name": "elui",
+  "name": "elui-native",
   "version": "0.1.0",
   "description": "for understanding how RN works under the hood",
   "main": "lib-commonjs/index.js",
@@ -18,6 +18,19 @@
     "src",
     "lib",
     "lib-commonjs",
+    "android",
+    "ios",
+    "cpp",
+    "nitrogen",
+    "nitro.json",
+    "*.podspec",
+    "react-native.config.js",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
@@ -29,10 +42,13 @@
     "depcheck": "fluentui-scripts depcheck",
     "lint": "fluentui-scripts eslint",
     "prettier": "fluentui-scripts prettier",
-    "prettier-fix": "fluentui-scripts prettier --fix true"
+    "prettier-fix": "fluentui-scripts prettier --fix true",
+    "nitrogen": "nitrogen"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "ios",
+    "android"
   ],
   "repository": {
     "type": "git",
@@ -50,15 +66,18 @@
     "@react-native-community/cli": "^20.0.0",
     "@react-native/babel-preset": "0.79.1",
     "@types/react": "^19.0.3",
+    "nitrogen": "patch:nitrogen@npm%3A0.32.0#~/.yarn/patches/nitrogen-npm-0.32.0-10e775b6a9.patch",
     "react": "19.0.3",
     "react-native": "^0.79.0",
     "react-native-macos": "^0.79.0",
+    "react-native-nitro-modules": "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch",
     "react-native-windows": "^0.79.0",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-nitro-modules": "*"
   },
   "peerDependenciesMeta": {
     "react-native-macos": {
@@ -68,8 +87,31 @@
       "optional": true
     }
   },
-  "dependencies": {
-    "@elui-react-native/tablist": "workspace:^",
-    "elui-native": "workspace:^"
+  "codegenConfig": {
+    "name": "ELUISpec",
+    "type": "all",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.elui"
+    },
+    "ios": {
+      "components": {
+        "FbrViewExample": {
+          "className": "FbrViewExample1"
+        },
+        "SysIcon": {
+          "className": "SysIcon"
+        },
+        "InvertedCorner": {
+          "className": "InvertedCorner"
+        }
+      }
+    }
+  },
+  "create-react-native-library": {
+    "languages": "kotlin-objc",
+    "type": "turbo-module",
+    "tools": [],
+    "version": "0.55.1"
   }
 }

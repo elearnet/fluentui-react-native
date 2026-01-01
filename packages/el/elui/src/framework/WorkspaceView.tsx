@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { Workspace, WorkspaceSplit, WorkspaceItem, WorkspaceLeaf } from './Workspace';
 import { PaneWithSeparator } from '../PaneWithSeparator';
-import SysIcon from '../SysIconNativeComponent';
+import {SysIcon,HoverableView,SystemColors} from 'elui-native';
 import { TabList, Tab } from '@elui-react-native/tablist';
-import { default as HoverableView } from '../HoverableViewNativeComponent';
-import { default as SystemColors } from '../NativeSystemColors';
 import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
 // import { Callout } from '@elui-react-native/callout';
 
@@ -137,7 +135,6 @@ const WorkspaceTab = ({
                         child,
                         index,
                         isActive,
-                        onLongPress,
                         onClose,
                         showSeparator,
                         detailBgColor
@@ -145,7 +142,6 @@ const WorkspaceTab = ({
   child: any,
   index: number,
   isActive: boolean,
-  onLongPress: (index: number, ref: React.RefObject<any>) => void,
   onClose: () => void,
   showSeparator: boolean,
   detailBgColor: string
@@ -164,12 +160,6 @@ const WorkspaceTab = ({
       <Tab
         key={tabKey}
         tabKey={tabKey}
-        // No componentRef passed to Tab, we rely on wrapperRef
-        onLongPress={() => {
-          if (wrapperRef.current) {
-            onLongPress(index, wrapperRef);
-          }
-        }}
         onPressIn={(e: any) => {
           if (e.nativeEvent.button === 2 && wrapperRef.current) {
             // Optional: Trigger on right click immediately if platform supports
@@ -215,15 +205,15 @@ const DefaultTabRenderer = (split: WorkspaceSplit, activeIndex: number, onSelect
   const detailBgColor = SystemColors.getSystemColor('unemphasizedSelectedContentBackgroundColor') || '#E0E0E0';
   const selectedKey = safeSelectValue(split, activeIndex);
 
-  const onTabLongPress = React.useCallback((index: number, ref: React.RefObject<any>) => {
-      // if (ref.current) {
-      //     ref.current.measureInWindow((x: number, y: number, width: number, height: number) => {
-      //         // setAnchorRect({ x: x, y: y, width: width, height: height }); // Use x/y for native bridge compatibility
-      //         // setContextMenuIndex(index);
-      //         // setIsContextMenuVisible(true);
-      //     });
-      // }
-  }, []);
+  // const onTabLongPress = React.useCallback((index: number, ref: React.RefObject<any>) => {
+  //     // if (ref.current) {
+  //     //     ref.current.measureInWindow((x: number, y: number, width: number, height: number) => {
+  //     //         // setAnchorRect({ x: x, y: y, width: width, height: height }); // Use x/y for native bridge compatibility
+  //     //         // setContextMenuIndex(index);
+  //     //         // setIsContextMenuVisible(true);
+  //     //     });
+  //     // }
+  // }, []);
 
   return (
     <View style={[styles.tabListContainer, isLeftCollapsed ? { marginLeft: minSidePaneWidth } : {}]}>
@@ -250,7 +240,6 @@ const DefaultTabRenderer = (split: WorkspaceSplit, activeIndex: number, onSelect
               child={child}
               index={index}
               isActive={isSelected}
-              onLongPress={onTabLongPress}
               onClose={() => split.removeChild(child)}
               showSeparator={showSeparator}
               detailBgColor={detailBgColor}

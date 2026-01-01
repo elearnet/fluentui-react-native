@@ -1,0 +1,22 @@
+diff --git a/ios/assetsCatalog.mjs b/ios/assetsCatalog.mjs
+index f3ec93fbdc14262be3b443d9f99863669d7d559f..9a6692afca3b3f05269ee3c07b17c2365f321046 100644
+--- a/ios/assetsCatalog.mjs
++++ b/ios/assetsCatalog.mjs
+@@ -74,7 +74,7 @@ function resampleImage(input, output, width, height) {
+     output,
+     input,
+   ];
+-  spawnSync("sips", args, { stdio: "inherit" });
++  spawnSync("sips", args, { stdio: "ignore" });
+ }
+ 
+ /**
+@@ -131,7 +131,7 @@ export function generateAssetsCatalogs(
+     const appIconSet = path.join(destination, `${setName}.appiconset`);
+     mkdir_p(appIconSet, fs);
+ 
+-    const icon = path.join(appManifestDir, appIcon.filename);
++    const icon = path.join(path.dirname(appManifestDir), appIcon.filename);
+     const extname = path.extname(icon);
+     const basename = path.basename(icon, extname);
+ 

@@ -1,0 +1,7 @@
+{
+  "extends": "@elui-react-native/scripts/configs/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "lib"
+  },
+  "include": ["src"]
+}
