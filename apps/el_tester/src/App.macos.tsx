@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import {
   View,
-  StyleSheet,
   Text,
 } from 'react-native';
 import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
-
+import {CompatibleView} from 'etest';
 import {
   App,
   WorkspaceView,
@@ -14,6 +13,7 @@ import {
   ELUIView,
   NitrotestHybridObject,
 } from 'elui';
+
 import { NoteListView } from './UI/NoteListView';
 import {SearchView} from './UI/SearchView.tsx';
 import {MarkdownView} from './UI/MarkdownView.tsx';
@@ -161,6 +161,7 @@ function hello() {
           <Text>Example View: {leaf.viewState.state?.text || 'Hello World'}</Text>
           <Text>nitro test result:{result}</Text>
           <ELUIView color="plus.circle.fill" style={{width:30,height:30,backgroundColor:'grey'}} />
+          <CompatibleView color="#123456" style={{width:60,height:60}} />
         </View>
       );
     };

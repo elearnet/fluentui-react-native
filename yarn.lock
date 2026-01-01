@@ -4191,7 +4191,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/tablist@npm:*, @elui-react-native/tablist@workspace:*, @elui-react-native/tablist@workspace:packages/components/TabList":
+"@elui-react-native/tablist@npm:*, @elui-react-native/tablist@workspace:*, @elui-react-native/tablist@workspace:^, @elui-react-native/tablist@workspace:packages/components/TabList":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/tablist@workspace:packages/components/TabList"
   dependencies:
@@ -13381,6 +13381,7 @@ __metadata:
     "@types/react-test-renderer": "npm:^19.0.3"
     elui: "workspace:*"
     eslint: "npm:^8.19.0"
+    etest: "workspace:^"
     jest: "npm:^29.6.3"
     prettier: "npm:2.8.8"
     react: "npm:19.0.3"
@@ -13407,6 +13408,7 @@ __metadata:
   dependencies:
     "@elui-react-native/eslint-config-rules": "workspace:*"
     "@elui-react-native/scripts": "workspace:*"
+    "@elui-react-native/tablist": "workspace:^"
     "@react-native-community/cli": "npm:^20.0.0"
     "@react-native/babel-preset": "npm:0.79.1"
     "@types/react": "npm:^19.0.3"
@@ -14373,6 +14375,34 @@ __metadata:
   checksum: 10c0/12be11ef62fb9817314d790089a0a49fae4e1b50594135dcb8076312b7d7e470884b5100d249b28c18581b7fd52f8b485689ffae22a11ed9ec17377a33a08f84
   languageName: node
   linkType: hard
+
+"etest@workspace:^, etest@workspace:packages/el/etest":
+  version: 0.0.0-use.local
+  resolution: "etest@workspace:packages/el/etest"
+  dependencies:
+    "@elui-react-native/eslint-config-rules": "workspace:*"
+    "@elui-react-native/scripts": "workspace:*"
+    "@react-native-community/cli": "npm:^20.0.0"
+    "@react-native/babel-preset": "npm:0.79.1"
+    "@types/react": "npm:^19.0.3"
+    nitrogen: "patch:nitrogen@npm%3A0.32.0#~/.yarn/patches/nitrogen-npm-0.32.0-10e775b6a9.patch"
+    react: "npm:19.0.3"
+    react-native: "npm:^0.79.0"
+    react-native-macos: "npm:^0.79.0"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
+    react-native-windows: "npm:^0.79.0"
+    typescript: "npm:5.0.4"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-nitro-modules: "*"
+  peerDependenciesMeta:
+    react-native-macos:
+      optional: true
+    react-native-windows:
+      optional: true
+  languageName: unknown
+  linkType: soft
 
 "event-target-shim@npm:^5.0.0, event-target-shim@npm:^5.0.1":
   version: 5.0.1

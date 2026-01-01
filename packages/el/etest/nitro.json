@@ -1,0 +1,21 @@
+{
+  "cxxNamespace": ["etest"],
+  "ios": {
+    "iosModuleName": "ETEST"
+  },
+  "android": {
+    "androidNamespace": ["etest"],
+    "androidCxxLibName": "etest"
+  },
+  "autolinking": {
+    "ETEST_TEST": {
+      "swift": "HybridETEST",
+      "kotlin": "HybridETEST"
+    },
+    "Nitrotest": {
+      "swift": "Nitrotest",
+      "kotlin": "Nitrotest"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}

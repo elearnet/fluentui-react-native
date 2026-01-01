@@ -17,5 +17,11 @@ module.exports = {
     elui: {
       root: path.resolve(__dirname, '../../packages/el/elui'),
     },
+    etest: {
+      root: path.resolve(__dirname, '../../packages/el/etest'),
+    },
+    '@elui-react-native/callout': {
+      root: path.resolve(__dirname, '../../packages/components/Callout'),
+    },
   },
 };

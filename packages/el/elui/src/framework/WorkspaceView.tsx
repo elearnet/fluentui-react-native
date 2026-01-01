@@ -7,7 +7,7 @@ import { TabList, Tab } from '@elui-react-native/tablist';
 import { default as HoverableView } from '../HoverableViewNativeComponent';
 import { default as SystemColors } from '../NativeSystemColors';
 import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
-import { Callout } from '@elui-react-native/callout';
+// import { Callout } from '@elui-react-native/callout';
 
 const HEADER_HEIGHT = 36;
 
@@ -195,34 +195,17 @@ const WorkspaceTab = ({
   );
 };
 
-const ContextMenuItem = ({ icon, text, onPress }: { icon: string, text: string, onPress: () => void }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  return (
-    <HoverableView
-      style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 4 }}
-      onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}
-    >
-      <TouchableOpacity onPress={onPress} style={{flexDirection: 'row', alignItems: 'center', flex: 1}}>
-        <View style={[
-          StyleSheet.absoluteFill,
-          { backgroundColor: isHovered ? '#0078d4' : 'transparent', borderRadius: 4, opacity: isHovered ? 0.2 : 0 }
-        ]} />
-        <SysIcon symbolName={icon} style={{ width: 14, height: 14, marginRight: 8, tintColor: '#000' } as any} />
-        <Text style={{ fontSize: 13 }}>{text}</Text>
-      </TouchableOpacity>
-    </HoverableView>
-  );
-};
+
 
 const DefaultTabRenderer = (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void) => {
   const workspace = split.workspace;
   const isLeftCollapsed = workspace.leftSplit && workspace.leftSplit.children.length > 0 && workspace.leftSplit.collapsed;
   const minSidePaneWidth = workspace.leftSplit.minSize;
 
-  const [contextMenuTarget, setContextMenuTarget] = React.useState<React.RefObject<any> | null>(null);
-  const [isContextMenuVisible, setIsContextMenuVisible] = React.useState(false);
-  const [contextMenuIndex, setContextMenuIndex] = React.useState(-1);
+  /* Manual Anchor Rect State */
+  // const [anchorRect, setAnchorRect] = React.useState<any>(null);
+  // const [isContextMenuVisible, setIsContextMenuVisible] = React.useState(false);
+  // const [contextMenuIndex, setContextMenuIndex] = React.useState(-1);
 
   // Helper to ensure valid selection key
   const safeSelectValue = (split: WorkspaceSplit, index: number) => {
@@ -233,9 +216,13 @@ const DefaultTabRenderer = (split: WorkspaceSplit, activeIndex: number, onSelect
   const selectedKey = safeSelectValue(split, activeIndex);
 
   const onTabLongPress = React.useCallback((index: number, ref: React.RefObject<any>) => {
-    setContextMenuIndex(index);
-    setContextMenuTarget(ref);
-    setIsContextMenuVisible(true);
+      // if (ref.current) {
+      //     ref.current.measureInWindow((x: number, y: number, width: number, height: number) => {
+      //         // setAnchorRect({ x: x, y: y, width: width, height: height }); // Use x/y for native bridge compatibility
+      //         // setContextMenuIndex(index);
+      //         // setIsContextMenuVisible(true);
+      //     });
+      // }
   }, []);
 
   return (
@@ -271,61 +258,6 @@ const DefaultTabRenderer = (split: WorkspaceSplit, activeIndex: number, onSelect
           );
         })}
       </TabList>
-
-
-      {isContextMenuVisible && contextMenuTarget && (
-        <Callout
-          target={contextMenuTarget}
-          onDismiss={() => setIsContextMenuVisible(false)}
-          style={{
-            backgroundColor: '#fff',
-            borderWidth: 0.5,
-            borderColor: 'rgba(0,0,0,0.2)',
-            padding: 4,
-            borderRadius: 6,
-            minWidth: 160,
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 4,
-            },
-            shadowOpacity: 0.15,
-            shadowRadius: 12,
-            elevation: 5,
-          }}
-        >
-          <ContextMenuItem
-            icon="xmark"
-            text="Close Tab"
-            onPress={() => {
-              const child = split.children[contextMenuIndex];
-              if (child) split.removeChild(child);
-              setIsContextMenuVisible(false);
-            }}
-          />
-          <ContextMenuItem
-            icon="arrow.left.and.right"
-            text="Close Others"
-            onPress={() => {
-              const targetChild = split.children[contextMenuIndex];
-              [...split.children].forEach(child => {
-                if(child !== targetChild) split.removeChild(child);
-              });
-              setIsContextMenuVisible(false);
-            }}
-          />
-          <ContextMenuItem
-            icon="arrow.right.to.line"
-            text="Close to the Right"
-            onPress={() => {
-              [...split.children].forEach((child, idx) => {
-                if(idx > contextMenuIndex) split.removeChild(child);
-              });
-              setIsContextMenuVisible(false);
-            }}
-          />
-        </Callout>
-      )}
     </View>
   );
 };

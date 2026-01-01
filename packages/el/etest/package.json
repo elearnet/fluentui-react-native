@@ -1,5 +1,5 @@
 {
-  "name": "elui",
+  "name": "etest",
   "version": "0.1.0",
   "description": "for understanding how RN works under the hood",
   "main": "lib-commonjs/index.js",
@@ -86,22 +86,16 @@
     }
   },
   "codegenConfig": {
-    "name": "ELUISpec",
+    "name": "ETESTSpec",
     "type": "all",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "com.elui"
+      "javaPackageName": "com.etest"
     },
     "ios": {
       "components": {
-        "FbrViewExample": {
-          "className": "FbrViewExample1"
-        },
-        "SysIcon": {
-          "className": "SysIcon"
-        },
-        "InvertedCorner": {
-          "className": "InvertedCorner"
+        "CompatibleView": {
+          "className": "CompatibleView"
         }
       }
     }
@@ -111,8 +105,5 @@
     "type": "turbo-module",
     "tools": [],
     "version": "0.55.1"
-  },
-  "dependencies": {
-    "@elui-react-native/tablist": "workspace:^"
   }
 }
