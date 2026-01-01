@@ -117,3 +117,4 @@ apps/*/.vscode/.react/
 
 # Ccache
 .ccache
+/docs/mm.md

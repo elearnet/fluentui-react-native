@@ -1656,7 +1656,7 @@ PODS:
 DEPENDENCIES:
   - boost (from `../../../node_modules/react-native-macos/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../../../node_modules/react-native-macos/third-party-podspecs/DoubleConversion.podspec`)
-  - ELUI (from `../../../packages/el/elui`)
+  - ELUI (from `../../../packages/el/elui-native`)
   - ETEST (from `../../../packages/el/etest`)
   - fast_float (from `../../../node_modules/react-native-macos/third-party-podspecs/fast_float.podspec`)
   - FBLazyVector (from `../../../node_modules/react-native-macos/Libraries/FBLazyVector`)
@@ -1737,7 +1737,7 @@ EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../../../node_modules/react-native-macos/third-party-podspecs/DoubleConversion.podspec"
   ELUI:
-    :path: "../../../packages/el/elui"
+    :path: "../../../packages/el/elui-native"
   ETEST:
     :path: "../../../packages/el/etest"
   fast_float:
@@ -1887,7 +1887,7 @@ SPEC CHECKSUMS:
   fast_float: 44983b3bddb2d2ed3021a98be86f60ec8abc9ffd
   FBLazyVector: 9caf418dd9c1d8df5e5fe27371816fffa785d7d1
   fmt: f6af2d677a106e3e44c9536a4c0c7f03ab53c854
-  FRNCallout: f6b8bcc8ec6e7638884b2674a9bb8718843f64b4
+  FRNCallout: 2a333fcfd5af672b8353f7ff9cab8c77b3fc623d
   glog: ea1690290b2b90f923ffcce07436498f09b428ee
   NitroModules: c69346bafda9ec281e2f278991c0d8317653b45b
   RCT-Folly: e8b53d8c0d2d9df4a6a8b0a368a1a91fc62a88cb

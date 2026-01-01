@@ -8,10 +8,54 @@ workspace 'FluentTester.xcworkspace'
 # (pnpm-mode) react_native_path = "#{__dir__}/../node_modules/react-native"
 react_native_path = "#{__dir__}/../../../node_modules/react-native"
 # Pod::UI.puts "ENV[RCT_NEW_ARCH_ENABLED] begin :#{ENV["RCT_NEW_ARCH_ENABLED"]}".green
-use_test_app! do |target|
+use_test_app!(
+  post_install: lambda do |installer|
+    # require 'fileutils'
+    # project_root = Pathname.new(__dir__)
+    # generated_dir = project_root.join('../../../node_modules/.generated/macos')
+
+    # # Symlink app.json
+    # source = project_root.join('../app.json')
+    # destination = generated_dir.join('app.json')
+    # FileUtils.rm_f(destination)
+    # FileUtils.ln_s(source, destination)
+
+    # # Symlink assets
+    # source = project_root.join('../assets')
+    # destination = generated_dir.join('assets')
+    # FileUtils.rm_f(destination)
+    # FileUtils.ln_s(source, destination)
+
+
+    # Fix Folly New.h operator new compatibility issue on macOS
+    # installer.pods_project.targets.each do |target|
+    #   if target.name == 'ELUI'
+    #     target.build_configurations.each do |config|
+    #       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+    #       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'FOLLY_USE_JEMALLOC=0'
+    #     end
+    #   end
+    # end
+    # @property (nonatomic, strong, readonly) dispatch_queue_t methodQueue RCT_DEPRECATED;
+    # Property with 'retain (or strong)' attribute must be of object type
+    # strong -> assign
+    # On iOS, dispatch_queue_t is an Objective-C object (so strong works)
+    # On macOS, dispatch_queue_t is a C type (not an object), so strong is invalid and assign is correct
+    # Fix dispatch_queue_t strong attribute error on macOS
+    react_core_path = "#{installer.sandbox.root}/Headers/Public/React-Core/React/RCTBridgeModule.h"
+    if File.exist?(react_core_path)
+      content = File.read(react_core_path)
+      content.gsub!('@property (nonatomic, strong, readonly) dispatch_queue_t methodQueue',
+                    '@property (nonatomic, assign, readonly) dispatch_queue_t methodQueue')
+      File.write(react_core_path, content)
+    end
+  end
+) do |target|
   target.app do
     platform :osx, '12'
   end
 end
+
 Pod::UI.puts "ENV[RCT_NEW_ARCH_ENABLED] end :#{ENV["RCT_NEW_ARCH_ENABLED"]}".green
 Pod::UI.puts "NewArchitectureHelper.new_arch_enabled :#{NewArchitectureHelper.new_arch_enabled}".green
+Pod::UI.warn('hi there. I just want to check out how warning msg look like')

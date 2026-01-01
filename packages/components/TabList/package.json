@@ -40,7 +40,7 @@
     "@elui-react-native/theming-utils": "workspace:*",
     "@elui-react-native/tokens": "workspace:*",
     "@elui-react-native/use-styling": "workspace:*",
-    "elui": "workspace:*"
+    "elui-native": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

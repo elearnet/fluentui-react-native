@@ -14,8 +14,8 @@ module.exports = {
   //hoisting native modules, codegen couldn't find them in el_tester/node_modules
   //have to tell codegen where to find them
   dependencies: {
-    elui: {
-      root: path.resolve(__dirname, '../../packages/el/elui'),
+    "elui-native": {
+      root: path.resolve(__dirname, '../../packages/el/elui-native'),
     },
     etest: {
       root: path.resolve(__dirname, '../../packages/el/etest'),

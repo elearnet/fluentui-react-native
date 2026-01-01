@@ -6,12 +6,11 @@ import {
 import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
 import {CompatibleView} from 'etest';
+// import {ELUIView, NitrotestHybridObject,} from 'elui-native';
 import {
   App,
   WorkspaceView,
   WorkspaceLeaf,
-  ELUIView,
-  NitrotestHybridObject,
 } from 'elui';
 
 import { NoteListView } from './UI/NoteListView';
@@ -55,7 +54,9 @@ const customTheme = new ThemeReference(baseTheme, {
 // customTheme.theme.colors.bodyFrameBackground
 
 //console.log(NitrotestHybridObject);
-const result = NitrotestHybridObject.multiply(2, 3);
+//const result = NitrotestHybridObject.multiply(2, 3);
+//<Text>nitro test result:{result}</Text>
+          // <ELUIView color="plus.circle.fill" style={{width:30,height:30,backgroundColor:'grey'}} />
 
 export default function AppRoot() {
   // Singleton App instance
@@ -159,8 +160,6 @@ function hello() {
       return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>Example View: {leaf.viewState.state?.text || 'Hello World'}</Text>
-          <Text>nitro test result:{result}</Text>
-          <ELUIView color="plus.circle.fill" style={{width:30,height:30,backgroundColor:'grey'}} />
           <CompatibleView color="#123456" style={{width:60,height:60}} />
         </View>
       );

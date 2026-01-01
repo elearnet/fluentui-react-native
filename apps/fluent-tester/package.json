@@ -96,9 +96,11 @@
     "@types/node": "^22.0.0",
     "@types/react": "~ 19.0.3",
     "@warren-ms/react-native-icons": "^0.0.13",
+    "etest": "workspace:*",
     "react": " 19.0.3",
     "react-native": "^0.79.0",
     "react-native-macos": "^0.79.0",
+    "react-native-nitro-modules": "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch",
     "react-native-svg": "^15.11.2",
     "react-native-windows": "^0.79.0"
   },
@@ -127,7 +129,7 @@
     "flow-bin": "^0.113.0",
     "metro-config": "^0.81.3",
     "react-native-svg-transformer": "^1.0.0",
-    "react-native-test-app": "^4.1.4",
+    "react-native-test-app": "patch:react-native-test-app@npm%3A4.4.12#~/.yarn/patches/react-native-test-app-npm-4.4.12-3029e310ef.patch",
     "react-test-renderer": " 19.0.3",
     "webdriverio": "^8.40.0"
   },

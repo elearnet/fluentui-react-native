@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { SysIcon } from 'elui';
+import { SysIcon } from 'elui-native';
 
 import { FontIcon } from './FontIcon/FontIcon';
 import type { IconProps } from './Icon.types';

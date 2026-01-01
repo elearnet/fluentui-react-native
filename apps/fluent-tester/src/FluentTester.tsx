@@ -13,6 +13,7 @@ import { fluentTesterStyles, mobileStyles } from './TestComponents/Common/styles
 import { testProps } from './TestComponents/Common/TestProps';
 import { tests } from './testPages';
 import { ThemePickers } from './theme/ThemePickers';
+import {CompatibleView} from 'etest';
 
 // uncomment the below lines to enable message spy
 /**
@@ -233,6 +234,8 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
       <View style={fluentTesterStyles.testRoot}>
         {enableSinglePaneView ? <MobileTestList /> : <TestList />}
         {isTestSectionVisible && <TestComponentView />}
+        <View><Text>Hello there</Text></View>
+        <CompatibleView color="#123456" style={{width:60,height:60}} />
       </View>
     </RootView>
   );
