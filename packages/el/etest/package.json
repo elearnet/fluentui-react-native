@@ -68,7 +68,7 @@
     "react": "19.0.3",
     "react-native": "^0.79.0",
     "react-native-macos": "^0.79.0",
-    "react-native-nitro-modules": "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch",
+    "react-native-nitro-modules": "patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch",
     "react-native-windows": "^0.79.0",
     "typescript": "5.0.4"
   },

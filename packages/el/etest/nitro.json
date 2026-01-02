@@ -8,13 +8,9 @@
     "androidCxxLibName": "etest"
   },
   "autolinking": {
-    "ETEST_TEST": {
-      "swift": "HybridETEST",
-      "kotlin": "HybridETEST"
-    },
-    "Nitrotest": {
-      "swift": "Nitrotest",
-      "kotlin": "Nitrotest"
+    "CompatibleNitroView": {
+      "swift": "HybridCompatibleNitroView",
+      "kotlin": "HybridCompatibleNitroView"
     }
   },
   "ignorePaths": ["node_modules"]

@@ -28,6 +28,7 @@ PODS:
   - ETEST (0.1.0):
     - DoubleConversion
     - glog
+    - NitroModules
     - RCT-Folly (= 2024.11.18.00)
     - RCTRequired
     - RCTTypeSafety
@@ -1883,7 +1884,7 @@ SPEC CHECKSUMS:
   boost: 7d49a506d1ac47358fea28558d184dd6431170ca
   DoubleConversion: 10f51d3e1238973c033faac2d84c0ea114942f53
   ELUI: 480b71eabc2d1d9c58115a6d449994efc1dceefe
-  ETEST: b93711c35f9f1f6c8e18cc25efcff01156edfc21
+  ETEST: f06c07b2200248b41824465d409915062be6d338
   fast_float: 44983b3bddb2d2ed3021a98be86f60ec8abc9ffd
   FBLazyVector: 9caf418dd9c1d8df5e5fe27371816fffa785d7d1
   fmt: f6af2d677a106e3e44c9536a4c0c7f03ab53c854

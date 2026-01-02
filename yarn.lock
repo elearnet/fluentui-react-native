@@ -4385,7 +4385,7 @@ __metadata:
     react: "npm: 19.0.3"
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
-    react-native-nitro-modules: "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch"
     react-native-svg: "npm:^15.11.2"
     react-native-svg-transformer: "npm:^1.0.0"
     react-native-test-app: "patch:react-native-test-app@npm%3A4.4.12#~/.yarn/patches/react-native-test-app-npm-4.4.12-3029e310ef.patch"
@@ -13390,7 +13390,7 @@ __metadata:
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
     react-native-markdown-display: "npm:^7.0.2"
-    react-native-nitro-modules: "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch"
     react-native-windows: "npm:^0.79.0"
     react-test-renderer: "npm:19.0.3"
     typescript: "npm:5.0.4"
@@ -13417,7 +13417,7 @@ __metadata:
     react: "npm:19.0.3"
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
-    react-native-nitro-modules: "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch"
     react-native-windows: "npm:^0.79.0"
     typescript: "npm:5.0.4"
   peerDependencies:
@@ -14417,7 +14417,7 @@ __metadata:
     react: "npm:19.0.3"
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
-    react-native-nitro-modules: "patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch"
     react-native-windows: "npm:^0.79.0"
     typescript: "npm:5.0.4"
   peerDependencies:
@@ -21372,13 +21372,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-nitro-modules@patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch":
+"react-native-nitro-modules@patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch::version=0.32.0&hash=5d8864":
   version: 0.32.0
   resolution: "react-native-nitro-modules@patch:react-native-nitro-modules@npm%3A0.32.0#~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch::version=0.32.0&hash=5d8864"
   peerDependencies:
     react: "*"
     react-native: "*"
   checksum: 10c0/b626449c700bbb7adc363790ac9edadaceaa9fd60d3ccd9722621a754501683f8140eb4a3fdcc54cd68d56f37f37db9b19ef71935437ae6d1a5aaf53d3d18b6b
+  languageName: node
+  linkType: hard
+
+"react-native-nitro-modules@patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch":
+  version: 0.32.0
+  resolution: "react-native-nitro-modules@patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch::version=0.32.0&hash=7dff21"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/a573daf40e014c3e55f19892eb93bec69655c3c831d743b003e1a007b1a48a4d814f0848ca2916281df3983b7773fe8f6449ee42c7b0958a0e861dd266f0443b
   languageName: node
   linkType: hard
 

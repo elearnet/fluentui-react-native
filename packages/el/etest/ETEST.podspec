@@ -24,5 +24,9 @@ Pod::Spec.new do |s|
     add_nitrogen_files(s)
   end
 
+  if ENV['RCT_NEW_ARCH_ENABLED'] == '1'
+    s.pod_target_xcconfig = { "OTHER_SWIFT_FLAGS" => "-D RCT_NEW_ARCH_ENABLED" }
+  end
+
   install_modules_dependencies(s)
 end

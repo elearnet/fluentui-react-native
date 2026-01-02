@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-} from 'react-native';
+import {View, Text, TouchableOpacity, GestureResponderEvent} from 'react-native';
 import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
-import {CompatibleView} from 'etest';
+import {CompatibleNitroView} from 'etest';
+import { callback } from 'react-native-nitro-modules';
 // import {ELUIView, NitrotestHybridObject,} from 'elui-native';
 import {
   App,
@@ -16,6 +14,7 @@ import {
 import { NoteListView } from './UI/NoteListView';
 import {SearchView} from './UI/SearchView.tsx';
 import {MarkdownView} from './UI/MarkdownView.tsx';
+import {SysIcon} from 'elui-native';
 
 
 const baseTheme = createAppleTheme();
@@ -143,7 +142,8 @@ function hello() {
 
     return () => app.onunload();
   }, [app]);
-
+  const [counter, setCounter] = useState(0);
+  const counterRef = React.useRef<CompatibleNitroView | null>(null);
   const renderLeaf = React.useCallback((leaf: any) => {
     const type = leaf.viewState?.type;
     if (type === 'file-explorer') {
@@ -157,15 +157,36 @@ function hello() {
         return <MarkdownView content={content} />;
     }
     if (type === 'example') {
+
       return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>Example View: {leaf.viewState.state?.text || 'Hello World'}</Text>
-          <CompatibleView color="#123456" style={{width:60,height:60}} />
+          <TouchableOpacity
+            onPress={():void=>{
+              counterRef.current?.reset();
+            }}
+            style={{width:60,height:60}}
+          >
+            <CompatibleNitroView color="#a53f56"
+                                 onTick={callback((count:number) => {
+                                setCounter(count);
+                            })}
+                            startFrom={5}
+                            style={{width:60,height:60}}
+                            hybridRef={{
+                              f: (ref:any) => {
+                                counterRef.current = ref
+                              },
+                            }}
+            >
+            </CompatibleNitroView>
+          </TouchableOpacity>
+          <Text style={{backgroundColor:'#ffffff'}}>{counter}</Text>
         </View>
       );
     };
     return <Text>Unknown View Type: {type}</Text>;
-  }, []);
+  }, [counter]);
 
   return (
     <ThemeProvider theme={customTheme}>

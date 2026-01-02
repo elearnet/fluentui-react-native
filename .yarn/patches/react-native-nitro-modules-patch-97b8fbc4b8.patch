@@ -1,0 +1,47 @@
+diff --git a/lib/commonjs/views/getHostComponent.js b/lib/commonjs/views/getHostComponent.js
+index e5ce7c438a0d6ecae72d3227692feb9908c35a51..1dea43b8b81b67db8587c9bcd4112f0cd58b7caa 100644
+--- a/lib/commonjs/views/getHostComponent.js
++++ b/lib/commonjs/views/getHostComponent.js
+@@ -79,7 +79,8 @@ function getHostComponent(name, getViewConfig) {
+  */
+ 
+ function callback(func) {
+-  if (typeof func === 'function') {
++  const isFabric = global.nativeFabricUIManager != null
++  if (isFabric && typeof func === 'function') {
+     return {
+       f: func
+     };
+diff --git a/lib/module/views/getHostComponent.js b/lib/module/views/getHostComponent.js
+index 497c63b0b291edc033695653872c6665ce418710..514f3d89d686b7a5e4cc1b5230b94f93c9862bb3 100644
+--- a/lib/module/views/getHostComponent.js
++++ b/lib/module/views/getHostComponent.js
+@@ -73,7 +73,8 @@ export function getHostComponent(name, getViewConfig) {
+  */
+ 
+ export function callback(func) {
+-  if (typeof func === 'function') {
++  const isFabric = global.nativeFabricUIManager != null
++  if (isFabric && typeof func === 'function') {
+     return {
+       f: func
+     };
+diff --git a/src/views/getHostComponent.ts b/src/views/getHostComponent.ts
+index 1cdef17f633ced99175a2185589ff89b170dada3..119674446bd3727b0b66e174582a2e86e9c1f4a2 100644
+--- a/src/views/getHostComponent.ts
++++ b/src/views/getHostComponent.ts
+@@ -145,8 +145,11 @@ export function callback<T>(
+   func: T
+ ): T extends (...args: any[]) => any ? NitroViewWrappedCallback<T> : T
+ export function callback(func: unknown) {
+-  if (typeof func === 'function') {
+-    return { f: func }
+-  }
++    const isFabric =
++        // @ts-expect-error global is not typed
++        global.nativeFabricUIManager != null
++    if (isFabric && typeof func === 'function') {
++        return { f: func }
++    }
+   return func
+ }

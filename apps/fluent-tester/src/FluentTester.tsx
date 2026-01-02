@@ -1,5 +1,17 @@
 import * as React from 'react';
-import { ScrollView, View, Text as RNText, Platform, SafeAreaView, BackHandler, I18nManager, NativeEventSubscription } from 'react-native';
+import {
+  ScrollView,
+  View,
+  Text as RNText,
+  Platform,
+  SafeAreaView,
+  BackHandler,
+  I18nManager,
+  NativeEventSubscription,
+  TouchableOpacity,
+  UIManager,
+  findNodeHandle,
+} from 'react-native';
 
 import { Separator, TextV1 as Text } from '@elui/react-native';
 import { ButtonV1 as Button } from '@elui-react-native/button';
@@ -13,7 +25,9 @@ import { fluentTesterStyles, mobileStyles } from './TestComponents/Common/styles
 import { testProps } from './TestComponents/Common/TestProps';
 import { tests } from './testPages';
 import { ThemePickers } from './theme/ThemePickers';
-import {CompatibleView} from 'etest';
+import {CompatibleView,CompatibleNitroView} from 'etest';
+import { useState } from 'react';
+import { callback } from 'react-native-nitro-modules';
 
 // uncomment the below lines to enable message spy
 /**
@@ -220,7 +234,9 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
       </ScrollView>
     );
   };
-
+  const [counter, setCounter] = useState(0);
+  const counterRef = React.useRef<CompatibleNitroView | null>(null);
+  const viewRef = React.useRef<any>(null);
   return (
     // On iOS, the accessible prop must be set to false because iOS does not support nested accessibility elements
     <RootView
@@ -234,8 +250,38 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
       <View style={fluentTesterStyles.testRoot}>
         {enableSinglePaneView ? <MobileTestList /> : <TestList />}
         {isTestSectionVisible && <TestComponentView />}
-        <View><Text>Hello there</Text></View>
+        <View><Text>Hello there:{counter}</Text></View>
         <CompatibleView color="#123456" style={{width:60,height:60}} />
+        <TouchableOpacity
+          onPress={():void=>{
+            if (counterRef.current) {
+                counterRef.current.reset();
+            } else if (viewRef.current) {
+                const tag = findNodeHandle(viewRef.current);
+                if (tag) {
+                    UIManager.dispatchViewManagerCommand(tag, 'reset', []);
+                }
+            }
+          }}
+          style={{width:60,height:60}}
+        >
+          <CompatibleNitroView color="#a53f06"
+                               ref={viewRef}
+                               onTick={callback((e: any) => {
+                                 const count = typeof e === 'number' ? e : e.nativeEvent.count;
+                                 console.log(`muhahahahahah:${count}`);
+                                 setCounter(count);
+                               })}
+                               startFrom={5}
+                               style={{width:60,height:60}}
+                               hybridRef={{
+                                 f: (ref:any) => {
+                                   counterRef.current = ref
+                                 },
+                               }}
+          >
+          </CompatibleNitroView>
+        </TouchableOpacity>
       </View>
     </RootView>
   );

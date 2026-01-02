@@ -23,7 +23,7 @@ const ELUIConfig = require('../nitrogen/generated/shared/json/ELUI_TESTConfig.js
 import type { ELUI_TESTMethods, ELUI_TESTProps } from './ELUI_TEST.nitro';
 import type { Nitrotest } from './Nitrotest.nitro';
 
-export const ELUIView = getHostComponent<ELUI_TESTMethods, ELUI_TESTProps>(
+export const ELUIView = getHostComponent<ELUI_TESTProps,ELUI_TESTMethods >(
   'ELUI_TEST',
   () => ELUIConfig
 );
