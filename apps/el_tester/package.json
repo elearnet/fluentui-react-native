@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@elui-react-native/button": "workspace:*",
+    "@elui-react-native/callout": "workspace:^",
     "@elui-react-native/tablist": "workspace:*",
     "elui": "workspace:*",
     "etest": "workspace:^",

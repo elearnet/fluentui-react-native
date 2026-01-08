@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {View, Text, TouchableOpacity, GestureResponderEvent} from 'react-native';
 import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
-import {CompatibleNitroView} from 'etest';
 import { callback } from 'react-native-nitro-modules';
 // import {ELUIView, NitrotestHybridObject,} from 'elui-native';
 import {
@@ -15,7 +14,8 @@ import { NoteListView } from './UI/NoteListView';
 import {SearchView} from './UI/SearchView.tsx';
 import {MarkdownView} from './UI/MarkdownView.tsx';
 import {SysIcon} from 'elui-native';
-
+import {TestCallout as TestNitroCallout} from '@elui-react-native/callout';
+import {CompatibleNitroView /*,TestNitroCallout*/} from 'etest';
 
 const baseTheme = createAppleTheme();
 const customTheme = new ThemeReference(baseTheme, {
@@ -140,6 +140,10 @@ function hello() {
     leaf4.setViewState({ type: 'markdown', state: { content: testMarkdown, title: 'Tab4' } });
     leaf4.view = "Markdown View";
 
+    const leaf5 = new WorkspaceLeaf(app.workspace);
+    app.workspace.rootSplit.addChild(leaf5);
+    leaf5.setViewState({ type: 'callout-test', state: {  } });
+
     return () => app.onunload();
   }, [app]);
   const [counter, setCounter] = useState(0);
@@ -185,6 +189,9 @@ function hello() {
         </View>
       );
     };
+    if(type==="callout-test"){
+      return (<TestNitroCallout />)
+    }
     return <Text>Unknown View Type: {type}</Text>;
   }, [counter]);
 

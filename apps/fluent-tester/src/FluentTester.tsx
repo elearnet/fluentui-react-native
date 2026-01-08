@@ -28,6 +28,7 @@ import { ThemePickers } from './theme/ThemePickers';
 import {CompatibleView,CompatibleNitroView} from 'etest';
 import { useState } from 'react';
 import { callback } from 'react-native-nitro-modules';
+import { TestCallout } from '@elui-react-native/callout';
 
 // uncomment the below lines to enable message spy
 /**
@@ -235,7 +236,6 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
     );
   };
   const [counter, setCounter] = useState(0);
-  const counterRef = React.useRef<CompatibleNitroView | null>(null);
   const viewRef = React.useRef<any>(null);
   return (
     // On iOS, the accessible prop must be set to false because iOS does not support nested accessibility elements
@@ -252,11 +252,9 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
         {isTestSectionVisible && <TestComponentView />}
         <View><Text>Hello there:{counter}</Text></View>
         <CompatibleView color="#123456" style={{width:60,height:60}} />
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={():void=>{
-            if (counterRef.current) {
-                counterRef.current.reset();
-            } else if (viewRef.current) {
+            if (viewRef.current) {
                 const tag = findNodeHandle(viewRef.current);
                 if (tag) {
                     UIManager.dispatchViewManagerCommand(tag, 'reset', []);
@@ -269,19 +267,14 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
                                ref={viewRef}
                                onTick={callback((e: any) => {
                                  const count = typeof e === 'number' ? e : e.nativeEvent.count;
-                                 console.log(`muhahahahahah:${count}`);
                                  setCounter(count);
                                })}
                                startFrom={5}
                                style={{width:60,height:60}}
-                               hybridRef={{
-                                 f: (ref:any) => {
-                                   counterRef.current = ref
-                                 },
-                               }}
           >
           </CompatibleNitroView>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
+        <TestCallout />
       </View>
     </RootView>
   );

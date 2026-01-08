@@ -2145,7 +2145,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/callout@npm:*, @elui-react-native/callout@workspace:*, @elui-react-native/callout@workspace:packages/components/Callout":
+"@elui-react-native/callout@npm:*, @elui-react-native/callout@workspace:*, @elui-react-native/callout@workspace:^, @elui-react-native/callout@workspace:packages/components/Callout":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/callout@workspace:packages/components/Callout"
   dependencies:
@@ -2166,9 +2166,11 @@ __metadata:
     "@react-native/babel-preset": "npm:^0.79.0"
     "@react-native/metro-config": "npm:^0.79.0"
     "@types/react": "npm:~ 19.0.3"
+    nitrogen: "patch:nitrogen@npm%3A0.32.0#~/.yarn/patches/nitrogen-npm-0.32.0-10e775b6a9.patch"
     react: "npm: 19.0.3"
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
+    react-native-nitro-modules: "patch:react-native-nitro-modules@patch%3Areact-native-nitro-modules@npm%253A0.32.0%23~/.yarn/patches/react-native-nitro-modules-npm-0.32.0-014a3e5494.patch%3A%3Aversion=0.32.0&hash=5d8864#~/.yarn/patches/react-native-nitro-modules-patch-97b8fbc4b8.patch"
     react-native-windows: "npm:^0.79.0"
     react-test-renderer: "npm: 19.0.3"
   peerDependencies:
@@ -2176,6 +2178,7 @@ __metadata:
     react: 18.2.0 || ^18.2.0 || 18.3.1 ||  19.0.3
     react-native: ^0.73.0 || ^0.74.0 || ^0.75.0 || ^0.76.0 || ^0.77.0 || ^0.78.0 || ^0.79.0
     react-native-macos: ^0.73.0 || ^0.74.0 || ^0.75.0 || ^0.76.0 || ^0.77.0 || ^0.78.0 || ^0.79.0
+    react-native-nitro-modules: "*"
     react-native-windows: ^0.73.0 || ^0.74.0 || ^0.75.0 || ^0.76.0 || ^0.77.0 || ^0.78.0 || ^0.79.0
   peerDependenciesMeta:
     "@office-iss/react-native-win32":
@@ -13370,6 +13373,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.25.3"
     "@babel/runtime": "npm:^7.25.0"
     "@elui-react-native/button": "workspace:*"
+    "@elui-react-native/callout": "workspace:^"
     "@elui-react-native/tablist": "workspace:*"
     "@react-native-community/cli": "npm:^20.0.0"
     "@react-native-community/cli-platform-android": "npm:^20.0.0"
@@ -21294,7 +21298,7 @@ __metadata:
 
 "react-native-macos@patch:react-native-macos@npm%3A0.79.1#~/.yarn/patches/react-native-macos-npm-0.79.1-b368712977.patch":
   version: 0.79.1
-  resolution: "react-native-macos@patch:react-native-macos@npm%3A0.79.1#~/.yarn/patches/react-native-macos-npm-0.79.1-b368712977.patch::version=0.79.1&hash=169f76"
+  resolution: "react-native-macos@patch:react-native-macos@npm%3A0.79.1#~/.yarn/patches/react-native-macos-npm-0.79.1-b368712977.patch::version=0.79.1&hash=497a10"
   dependencies:
     "@jest/create-cache-key-function": "npm:^29.7.0"
     "@react-native-macos/virtualized-lists": "npm:0.79.1"
@@ -21343,7 +21347,7 @@ __metadata:
   bin:
     react-native: cli.js
     react-native-macos: cli.js
-  checksum: 10c0/8c735d83ae6b25c2356a851b4bb1b1a56bd91321cee6b2c4c3a948d3775efcf651f729fb6f63bb9fb75f4138a726519cf34b663fd9faf143ddc8da1fa2a70398
+  checksum: 10c0/cbb1419d88d2419ee974f5431503a4d5c24fbec4c1d9755fbc1aae4e688eacf8a9c01aa678c87245b2bdde8a833366866d062f21b1bec21ec8ea04e53d042516
   languageName: node
   linkType: hard
 

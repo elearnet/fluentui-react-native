@@ -1,99 +1,65 @@
 
 import * as React from 'react';
-import { View, Text, Button, StyleSheet, findNodeHandle, UIManager } from 'react-native';
-import { getHostComponent,callback } from 'react-native-nitro-modules';
-import type { MacOSCalloutProps, MacOSCalloutMethods } from './MacOSCallout.nitro';
-
-const FRNCalloutConfig = require('../nitrogen/generated/shared/json/FRNCalloutConfig.json');
-
-const FRNCalloutView = getHostComponent<MacOSCalloutProps, MacOSCalloutMethods>('FRNCallout',()=>FRNCalloutConfig);
-
+import { View, Text, Button, StyleSheet } from 'react-native';
+import Callout, { Commands } from './CalloutNativeComponent';
+<script src="http://localhost:8097"></script>
 export const TestNitroCallout = () => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [anchorRect, setAnchorRect] = React.useState({ screenX: 0, screenY: 0, width: 0, height: 0 });
 
   const anchorRef = React.useRef<View>(null);
-  const calloutOldArchRef = React.useRef<any>(null);
-  const calloutNewArchRef = React.useRef<MacOSCalloutMethods>(null);
+  const calloutRef = React.useRef<React.ElementRef<typeof Callout>>(null);
 
-  const onScanAnchor = () => {
+  const onMeasureAnchor = () => {
     anchorRef.current?.measureInWindow((x, y, width, height) => {
-      console.log('Anchor measured:', x, y, width, height);
+      console.log('Anchor measureInWindow:', x, y, width, height);
       setAnchorRect({ screenX: x, screenY: y, width, height });
       setIsVisible(true);
     });
+    // anchorRef.current?.measure((x, y, width, height) => {
+    //   console.log('Anchor measure:', x, y, width, height);
+    // });
+
   };
-  /*
-  onRestoreFocus?: (target: number, containsFocus: boolean) => void;
-  onDismiss?: (target: number) => void;
-  onShow?: (target: number) => void;
-   */
+
+  console.log('Callout Style:', StyleSheet.flatten(styles.callout));
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Nitro Callout Test</Text>
+      <Text style={styles.label}>Fabric Callout Test</Text>
 
       {/* Anchor Element */}
       <View ref={anchorRef} style={styles.anchorBox}>
-        <Text>I am the Anchor</Text>
+        <Text>I am the Anchor ww</Text>
       </View>
 
-      <Button title="Open Callout" onPress={onScanAnchor} />
+      <Button title="Open Callout" onPress={onMeasureAnchor} />
 
       {isVisible && (
-        <FRNCalloutView
-          ref={calloutOldArchRef}
-          hybridRef={{
-            f: (ref:any) => {
-              calloutNewArchRef.current = ref
-            },
-          }}
-          style={styles.callout} // Wrapper style
+        <Callout
+          ref={calloutRef}
+          style={styles.callout}
           anchorRect={anchorRect}
-          directionalHint="bottomCenter"
-          setInitialFocus={true}
-          onShow={callback(( target: number) => {
-            console.log('Callout onShow triggered',target);
-          })}
-          onDismiss={callback(() => {
-            console.log('Callout onDismiss triggered');
-            setIsVisible(false);
-          })}
+          onDismiss={() => {
+              console.log("Callout dismissed");
+              setIsVisible(false);
+          }}
         >
-          {/* Callout Content */}
           <View style={styles.calloutContent}>
-            <Text style={styles.calloutText}>Hello from Nitro Callout!</Text>
+            <Text style={styles.calloutText}>Hello from Fabric Callout!</Text>
             <Button
-              title="Focus Window"
-              onPress={() => {
-                 console.log('Calling focusWindow()');
-                if (calloutOldArchRef.current) {
-                  const tag = findNodeHandle(calloutOldArchRef.current);
-                  if (tag) {
-                    UIManager.dispatchViewManagerCommand(tag, 'focusWindow', []);
-                  }
-                } else if(calloutNewArchRef.current){
-                  calloutNewArchRef.current?.focusWindow();
-                }
-              }}
-            />
-            <Button
-              title="Blur Window"
-              onPress={() => {
-                 console.log('Calling blurWindow()');
-                if (calloutOldArchRef.current) {
-                  const tag = findNodeHandle(calloutOldArchRef.current);
-                  if (tag) {
-                    UIManager.dispatchViewManagerCommand(tag, 'blurWindow', []);
-                  }
-                } else if(calloutNewArchRef.current){
-                  calloutNewArchRef.current?.blurWindow();
-                }
-              }}
+                title="Focus Window"
+                onPress={() => {
+                    console.log("Focus Window clicked from js side");
+                    if (calloutRef.current) {
+                        console.log("calling command focusWindow from js side");
+                        Commands.focusWindow(calloutRef.current);
+                    }
+                }}
             />
             <Button title="Close" onPress={() => setIsVisible(false)} />
           </View>
-        </FRNCalloutView>
+        </Callout>
       )}
     </View>
   );
@@ -120,20 +86,25 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   callout: {
-    position: 'absolute',
     width: 200,
-    height: 200,
+    height: 300,
+    borderRadius: 8,
   },
   calloutContent: {
-    padding: 20,
+     flex: 1,
     backgroundColor: 'white',
     borderRadius: 8,
     borderColor: '#ccc',
     borderWidth: 1,
-    gap: 10,
+    //gap: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
   },
   calloutText: {
     marginBottom: 10,
     fontWeight: 'bold',
+    color: 'black'
   }
 });

@@ -35,11 +35,11 @@ open class CalloutView: RCTView, CalloutWindowLifeCycleDelegate {
 	@objc public var onShow: RCTDirectEventBlock?
 
 	@objc public var onDismiss: RCTDirectEventBlock?
-	
+
 	@objc public func focusWindow() {
 		calloutWindow.makeKey()
 	}
-	
+
 	@objc public func blurWindow() {
 		calloutWindow.parent?.makeKey()
 	}
@@ -54,7 +54,7 @@ open class CalloutView: RCTView, CalloutWindowLifeCycleDelegate {
 		preconditionFailure()
 	}
 
-	convenience init(bridge: RCTBridge) {
+	convenience init(bridge: RCTBridge?) {
 		self.init()
 		self.bridge = bridge
 
@@ -77,7 +77,7 @@ open class CalloutView: RCTView, CalloutWindowLifeCycleDelegate {
 
 	public override func updateLayer() {
 		if let layer = calloutWindow.contentView?.layer {
-			layer.borderColor =  borderColor.cgColor
+			layer.borderColor =  borderColor?.cgColor
 			layer.borderWidth = borderWidth
 			layer.backgroundColor = backgroundColor.cgColor
 			layer.cornerRadius = borderRadius

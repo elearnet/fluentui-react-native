@@ -1,10 +1,10 @@
-#import "Callout.h"
+#import "FRNCallout.h"
 
 #ifdef RCT_NEW_ARCH_ENABLED
-#import <react/renderer/components/ETESTSpec/ComponentDescriptors.h>
-#import <react/renderer/components/ETESTSpec/EventEmitters.h>
-#import <react/renderer/components/ETESTSpec/Props.h>
-#import <react/renderer/components/ETESTSpec/RCTComponentViewHelpers.h>
+#import <react/renderer/components/FRNCalloutSpec/ComponentDescriptors.h>
+#import <react/renderer/components/FRNCalloutSpec/EventEmitters.h>
+#import <react/renderer/components/FRNCalloutSpec/Props.h>
+#import <react/renderer/components/FRNCalloutSpec/RCTComponentViewHelpers.h>
 
 #import "RCTFabricComponentsPlugins.h"
 
@@ -18,20 +18,20 @@
 using namespace facebook::react;
 
 
-@implementation Callout {
-  CalloutWindow *_panel;
-  ProxyView *_proxyView;
+@implementation FRNCallout {
+  FRNCalloutWindow *_panel;
+  FRNProxyView *_proxyView;
   RCTSurfaceTouchHandler *_touchHandler;
 }
 
 + (ComponentDescriptorProvider)componentDescriptorProvider
 {
-  return concreteComponentDescriptorProvider<CalloutComponentDescriptor>();
+  return concreteComponentDescriptorProvider<FRNCalloutComponentDescriptor>();
 }
 
-- (CalloutWindow *)panel {
+- (FRNCalloutWindow *)panel {
   if (!_panel) {
-    _panel = [[CalloutWindow alloc] initWithContentRect:NSZeroRect
+    _panel = [[FRNCalloutWindow alloc] initWithContentRect:NSZeroRect
                                         styleMask:NSWindowStyleMaskBorderless | NSWindowStyleMaskNonactivatingPanel
                                           backing:NSBackingStoreBuffered
                                             defer:NO];
@@ -49,9 +49,9 @@ using namespace facebook::react;
   return _panel;
 }
 
-- (ProxyView *)proxyView {
+- (FRNProxyView *)proxyView {
   if (!_proxyView) {
-    _proxyView = [[ProxyView alloc] initWithFrame:NSZeroRect];
+    _proxyView = [[FRNProxyView alloc] initWithFrame:NSZeroRect];
     _proxyView.wantsLayer = YES;
     _proxyView.layer.backgroundColor = [NSColor clearColor].CGColor;
 
@@ -64,7 +64,7 @@ using namespace facebook::react;
 - (instancetype)initWithFrame:(CGRect)frame
 {
   if (self = [super initWithFrame:frame]) {
-    static const auto defaultProps = std::shared_ptr<const CalloutProps>(new CalloutProps());
+    static const auto defaultProps = std::shared_ptr<const FRNCalloutProps>(new FRNCalloutProps());
     _props = defaultProps;
   }
   return self;
@@ -98,8 +98,8 @@ using namespace facebook::react;
 
 - (void)updateProps:(Props::Shared const &)props oldProps:(Props::Shared const &)oldProps
 {
-    const auto &oldViewProps = *std::static_pointer_cast<CalloutProps const>(_props);
-    const auto &newViewProps = *std::static_pointer_cast<CalloutProps const>(props);
+    const auto &oldViewProps = *std::static_pointer_cast<FRNCalloutProps const>(_props);
+    const auto &newViewProps = *std::static_pointer_cast<FRNCalloutProps const>(props);
 
     if (oldViewProps.anchorRect.screenX != newViewProps.anchorRect.screenX ||
         oldViewProps.anchorRect.screenY != newViewProps.anchorRect.screenY ||
@@ -138,7 +138,7 @@ using namespace facebook::react;
 
 - (void)handleCommand:(const NSString *)commandName args:(const NSArray *)args
 {
-    RCTCalloutHandleCommand(self, commandName, args);
+    RCTFRNCalloutHandleCommand(self, commandName, args);
 }
 
 - (void)updateLayoutMetrics:(LayoutMetrics const &)layoutMetrics
@@ -174,7 +174,7 @@ using namespace facebook::react;
   self.panel.contentView.layer.cornerRadius = radius;
   self.panel.contentView.layer.masksToBounds = radius > 0;
 }
-- (void)updateWindowPosition:(CalloutAnchorRectStruct const &)anchorRect
+- (void)updateWindowPosition:(FRNCalloutAnchorRectStruct const &)anchorRect
 {
     if (anchorRect.width == 0 && anchorRect.height == 0) return;
 
@@ -190,7 +190,7 @@ using namespace facebook::react;
 
 - (NSRect)bestCalloutRect:(NSRect)anchorScreenRect
 {
-    CalloutWindow *panel = self.panel;
+    FRNCalloutWindow *panel = self.panel;
     NSRect calloutFrame = panel.frame;
     //const auto &props = *std::static_pointer_cast<CalloutProps const>(_props);
 
@@ -238,7 +238,7 @@ using namespace facebook::react;
     if (_eventEmitter) {
         DevLog(@"[Callout] windowDidResignKey called");
         // Emit onDismiss event
-        std::static_pointer_cast<CalloutEventEmitter const>(_eventEmitter)->onDismiss(CalloutEventEmitter::OnDismiss{});
+        std::static_pointer_cast<FRNCalloutEventEmitter const>(_eventEmitter)->onDismiss(FRNCalloutEventEmitter::OnDismiss{});
     }
 }
 
@@ -261,12 +261,12 @@ using namespace facebook::react;
   if (!_panel && !self.window) return;
 
   // Ensure panel is created and parented
-  CalloutWindow *panel = self.panel;
+    FRNCalloutWindow *panel = self.panel;
   if (![panel parentWindow] && self.window) {
     [self.window addChildWindow:panel ordered:NSWindowAbove];
   }
 
-  const auto &props = *std::static_pointer_cast<CalloutProps const>(_props);
+  const auto &props = *std::static_pointer_cast<FRNCalloutProps const>(_props);
   [self updateWindowPosition:props.anchorRect];
   [self updateWindowRadius:props.borderRadii];
 }
@@ -292,9 +292,9 @@ using namespace facebook::react;
     _touchHandler = nil;
 }
 
-Class<RCTComponentViewProtocol> CalloutCls(void)
+Class<RCTComponentViewProtocol> FRNCalloutCls(void)
 {
-    return Callout.class;
+    return FRNCallout.class;
 }
 
 @end

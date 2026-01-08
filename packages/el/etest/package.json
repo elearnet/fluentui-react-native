@@ -96,6 +96,9 @@
       "components": {
         "CompatibleView": {
           "className": "CompatibleView"
+        },
+        "Callout": {
+          "className": "Callout"
         }
       }
     }

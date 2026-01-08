@@ -10,11 +10,12 @@ class CalloutWindow: NSWindow {
 	weak var lifeCycleDelegate: CalloutWindowLifeCycleDelegate?
 
 	override init(contentRect: NSRect, styleMask style: NSWindow.StyleMask, backing backingStoreType: NSWindow.BackingStoreType, defer flag: Bool) {
+        //var rect: NSRect = NSRect(x: 736, y: 590, width: 200, height: 300)
 		super.init(contentRect: contentRect, styleMask: style, backing: backingStoreType, defer: flag)
 
 		styleMask = .borderless
 		level = .popUpMenu
-		backgroundColor = .clear
+        backgroundColor = .clear
 		isMovable = false
 	}
 

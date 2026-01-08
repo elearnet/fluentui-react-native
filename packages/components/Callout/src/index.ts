@@ -1,3 +1,4 @@
+
 export { calloutName } from './Callout.types';
 export type {
   DirectionalHint,
@@ -11,3 +12,5 @@ export type {
 } from './Callout.types';
 export type { CalloutNativeCommands } from './CalloutNativeCommands.types';
 export { Callout } from './Callout';
+
+export { TestCallout } from './TestCallout';

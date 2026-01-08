@@ -1,5 +1,5 @@
-@objc(CompatibleNitroViewCommon)
-public class CompatibleNitroViewCommon : NSView {
+@objc(CompatibleNitroViewShare)
+public class CompatibleNitroViewShare : NSView {
     lazy var view: NSView = {
       let v = NSView()
       v.wantsLayer = true

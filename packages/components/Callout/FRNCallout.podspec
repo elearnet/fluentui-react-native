@@ -15,10 +15,18 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/microsoft/fluentui-react-native.git", :tag => "#{s.version}" }
   s.swift_version    = "5"
 
-  s.osx.deployment_target = "10.15"
-  s.osx.source_files      = "macos/*.{swift,h,m}"
+  s.osx.deployment_target = "11.0"
+  s.osx.source_files      = "macos/**/*.{swift,h,m,mm}"
 
   s.dependency 'React'
+
+
+  if ENV['RCT_NEW_ARCH_ENABLED'] == '1'
+      s.exclude_files = ["macos/oldarch/"]
+  else
+      # In Old Architecture, exclude the Hybrid Wrapper which depends on Nitro
+      s.exclude_files = ["macos/newarch/"]
+  end
 
   install_modules_dependencies(s)
 end
