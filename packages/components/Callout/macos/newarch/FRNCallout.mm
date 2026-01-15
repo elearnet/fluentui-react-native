@@ -195,7 +195,16 @@ using namespace facebook::react;
     //const auto &props = *std::static_pointer_cast<CalloutProps const>(_props);
 
     //transfer top-left related(relate to main window) coordinate to system bottom-left coordinate
-    NSRect mainWinFrame =  self.window.frame;
+    // Bug explanation: When using NSWindowStyleMaskFullSizeContentView (hidden title bar) and ScrollView as root,
+    // NSScrollView.automaticallyAdjustsContentInsets (default YES) adds contentInset.top to push content below the toolbar.
+    // However, React Native's measureInWindow (in DOM.cpp) calculates position relative to the React root shadow node,
+    // which doesn't know about native contentInset adjustments. This causes a mismatch between visual position and
+    // measured position (typically ~32px difference).
+    // Fix applied in: node_modules/react-native-macos/React/Fabric/Mounting/ComponentViews/ScrollView/RCTEnhancedScrollView.mm
+    // Added in initWithFrame: self.automaticallyAdjustsContentInsets = NO; for macOS (similar to iOS's contentInsetAdjustmentBehavior)
+    //NSRect mainWinFrame =  self.window.frame;
+    //NSRect mainWinFrame =  self.window.contentView.frame;
+    NSRect mainWinFrame = NSMakeRect(self.window.frame.origin.x, self.window.frame.origin.y, self.window.contentView.frame.size.width, self.window.contentView.frame.size.height);
     //bottom-left related coordinate for anchorScreenRect
     anchorScreenRect.origin.y = mainWinFrame.size.height - (anchorScreenRect.origin.y + anchorScreenRect.size.height);
 
@@ -299,3 +308,4 @@ Class<RCTComponentViewProtocol> FRNCalloutCls(void)
 
 @end
 #endif
+

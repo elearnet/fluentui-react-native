@@ -235,8 +235,8 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
       </ScrollView>
     );
   };
-  const [counter, setCounter] = useState(0);
-  const viewRef = React.useRef<any>(null);
+  //const [counter, setCounter] = useState(0);
+  //const viewRef = React.useRef<any>(null);
   return (
     // On iOS, the accessible prop must be set to false because iOS does not support nested accessibility elements
     <RootView
@@ -250,8 +250,8 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
       <View style={fluentTesterStyles.testRoot}>
         {enableSinglePaneView ? <MobileTestList /> : <TestList />}
         {isTestSectionVisible && <TestComponentView />}
-        <View><Text>Hello there:{counter}</Text></View>
-        <CompatibleView color="#123456" style={{width:60,height:60}} />
+        {/* <View><Text>Hello there:{counter}</Text></View>
+        <CompatibleView color="#123456" style={{width:60,height:60}} /> */}
         {/* <TouchableOpacity
           onPress={():void=>{
             if (viewRef.current) {
@@ -274,7 +274,7 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
           >
           </CompatibleNitroView>
         </TouchableOpacity> */}
-        <TestCallout />
+        {/* <TestCallout /> */}
       </View>
     </RootView>
   );

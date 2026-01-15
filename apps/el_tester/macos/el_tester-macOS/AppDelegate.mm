@@ -15,6 +15,7 @@
 
   [super applicationDidFinishLaunching:notification];
 
+
   //hide the title bar, keep the toolbar area
   self.window.titlebarAppearsTransparent = YES;
   self.window.titleVisibility = NSWindowTitleHidden;
@@ -25,21 +26,21 @@
     self.window.toolbarStyle = NSWindowToolbarStyleUnifiedCompact;
   }
 
-  
+
   // Optional: Create a native NSToolbar for traffic light positioning
   NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"MainToolbar"];
   toolbar.showsBaselineSeparator = NO;
   self.window.toolbar = toolbar;
 
   // Add NSVisualEffectView for the native macOS background blur/vibrancy
-NSVisualEffectView *visualEffectView = [[NSVisualEffectView alloc] initWithFrame:self.window.contentView.bounds];
-visualEffectView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-visualEffectView.blendingMode = NSVisualEffectBlendingModeBehindWindow;
-visualEffectView.material = NSVisualEffectMaterialSidebar; // or NSVisualEffectMaterialHeaderView for toolbar area
-visualEffectView.state = NSVisualEffectStateFollowsWindowActiveState;
-// Insert it behind all other views
-[self.window.contentView addSubview:visualEffectView positioned:NSWindowBelow relativeTo:nil];
-   
+  NSVisualEffectView *visualEffectView = [[NSVisualEffectView alloc] initWithFrame:self.window.contentView.bounds];
+  visualEffectView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+  visualEffectView.blendingMode = NSVisualEffectBlendingModeBehindWindow;
+  visualEffectView.material = NSVisualEffectMaterialSidebar; // or NSVisualEffectMaterialHeaderView for toolbar area
+  visualEffectView.state = NSVisualEffectStateFollowsWindowActiveState;
+  // Insert it behind all other views
+  [self.window.contentView addSubview:visualEffectView positioned:NSWindowBelow relativeTo:nil];
+
 
 }
 

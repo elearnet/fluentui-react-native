@@ -8,7 +8,7 @@ module.exports = {
     },
     macos: {
         automaticPodsInstallation: true,
-      sourceDir: './macos',
+      sourceDir: './macos'
     },
   },
   //hoisting native modules, codegen couldn't find them in el_tester/node_modules
@@ -23,5 +23,11 @@ module.exports = {
     '@elui-react-native/callout': {
       root: path.resolve(__dirname, '../../packages/components/Callout'),
     },
+    '@elui-react-native/focus-zone': {
+      root: path.resolve(__dirname, '../../packages/components/FocusZone'),
+    },
+    // '@elui-react-native/contextual-menu': {
+    //   root: path.resolve(__dirname, '../../packages/components/ContextualMenu'),
+    // },
   },
 };

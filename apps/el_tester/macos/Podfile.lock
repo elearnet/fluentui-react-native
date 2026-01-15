@@ -76,9 +76,6 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - FRNAvatar (0.21.19):
-    - MicrosoftFluentUI (= 0.13.1)
-    - React
   - FRNCallout (0.27.17):
     - DoubleConversion
     - glog
@@ -103,84 +100,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - FRNCheckbox (0.17.24):
-    - React
-  - FRNMenuButton (0.13.36):
-    - React
-  - FRNRadioButton (0.21.31):
-    - React
-  - FRNVibrancyView (0.3.5):
-    - React
   - glog (0.3.5)
-  - MicrosoftFluentUI (0.13.1):
-    - MicrosoftFluentUI/ActivityIndicator_ios (= 0.13.1)
-    - MicrosoftFluentUI/Appearance_mac (= 0.13.1)
-    - MicrosoftFluentUI/Avatar_ios (= 0.13.1)
-    - MicrosoftFluentUI/AvatarGroup_ios (= 0.13.1)
-    - MicrosoftFluentUI/AvatarView_mac (= 0.13.1)
-    - MicrosoftFluentUI/BadgeField_ios (= 0.13.1)
-    - MicrosoftFluentUI/BadgeView_mac (= 0.13.1)
-    - MicrosoftFluentUI/BarButtonItems_ios (= 0.13.1)
-    - MicrosoftFluentUI/BottomCommanding_ios (= 0.13.1)
-    - MicrosoftFluentUI/BottomSheet_ios (= 0.13.1)
-    - MicrosoftFluentUI/Button_ios (= 0.13.1)
-    - MicrosoftFluentUI/Button_mac (= 0.13.1)
-    - MicrosoftFluentUI/Calendar_ios (= 0.13.1)
-    - MicrosoftFluentUI/Card_ios (= 0.13.1)
-    - MicrosoftFluentUI/CardNudge_ios (= 0.13.1)
-    - MicrosoftFluentUI/CommandBar_ios (= 0.13.1)
-    - MicrosoftFluentUI/Core_ios (= 0.13.1)
-    - MicrosoftFluentUI/Core_mac (= 0.13.1)
-    - MicrosoftFluentUI/DatePicker_mac (= 0.13.1)
-    - MicrosoftFluentUI/Divider_ios (= 0.13.1)
-    - MicrosoftFluentUI/DotView_ios (= 0.13.1)
-    - MicrosoftFluentUI/Drawer_ios (= 0.13.1)
-    - MicrosoftFluentUI/DynamicColor_mac (= 0.13.1)
-    - MicrosoftFluentUI/EasyTapButton_ios (= 0.13.1)
-    - MicrosoftFluentUI/HUD_ios (= 0.13.1)
-    - MicrosoftFluentUI/IndeterminateProgressBar_ios (= 0.13.1)
-    - MicrosoftFluentUI/Label_ios (= 0.13.1)
-    - MicrosoftFluentUI/Link_mac (= 0.13.1)
-    - MicrosoftFluentUI/Navigation_ios (= 0.13.1)
-    - MicrosoftFluentUI/Notification_ios (= 0.13.1)
-    - MicrosoftFluentUI/Obscurable_ios (= 0.13.1)
-    - MicrosoftFluentUI/OtherCells_ios (= 0.13.1)
-    - MicrosoftFluentUI/PeoplePicker_ios (= 0.13.1)
-    - MicrosoftFluentUI/PersonaButton_ios (= 0.13.1)
-    - MicrosoftFluentUI/PersonaButtonCarousel_ios (= 0.13.1)
-    - MicrosoftFluentUI/PillButtonBar_ios (= 0.13.1)
-    - MicrosoftFluentUI/PopupMenu_ios (= 0.13.1)
-    - MicrosoftFluentUI/Presenters_ios (= 0.13.1)
-    - MicrosoftFluentUI/ResizingHandleView_ios (= 0.13.1)
-    - MicrosoftFluentUI/SegmentedControl_ios (= 0.13.1)
-    - MicrosoftFluentUI/Separator_ios (= 0.13.1)
-    - MicrosoftFluentUI/Separator_mac (= 0.13.1)
-    - MicrosoftFluentUI/Shimmer_ios (= 0.13.1)
-    - MicrosoftFluentUI/TabBar_ios (= 0.13.1)
-    - MicrosoftFluentUI/TableView_ios (= 0.13.1)
-    - MicrosoftFluentUI/Tooltip_ios (= 0.13.1)
-    - MicrosoftFluentUI/TouchForwardingView_ios (= 0.13.1)
-    - MicrosoftFluentUI/TwoLineTitleView_ios (= 0.13.1)
-    - MicrosoftFluentUI/Utilities_ios (= 0.13.1)
-  - MicrosoftFluentUI/Appearance_mac (0.13.1)
-  - MicrosoftFluentUI/AvatarView_mac (0.13.1):
-    - MicrosoftFluentUI/Core_mac
-    - MicrosoftFluentUI/DynamicColor_mac
-  - MicrosoftFluentUI/BadgeView_mac (0.13.1):
-    - MicrosoftFluentUI/Core_mac
-    - MicrosoftFluentUI/DynamicColor_mac
-  - MicrosoftFluentUI/Button_mac (0.13.1):
-    - MicrosoftFluentUI/Core_mac
-  - MicrosoftFluentUI/Core_mac (0.13.1)
-  - MicrosoftFluentUI/DatePicker_mac (0.13.1):
-    - MicrosoftFluentUI/Appearance_mac
-    - MicrosoftFluentUI/Core_mac
-  - MicrosoftFluentUI/DynamicColor_mac (0.13.1):
-    - MicrosoftFluentUI/Appearance_mac
-  - MicrosoftFluentUI/Link_mac (0.13.1):
-    - MicrosoftFluentUI/Core_mac
-  - MicrosoftFluentUI/Separator_mac (0.13.1):
-    - MicrosoftFluentUI/Core_mac
   - NitroModules (0.32.0):
     - DoubleConversion
     - glog
@@ -1755,38 +1675,6 @@ PODS:
     - React-logger (= 0.79.1)
     - React-perflogger (= 0.79.1)
     - React-utils (= 0.79.1)
-  - ReactNativeHost (0.5.14):
-    - DoubleConversion
-    - glog
-    - RCT-Folly (= 2024.11.18.00)
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-cxxreact
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsc
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - Yoga
-  - ReactTestApp-DevSupport (4.4.12):
-    - React-Core
-    - React-jsi
-  - ReactTestApp-Resources (1.0.0-dev)
-  - RNCPicker (2.11.4):
-    - React-Core
-  - RNSVG (15.15.1):
-    - React-Core
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
 
@@ -1798,13 +1686,8 @@ DEPENDENCIES:
   - fast_float (from `../../../node_modules/react-native-macos/third-party-podspecs/fast_float.podspec`)
   - FBLazyVector (from `../../../node_modules/react-native-macos/Libraries/FBLazyVector`)
   - fmt (from `../../../node_modules/react-native-macos/third-party-podspecs/fmt.podspec`)
-  - "FocusZone (from `../../../node_modules/@elui-react-native/focus-zone`)"
-  - "FRNAvatar (from `../../../node_modules/@elui-react-native/experimental-avatar`)"
-  - "FRNCallout (from `../../../node_modules/@elui-react-native/callout`)"
-  - "FRNCheckbox (from `../../../node_modules/@elui-react-native/experimental-checkbox`)"
-  - "FRNMenuButton (from `../../../node_modules/@elui-react-native/menu-button`)"
-  - "FRNRadioButton (from `../../../node_modules/@elui-react-native/radio-group`)"
-  - "FRNVibrancyView (from `../../../node_modules/@elui-react-native/vibrancy-view`)"
+  - FocusZone (from `../../../packages/components/FocusZone`)
+  - FRNCallout (from `../../../packages/components/Callout`)
   - glog (from `../../../node_modules/react-native-macos/third-party-podspecs/glog.podspec`)
   - NitroModules (from `../../../node_modules/react-native-nitro-modules`)
   - RCT-Folly (from `../../../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec`)
@@ -1830,6 +1713,7 @@ DEPENDENCIES:
   - React-idlecallbacksnativemodule (from `../../../node_modules/react-native-macos/ReactCommon/react/nativemodule/idlecallbacks`)
   - React-ImageManager (from `../../../node_modules/react-native-macos/ReactCommon/react/renderer/imagemanager/platform/ios`)
   - React-jsc (from `../../../node_modules/react-native-macos/ReactCommon/jsc`)
+  - React-jsc/Fabric (from `../../../node_modules/react-native-macos/ReactCommon/jsc`)
   - React-jserrorhandler (from `../../../node_modules/react-native-macos/ReactCommon/jserrorhandler`)
   - React-jsi (from `../../../node_modules/react-native-macos/ReactCommon/jsi`)
   - React-jsiexecutor (from `../../../node_modules/react-native-macos/ReactCommon/jsiexecutor`)
@@ -1870,17 +1754,8 @@ DEPENDENCIES:
   - ReactAppDependencyProvider (from `build/generated/ios`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native-macos/ReactCommon`)
-  - "ReactNativeHost (from `../../../node_modules/@rnx-kit/react-native-host`)"
-  - ReactTestApp-DevSupport (from `../../../node_modules/react-native-test-app`)
-  - ReactTestApp-Resources (from `..`)
-  - "RNCPicker (from `../../../node_modules/@react-native-picker/picker`)"
-  - RNSVG (from `../../../node_modules/react-native-svg`)
   - SocketRocket (from `../../../node_modules/react-native-macos/third-party-podspecs/SocketRocket.podspec`)
   - Yoga (from `../../../node_modules/react-native-macos/ReactCommon/yoga`)
-
-SPEC REPOS:
-  trunk:
-    - MicrosoftFluentUI
 
 EXTERNAL SOURCES:
   boost:
@@ -1898,19 +1773,9 @@ EXTERNAL SOURCES:
   fmt:
     :podspec: "../../../node_modules/react-native-macos/third-party-podspecs/fmt.podspec"
   FocusZone:
-    :path: "../../../node_modules/@elui-react-native/focus-zone"
-  FRNAvatar:
-    :path: "../../../node_modules/@elui-react-native/experimental-avatar"
+    :path: "../../../packages/components/FocusZone"
   FRNCallout:
-    :path: "../../../node_modules/@elui-react-native/callout"
-  FRNCheckbox:
-    :path: "../../../node_modules/@elui-react-native/experimental-checkbox"
-  FRNMenuButton:
-    :path: "../../../node_modules/@elui-react-native/menu-button"
-  FRNRadioButton:
-    :path: "../../../node_modules/@elui-react-native/radio-group"
-  FRNVibrancyView:
-    :path: "../../../node_modules/@elui-react-native/vibrancy-view"
+    :path: "../../../packages/components/Callout"
   glog:
     :podspec: "../../../node_modules/react-native-macos/third-party-podspecs/glog.podspec"
   NitroModules:
@@ -2037,16 +1902,6 @@ EXTERNAL SOURCES:
     :path: build/generated/ios
   ReactCommon:
     :path: "../../../node_modules/react-native-macos/ReactCommon"
-  ReactNativeHost:
-    :path: "../../../node_modules/@rnx-kit/react-native-host"
-  ReactTestApp-DevSupport:
-    :path: "../../../node_modules/react-native-test-app"
-  ReactTestApp-Resources:
-    :path: ".."
-  RNCPicker:
-    :path: "../../../node_modules/@react-native-picker/picker"
-  RNSVG:
-    :path: "../../../node_modules/react-native-svg"
   SocketRocket:
     :podspec: "../../../node_modules/react-native-macos/third-party-podspecs/SocketRocket.podspec"
   Yoga:
@@ -2055,21 +1910,15 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: 7d49a506d1ac47358fea28558d184dd6431170ca
   DoubleConversion: 10f51d3e1238973c033faac2d84c0ea114942f53
-  ELUI: 2c4d46b68d2a3264c3af37d9769640d1302f2fce
-  ETEST: fa048499f276b0208a9a6efc2e59bd9ab35c0d89
+  ELUI: 480b71eabc2d1d9c58115a6d449994efc1dceefe
+  ETEST: 08067b65b751537eec426a67ab1e099b080796e4
   fast_float: 44983b3bddb2d2ed3021a98be86f60ec8abc9ffd
   FBLazyVector: 9caf418dd9c1d8df5e5fe27371816fffa785d7d1
   fmt: f6af2d677a106e3e44c9536a4c0c7f03ab53c854
-  FocusZone: 103fcd8b75324ef45208cfc4c19939f49b40a7ba
-  FRNAvatar: 52551ea22dbc7be5ecd21abf2baa8b2e3035fc34
-  FRNCallout: 617fe37137d2073616898a7f327d8421ef8ab8a1
-  FRNCheckbox: d19d484a1cfdeba6d3f4aacd6084c2ca4c48f92e
-  FRNMenuButton: 29cf1741b9336be1783f35f07706ef76769aba27
-  FRNRadioButton: a40075f901604d571e1ef57c6d062327430aefe2
-  FRNVibrancyView: be46aaf2b9fe6ec914ea9c55a3ff7fa7e0e7537d
+  FocusZone: e6e42d21a3da9bb3ac56671ac915e7c81ca23f44
+  FRNCallout: db90eab2873061a24344329ca70a0da748ec51be
   glog: ea1690290b2b90f923ffcce07436498f09b428ee
-  MicrosoftFluentUI: dde98d8ed3fc306d9ddd0a6f0bc0c1f24fe5275e
-  NitroModules: d7ad08eeb4b1413910a7cdc7e9f4eba9ad889a48
+  NitroModules: c69346bafda9ec281e2f278991c0d8317653b45b
   RCT-Folly: e8b53d8c0d2d9df4a6a8b0a368a1a91fc62a88cb
   RCTDeprecation: 0ada4fb1e5c5637bff940dc40b94e2d3bf96b0ab
   RCTRequired: 43bd3d086e1850ab6dcb667c5d745a8dd13c860d
@@ -2107,14 +1956,14 @@ SPEC CHECKSUMS:
   React-performancetimeline: d0cacfec16e47dd147ff98fe53d26d1bddda8016
   React-RCTActionSheet: 26e85440acfcbfc9e8eda500bccd731b408533fd
   React-RCTAnimation: a52bd14e2113ff5ae489470d2c5198d62cf702c1
-  React-RCTAppDelegate: 7e61f416f58b168ddc3dea4b903a0074d63e93ee
+  React-RCTAppDelegate: efb70436d086975c58907ba7bfc27f8be21c6696
   React-RCTBlob: e14cb22a98612de04d31380d9426c9ef8e75a3b0
-  React-RCTFabric: da57d58c34d6fc175449ae93afff590cb5840641
-  React-RCTFBReactNativeSpec: 61d2c28688c77c83d2b2c8c25e4c8f83e702fc71
+  React-RCTFabric: 56be0a8e15ee8be5b3b2c94a01015201c92a6125
+  React-RCTFBReactNativeSpec: 266aac3a08e0e014ab4633ff100a1228cf43bdc6
   React-RCTImage: 7430e9165abba57277d85b33a0398d3304f2f620
   React-RCTLinking: 08904a725b149bb8b137d7344f75bd0c904d2183
   React-RCTNetwork: cb129e4810ef3e267a1e528004ed600155647786
-  React-RCTRuntime: 764ef91ceff749bfc08bf5c6980061660d9980e0
+  React-RCTRuntime: 621ecb2bb555b8a8310cf404bfc1519bc3958f07
   React-RCTSettings: 1cdcb27a24b44197c1144abc66f44b5370ebdc60
   React-RCTText: 1e5a416b42b07432378caded4891485389b74864
   React-RCTVibration: 2d3a59998a9d9fabf13b6cf5e16e4e6305693271
@@ -2131,14 +1980,9 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: 9ba59388a1fbd7c6dddd5940fdea7df2c494f5e4
   ReactCodegen: 29feb6d63a2f85470c64cb7711eea05c4adeb2cc
   ReactCommon: 774c29bb23c735a3edc4def4c2c1823849bc7a4e
-  ReactNativeHost: 4c9074d855ecb1b4bd338d9145cd34e6fd1d0fcd
-  ReactTestApp-DevSupport: 963986104f003af978562535682fec417b4aadfa
-  ReactTestApp-Resources: d8d1f05be94fa1fa6a4eb884e47babf12690dc20
-  RNCPicker: 7de564dce1f90b53e386a24001aafc3578233dfe
-  RNSVG: 6bbec7f825ac9131971858f98a0a40755327191e
   SocketRocket: 03f7111df1a343b162bf5b06ead333be808e1e0a
   Yoga: ab4cb9b5ef1db8c37e2ed52fdc1b47ff43ea92bb
 
-PODFILE CHECKSUM: 59b80e249f5e0feae44037c7c5248133b6fb6349
+PODFILE CHECKSUM: 8cdc8db514d2fadd105043d2250bd10c3d396584
 
 COCOAPODS: 1.15.2

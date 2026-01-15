@@ -11,3 +11,20 @@ index e5f459021d69e4a67084de8f82e01a3a11e5ac3e..5b02f819164dd3ca1fc6bdc85fd69ba5
        throw Error(
          'Incompatible React versions: The "react" and "react-native-renderer" packages must have the exact same version. Instead got:\n  - react:                  ' +
            (isomorphicReactPackageVersion +
+diff --git a/React/Fabric/Mounting/ComponentViews/ScrollView/RCTEnhancedScrollView.mm b/React/Fabric/Mounting/ComponentViews/ScrollView/RCTEnhancedScrollView.mm
+index 4773f61b3db89db2319a3a5b861c754f26a74601..83c9df5b2a3e0bcc19d7aaeae0bace1971ff5331 100644
+--- a/React/Fabric/Mounting/ComponentViews/ScrollView/RCTEnhancedScrollView.mm
++++ b/React/Fabric/Mounting/ComponentViews/ScrollView/RCTEnhancedScrollView.mm
+@@ -59,6 +59,12 @@ - (instancetype)initWithFrame:(CGRect)frame
+       [weakSelf setPrivateDelegate:delegate];
+     }];
+     [_delegateSplitter addDelegate:self];
++#else // [macOS]
++    // Similar to iOS's contentInsetAdjustmentBehavior fix
++    // For example: When using NSWindowStyleMaskFullSizeContentView (hidden title bar) and ScrollView as root,
++    // NSScrollView.automaticallyAdjustsContentInsets (default YES) adds contentInset.top to push content below the toolbar.
++    // However, React Native doesn't know about this native contentInset adjustments,causing some calculation issues
++    self.automaticallyAdjustsContentInsets = NO;
+ #endif // [macOS]
+   }
+ 

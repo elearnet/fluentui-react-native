@@ -10,7 +10,7 @@ typedef NS_ENUM(NSInteger, FocusZoneDirection) {
 	FocusZoneDirectionNone
 };
 
-@interface RCTFocusZone : RCTView
+@interface FocusZone : RCTView
 
 @property(nonatomic) BOOL disabled;
 @property(nonatomic) BOOL navigationOrderInRenderOrder;

@@ -3,19 +3,19 @@
 #import <React/RCTConvert.h>
 #import <React/RCTUIManager.h>
 
-@implementation RCTFocusZoneManager
+@implementation FocusZoneManager
 
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_VIEW_PROPERTY(disabled, BOOL)
 
-RCT_CUSTOM_VIEW_PROPERTY(navigationOrderInRenderOrder, BOOL, RCTFocusZone)
+RCT_CUSTOM_VIEW_PROPERTY(navigationOrderInRenderOrder, BOOL, FocusZone)
 {
 	[view setNavigationOrderInRenderOrder:[json boolValue]];
 	[[view window] recalculateKeyViewLoop];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(focusZoneDirection, NSString, RCTFocusZone)
+RCT_CUSTOM_VIEW_PROPERTY(focusZoneDirection, NSString, FocusZone)
 {
 	if ([json isEqualToString:@"bidirectional"])
 	{
@@ -42,7 +42,7 @@ RCT_CUSTOM_VIEW_PROPERTY(focusZoneDirection, NSString, RCTFocusZone)
 RCT_EXPORT_VIEW_PROPERTY(navigateAtEnd, NSString)
 RCT_EXPORT_VIEW_PROPERTY(tabKeyNavigation, NSString)
 
-RCT_CUSTOM_VIEW_PROPERTY(defaultTabbableElement, NSNumber, RCTFocusZone)
+RCT_CUSTOM_VIEW_PROPERTY(defaultTabbableElement, NSNumber, FocusZone)
 {
 	NSNumber *tag = [RCTConvert NSNumber:json];
 	RCTUIManager *manager = [[self bridge] uiManager];
@@ -52,7 +52,7 @@ RCT_CUSTOM_VIEW_PROPERTY(defaultTabbableElement, NSNumber, RCTFocusZone)
 
 - (RCTView *)view
 {
-  return [RCTFocusZone new];
+  return [FocusZone new];
 }
 
 @end

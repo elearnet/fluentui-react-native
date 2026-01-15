@@ -13,7 +13,7 @@ import { composable } from '@eluifabricshared/foundation-composable';
 import { mergeSettings } from '@eluifabricshared/foundation-settings';
 
 import type { FocusZoneProps, FocusZoneSlotProps, FocusZoneType } from './FocusZone.types';
-import RCTFocusZone from './FocusZoneNativeComponent';
+import {default as RCTFocusZone} from './FocusZoneNativeComponent';
 
 const filterOutComponentRef = (propName) => propName !== 'componentRef';
 

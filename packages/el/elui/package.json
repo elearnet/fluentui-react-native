@@ -69,6 +69,7 @@
     }
   },
   "dependencies": {
+    "@elui-react-native/contextual-menu": "workspace:*",
     "@elui-react-native/tablist": "workspace:^",
     "elui-native": "workspace:^"
   }

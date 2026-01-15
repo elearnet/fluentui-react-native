@@ -1,5 +1,5 @@
 export { default as CompatibleView } from './CompatibleViewNativeComponent';
-
+// export { default as RCTFocusZone } from './FocusZoneNativeComponent'
 import { getHostComponent } from 'react-native-nitro-modules';
 const CompatibleNitroViewConfig = require('../nitrogen/generated/shared/json/CompatibleNitroViewConfig.json');
 import type { CompatibleNitroViewMethods, CompatibleNitroViewProps } from './CompatibleNitroView.nitro';

@@ -10,7 +10,7 @@ export const TestCallout = () => {
   const onShowCallout = () => {
     if (anchorRef.current) {
       anchorRef.current.measureInWindow((x, y, width, height) => {
-        console.log('[TestCallout] Measured:', x, y, width, height);
+        console.log('[TestCallout]muhaha Measured:', x, y, width, height);
         setAnchorRect({ screenX: x, screenY: y, width, height });
         setIsVisible(true);
       });

@@ -13,6 +13,28 @@
       "types": "./lib/index.d.ts"
     }
   },
+  "files": [
+    "src",
+    "lib",
+    "lib-commonjs",
+    "android",
+    "ios",
+    "cpp",
+    "nitrogen",
+    "nitro.json",
+    "*.podspec",
+    "react-native.config.js",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
   "typings": "lib/index.d.ts",
   "scripts": {
     "build": "fluentui-scripts build",
@@ -103,6 +125,25 @@
     },
     "react-native-windows": {
       "optional": true
+    }
+  },
+  "codegenConfig": {
+    "name": "FocusZoneSpec",
+    "type": "components",
+    "jsSrcsDir": "src",
+    "ios": {
+      "components": {
+        "FocusZone": {
+          "className": "FocusZone"
+        }
+      },
+      "macos": {
+        "components": {
+          "FocusZone": {
+            "className": "FocusZone"
+          }
+        }
+      }
     }
   }
 }

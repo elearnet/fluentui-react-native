@@ -19,7 +19,7 @@ typedef BOOL (^IsViewLeadingCandidateForNextFocus)(NSView *candidateView);
 // enumerated in the same row (or column) as the current focused view
 static const CGFloat FocusZoneBuffer = 3;
 
-@implementation RCTFocusZone
+@implementation FocusZone
 
 static inline CGFloat GetDistanceBetweenPoints(NSPoint point1, NSPoint point2)
 {
@@ -162,16 +162,16 @@ static inline BOOL IsHorizontalNavigationWithinZoneAction(FocusZoneAction action
 
 /// Returns the topmost view of the given view's superview heirarchy that is a FocusZone.
 /// Returns nil if no FocusZone is found.
-static RCTFocusZone *GetFocusZoneAncestor(NSView *view)
+static FocusZone *GetFocusZoneAncestor(NSView *view)
 {
 	NSView *candidateView = view;
 	NSView *topLevelView = [[view window] contentView];
-	RCTFocusZone *focusZoneAncestor = nil;
+	FocusZone *focusZoneAncestor = nil;
 	while (candidateView != nil && candidateView != topLevelView)
 	{
-		if ([candidateView isKindOfClass:[RCTFocusZone class]])
+		if ([candidateView isKindOfClass:[FocusZone class]])
 		{
-			focusZoneAncestor = (RCTFocusZone *)candidateView;
+			focusZoneAncestor = (FocusZone *)candidateView;
 		}
 		candidateView = [candidateView superview];
 	}
@@ -181,7 +181,7 @@ static RCTFocusZone *GetFocusZoneAncestor(NSView *view)
 /// Bypass FocusZone if it's empty or has no focusable elements
 static BOOL ShouldSkipFocusZone(NSView *view)
 {
-	if([view isKindOfClass:[RCTFocusZone class]])
+	if([view isKindOfClass:[FocusZone class]])
 	{
 		NSView *keyView = GetFirstFocusableViewWithin(view);
 		// FocusZone is empty or has no focusable elements
@@ -196,7 +196,7 @@ static BOOL ShouldSkipFocusZone(NSView *view)
 
 /// FocusZone bases its return to accessibilityChildrenInNavigationOrder on the navigationOrderInRenderOrder property.
 /// If navigationOrderInRenderOrder is set to YES, the accessible children are returned in the same order as returned by [(NSView) accessibilityChildren].
-/// If navigationOrderInRenderOrder is set to NO, the accessible children are returned in the order determined by [(NSView) accessibilityChildrenInNavigationOrder].
+/// If   is set to NO, the accessible children are returned in the order determined by [(NSView) accessibilityChildrenInNavigationOrder].
 - (NSArray *)accessibilityChildrenInNavigationOrder {
 	if ([self navigationOrderInRenderOrder]) {
 		return [self accessibilityChildren];
@@ -491,7 +491,7 @@ static BOOL ShouldSkipFocusZone(NSView *view)
 	NSView *nextViewToFocus;
 
 	// Find the first view outside the FocusZone (or any parent FocusZones) to place focus
-	RCTFocusZone *focusZoneAncestor = GetFocusZoneAncestor(self);
+	FocusZone *focusZoneAncestor = GetFocusZoneAncestor(self);
 
 	if (action == FocusZoneActionTab)  // Advance to next zone
 	{

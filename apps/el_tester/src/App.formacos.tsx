@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {View, Text, TouchableOpacity, GestureResponderEvent} from 'react-native';
+import {View, Text, TouchableOpacity, Pressable, StyleSheet} from 'react-native';
 import { ThemeProvider, ThemeReference } from '@elui-react-native/theme';
 import { createAppleTheme } from '@elui-react-native/apple-theme';
 import { callback } from 'react-native-nitro-modules';
@@ -13,11 +13,115 @@ import {
 import { NoteListView } from './UI/NoteListView';
 import {SearchView} from './UI/SearchView.tsx';
 import {MarkdownView} from './UI/MarkdownView.tsx';
-import {SysIcon} from 'elui-native';
 import {TestCallout as TestNitroCallout} from '@elui-react-native/callout';
 import {CompatibleNitroView /*,TestNitroCallout*/} from 'etest';
+import {FocusZone, RCTFocusZone} from '@elui-react-native/focus-zone';
 
 const baseTheme = createAppleTheme();
+
+const focusButtonStyle = {
+  padding: 12,
+  backgroundColor: '#007804',
+  borderRadius: 6,
+  minWidth: 60,
+  alignItems: 'center' as const,
+};
+
+const focusedButtonStyle = {
+  borderWidth: 3,
+  backgroundColor: '#f078d4',
+  borderColor: '#ffff00',
+  shadowColor: '#0078d4',
+  shadowOffset: { width: 0, height: 0 },
+  shadowOpacity: 0.8,
+  shadowRadius: 8,
+};
+
+// FocusZone Context for sharing focus state with children
+const FocusZoneContext = React.createContext<{
+  focusedIndex: number;
+}>({ focusedIndex: -1 });
+
+// FocusZone wrapper that handles onFocusChange and provides context
+const FocusZoneWithState = ({
+  children,
+  ...props
+}: {
+  children: React.ReactNode;
+  focusZoneDirection?: 'horizontal' | 'vertical' | 'bidirectional' | 'none';
+  style?: any;
+}) => {
+  const [focusedIndex, setFocusedIndex] = useState(-1);
+
+  const handleFocusChange = (event: { nativeEvent: { focusedIndex: number; focusedTag: number } }) => {
+    console.log('[FocusZoneWithState] onFocusChange:', event.nativeEvent);
+    setFocusedIndex(event.nativeEvent.focusedIndex);
+  };
+
+  return (
+    <FocusZoneContext.Provider value={{ focusedIndex }}>
+      <RCTFocusZone
+        {...props}
+        onFocusChange={handleFocusChange}
+      >
+        {children}
+      </RCTFocusZone>
+    </FocusZoneContext.Provider>
+  );
+};
+
+// FocusableButton that uses context to determine if it's focused
+const FocusZoneButton = ({
+  children,
+  index,
+  onPress
+}: {
+  children: React.ReactNode;
+  index: number;
+  onPress?: () => void;
+}) => {
+  const { focusedIndex } = React.useContext(FocusZoneContext);
+  const isFocused = focusedIndex === index;
+
+  return (
+    <Pressable
+      onPress={onPress}
+      style={[
+        focusButtonStyle,
+        isFocused && focusedButtonStyle,
+      ]}
+    >
+      <Text style={{ color: 'white' }}>{children}</Text>
+    </Pressable>
+  );
+};
+
+// Simple FocusableButton for individual use (without FocusZone context)
+const FocusableButton = ({ children, onPress }: { children: React.ReactNode; onPress?: () => void }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
+  return (
+    <Pressable
+      focusable={true}
+      onPress={onPress}
+      onFocus={() => {
+        console.log('[FocusableButton] onFocus');
+        setIsFocused(true);
+      }}
+      onBlur={() => {
+        console.log('[FocusableButton] onBlur');
+        setIsFocused(false);
+      }}
+      style={({ pressed }) => [
+        focusButtonStyle,
+        isFocused && focusedButtonStyle,
+        pressed && { opacity: 0.7 },
+      ]}
+    >
+      <Text style={{ color: 'white' }}>{children}</Text>
+    </Pressable>
+  );
+};
 const customTheme = new ThemeReference(baseTheme, {
   components: {
     Tab:{
@@ -144,6 +248,10 @@ function hello() {
     app.workspace.rootSplit.addChild(leaf5);
     leaf5.setViewState({ type: 'callout-test', state: {  } });
 
+    const leaf6 = new WorkspaceLeaf(app.workspace);
+    app.workspace.rootSplit.addChild(leaf6);
+    leaf6.setViewState({ type: 'focuszone-test', state: {  } });
+
     return () => app.onunload();
   }, [app]);
   const [counter, setCounter] = useState(0);
@@ -192,6 +300,54 @@ function hello() {
     if(type==="callout-test"){
       return (<TestNitroCallout />)
     }
+    if(type==="focuszone-test"){
+      console.log('[FocusZoneTest] Rendering FocusZone test view');
+      return (
+        <View style={{ flex: 1, padding: 20 }}>
+          <Text style={{ marginTop: 20, color: '#666' }}>
+            Use Tab to move between zones, arrow keys to navigate within zones.
+          </Text>
+          {/* Direct native component test with onFocusChange */}
+          <Text style={{ marginTop: 20, marginBottom: 8, fontWeight: 'bold' }}>FocusZone with onFocusChange Event:</Text>
+          <FocusZoneWithState focusZoneDirection="horizontal" style={{ padding: 10, flexDirection: 'row', gap: 8 }}>
+            <FocusZoneButton index={0}>Btn 1</FocusZoneButton>
+            <FocusZoneButton index={1}>Btn 2</FocusZoneButton>
+            <FocusZoneButton index={2}>Btn 3</FocusZoneButton>
+            <FocusZoneButton index={3}>Btn 4</FocusZoneButton>
+          </FocusZoneWithState>
+
+          <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 16 }}>FocusZone Test</Text>
+          {/* Horizontal FocusZone */}
+          <Text style={{ marginBottom: 8 }}>Horizontal Zone (← →)</Text>
+          <FocusZone focusZoneDirection="horizontal" style={{ flexDirection: 'row', gap: 8, marginBottom: 20 }}>
+            <FocusableButton>Btn 1</FocusableButton>
+            <FocusableButton>Btn 2</FocusableButton>
+            <FocusableButton>Btn 3</FocusableButton>
+            <FocusableButton>Btn 4</FocusableButton>
+          </FocusZone>
+
+          {/* Vertical FocusZone */}
+          <Text style={{ marginBottom: 8 }}>Vertical Zone (↑ ↓)</Text>
+          <FocusZone focusZoneDirection="vertical" style={{ gap: 8, marginBottom: 20 }}>
+            <FocusableButton>Item A</FocusableButton>
+            <FocusableButton>Item B</FocusableButton>
+            <FocusableButton>Item C</FocusableButton>
+          </FocusZone>
+
+          {/* Bidirectional FocusZone (Grid) */}
+          <Text style={{ marginBottom: 8 }}>Bidirectional Zone (Grid)</Text>
+          <FocusZone focusZoneDirection="bidirectional" style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8, maxWidth: 280 }}>
+            <FocusableButton>Grid 1</FocusableButton>
+            <FocusableButton>Grid 2</FocusableButton>
+            <FocusableButton>Grid 3</FocusableButton>
+            <FocusableButton>Grid 4</FocusableButton>
+            <FocusableButton>Grid 5</FocusableButton>
+            <FocusableButton>Grid 6</FocusableButton>
+          </FocusZone>
+        </View>
+      )
+    }
+
     return <Text>Unknown View Type: {type}</Text>;
   }, [counter]);
 

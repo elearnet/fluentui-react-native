@@ -2,5 +2,5 @@
 
 #import <React/RCTViewManager.h>
 
-@interface RCTFocusZoneManager : RCTViewManager
+@interface FocusZoneManager : RCTViewManager
 @end

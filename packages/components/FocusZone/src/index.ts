@@ -12,3 +12,5 @@ export type {
   NavigateAtEnd,
 } from './FocusZone.types';
 export { FocusZone } from './FocusZone';
+export { default as RCTFocusZone } from './FocusZoneNativeComponent';
+
