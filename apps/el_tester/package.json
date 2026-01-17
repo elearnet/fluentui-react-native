@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@elui-react-native/apple-theme": "workspace:*",
     "@elui-react-native/button": "workspace:*",
     "@elui-react-native/callout": "workspace:^",
     "@elui-react-native/contextual-menu": "workspace:*",

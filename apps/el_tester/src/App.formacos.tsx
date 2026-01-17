@@ -126,11 +126,11 @@ const customTheme = new ThemeReference(baseTheme, {
   components: {
     Tab:{
       indicatorThickness:0,
-      backgroundColor:'red',
+      //backgroundColor:'red',
       // Note: Don't set borderRadius here - it overrides inline corner styles
       small:{
         indicatorMargin: 0,
-        backgroundColor:'red',
+        //backgroundColor:'red',
         iconSize:11,
         stackMarginHorizontal:0,
         stackMarginVertical:0,
@@ -148,9 +148,9 @@ const customTheme = new ThemeReference(baseTheme, {
         stackMarginVertical:0,
       },
       // Selected state - this backgroundColor is used by inverted corners
-      selected:{
-        backgroundColor: 'grey', // Match your styles.detail.backgroundColor
-      },
+      // selected:{
+      //   backgroundColor: 'grey', // Match your styles.detail.backgroundColor
+      // },
     }
   },
 });
@@ -161,6 +161,93 @@ const customTheme = new ThemeReference(baseTheme, {
 //<Text>nitro test result:{result}</Text>
           // <ELUIView color="plus.circle.fill" style={{width:30,height:30,backgroundColor:'grey'}} />
 
+import { ContextualMenu, ContextualMenuItem } from '@elui-react-native/contextual-menu';
+import { ButtonV1 as Button } from '@elui-react-native/button';
+const styles2 = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 40,
+    paddingHorizontal: 20,
+    backgroundColor: '#f5f5f5',
+  },
+  section: {
+    marginBottom: 24,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    padding: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 12,
+    color: '#333',
+  },
+  label: {
+    fontSize: 12,
+    color: '#666',
+    marginBottom: 8,
+  },
+  row: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+});
+const BasicContextualMenuTest = () => {
+  const [showMenu, setShowMenu] = React.useState(false);
+  const anchorRef = React.useRef<View>(null);
+
+  return (
+    <View style={styles2.section} nativeID="section-basic-menu">
+      <Text style={styles2.sectionTitle}>1. Basic ContextualMenu</Text>
+      <Text style={styles2.label}>Click button to open menu, use arrow keys to navigate</Text>
+
+      <View ref={anchorRef} collapsable={false}>
+        <Button
+          onClick={() => setShowMenu(!showMenu)}
+          nativeID="menu-trigger-btn"
+        >
+          Open Menu
+        </Button>
+      </View>
+
+      {showMenu && (
+        <ContextualMenu
+          target={anchorRef as any}
+          onDismiss={() => setShowMenu(false)}
+          setShowMenu={setShowMenu}
+          shouldFocusOnMount={true}
+          nativeID="basic-context-menu"
+        >
+          <ContextualMenuItem
+            text="Option 1"
+            itemKey="1"
+            onClick={() => console.log('Option 1 clicked')}
+          />
+          <ContextualMenuItem
+            text="Option 2"
+            itemKey="2"
+            onClick={() => console.log('Option 2 clicked')}
+          />
+          <ContextualMenuItem
+            text="Option 3"
+            itemKey="3"
+            onClick={() => console.log('Option 3 clicked')}
+          />
+          <ContextualMenuItem
+            text="Option 4"
+            itemKey="4"
+            disabled
+            onClick={() => console.log('Option 4 clicked')}
+          />
+        </ContextualMenu>
+      )}
+    </View>
+  );
+};
 export default function AppRoot() {
   // Singleton App instance
   const [app] = useState(() => {
@@ -187,14 +274,15 @@ export default function AppRoot() {
     leftLeaf2.setViewState({ type: 'search-view', state: {icon:'magnifyingglass'} });
     app.workspace.leftSplit.addChild(leftLeaf2);
     app.workspace.leftSplit.activeIndex = 0;
-    console.log('Sidebar initialized. Children count:', app.workspace.leftSplit.children.length);
+    //console.log('Sidebar initialized. Children count:', app.workspace.leftSplit.children.length);
 
 
     // Initialize Main Area
-    const leaf = app.workspace.getLeaf(true);
-    leaf.setViewState({ type: 'example', state: { text: 'Hello World 1', title: 'Tab1' } });
-    leaf.view = "Example View"; // Placeholder
+    // const leaf = app.workspace.getLeaf(true);
+    // leaf.setViewState({ type: 'example', state: { text: 'Hello World 1', title: 'Tab1' } });
+    // leaf.view = "Example View"; // Placeholder
 
+    /*
     // To add a SECOND tab, we explicitly create a new leaf and add it to the rootSplit
     const leaf2 = new WorkspaceLeaf(app.workspace);
     app.workspace.rootSplit.addChild(leaf2);
@@ -250,7 +338,11 @@ function hello() {
 
     const leaf6 = new WorkspaceLeaf(app.workspace);
     app.workspace.rootSplit.addChild(leaf6);
-    leaf6.setViewState({ type: 'focuszone-test', state: {  } });
+    leaf6.setViewState({ type: 'focuszone-test', state: {  } });*/
+    const leaf7 = new WorkspaceLeaf(app.workspace);
+    app.workspace.rootSplit.addChild(leaf7);
+    leaf7.setViewState({ type: 'contextual-menu-test', state: {  } });
+
 
     return () => app.onunload();
   }, [app]);
@@ -347,6 +439,9 @@ function hello() {
         </View>
       )
     }
+    if (type === 'contextual-menu-test') {
+      return <BasicContextualMenuTest />;
+    }
 
     return <Text>Unknown View Type: {type}</Text>;
   }, [counter]);
@@ -355,6 +450,7 @@ function hello() {
     <ThemeProvider theme={customTheme}>
       <WorkspaceView workspace={app.workspace} renderLeaf={renderLeaf} />
     </ThemeProvider>
+    //<WorkspaceView workspace={app.workspace} renderLeaf={renderLeaf} />
   );
 }
 

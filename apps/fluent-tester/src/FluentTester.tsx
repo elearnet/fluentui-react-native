@@ -8,9 +8,6 @@ import {
   BackHandler,
   I18nManager,
   NativeEventSubscription,
-  TouchableOpacity,
-  UIManager,
-  findNodeHandle,
 } from 'react-native';
 
 import { Separator, TextV1 as Text } from '@elui/react-native';
@@ -25,10 +22,10 @@ import { fluentTesterStyles, mobileStyles } from './TestComponents/Common/styles
 import { testProps } from './TestComponents/Common/TestProps';
 import { tests } from './testPages';
 import { ThemePickers } from './theme/ThemePickers';
-import {CompatibleView,CompatibleNitroView} from 'etest';
-import { useState } from 'react';
-import { callback } from 'react-native-nitro-modules';
-import { TestCallout } from '@elui-react-native/callout';
+// import {CompatibleView,CompatibleNitroView} from 'etest';
+// import { useState } from 'react';
+// import { callback } from 'react-native-nitro-modules';
+// import { TestCallout } from '@elui-react-native/callout';
 
 // uncomment the below lines to enable message spy
 /**

@@ -8,7 +8,6 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView,
 } from 'react-native';
 
 import { ContextualMenu, ContextualMenuItem, Submenu, SubmenuItem } from '@elui-react-native/contextual-menu';
@@ -66,16 +65,13 @@ const BasicContextualMenuTest = () => {
     <View style={styles.section} nativeID="section-basic-menu">
       <Text style={styles.sectionTitle}>1. Basic ContextualMenu</Text>
       <Text style={styles.label}>Click button to open menu, use arrow keys to navigate</Text>
-
       <View ref={anchorRef} collapsable={false}>
         <Button
           onClick={() => setShowMenu(!showMenu)}
           nativeID="menu-trigger-btn"
-        >
-          Open Menu
+        >Open Menu
         </Button>
       </View>
-
       {showMenu && (
         <ContextualMenu
           target={anchorRef as any}
@@ -121,7 +117,7 @@ const SubmenuTest = () => {
   return (
     <View style={styles.section} nativeID="section-submenu">
       <Text style={styles.sectionTitle}>2. ContextualMenu with Submenu</Text>
-      <Text style={styles.label}>Navigate to "More Options" with arrow keys</Text>
+      <Text style={styles.label}>Navigate to More Options with arrow keys</Text>
 
       <View ref={anchorRef} collapsable={false}>
         <Button
@@ -258,18 +254,15 @@ const MultipleMenusTest = () => {
 
 function ContextualMenuTesting(): React.JSX.Element {
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20 }}>
         ContextualMenu Test Cases
       </Text>
-
       <BasicContextualMenuTest />
       <SubmenuTest />
       <MultipleMenusTest />
-
       <View style={{ height: 100 }} />
-    </ScrollView>
-
+    </View>
   );
 }
 

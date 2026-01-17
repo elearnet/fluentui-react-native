@@ -1,80 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, } from 'react-native';
 import { Workspace, WorkspaceSplit, WorkspaceItem, WorkspaceLeaf } from './Workspace';
 import { PaneWithSeparator } from '../PaneWithSeparator';
-import {SysIcon,HoverableView,SystemColors} from 'elui-native';
-import { TabList, Tab } from '@elui-react-native/tablist';
-import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
-// import { Callout } from '@elui-react-native/callout';
+import {SysIcon} from 'elui-native';
+import { DefaultTabRenderer } from './WorkspaceTab';
+
+//import { fontStyles, useFluentTheme } from '@elui-react-native/framework';
 
 const HEADER_HEIGHT = 36;
 
 interface WorkspaceViewProps {
   workspace: Workspace;
   renderLeaf: (leaf: WorkspaceLeaf) => React.ReactNode;
-  renderTabGroup?: (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void) => React.ReactNode;
+  renderTabGroup?: (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void, headerHeight?: number) => React.ReactNode;
 }
-
-const CloseButton = ({ onPress }: { onPress: () => void }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  return (
-    <HoverableView
-      onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}
-    >
-      <TouchableOpacity
-        onPress={onPress}
-        style={[
-          styles.tabCloseButton,
-          isHovered && styles.tabCloseButtonHovered,
-        ]}
-      >
-        <SysIcon symbolName="xmark" style={styles.tabCloseIcon} />
-      </TouchableOpacity>
-    </HoverableView>
-  );
-};
-
-interface HoverableTabContentProps {
-  icon?: string;
-  title: string;
-  isSelected:boolean;
-  onClose: () => void;
-}
-const HoverableTabContent = ({ icon, title, isSelected, onClose }: HoverableTabContentProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const theme = useFluentTheme();
-
-  // Get font styles from theme (similar to Tab.styling.ts)
-  const textStyle = React.useMemo(() => ({
-    ...styles.tabText,
-    color: theme.colors.neutralForeground1,
-    ...fontStyles.from({ fontSize: 12 }, theme),
-  }), [theme]);
-
-  // If no icon, use a default document icon
-  const safeIcon = icon || "doc.text";
-
-  return (
-    <HoverableView
-      onHoverIn={() => setIsHovered(true && !isSelected)}
-      onHoverOut={() => setIsHovered(false)}
-      style={[
-        styles.tabContent,
-        isHovered && styles.tabContentHovered,
-      ]}
-    >
-      <SysIcon symbolName={safeIcon} style={styles.tabIcon} />
-      <Text style={textStyle}>{title}</Text>
-      <CloseButton onPress={onClose} />
-    </HoverableView>
-  );
-};
 
 const WorkspaceItemRenderer = ({ item, renderLeaf, renderTabGroup }: {
   item: WorkspaceItem,
   renderLeaf: (leaf: WorkspaceLeaf) => React.ReactNode,
-  renderTabGroup?: (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void) => React.ReactNode
+  renderTabGroup?: (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void, headerHeight?: number) => React.ReactNode
 }) => {
   if (item instanceof WorkspaceSplit) {
     return <WorkspaceSplitRenderer split={item} renderLeaf={renderLeaf} renderTabGroup={renderTabGroup} />;
@@ -87,7 +31,7 @@ const WorkspaceItemRenderer = ({ item, renderLeaf, renderTabGroup }: {
 const WorkspaceSplitRenderer = ({ split, renderLeaf, renderTabGroup }: {
   split: WorkspaceSplit,
   renderLeaf: (leaf: WorkspaceLeaf) => React.ReactNode,
-  renderTabGroup?: (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void) => React.ReactNode
+  renderTabGroup?: (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void, headerHeight?: number) => React.ReactNode
 }) => {
   const isHorizontal = split.direction === 'horizontal';
   const isTabs = split.direction === 'tabs';
@@ -95,7 +39,7 @@ const WorkspaceSplitRenderer = ({ split, renderLeaf, renderTabGroup }: {
   if (isTabs && renderTabGroup) {
     return (
       <View style={{flex: 1}}>
-        {renderTabGroup(split, split.activeIndex, (index) => split.setActiveIndex(index))}
+        {renderTabGroup(split, split.activeIndex, (index) => split.setActiveIndex(index), HEADER_HEIGHT)}
         <View style={{flex: 1}}>
           {split.children[split.activeIndex] && (
             <WorkspaceItemRenderer item={split.children[split.activeIndex]} renderLeaf={renderLeaf} renderTabGroup={renderTabGroup} />
@@ -130,126 +74,7 @@ const WorkspaceLeafRenderer = ({ leaf, renderLeaf }: { leaf: WorkspaceLeaf, rend
   );
 };
 
-// Extracted Tab Component to handle Refs correctly
-const WorkspaceTab = ({
-                        child,
-                        index,
-                        isActive,
-                        onClose,
-                        showSeparator,
-                        detailBgColor
-                      }: {
-  child: any,
-  index: number,
-  isActive: boolean,
-  onClose: () => void,
-  showSeparator: boolean,
-  detailBgColor: string
-}) => {
-  // Use a wrapper view for reliable anchoring of the Context Menu (Callout)
-  const wrapperRef = React.useRef<View>(null);
-  const title = child.viewState?.state?.title || child.viewState?.type || `Tab ${index + 1}`;
-  const icon = child.viewState?.state?.icon;
-  const tabKey = index.toString();
 
-  return (
-    <View
-      ref={wrapperRef}
-      style={{ flex: 1, flexDirection: 'row' }}
-    >
-      <Tab
-        key={tabKey}
-        tabKey={tabKey}
-        onPressIn={(e: any) => {
-          if (e.nativeEvent.button === 2 && wrapperRef.current) {
-            // Optional: Trigger on right click immediately if platform supports
-            // onLongPress(index, wrapperRef);
-          }
-        }}
-        showSeparator={showSeparator}
-        showInvertedCorners={isActive}
-        cornerColor={detailBgColor}
-        style={[styles.tab, {
-          backgroundColor: isActive ? detailBgColor : 'transparent',
-          flex: 1, // Fill the wrapper
-        }]}
-      >
-        <HoverableTabContent
-          icon={icon}
-          title={title}
-          isSelected={isActive}
-          onClose={onClose}
-        />
-      </Tab>
-    </View>
-  );
-};
-
-
-
-const DefaultTabRenderer = (split: WorkspaceSplit, activeIndex: number, onSelect: (index: number) => void) => {
-  const workspace = split.workspace;
-  const isLeftCollapsed = workspace.leftSplit && workspace.leftSplit.children.length > 0 && workspace.leftSplit.collapsed;
-  const minSidePaneWidth = workspace.leftSplit.minSize;
-
-  /* Manual Anchor Rect State */
-  // const [anchorRect, setAnchorRect] = React.useState<any>(null);
-  // const [isContextMenuVisible, setIsContextMenuVisible] = React.useState(false);
-  // const [contextMenuIndex, setContextMenuIndex] = React.useState(-1);
-
-  // Helper to ensure valid selection key
-  const safeSelectValue = (split: WorkspaceSplit, index: number) => {
-    if (!split.children[index]) return "0";
-    return index.toString();
-  };
-  const detailBgColor = SystemColors.getSystemColor('unemphasizedSelectedContentBackgroundColor') || '#E0E0E0';
-  const selectedKey = safeSelectValue(split, activeIndex);
-
-  // const onTabLongPress = React.useCallback((index: number, ref: React.RefObject<any>) => {
-  //     // if (ref.current) {
-  //     //     ref.current.measureInWindow((x: number, y: number, width: number, height: number) => {
-  //     //         // setAnchorRect({ x: x, y: y, width: width, height: height }); // Use x/y for native bridge compatibility
-  //     //         // setContextMenuIndex(index);
-  //     //         // setIsContextMenuVisible(true);
-  //     //     });
-  //     // }
-  // }, []);
-
-  return (
-    <View style={[styles.tabListContainer, isLeftCollapsed ? { marginLeft: minSidePaneWidth } : {}]}>
-      <TabList
-        selectedKey={selectedKey}
-        onTabSelect={(key: string) => {
-          const idx = parseInt(key, 10);
-          onSelect(idx);
-        }}
-        appearance="subtle"
-        size="small"
-        style={styles.tabList}
-      >
-        {split.children.map((child: any, index: number) => {
-          const tabKey = index.toString();
-          const isSelected = tabKey === selectedKey;
-          const isLast = index === split.children.length - 1;
-          const nextKey = (index + 1).toString();
-          const showSeparator = selectedKey !== tabKey && selectedKey !== nextKey && !isLast;
-
-          return (
-            <WorkspaceTab
-              key={tabKey}
-              child={child}
-              index={index}
-              isActive={isSelected}
-              onClose={() => split.removeChild(child)}
-              showSeparator={showSeparator}
-              detailBgColor={detailBgColor}
-            />
-          );
-        })}
-      </TabList>
-    </View>
-  );
-};
 
 export const WorkspaceView = ({ workspace, renderLeaf, renderTabGroup = DefaultTabRenderer }: WorkspaceViewProps) => {
   const [layoutVersion, setLayoutVersion] = useState(0);
@@ -407,71 +232,4 @@ const styles = StyleSheet.create({
   // Separators
   hSeparator: { height: 1, backgroundColor: 'black' },
   vSeparator: { width: 1, backgroundColor: 'black' },
-  tabListContainer: {
-    flexDirection: 'row',
-    height: HEADER_HEIGHT,
-    paddingTop: 0,
-    paddingLeft: 10,
-    alignItems: 'flex-end', // Anchor tabs to bottom for inverted corners
-    // flex: 1, // Removed to prevent it from growing vertically in column layout
-    width: '100%', // Ensure it spans full width
-    //width:2000,
-    overflow: 'visible', // Ensure decorations aren't clipped
-    //backgroundColor: 'red',
-  },
-  tabList:{
-    flex:1, height: 27,
-    width: '100%',
-    // backgroundColor: 'red',
-  },
-  // Chrome-style Tab Styles
-  tab:{
-    height: 27,
-    borderTopLeftRadius: 6,
-    borderTopRightRadius: 6,
-    borderBottomLeftRadius: 0, // No rounding at bottom (inverted corners handle this)
-    borderBottomRightRadius: 0,
-    backgroundColor: 'transparent',
-    paddingHorizontal: 0,
-    paddingVertical: 0,
-    //width:120,
-    // flex: 1,Auto width, don't work,  Slots.container(FocusZone) causing the issue??
-    // fixed by adding style={vertical?{height:'100%'}:{width:'100%'}} to TabList's Slots.container
-    flex: 1,
-    //maxWidth: 200,
-    //minWidth: 100,
-  },
-  tabContent: {
-    height: 25,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flex: 1,
-    borderRadius: 6,
-    paddingHorizontal: 3,
-  },
-  tabContentHovered: {
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
-  },
-  tabIcon: {
-    width: 16,
-    height: 16,
-    marginRight: 6,
-  },
-  tabText: {
-    flex: 1,
-    fontSize: 12,
-  },
-  tabCloseButton: {
-    marginLeft: 6,
-    padding: 2,
-    borderRadius: 4,
-  },
-  tabCloseButtonHovered: {
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
-  },
-  tabCloseIcon: {
-    width: 12,
-    height: 12,
-  },
 });

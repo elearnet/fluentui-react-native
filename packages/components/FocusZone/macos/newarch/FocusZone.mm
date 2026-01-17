@@ -233,7 +233,8 @@ static const CGFloat FocusZoneBuffer = 3;
         } else if (defaultTabbable.isNumber()) {
             // JS numbers come as double, not int
             // Handle as React tag (not supported in Fabric)
-            NSLog(@"[FocusZone] Warning: Integer/number tag lookup not supported in Fabric. Use nativeID (string) instead.");
+            //NSLog(@"[FocusZone] Warning: Integer/number tag lookup not supported in Fabric. Use nativeID (string) instead.");
+            _defaultResponder = [self findViewWithReactTag:@(defaultTabbable.asInt()) inView:self.window.contentView];
         }
     }
     [super updateProps:props oldProps:oldProps];
@@ -260,6 +261,24 @@ static const CGFloat FocusZoneBuffer = 3;
         NSView *found = [self findViewWithNativeID:nativeID inView:subview];
         if (found) return found;
     }
+    return nil;
+}
+
+// Find a view by its reactTag in the view hierarchy
+- (NSView *)findViewWithReactTag:(NSNumber *)targetTag inView:(NSView *)parentView
+{
+    if ([parentView respondsToSelector:@selector(reactTag)]) {
+        NSNumber *viewTag = [(id)parentView reactTag];
+        if ([viewTag isEqualToNumber:targetTag]) {
+            return parentView;
+        }
+    }
+
+    for (NSView *subview in parentView.subviews) {
+        NSView *found = [self findViewWithReactTag:targetTag inView:subview];
+        if (found) return found;
+    }
+
     return nil;
 }
 

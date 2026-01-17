@@ -12,8 +12,9 @@ import { useHorizontalSizeClass } from '@elui-react-native/experimental-appearan
 import { ThemeReference, ThemeProvider } from '@elui-react-native/theme';
 
 import type { FluentTesterProps } from './FluentTester';
-import { FluentTester } from './FluentTester';
+import { FluentTester } from './FluentTester2';
 import { testerTheme } from './theme/index';
+
 
 export const FluentTesterApp: React.FunctionComponent<FluentTesterProps> = (props) => {
   const sizeClass = useHorizontalSizeClass();

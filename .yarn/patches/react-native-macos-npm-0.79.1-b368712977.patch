@@ -28,3 +28,46 @@ index 4773f61b3db89db2319a3a5b861c754f26a74601..83c9df5b2a3e0bcc19d7aaeae0bace19
  #endif // [macOS]
    }
  
+diff --git a/ReactCommon/react/renderer/graphics/platform/ios/react/renderer/graphics/HostPlatformColor.mm b/ReactCommon/react/renderer/graphics/platform/ios/react/renderer/graphics/HostPlatformColor.mm
+index 069af91004855f0e6918be10a764e58dadaa7fce..f9065d2d14b033986f8628db1934a1fcd0cb7da0 100644
+--- a/ReactCommon/react/renderer/graphics/platform/ios/react/renderer/graphics/HostPlatformColor.mm
++++ b/ReactCommon/react/renderer/graphics/platform/ios/react/renderer/graphics/HostPlatformColor.mm
+@@ -119,9 +119,35 @@ int32_t ColorFromColorComponents(const facebook::react::ColorComponents &compone
+ 
+ int32_t ColorFromUIColor(RCTUIColor *color) // [macOS]
+ {
+-  CGFloat rgba[4];
+-  [color getRed:&rgba[0] green:&rgba[1] blue:&rgba[2] alpha:&rgba[3]];
+-  return ColorFromColorComponents({(float)rgba[0], (float)rgba[1], (float)rgba[2], (float)rgba[3]});
++    CGFloat rgba[4];
++#if TARGET_OS_OSX // [macOS]
++    //if ([color.className  isEqual: @"NSDynamicSystemColor"]) {
++        //color = [color colorUsingColorSpace:[NSColorSpace genericRGBColorSpace]];
++      //  NSLog(@"converted color:%@",color.className);
++   // }
++    //Valid only on component based colors whose colorSpace model is NSColorSpaceModelRGB.
++    //not valid for the NSColor Catalog color: System labelColor; need to first convert colorspace
++//    if ([color.colorSpace isKindOfClass:[NSColorSpaceModelRGB class]]) {
++//
++//    }
++//    NSLog(@"original  color:class name:%@,color spaces:%ld",color.className,[color colorSpace].colorSpaceModel);
++//    if([color colorSpace].colorSpaceModel != NSColorSpaceModelRGB){
++//        color = [color colorUsingColorSpace:[NSColorSpace genericRGBColorSpace]];
++//        NSLog(@"first converted color:class name:%@",color.className);
++//    }
++    @try {
++        [color getRed:&rgba[0] green:&rgba[1] blue:&rgba[2] alpha:&rgba[3]];
++        NSLog(@"ok color:class name:%@",color.className);
++    } @catch (NSException *e) {
++        NSLog(@"error messages:%@:%@",e.name,e.reason);
++        NSLog(@"issues color:class name:%@",color.className); //_NSTaggedPointerColor
++        color = [color colorUsingColorSpace:[NSColorSpace genericRGBColorSpace]];
++        NSLog(@"sec converted color:class name:%@",color.className);
++        [color getRed:&rgba[0] green:&rgba[1] blue:&rgba[2] alpha:&rgba[3]];
++        //@throw e;
++    }
++#endif // [macOS]
++    return ColorFromColorComponents({(float)rgba[0], (float)rgba[1], (float)rgba[2], (float)rgba[3]});
+ }
+ 
+ #if !TARGET_OS_OSX // [macOS]

@@ -22,6 +22,7 @@ using namespace facebook::react;
   FRNCalloutWindow *_panel;
   FRNProxyView *_proxyView;
   RCTSurfaceTouchHandler *_touchHandler;
+  NSInteger _pendingTarget; // Store target to apply when view moves to window
 }
 
 + (ComponentDescriptorProvider)componentDescriptorProvider
@@ -101,11 +102,27 @@ using namespace facebook::react;
     const auto &oldViewProps = *std::static_pointer_cast<FRNCalloutProps const>(_props);
     const auto &newViewProps = *std::static_pointer_cast<FRNCalloutProps const>(props);
 
-    if (oldViewProps.anchorRect.screenX != newViewProps.anchorRect.screenX ||
+    // Handle target prop - store for use in showCallout (timing issue: updateProps called before viewDidMoveToWindow)
+    if (oldViewProps.target != newViewProps.target) {
+        _pendingTarget = newViewProps.target;
+        if (_pendingTarget != 0) {
+            DevLog(@"[Callout] target updated: %ld", (long)_pendingTarget);
+            // Try to update immediately if window is already available
+            if (self.window) {
+                [self updateWindowPositionFromTarget:_pendingTarget];
+            }
+            // If window not ready yet, showCallout will use _pendingTarget when called
+        }
+    }
+
+    // Handle anchorRect prop (fallback if no target)
+    BOOL anchorRectChanged = oldViewProps.anchorRect.screenX != newViewProps.anchorRect.screenX ||
         oldViewProps.anchorRect.screenY != newViewProps.anchorRect.screenY ||
         oldViewProps.anchorRect.width != newViewProps.anchorRect.width ||
-        oldViewProps.anchorRect.height != newViewProps.anchorRect.height) {
+        oldViewProps.anchorRect.height != newViewProps.anchorRect.height;
 
+    // Only use anchorRect if target is not set
+    if (anchorRectChanged && newViewProps.target <= 0) {
         DevLog(@"[Callout] anchorRect updated: x=%f, y=%f, w=%f, h=%f",
               newViewProps.anchorRect.screenX,
               newViewProps.anchorRect.screenY,
@@ -113,7 +130,7 @@ using namespace facebook::react;
               newViewProps.anchorRect.height);
 
         // Update window position based on anchorRect here if needed
-      [self updateWindowPosition:newViewProps.anchorRect];
+        [self updateWindowPosition:newViewProps.anchorRect];
     }
 
     if (oldViewProps.borderRadii != newViewProps.borderRadii) {
@@ -134,6 +151,65 @@ using namespace facebook::react;
 //    }
 
     [super updateProps:props oldProps:oldProps];
+}
+
+#pragma mark - Target View Lookup
+
+// Find a view by its reactTag in the view hierarchy
+- (NSView *)findViewWithReactTag:(NSNumber *)targetTag inView:(NSView *)view
+{
+    if ([view respondsToSelector:@selector(reactTag)]) {
+        NSNumber *viewTag = [(id)view reactTag];
+        if ([viewTag isEqualToNumber:targetTag]) {
+            return view;
+        }
+    }
+
+    for (NSView *subview in view.subviews) {
+        NSView *found = [self findViewWithReactTag:targetTag inView:subview];
+        if (found) return found;
+    }
+
+    return nil;
+}
+
+// Update callout position based on target view
+- (void)updateWindowPositionFromTarget:(NSInteger)targetTag
+{
+    if (!self.window) return;
+
+    // Find the target view in the window's content view hierarchy
+    NSView *targetView = [self findViewWithReactTag:@(targetTag) inView:self.window.contentView];
+
+    if (!targetView) {
+        DevLog(@"[Callout] Could not find target view with tag: %ld", (long)targetTag);
+        return;
+    }
+
+    // Get the target view's frame in window coordinates
+    NSRect targetFrameInWindow = [targetView convertRect:targetView.bounds toView:nil];
+
+    DevLog(@"[Callout] Target view found, frame in window: %@", NSStringFromRect(targetFrameInWindow));
+
+    // Create anchor rect from target view's measured position
+    // Use the target frame directly (already in window coordinates, origin at bottom-left for macOS)
+    NSRect mainWinFrame = self.window.contentView.frame;
+
+    // The targetFrameInWindow is bottom-left origin (macOS native)
+    // Convert to top-left origin (React Native convention) for consistency with anchorRect
+    CGFloat topLeftY = mainWinFrame.size.height - targetFrameInWindow.origin.y - targetFrameInWindow.size.height;
+
+    // Create a temporary anchor rect struct
+    FRNCalloutAnchorRectStruct anchorRect;
+    anchorRect.screenX = targetFrameInWindow.origin.x;
+    anchorRect.screenY = topLeftY;
+    anchorRect.width = targetFrameInWindow.size.width;
+    anchorRect.height = targetFrameInWindow.size.height;
+
+    DevLog(@"[Callout] Computed anchorRect from target: x=%f, y=%f, w=%f, h=%f",
+           anchorRect.screenX, anchorRect.screenY, anchorRect.width, anchorRect.height);
+
+    [self updateWindowPosition:anchorRect];
 }
 
 - (void)handleCommand:(const NSString *)commandName args:(const NSArray *)args
@@ -245,6 +321,25 @@ using namespace facebook::react;
 - (void)windowDidResignKey:(NSNotification *)notification
 {
     if (_eventEmitter) {
+        // Check if focus went to another Callout window
+        // - Parent → Child (submenu opens): Don't dismiss parent
+        // - Child → Parent (focus returns): Should dismiss child
+        NSWindow *keyWindow = [NSApp keyWindow];
+
+        // Check if the new key window is also a FRNCalloutWindow
+        if (keyWindow && [keyWindow isKindOfClass:[FRNCalloutWindow class]]) {
+            // Compare window levels to determine parent/child relationship
+            // Child windows (submenus) typically have higher level or were ordered above
+            // If the new key window's level is >= our panel's level, it's likely a child (submenu)
+            // So we shouldn't dismiss - we're the parent
+            if ([keyWindow level] >= [self.panel level]) {
+                DevLog(@"[Callout] windowDidResignKey: focus went to child Callout, not dismissing");
+                return;
+            }
+            // Otherwise, we're the child going back to parent - should dismiss
+            DevLog(@"[Callout] windowDidResignKey: focus returned to parent Callout, dismissing");
+        }
+
         DevLog(@"[Callout] windowDidResignKey called");
         // Emit onDismiss event
         std::static_pointer_cast<FRNCalloutEventEmitter const>(_eventEmitter)->onDismiss(FRNCalloutEventEmitter::OnDismiss{});
@@ -276,7 +371,14 @@ using namespace facebook::react;
   }
 
   const auto &props = *std::static_pointer_cast<FRNCalloutProps const>(_props);
-  [self updateWindowPosition:props.anchorRect];
+
+  // Use target if set, otherwise fall back to anchorRect
+  if (_pendingTarget != 0) {
+    DevLog(@"[Callout] showCallout: using pending target %ld", (long)_pendingTarget);
+    [self updateWindowPositionFromTarget:_pendingTarget];
+  } else {
+    [self updateWindowPosition:props.anchorRect];
+  }
   [self updateWindowRadius:props.borderRadii];
 }
 

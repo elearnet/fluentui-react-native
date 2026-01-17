@@ -77,9 +77,11 @@ open class CalloutView: RCTView, CalloutWindowLifeCycleDelegate {
 
 	public override func updateLayer() {
 		if let layer = calloutWindow.contentView?.layer {
+
 			layer.borderColor =  borderColor?.cgColor
 			layer.borderWidth = borderWidth
-			layer.backgroundColor = backgroundColor.cgColor
+      let safeBackgroundColor: NSColor? = backgroundColor
+			layer.backgroundColor = safeBackgroundColor?.cgColor ?? NSColor.clear.cgColor
 			layer.cornerRadius = borderRadius
 		}
 	}

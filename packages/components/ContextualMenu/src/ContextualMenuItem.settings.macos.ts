@@ -6,6 +6,7 @@ import { contextualMenuItemName } from './ContextualMenuItem.types';
 export const settings: IComposeSettings<ContextualMenuItemType> = [
   {
     tokens: {
+      backgroundColor: 'menuBackground',
       color: 'menuItemText',
     },
     root: {
