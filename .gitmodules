@@ -1,0 +1,3 @@
+[submodule "elui"]
+	path = elui
+	url = git@github.com:elearnet/ELUI.git
