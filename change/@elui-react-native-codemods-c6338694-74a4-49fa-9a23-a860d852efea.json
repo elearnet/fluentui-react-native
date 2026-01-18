@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix: fixed some issues",
-  "packageName": "@elui-react-native/codemods",
-  "email": "eadron@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

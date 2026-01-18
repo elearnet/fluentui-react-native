@@ -13400,9 +13400,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"el_tester@workspace:el/el_tester":
+"el_tester@workspace:elui/el_tester":
   version: 0.0.0-use.local
-  resolution: "el_tester@workspace:el/el_tester"
+  resolution: "el_tester@workspace:elui/el_tester"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/preset-env": "npm:^7.25.3"
@@ -13446,9 +13446,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"elui-native@workspace:*, elui-native@workspace:^, elui-native@workspace:el/elui-native":
+"elui-native@workspace:*, elui-native@workspace:^, elui-native@workspace:elui/elui-native":
   version: 0.0.0-use.local
-  resolution: "elui-native@workspace:el/elui-native"
+  resolution: "elui-native@workspace:elui/elui-native"
   dependencies:
     "@elui-react-native/eslint-config-rules": "workspace:*"
     "@elui-react-native/scripts": "workspace:*"
@@ -13474,9 +13474,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"elui@workspace:*, elui@workspace:el/elui":
+"elui@workspace:*, elui@workspace:elui/elui":
   version: 0.0.0-use.local
-  resolution: "elui@workspace:el/elui"
+  resolution: "elui@workspace:elui/elui"
   dependencies:
     "@elui-react-native/contextual-menu": "workspace:*"
     "@elui-react-native/eslint-config-rules": "workspace:*"
@@ -14447,9 +14447,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"etest@workspace:*, etest@workspace:^, etest@workspace:el/etest":
+"etest@workspace:*, etest@workspace:^, etest@workspace:elui/etest":
   version: 0.0.0-use.local
-  resolution: "etest@workspace:el/etest"
+  resolution: "etest@workspace:elui/etest"
   dependencies:
     "@elui-react-native/eslint-config-rules": "workspace:*"
     "@elui-react-native/scripts": "workspace:*"

@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix: fixed some issues",
-  "packageName": "@elui-react-native/experimental-avatar",
-  "email": "eadron@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
