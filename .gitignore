@@ -119,3 +119,5 @@ apps/*/.vscode/.react/
 .ccache
 /docs/mm.md
 /docs/sandbox.md
+/docs/react-native-macos-npm-0.79.1-b368712977.patch
+/docs/bak/

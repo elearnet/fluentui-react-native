@@ -1,5 +1,6 @@
 import * as React from 'react';
-import type { AccessibilityActionEvent, AccessibilityState } from 'react-native';
+import type { AccessibilityActionEvent, AccessibilityState, GestureResponderEvent } from 'react-native';
+import { Platform } from 'react-native';
 
 import { memoize } from '@elui-react-native/framework';
 import type { IFocusable } from '@elui-react-native/interactive-hooks';
@@ -38,12 +39,21 @@ export const useTab = (props: TabProps): TabInfo => {
 
   const isDisabled = disabled || tablist.disabled;
 
-  const changeSelection = React.useCallback(() => {
-    if (tabKey !== selectedKey) {
-      onTabSelect(tabKey);
-      componentRef && setFocusedTabRef(componentRef);
-    }
-  }, [componentRef, setFocusedTabRef, onTabSelect, selectedKey, tabKey]);
+  const changeSelection = React.useCallback(
+    (e?: GestureResponderEvent) => {
+      // On macOS, we want to ignore right-clicks (button 2) for selection
+      // This allows the context menu to open without selecting the tab
+      if (Platform.OS === 'macos' && (e as any)?.nativeEvent?.button === 2) {
+        return;
+      }
+
+      if (tabKey !== selectedKey) {
+        onTabSelect(tabKey);
+        componentRef && setFocusedTabRef(componentRef);
+      }
+    },
+    [componentRef, setFocusedTabRef, onTabSelect, selectedKey, tabKey],
+  );
 
   const changeSelectionWithFocus = useOnPressWithFocus(componentRef, changeSelection);
 
