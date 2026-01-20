@@ -1,6 +1,6 @@
 {
   "type": "patch",
-  "comment": "fix:",
+  "comment": "Change files",
   "packageName": "@elui-react-native/eslint-config-rules",
   "email": "eadron@users.noreply.github.com",
   "dependentChangeType": "patch"
