@@ -33,8 +33,7 @@
   "dependencies": {
     "@elui-react-native/adapters": "workspace:*",
     "@elui-react-native/framework": "workspace:*",
-    "@elui-react-native/text": "workspace:*",
-    "elui-native": "workspace:*"
+    "@elui-react-native/text": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

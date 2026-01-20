@@ -1,7 +1,6 @@
 {
   "name": "@elui-react-native/scripts",
-  "version": "0.1.1",
-  "private": true,
+  "version": "0.1.2",
   "main": "./src/index.js",
   "type": "module",
   "bin": {
@@ -55,7 +54,6 @@
     }
   ],
   "beachball": {
-    "shouldPublish": false,
     "disallowedChangeTypes": [
       "major"
     ]

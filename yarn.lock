@@ -2699,7 +2699,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@elui-react-native/eslint-config-rules@workspace:packages/framework/eslint-config-rules"
   dependencies:
-    "@elui-react-native/scripts": "workspace:*"
+    "@elui-react-native/scripts": "npm:*"
     "@microsoft/eslint-plugin-sdl": "npm:^1.1.0"
     "@rnx-kit/eslint-plugin": "npm:^0.8.6"
     "@types/eslint": "npm:^9.0.0"
@@ -3282,7 +3282,6 @@ __metadata:
     "@react-native/metro-config": "npm:^0.79.0"
     "@types/react": "npm:~ 19.0.3"
     "@types/react-test-renderer": "npm:^ 19.1.0"
-    elui-native: "workspace:*"
     react: "npm: 19.0.3"
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
@@ -3963,7 +3962,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/scripts@workspace:*, @elui-react-native/scripts@workspace:scripts":
+"@elui-react-native/scripts@npm:*, @elui-react-native/scripts@workspace:*, @elui-react-native/scripts@workspace:scripts":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/scripts@workspace:scripts"
   dependencies:
@@ -4219,7 +4218,6 @@ __metadata:
     "@react-native/metro-config": "npm:^0.79.0"
     "@types/react": "npm:~ 19.0.3"
     "@types/react-test-renderer": "npm:^ 19.1.0"
-    elui-native: "workspace:*"
     react: "npm: 19.0.3"
     react-native: "npm:^0.79.0"
     react-native-macos: "npm:^0.79.0"
@@ -4380,7 +4378,6 @@ __metadata:
     "@wdio/cli": "npm:^8.40.0"
     "@wdio/globals": "npm:^8.40.0"
     "@wdio/jasmine-framework": "npm:^8.40.0"
-    etest: "workspace:*"
     flow-bin: "npm:^0.113.0"
     metro-config: "npm:^0.81.3"
     react: "npm: 19.0.3"
@@ -13620,7 +13617,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"elui-native@workspace:*, elui-native@workspace:^, elui-native@workspace:elui/elui-native":
+"elui-native@workspace:^, elui-native@workspace:elui/elui-native":
   version: 0.0.0-use.local
   resolution: "elui-native@workspace:elui/elui-native"
   dependencies:
@@ -14622,7 +14619,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"etest@workspace:*, etest@workspace:^, etest@workspace:elui/etest":
+"etest@workspace:^, etest@workspace:elui/etest":
   version: 0.0.0-use.local
   resolution: "etest@workspace:elui/etest"
   dependencies:

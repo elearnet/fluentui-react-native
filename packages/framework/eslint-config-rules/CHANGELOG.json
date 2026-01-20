@@ -1,6 +1,21 @@
 {
-  "name": "@uifabric/eslint-config-rules",
+  "name": "@elui-react-native/eslint-config-rules",
   "entries": [
+    {
+      "date": "Tue, 20 Jan 2026 13:10:30 GMT",
+      "version": "0.1.2",
+      "tag": "@elui-react-native/eslint-config-rules_v0.1.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "eadron@users.noreply.github.com",
+            "package": "@elui-react-native/eslint-config-rules",
+            "commit": "09a0fa5931fbd0335fcfaf9ab84525b5db2b2d8f",
+            "comment": "fix:"
+          }
+        ]
+      }
+    },
     {
       "date": "Sat, 14 Sep 2019 01:56:36 GMT",
       "tag": "@uifabric/eslint-config-rules_v0.1.1",

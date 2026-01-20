@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Change files",
-  "packageName": "@elui-react-native/scripts",
-  "email": "eadron@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
