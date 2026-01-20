@@ -1,0 +1,20 @@
+{
+  "name": "@elui-react-native/scripts",
+  "entries": [
+    {
+      "date": "Tue, 20 Jan 2026 13:26:13 GMT",
+      "version": "0.1.2",
+      "tag": "@elui-react-native/scripts_v0.1.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "eadron@users.noreply.github.com",
+            "package": "@elui-react-native/scripts",
+            "commit": "c4b4b57d428928fbd05e1235f5a1aa46b082bf54",
+            "comment": "Change files"
+          }
+        ]
+      }
+    }
+  ]
+}

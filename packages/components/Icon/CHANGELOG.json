@@ -1,6 +1,21 @@
 {
-  "name": "@fluentui-react-native/icon",
+  "name": "@elui-react-native/icon",
   "entries": [
+    {
+      "date": "Tue, 20 Jan 2026 17:45:28 GMT",
+      "version": "0.21.24",
+      "tag": "@elui-react-native/icon_v0.21.24",
+      "comments": {
+        "patch": [
+          {
+            "author": "eadron@users.noreply.github.com",
+            "package": "@elui-react-native/icon",
+            "commit": "f1c98b9971484c7c43510c57a9eb0338e8025e62",
+            "comment": "fix: exclude elui for publish"
+          }
+        ]
+      }
+    },
     {
       "date": "Tue, 05 Aug 2025 18:50:40 GMT",
       "version": "0.21.18",

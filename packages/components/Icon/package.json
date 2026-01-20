@@ -1,6 +1,6 @@
 {
   "name": "@elui-react-native/icon",
-  "version": "0.21.23",
+  "version": "0.21.24",
   "description": "A cross-platform Icon component",
   "main": "lib-commonjs/index.js",
   "module": "lib/index.js",
@@ -31,17 +31,17 @@
     "directory": "packages/components/Icon"
   },
   "dependencies": {
-    "@elui-react-native/adapters": "workspace:*",
-    "@elui-react-native/framework": "workspace:*",
-    "@elui-react-native/text": "workspace:*"
+    "@elui-react-native/adapters": "0.13.5",
+    "@elui-react-native/framework": "0.14.17",
+    "@elui-react-native/text": "0.24.21"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@elui-react-native/babel-config": "workspace:*",
-    "@elui-react-native/eslint-config-rules": "workspace:*",
-    "@elui-react-native/jest-config": "workspace:*",
-    "@elui-react-native/scripts": "workspace:*",
-    "@elui-react-native/test-tools": "workspace:*",
+    "@elui-react-native/babel-config": "0.1.1",
+    "@elui-react-native/eslint-config-rules": "0.1.2",
+    "@elui-react-native/jest-config": "0.1.1",
+    "@elui-react-native/scripts": "0.1.2",
+    "@elui-react-native/test-tools": "0.1.1",
     "@office-iss/react-native-win32": "^0.79.0",
     "@react-native-community/cli": "^20.0.0",
     "@react-native-community/cli-platform-android": "^20.0.0",

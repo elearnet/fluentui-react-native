@@ -1,8 +1,16 @@
-# Change Log - @fluentui-react-native/tablist
+# Change Log - @elui-react-native/tablist
 
-<!-- This log was last generated on Tue, 05 Aug 2025 18:50:41 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 20 Jan 2026 17:48:42 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 0.7.20
+
+Tue, 20 Jan 2026 17:48:42 GMT
+
+### Patches
+
+- fix: exclude elui for publish (eadron@users.noreply.github.com)
 
 ## 0.7.14
 

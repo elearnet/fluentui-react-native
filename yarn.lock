@@ -1848,7 +1848,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@elui-react-native/adapters@npm:*, @elui-react-native/adapters@workspace:*, @elui-react-native/adapters@workspace:packages/utils/adapters":
+"@elui-react-native/adapters@npm:*, @elui-react-native/adapters@npm:0.13.5, @elui-react-native/adapters@workspace:*, @elui-react-native/adapters@workspace:packages/utils/adapters":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/adapters@workspace:packages/utils/adapters"
   dependencies:
@@ -2020,7 +2020,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/babel-config@workspace:*, @elui-react-native/babel-config@workspace:packages/configs/babel-config":
+"@elui-react-native/babel-config@npm:0.1.1, @elui-react-native/babel-config@workspace:*, @elui-react-native/babel-config@workspace:packages/configs/babel-config":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/babel-config@workspace:packages/configs/babel-config"
   dependencies:
@@ -2695,7 +2695,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/eslint-config-rules@workspace:*, @elui-react-native/eslint-config-rules@workspace:packages/framework/eslint-config-rules":
+"@elui-react-native/eslint-config-rules@npm:0.1.2, @elui-react-native/eslint-config-rules@workspace:*, @elui-react-native/eslint-config-rules@workspace:packages/framework/eslint-config-rules":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/eslint-config-rules@workspace:packages/framework/eslint-config-rules"
   dependencies:
@@ -3215,7 +3215,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/framework@npm:*, @elui-react-native/framework@workspace:*, @elui-react-native/framework@workspace:packages/framework/framework":
+"@elui-react-native/framework@npm:*, @elui-react-native/framework@npm:0.14.17, @elui-react-native/framework@workspace:*, @elui-react-native/framework@workspace:packages/framework/framework":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/framework@workspace:packages/framework/framework"
   dependencies:
@@ -3266,14 +3266,14 @@ __metadata:
   resolution: "@elui-react-native/icon@workspace:packages/components/Icon"
   dependencies:
     "@babel/core": "npm:^7.20.0"
-    "@elui-react-native/adapters": "workspace:*"
-    "@elui-react-native/babel-config": "workspace:*"
-    "@elui-react-native/eslint-config-rules": "workspace:*"
-    "@elui-react-native/framework": "workspace:*"
-    "@elui-react-native/jest-config": "workspace:*"
-    "@elui-react-native/scripts": "workspace:*"
-    "@elui-react-native/test-tools": "workspace:*"
-    "@elui-react-native/text": "workspace:*"
+    "@elui-react-native/adapters": "npm:0.13.5"
+    "@elui-react-native/babel-config": "npm:0.1.1"
+    "@elui-react-native/eslint-config-rules": "npm:0.1.2"
+    "@elui-react-native/framework": "npm:0.14.17"
+    "@elui-react-native/jest-config": "npm:0.1.1"
+    "@elui-react-native/scripts": "npm:0.1.2"
+    "@elui-react-native/test-tools": "npm:0.1.1"
+    "@elui-react-native/text": "npm:0.24.21"
     "@office-iss/react-native-win32": "npm:^0.79.0"
     "@react-native-community/cli": "npm:^20.0.0"
     "@react-native-community/cli-platform-android": "npm:^20.0.0"
@@ -3411,7 +3411,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/jest-config@workspace:*, @elui-react-native/jest-config@workspace:packages/configs/jest-config":
+"@elui-react-native/jest-config@npm:0.1.1, @elui-react-native/jest-config@workspace:*, @elui-react-native/jest-config@workspace:packages/configs/jest-config":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/jest-config@workspace:packages/configs/jest-config"
   dependencies:
@@ -3962,7 +3962,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/scripts@npm:*, @elui-react-native/scripts@workspace:*, @elui-react-native/scripts@workspace:scripts":
+"@elui-react-native/scripts@npm:*, @elui-react-native/scripts@npm:0.1.2, @elui-react-native/scripts@workspace:*, @elui-react-native/scripts@workspace:scripts":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/scripts@workspace:scripts"
   dependencies:
@@ -4241,7 +4241,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/test-tools@workspace:*, @elui-react-native/test-tools@workspace:packages/utils/test-tools":
+"@elui-react-native/test-tools@npm:0.1.1, @elui-react-native/test-tools@workspace:*, @elui-react-native/test-tools@workspace:packages/utils/test-tools":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/test-tools@workspace:packages/utils/test-tools"
   dependencies:
@@ -4396,7 +4396,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@elui-react-native/text@npm:*, @elui-react-native/text@workspace:*, @elui-react-native/text@workspace:packages/components/Text":
+"@elui-react-native/text@npm:*, @elui-react-native/text@npm:0.24.21, @elui-react-native/text@workspace:*, @elui-react-native/text@workspace:packages/components/Text":
   version: 0.0.0-use.local
   resolution: "@elui-react-native/text@workspace:packages/components/Text"
   dependencies:

@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix: exclude elui for publish",
-  "packageName": "@elui-react-native/tablist",
-  "email": "eadron@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

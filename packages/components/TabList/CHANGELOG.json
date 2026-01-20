@@ -1,6 +1,21 @@
 {
-  "name": "@fluentui-react-native/tablist",
+  "name": "@elui-react-native/tablist",
   "entries": [
+    {
+      "date": "Tue, 20 Jan 2026 17:48:42 GMT",
+      "version": "0.7.20",
+      "tag": "@elui-react-native/tablist_v0.7.20",
+      "comments": {
+        "patch": [
+          {
+            "author": "eadron@users.noreply.github.com",
+            "package": "@elui-react-native/tablist",
+            "commit": "f1c98b9971484c7c43510c57a9eb0338e8025e62",
+            "comment": "fix: exclude elui for publish"
+          }
+        ]
+      }
+    },
     {
       "date": "Tue, 05 Aug 2025 18:50:41 GMT",
       "version": "0.7.14",
