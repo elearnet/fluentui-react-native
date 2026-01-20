@@ -33,8 +33,5 @@ module.exports = {
       inputs: [],
       outputs: [],
     },
-  },
-  ignore: [
-    "elui/**"
-  ]
+  }
 };
