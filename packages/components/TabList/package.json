@@ -113,5 +113,17 @@
     "react-native-windows": {
       "optional": true
     }
+  },
+  "codegenConfig": {
+    "name": "ELUITabListSpec",
+    "type": "components",
+    "jsSrcsDir": "src",
+    "macos": {
+      "components": {
+        "InvertedCorner": {
+          "className": "InvertedCorner"
+        }
+      }
+    }
   }
 }

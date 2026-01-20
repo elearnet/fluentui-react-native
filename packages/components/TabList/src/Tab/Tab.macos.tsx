@@ -13,7 +13,7 @@ import type { IconPropsV1 as IconProps } from '@elui-react-native/icon';
 import type { PressablePropsExtended } from '@elui-react-native/interactive-hooks';
 import type { TextProps } from '@elui-react-native/text';
 import { Text } from '@elui-react-native/text';
-import { InvertedCorner } from 'elui-native';
+import InvertedCorner from '../InvertedCornerNativeComponent';
 
 import { useTabSlotProps } from './Tab.styling';
 import { tabName } from './Tab.types';

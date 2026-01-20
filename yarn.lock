@@ -13614,6 +13614,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"elui-api@workspace:elui/elui-api":
+  version: 0.0.0-use.local
+  resolution: "elui-api@workspace:elui/elui-api"
+  languageName: unknown
+  linkType: soft
+
 "elui-native@workspace:*, elui-native@workspace:^, elui-native@workspace:elui/elui-native":
   version: 0.0.0-use.local
   resolution: "elui-native@workspace:elui/elui-native"

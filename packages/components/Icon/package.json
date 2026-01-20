@@ -107,5 +107,17 @@
     "react-native-windows": {
       "optional": true
     }
+  },
+  "codegenConfig": {
+    "name": "ELUIIconSpec",
+    "type": "components",
+    "jsSrcsDir": "src",
+    "macos": {
+      "components": {
+        "SysIcon": {
+          "className": "SysIcon"
+        }
+      }
+    }
   }
 }

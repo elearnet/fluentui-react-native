@@ -10,3 +10,4 @@ export { svgIconName } from './SvgIcon/SvgIcon.types';
 export { Icon as IconV1 } from './Icon';
 export { FontIcon } from './FontIcon/FontIcon';
 export { SvgIcon } from './SvgIcon/SvgIcon';
+export { default as SysIcon } from './SysIconNativeComponent';
