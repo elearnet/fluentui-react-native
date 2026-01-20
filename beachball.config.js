@@ -5,6 +5,7 @@ const execSync = require('child_process').execSync;
 module.exports = {
   disallowedChangeTypes: ['major'],
   ignorePatterns: ['elui/**'],
+  scope: ['!elui/**'],
   hooks: {
     prepublish: (packagePath) => {
       const packageJsonPath = path.join(packagePath, 'package.json');

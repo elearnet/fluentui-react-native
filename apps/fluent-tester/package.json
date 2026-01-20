@@ -96,7 +96,6 @@
     "@types/node": "^22.0.0",
     "@types/react": "~ 19.0.3",
     "@warren-ms/react-native-icons": "^0.0.13",
-    "etest": "workspace:*",
     "react": " 19.0.3",
     "react-native": "^0.79.0",
     "react-native-macos": "^0.79.0",
