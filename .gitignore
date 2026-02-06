@@ -123,3 +123,6 @@ apps/*/.vscode/.react/
 /docs/bak/
 
 #.agent/
+/.yarn_bak/
+/.yarnrc.yml.bak
+/yarn.lock.bak
