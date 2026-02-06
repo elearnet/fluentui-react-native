@@ -111,11 +111,9 @@
     "name": "ELUIIconSpec",
     "type": "components",
     "jsSrcsDir": "src",
-    "macos": {
-      "components": {
-        "SysIcon": {
-          "className": "SysIcon"
-        }
+    "ios": {
+      "componentProvider": {
+        "SysIcon": "SysIcon"
       }
     }
   }

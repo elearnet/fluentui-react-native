@@ -117,11 +117,9 @@
     "name": "ELUITabListSpec",
     "type": "components",
     "jsSrcsDir": "src",
-    "macos": {
-      "components": {
-        "InvertedCorner": {
-          "className": "InvertedCorner"
-        }
+    "ios": {
+      "componentProvider": {
+        "InvertedCorner": "InvertedCorner"
       }
     }
   }

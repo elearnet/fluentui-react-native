@@ -132,17 +132,8 @@
     "type": "components",
     "jsSrcsDir": "src",
     "ios": {
-      "components": {
-        "FocusZone": {
-          "className": "FocusZone"
-        }
-      },
-      "macos": {
-        "components": {
-          "FocusZone": {
-            "className": "FocusZone"
-          }
-        }
+      "componentProvider": {
+        "FocusZone": "FocusZone"
       }
     }
   }

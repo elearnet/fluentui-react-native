@@ -110,11 +110,9 @@
     "name": "FRNCalloutSpec",
     "type": "components",
     "jsSrcsDir": "src",
-    "macos": {
-      "components": {
-        "FRNCallout": {
-          "className": "FRNCallout"
-        }
+    "ios": {
+      "componentProvider": {
+        "FRNCallout": "FRNCallout"
       }
     }
   }
