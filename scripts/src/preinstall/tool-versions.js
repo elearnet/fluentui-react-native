@@ -15,7 +15,16 @@ function getPackageManifest(folder) {
 // Get the versions once, so we don't query again on each package
 const scriptFolder = path.join(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const scriptManifest = getPackageManifest(scriptFolder);
-const rootManifest = getPackageManifest(path.dirname(scriptFolder));
+let monorepoRoot = path.dirname(scriptFolder);
+while (!fs.existsSync(path.join(monorepoRoot, 'yarn.lock')) && monorepoRoot !== '/') {
+  monorepoRoot = path.dirname(monorepoRoot);
+}
+// if (!fs.existsSync(path.join(monorepoRoot, 'yarn.lock'))) {
+//   // Fallback or error if not found, but avoiding infinite loop
+//   monorepoRoot = path.join(path.dirname(scriptFolder), '../..');
+// }
+const rootManifest = getPackageManifest(monorepoRoot);
+
 
 /** @type {Record<string, string>} */
 const devToolVersions = {
