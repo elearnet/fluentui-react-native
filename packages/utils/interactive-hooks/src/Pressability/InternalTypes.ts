@@ -48,7 +48,7 @@ export type AbstractComponent<Config extends ObjectBase, Instance = unknown> =
   // Either a function component that has a specific return type:
   | (React.FunctionComponent<Config> & ((props: React.PropsWithChildren<Config>, context?: any) => Instance))
   // ...or a class component that has the required Component methods and the Instance methods
-  | { new (props: Config, context?: any): Instance & ComponentMethods<Config> };
+  | { new(props: Config, context?: any): Instance & ComponentMethods<Config> };
 
 /**
  * internal definitions from RN project
